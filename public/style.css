@@ -62,6 +62,51 @@ main {
   padding: 0 20px 30px;
 }
 
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 18px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.tab:hover { border-color: #d8b7ae; color: var(--accent); }
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-right: 2px;
+  vertical-align: 1px;
+}
+
+.badge-news { background: #eef0f2; color: #5b6470; }
+.badge-event { background: #e3eefb; color: #1f6fb2; }
+.badge-volunteer { background: #e2f4e8; color: #1e8a4c; }
+
+.card .meta .mtime { margin-right: 8px; }
+
+.archive li .badge { margin-right: 6px; }
+
 .card {
   background: var(--card);
   border: 1px solid var(--line);

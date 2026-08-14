@@ -3,9 +3,29 @@ const path = require('path');
 
 const RSS_URL = 'https://minsknews.by/feed/';
 const FETCH_INTERVAL_MS = 23 * 60 * 60 * 1000;
-const MAX_ITEMS = 40;
+const MAX_ITEMS = 120;
 const MAX_FULLTEXT = 20;
-const HOMEPAGE_RECENT = 50;
+const HOMEPAGE_RECENT = 60;
+
+const EVENT_KEYS = [
+  'выставк', 'концерт', 'фестивал', 'спектакл', 'форум', 'ярмарк', 'премьер',
+  'показ', 'встреч', 'мастер-класс', 'экскурси', 'кино', 'лекци',
+  'конференция', 'турнир', 'соревновани', 'экспозиц', 'праздник',
+  'музей', 'театр', 'афиша', 'конкурс', 'олимпиад', 'день открытых', 'концертн'
+];
+const VOLUNTEER_KEYS = [
+  'волонтёр', 'волонтер', 'донор', 'благотворит', 'добровольц', 'красный крест',
+  'гуманитарн', 'субботник', 'приют', 'пожертвова', 'безвозмездн', 'нуждающ'
+];
+const CAT_LABEL = { news: '新闻', event: '活动', volunteer: '志愿者' };
+const CAT_RANK = { volunteer: 0, event: 1, news: 2 };
+
+function classify(text) {
+  const t = String(text || '').toLowerCase();
+  for (const k of VOLUNTEER_KEYS) if (t.includes(k)) return 'volunteer';
+  for (const k of EVENT_KEYS) if (t.includes(k)) return 'event';
+  return 'news';
+}
 
 const ROOT = path.join(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
@@ -160,7 +180,7 @@ function articlePageHtml(rec) {
 <header class="site-head article-head">
   <h1>${escapeHtml(rec.zh)}</h1>
   <div class="ru">${escapeHtml(rec.ru)}</div>
-  <div class="meta">● ${escapeHtml(rec.beijing)}（北京时间）· <a href="${escapeHtml(rec.link)}" target="_blank" rel="noopener noreferrer">查看俄语原文 ↗</a></div>
+  <div class="meta">${catBadge(rec.cat)} <span class="mtime">● ${escapeHtml(rec.beijing)}（北京时间）</span> · <a href="${escapeHtml(rec.link)}" target="_blank" rel="noopener noreferrer">查看俄语原文 ↗</a></div>
 </header>
 <main class="article-body">
 ${bodyHtml}
@@ -174,28 +194,37 @@ ${bodyHtml}
 `;
 }
 
+function catBadge(cat) {
+  const c = cat || 'news';
+  return `<span class="badge badge-${c}">${CAT_LABEL[c] || '新闻'}</span>`;
+}
+
 function homepageHtml(records, updated) {
-  const cards = records
+  const recent = records.slice(0, HOMEPAGE_RECENT);
+  const cards = recent
     .map(
-      (c) => `<article class="card">
+      (c) => `<article class="card" data-cat="${c.cat || 'news'}">
   <h2 class="ttl"><a href="article/${encodeURIComponent(c.slug)}.html">${escapeHtml(c.zh)}</a></h2>
   <div class="ru">${escapeHtml(c.ru)}</div>
   ${(c.sum || '').length > 1 ? `<p class="sum">${escapeHtml(c.sum.slice(0, 160))} <a class="more" href="article/${encodeURIComponent(c.slug)}.html">阅读全文 ↗</a></p>` : ''}
-  <div class="meta">● ${escapeHtml(c.beijing)}（北京时间） · <a href="${escapeHtml(c.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
+  <div class="meta">${catBadge(c.cat)} <span class="mtime">● ${escapeHtml(c.beijing)}（北京时间）</span> <a href="${escapeHtml(c.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`
     )
     .join('\n');
 
-  const recent = records.slice(0, HOMEPAGE_RECENT);
   const older = records.slice(HOMEPAGE_RECENT);
   let olderHtml = '';
   if (older.length) {
     const list = older
-      .map((o) => `<li><a href="article/${encodeURIComponent(o.slug)}.html">${escapeHtml(o.zh)}</a> <span class="old-date">${escapeHtml(o.beijing)}</span></li>`)
+      .map((o) => `<li class="arch-item" data-cat="${o.cat || 'news'}">${catBadge(o.cat)} <a href="article/${encodeURIComponent(o.slug)}.html">${escapeHtml(o.zh)}</a> <span class="old-date">${escapeHtml(o.beijing)}</span></li>`)
       .join('\n');
     olderHtml = `<details class="archive"><summary>更早的新闻（${records.length - recent.length} 篇）</summary>
 <ul>${list}</ul></details>`;
   }
+
+  const counts = { news: 0, event: 0, volunteer: 0 };
+  for (const r of records) counts[r.cat || 'news']++;
+  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer}`;
 
   return `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -215,10 +244,16 @@ function homepageHtml(records, updated) {
 <body>
 <header class="site-head">
   <h1>白俄新闻<span class="accent">中文站</span></h1>
-  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
-  <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇</p>
+  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
+  <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
 </header>
 <main>
+<div class="tabs" role="tablist">
+  <button class="tab active" data-f="all">全部</button>
+  <button class="tab" data-f="news">新闻</button>
+  <button class="tab" data-f="event">活动</button>
+  <button class="tab" data-f="volunteer">志愿者</button>
+</div>
 ${cards}
 ${olderHtml}
 </main>
@@ -226,6 +261,24 @@ ${olderHtml}
   <p>本站由机器自动抓取并翻译新闻，仅供学习交流，版权归原始来源 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">«Минск-новости»</a> 所有。</p>
   <p>时间均为北京时间 · <a href="https://github.com/wjd888-aaa/minsk-news-cn" target="_blank" rel="noopener noreferrer">开源项目</a></p>
 </footer>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tab');
+  var items = document.querySelectorAll('.card, .arch-item');
+  var arch = document.querySelector('.archive');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.classList.remove('active'); });
+      t.classList.add('active');
+      var f = t.getAttribute('data-f');
+      items.forEach(function (c) {
+        c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none';
+      });
+      if (arch) arch.open = (f !== 'all');
+    });
+  });
+})();
+</script>
 </body>
 </html>
 `;
@@ -250,8 +303,9 @@ async function main() {
   console.log('Parsed items: ' + blocks.length);
   if (!blocks.length) throw new Error('no items parsed');
 
-  // ---- 2. load existing index ----
+  // ---- 2. load existing index (re-classify by title so rules stay consistent) ----
   let index = readJson(INDEX_FILE, []);
+  for (const r of index) r.cat = classify(r.ru || '');
   const byLink = new Map(index.map((r) => [r.link, r]));
 
   // ---- 3. collect new records ----
@@ -266,6 +320,7 @@ async function main() {
       slug: slugFromUrl(link),
       link,
       ru,
+      cat: classify(ru),
       isodate,
       beijing: fmtBeijing(isodate),
     });
@@ -282,9 +337,12 @@ async function main() {
     await sleep(200 + Math.random() * 200);
   }
 
-  // ---- 5. full text for up to MAX_FULLTEXT newest ----
+  // ---- 5. full text for up to MAX_FULLTEXT (志愿者/活动优先, 再按最新) ----
+  const fulltextOrder = [...newRecords].sort(
+    (a, b) => (CAT_RANK[a.cat || 'news'] || 2) - (CAT_RANK[b.cat || 'news'] || 2)
+  );
   let fulltextDone = 0;
-  for (const rec of newRecords) {
+  for (const rec of fulltextOrder) {
     if (fulltextDone >= MAX_FULLTEXT) break;
     process.stdout.write(`  body: ${rec.ru.slice(0, 40)} ... `);
     try {
