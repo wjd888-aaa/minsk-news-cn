@@ -17,13 +17,17 @@ const VOLUNTEER_KEYS = [
   'волонтёр', 'волонтер', 'донор', 'благотворит', 'добровольц', 'красный крест',
   'гуманитарн', 'субботник', 'приют', 'пожертвова', 'безвозмездн', 'нуждающ'
 ];
-const CAT_LABEL = { news: '新闻', event: '活动', volunteer: '志愿者' };
-const CAT_RANK = { volunteer: 0, event: 1, news: 2 };
+const CHINA_KEYS = [
+  'китай', 'кнр', 'си цзиньпин', 'шанхайск', 'поднебесн', 'белорусско-китай', 'китайско-белорусск'
+];
+const CAT_LABEL = { news: '新闻', event: '活动', volunteer: '志愿者', china: '中白' };
+const CAT_RANK = { volunteer: 0, event: 1, china: 2, news: 3 };
 
 function classify(text) {
   const t = String(text || '').toLowerCase();
   for (const k of VOLUNTEER_KEYS) if (t.includes(k)) return 'volunteer';
   for (const k of EVENT_KEYS) if (t.includes(k)) return 'event';
+  for (const k of CHINA_KEYS) if (t.includes(k)) return 'china';
   return 'news';
 }
 
@@ -157,6 +161,69 @@ function nowBeijing() {
   return `${now.getUTCFullYear()}-${p(now.getUTCMonth() + 1)}-${p(now.getUTCDate())} ${p(now.getUTCHours())}:${p(now.getUTCMinutes())}`;
 }
 
+const WMO_DESC = {
+  0: ['☀️', '晴'], 1: ['🌤', '基本晴'], 2: ['⛅', '多云'], 3: ['☁️', '阴'],
+  45: ['🌫', '雾'], 48: ['🌫', '雾凇'], 51: ['🌦', '毛毛雨'], 53: ['🌦', '毛毛雨'], 55: ['🌧', '小毛毛雨'],
+  61: ['🌧', '小雨'], 63: ['🌧', '中雨'], 65: ['🌧', '大雨'], 66: ['🌧', '冻雨'], 67: ['🌧', '冻雨'],
+  71: ['🌨', '小雪'], 73: ['🌨', '中雪'], 75: ['❄️', '大雪'], 77: ['❄️', '雪粒'],
+  80: ['🌦', '阵雨'], 81: ['🌧', '阵雨'], 82: ['⛈', '强阵雨'], 85: ['🌨', '阵雪'], 86: ['❄️', '强阵雪'],
+  95: ['⛈', '雷雨'], 96: ['⛈', '雷雨冰雹'], 99: ['⛈', '强雷雨冰雹']
+};
+
+function wmo(code, fallback) {
+  const d = WMO_DESC[code] || fallback;
+  return d[0];
+}
+
+async function fetchWeather() {
+  try {
+    const url =
+      'https://api.open-meteo.com/v1/forecast?latitude=53.9&longitude=27.5667' +
+      '&current=temperature_2m,apparent_temperature,weather_code' +
+      '&daily=temperature_2m_max,temperature_2m_min,weather_code' +
+      '&forecast_days=5&timezone=Europe%2FMinsk';
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    if (!res.ok) throw new Error('weather http ' + res.status);
+    const j = await res.json();
+    const cur = j.current || {};
+    const d = j.daily || {};
+    const nowDesc = WMO_DESC[cur.weather_code] || ['🌡', ''];
+    const days = (d.time || []).slice(0, 4).map((t, i) => {
+      const code = (d.weather_code || [])[i];
+      const em = wmo(code, ['&#9679;']);
+      const day = String(t).slice(5).replace('-', '/');
+      return `${em} ${day} ${Math.round(d.temperature_2m_min[i])}~${Math.round(d.temperature_2m_max[i])}°`;
+    });
+    return `📍 明斯克天气 ${nowDesc[0]} ${Math.round(cur.temperature_2m)}°（体感 ${Math.round(cur.apparent_temperature)}°）${nowDesc[1]} · ${days.join(' ')}`;
+  } catch (e) {
+    console.log('weather fetch fail: ' + e.message);
+    return '';
+  }
+}
+
+async function fetchRates() {
+  try {
+    const url = 'https://api.nbrb.by/exrates/rates?periodicity=0';
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    if (!res.ok) throw new Error('rates http ' + res.status);
+    const list = await res.json();
+    const want = ['USD', 'CNY', 'RUB', 'EUR'];
+    const parts = [];
+    for (const w of want) {
+      const r = list.find((x) => x.Cur_Abbreviation === w && x.Cur_Scale);
+      if (!r) continue;
+      const rate = Number(r.Cur_OfficialRate);
+      const scale = Number(r.Cur_Scale);
+      const one = rate / scale;
+      parts.push(`${scale} ${w} = ${rate.toFixed(2)} BYN`);
+    }
+    return `🇧🇾 白央行汇率 ` + parts.join(' · ');
+  } catch (e) {
+    console.log('rates fetch fail: ' + e.message);
+    return '';
+  }
+}
+
 function articlePageHtml(rec) {
   let bodyHtml;
   if (rec.body && rec.body.length) {
@@ -199,7 +266,7 @@ function catBadge(cat) {
   return `<span class="badge badge-${c}">${CAT_LABEL[c] || '新闻'}</span>`;
 }
 
-function homepageHtml(records, updated) {
+function homepageHtml(records, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
   const cards = recent
     .map(
@@ -222,9 +289,9 @@ function homepageHtml(records, updated) {
 <ul>${list}</ul></details>`;
   }
 
-  const counts = { news: 0, event: 0, volunteer: 0 };
+  const counts = { news: 0, event: 0, volunteer: 0, china: 0 };
   for (const r of records) counts[r.cat || 'news']++;
-  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer}`;
+  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer} · 中白 ${counts.china}`;
 
   return `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -244,16 +311,22 @@ function homepageHtml(records, updated) {
 <body>
 <header class="site-head">
   <h1>白俄新闻<span class="accent">中文站</span></h1>
-  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
+  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 中白 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
   <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
 </header>
+${widgets}
 <main>
+<div class="searchbar">
+  <input id="search" type="search" placeholder="🔍 搜索中文或俄语标题…" autocomplete="off" aria-label="站内搜索">
+</div>
 <div class="tabs" role="tablist">
   <button class="tab active" data-f="all">全部</button>
   <button class="tab" data-f="news">新闻</button>
   <button class="tab" data-f="event">活动</button>
   <button class="tab" data-f="volunteer">志愿者</button>
+  <button class="tab" data-f="china">中白</button>
 </div>
+<p id="nores" class="nores" hidden>没有匹配的结果，换个关键词试试。</p>
 ${cards}
 ${olderHtml}
 </main>
@@ -266,17 +339,31 @@ ${olderHtml}
   var tabs = document.querySelectorAll('.tab');
   var items = document.querySelectorAll('.card, .arch-item');
   var arch = document.querySelector('.archive');
+  var input = document.getElementById('search');
+  var nores = document.getElementById('nores');
+  function apply() {
+    var active = document.querySelector('.tab.active');
+    var f = active ? active.getAttribute('data-f') : 'all';
+    var q = (input && input.value || '').toLowerCase().trim();
+    var vis = 0;
+    items.forEach(function (c) {
+      var okCat = (f === 'all' || c.getAttribute('data-cat') === f);
+      var okTxt = !q || (c.textContent || '').toLowerCase().indexOf(q) !== -1;
+      var show = okCat && okTxt;
+      c.style.display = show ? '' : 'none';
+      if (show) vis++;
+    });
+    if (nores) nores.hidden = vis !== 0;
+    if (arch) arch.open = (q !== '' || f !== 'all');
+  }
   tabs.forEach(function (t) {
     t.addEventListener('click', function () {
       tabs.forEach(function (x) { x.classList.remove('active'); });
       t.classList.add('active');
-      var f = t.getAttribute('data-f');
-      items.forEach(function (c) {
-        c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none';
-      });
-      if (arch) arch.open = (f !== 'all');
+      apply();
     });
   });
+  if (input) input.addEventListener('input', apply);
 })();
 </script>
 </body>
@@ -384,7 +471,15 @@ async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   mkdirSync(path.join(OUT_DIR, 'article'), { recursive: true });
   const updated = nowBeijing();
-  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, updated), 'utf8');
+  let widgets = '';
+  try {
+    const [w1, r1] = await Promise.all([fetchWeather(), fetchRates()]);
+    const parts = [w1, r1].filter(Boolean).map((p) => `<p class="widget">${p}</p>`);
+    if (parts.length) widgets = `<div class="widgets">${parts.join('')}</div>`;
+  } catch (e) {
+    console.log('widgets fetch fail: ' + e.message);
+  }
+  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, updated, widgets), 'utf8');
   for (const rec of records) {
     try {
       writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
