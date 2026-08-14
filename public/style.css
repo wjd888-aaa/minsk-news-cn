@@ -136,9 +136,70 @@ main {
 .site-foot a { color: var(--accent); text-decoration: none; }
 .site-foot p { margin: 4px 0; }
 
+.crumb {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 24px 20px 0;
+  font-size: 13px;
+}
+
+.crumb a { color: var(--accent); text-decoration: none; }
+
+.article-head { padding-bottom: 12px; }
+.article-head h1 { font-size: 26px; line-height: 1.5; }
+.article-head .meta { margin-top: 10px; color: var(--muted); font-size: 12.5px; }
+.article-head .meta a { color: var(--accent); text-decoration: none; }
+
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+}
+
+.article-body p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  margin: 0 0 16px;
+  color: #33302c;
+}
+
+.article-body a { color: var(--accent); }
+
+.article-body .note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.archive {
+  margin: 22px 0;
+  padding: 14px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.archive summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.archive ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+.archive li { margin: 4px 0; }
+.archive li a { color: var(--ink); text-decoration: none; }
+.archive li a:hover { color: var(--accent); }
+.archive .old-date { color: var(--muted); font-size: 11.5px; }
+
 @media (max-width: 560px) {
   .site-head { padding-top: 34px; }
   .site-head h1 { font-size: 27px; }
   .card { padding: 16px 16px; }
   .card .ttl { font-size: 16px; }
+  .article-head h1 { font-size: 21px; }
 }

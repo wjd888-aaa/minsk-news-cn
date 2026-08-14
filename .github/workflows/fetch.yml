@@ -2,13 +2,13 @@ name: Build & Deploy
 
 on:
   schedule:
-    - cron: '0,30 * * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -28,18 +28,31 @@ jobs:
         with:
           node-version: 20
 
-      - name: Fetch & translate RSS
+      - name: Fetch & translate
+        id: build
         run: node scripts/build.js
-        timeout-minutes: 10
+        timeout-minutes: 25
+
+      - name: Commit new articles
+        if: steps.build.outputs.skipped != 'true'
+        run: |
+          git config user.name "wjd888-aaa"
+          git config user.email "wjd888-aaa@users.noreply.github.com"
+          git add articles
+          git diff --cached --quiet || git commit -m "chore: update articles"
+          git push origin main
 
       - name: Configure Pages
+        if: steps.build.outputs.skipped != 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
+        if: steps.build.outputs.skipped != 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
       - name: Deploy to Pages
         id: deployment
+        if: steps.build.outputs.skipped != 'true'
         uses: actions/deploy-pages@v4
