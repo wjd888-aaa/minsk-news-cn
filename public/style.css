@@ -238,6 +238,45 @@ main {
   color: var(--muted);
 }
 
+.card.deal { background: #fbfbf7; }
+
+.card.deal .deal-img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #f0ede6;
+}
+
+.card.deal .deal-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.card.deal .store-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #eaf6ec;
+  color: #1e8a4c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card.deal .deal-text {
+  margin: 0;
+  font-size: 14px;
+  color: #4a4642;
+  word-break: break-word;
+}
+
 .site-foot {
   max-width: 780px;
   margin: 0 auto;

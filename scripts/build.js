@@ -26,6 +26,28 @@ const CHINA_KEYS = [
 const CAT_LABEL = { news: '新闻', event: '活动', volunteer: '志愿者', china: '中白' };
 const CAT_RANK = { volunteer: 0, event: 1, china: 2, news: 3 };
 
+const DEAL_CHANNELS = [
+  { user: 'shopsgreen', store: 'Green' },
+  { user: 'evroopt_shop', store: 'Евроопт' },
+  { user: 'almi_by', store: 'АЛМИ' },
+  { user: 'hitdiscount_by', store: 'Хит' },
+  { user: 'gippoby_offical', store: 'Гиппо' },
+  { user: 'kopeechka_by', store: 'Копеечка' },
+  { user: 'groshyk', store: 'Грошык' },
+  { user: 'santaretail_by', store: 'Санта' },
+  { user: 'fixprice_by', store: 'Fix Price' },
+  { user: 'koronaby', store: 'Корона' },
+  { user: 'unistoreminsk', store: 'UniStore' },
+];
+const DEAL_DAYS = 30;
+const DEAL_MAX = 100;
+
+const DEAL_PAGES = [
+  { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
+  { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
+  { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
+];
+
 function classify(text) {
   const t = String(text || '').toLowerCase();
   for (const k of VOLUNTEER_KEYS) if (t.includes(k)) return 'volunteer';
@@ -39,6 +61,7 @@ const OUT_DIR = path.join(ROOT, 'out');
 const ART_DIR = path.join(ROOT, 'articles');
 const INDEX_FILE = path.join(ART_DIR, 'index.json');
 const LAST_RUN_FILE = path.join(ART_DIR, 'last_fetch.json');
+const DEALS_FILE = path.join(ART_DIR, 'deals.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -227,6 +250,194 @@ async function fetchRates() {
   }
 }
 
+function parse3CeniSales(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/<a\b[^>]*href="(\/sale\/[a-z0-9-]+\/)"[^>]*>([\s\S]*?)<\/a>/g)) {
+    const slug = m[1].replace(/^\/|\/$/g, '');
+    if (seen.has(slug)) continue;
+    const text = stripHtml(m[2]);
+    if (!text) continue;
+    seen.add(slug);
+    const periodM = text.match(/(?:с|С)\s*(\d{1,2})\s+по\s+(\d{1,2})\s+([а-яё]+)/);
+    out.push({
+      id: slug,
+      link: 'https://3ceni.by' + m[1],
+      text,
+      period: periodM ? `с ${periodM[1]} по ${periodM[2]} ${periodM[3]}` : '',
+    });
+  }
+  return out;
+}
+
+function parseDionisPromos(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/<div class="swiper-slide">([\s\S]*?)<\/a>\s*<\/div>\s*<\/div>/g)) {
+    const block = m[1];
+    const hrefM = block.match(/href='(https:\/\/dionis-shop\.by\/promotions\/[a-z0-9-]+)'/);
+    const titleM = block.match(/<div class="title">([^<]*)<\/div>/);
+    if (!hrefM || !titleM) continue;
+    const slug = hrefM[1].split('/').pop();
+    if (seen.has(slug)) continue;
+    const text = stripHtml(titleM[1]);
+    const dateM = block.match(/<div class="date">([^<]*)<\/div>/);
+    if (!text || text.includes('Полоцк')) continue;
+    seen.add(slug);
+    out.push({
+      id: slug,
+      link: hrefM[1],
+      text,
+      period: dateM ? dateM[1].trim() : '',
+    });
+  }
+  return out;
+}
+
+function parsePerekrestokDiscounts(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/<a\b[^>]*href="(\/discounts\/[a-z0-9-]+\/)"[^>]*>([\s\S]*?)<\/a>/g)) {
+    const slug = m[1].replace(/^\/|\/$/g, '');
+    if (seen.has(slug)) continue;
+    const text = stripHtml(m[2]);
+    if (!text) continue;
+    seen.add(slug);
+    const periodM = text.match(/(?:с|С)\s*(\d{1,2}(?:\s+[а-яё]+)?)\s+по\s+(\d{1,2}(?:\s+[а-яё]+)?)/);
+    out.push({
+      id: slug,
+      link: 'https://perekrestok24.by' + m[1],
+      text,
+      period: periodM ? `с ${periodM[1]} по ${periodM[2]}` : '',
+    });
+  }
+  return out;
+}
+
+async function fetchPerekrestokPeriod(it) {
+  try {
+    const res = await fetch(it.link, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+    });
+    if (!res.ok) return it;
+    const html = await res.text();
+    const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1];
+    if (h1) it.text = stripHtml(h1);
+    const p =
+      (html.match(/с\s+\d{1,2}(?:\s+[а-яё]+)?\s+по\s+\d{1,2}(?:\s+[а-яё]+)?/i) || [])[0] ||
+      (html.match(/\d{1,2}\.\d{2}\.\d{4}\s*[-–]\s*\d{1,2}\.\d{2}\.\d{4}/) || [])[0] ||
+      '';
+    if (p) it.period = p;
+  } catch (e) {
+    // keep listing item as-is
+  }
+  return it;
+}
+
+function parseTelegramPage(html) {
+  const out = [];
+  const posts = [];
+  const rePost = /data-post="([\w-]+\/\d+)"/g;
+  let m;
+  while ((m = rePost.exec(html))) posts.push({ post: m[1], at: m.index });
+  for (let i = 0; i < posts.length; i++) {
+    const start = posts[i].at;
+    const end = i + 1 < posts.length ? posts[i + 1].at : html.length;
+    const block = html.slice(start, end);
+    if (block.includes('service_message')) continue;
+    const textM = block.match(/js-message_text" dir="auto">([\s\S]*?)<\/div>/);
+    const dateM = block.match(/datetime="([^"]+)"/);
+    const photoM = block.match(/background-image:url\(\\?'(https:\/\/cdn4\.telesco\.pe\/[^'\\]+)/);
+    const text = textM ? stripHtml(textM[1]) : '';
+    if (!text && !photoM) continue;
+    out.push({
+      id: posts[i].post.split('/')[1],
+      link: 'https://t.me/' + posts[i].post,
+      date: dateM ? dateM[1] : '',
+      text,
+      photo: photoM ? photoM[1] : '',
+    });
+  }
+  return out;
+}
+
+async function fetchDeals() {
+  mkdirSync(ART_DIR, { recursive: true });
+  const existing = readJson(DEALS_FILE, []);
+  const clean = (d) => (d.user || '').length > 1 && d.id && d.id !== 'undefined';
+  const tgMap = new Map(existing.filter((d) => !(d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
+  const pageMap = new Map(existing.filter((d) => (d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
+  const cutoff = Date.now() - DEAL_DAYS * 86400000;
+  for (const ch of DEAL_CHANNELS) {
+    try {
+      const res = await fetch(`https://t.me/s/${ch.user}`, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+      });
+      if (!res.ok) throw new Error('http ' + res.status);
+      const html = await res.text();
+      const msgs = parseTelegramPage(html);
+      let kept = 0;
+      for (const msg of msgs) {
+        if (!msg.date || new Date(msg.date).getTime() < cutoff) continue;
+        tgMap.set(ch.user + '/' + msg.id, {
+          user: ch.user,
+          store: ch.store,
+          link: msg.link,
+          date: msg.date,
+          beijing: fmtBeijing(msg.date),
+          text: msg.text,
+          photo: msg.photo,
+        });
+        kept++;
+      }
+      console.log(`  deals ${ch.user}: ${msgs.length} 帖，保留 ${kept}`);
+    } catch (e) {
+      console.log(`  deals ${ch.user} fail: ${e.message}`);
+    }
+    await sleep(300);
+  }
+  for (const src of DEAL_PAGES) {
+    try {
+      const res = await fetch(src.url, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+      });
+      if (!res.ok) throw new Error('http ' + res.status);
+      const items = src.parse(await res.text());
+      const now = new Date().toISOString();
+      let kept = 0;
+      for (const it of items.slice(0, src.limit || 8)) {
+        if (src.enrich) {
+          await src.enrich(it);
+          await sleep(200);
+        }
+        pageMap.set('page:' + src.id + '/' + it.id, {
+          user: 'page:' + src.id,
+          id: it.id,
+          store: src.store,
+          link: it.link,
+          date: now,
+          beijing: fmtBeijing(now),
+          text: it.text,
+          period: it.period || '',
+          photo: '',
+        });
+        kept++;
+      }
+      console.log(`  deals ${src.id}: ${items.length} 条，保留 ${kept}`);
+    } catch (e) {
+      console.log(`  deals ${src.id} fail: ${e.message}`);
+    }
+    await sleep(300);
+  }
+  const pageItems = [...pageMap.values()];
+  const tgItems = [...tgMap.values()]
+    .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const deals = [...pageItems, ...tgItems].slice(0, DEAL_MAX);
+  writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
+  return deals;
+}
+
 function articlePageHtml(rec) {
   let bodyHtml;
   if (rec.body && rec.body.length) {
@@ -270,8 +481,20 @@ function catBadge(cat) {
   return `<span class="badge badge-${c}">${CAT_LABEL[c] || '新闻'}</span>`;
 }
 
-function homepageHtml(records, updated, widgets) {
+function homepageHtml(records, deals, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
+  const dealCards = deals.length
+    ? deals
+        .map(
+          (d) => `<article class="card deal" data-cat="deal">
+  ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
+  <div class="deal-head"><span class="store-badge">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
+  <p class="deal-text">${escapeHtml(d.text.slice(0, 300))}</p>
+  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">在 Telegram 查看原文 ↗</a></div>
+</article>`
+        )
+        .join('\n')
+    : '';
   const cards = recent
     .map(
       (c) => `<article class="card" data-cat="${c.cat || 'news'}">
@@ -295,7 +518,7 @@ function homepageHtml(records, updated, widgets) {
 
   const counts = { news: 0, event: 0, volunteer: 0, china: 0 };
   for (const r of records) counts[r.cat || 'news']++;
-  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer} · 中白 ${counts.china}`;
+  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条`;
 
   return `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -303,11 +526,11 @@ function homepageHtml(records, updated, widgets) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>白俄新闻中文站 · 白俄罗斯新闻中文明日速览</title>
-<meta name="description" content="自动翻译自 minsknews.by 的白俄罗斯与明斯克最新新闻，每 23 小时更新，按北京时间显示，点击标题查看中文全文。">
+<meta name="description" content="自动翻译自 minsknews.by 的白俄罗斯与明斯克新闻，以及明斯克各大超市折扣（Telegram 汇总），定时更新，按北京时间显示。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="白俄新闻中文站">
 <meta property="og:title" content="白俄新闻中文站 · 白俄罗斯新闻中文明日速览">
-<meta property="og:description" content="自动翻译自 minsknews.by 的白俄罗斯与明斯克最新新闻，每 23 小时更新，点击标题看中文全文。">
+<meta property="og:description" content="白俄罗斯与明斯克新闻（自动翻译自 minsknews.by）与明斯克超市折扣汇总（Telegram），定时更新。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 <link rel="stylesheet" href="style.css">
@@ -316,7 +539,7 @@ function homepageHtml(records, updated, widgets) {
 ${PARENT_LINK}
 <header class="site-head">
   <h1>白俄新闻<span class="accent">中文站</span></h1>
-  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 中白 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
+  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 中白 · 超市折扣 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 新闻每 23 小时更新 · 折扣每 30 分钟更新</p>
   <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
 </header>
 ${widgets}
@@ -326,12 +549,14 @@ ${widgets}
 </div>
 <div class="tabs" role="tablist">
   <button class="tab active" data-f="all">全部</button>
+  <button class="tab" data-f="deal">超市折扣</button>
   <button class="tab" data-f="news">新闻</button>
   <button class="tab" data-f="event">活动</button>
   <button class="tab" data-f="volunteer">志愿者</button>
   <button class="tab" data-f="china">中白</button>
 </div>
 <p id="nores" class="nores" hidden>没有匹配的结果，换个关键词试试。</p>
+${dealCards}
 ${cards}
 ${olderHtml}
 </main>
@@ -376,17 +601,7 @@ ${olderHtml}
 `;
 }
 
-async function main() {
-  // ---- 1. 23h gate ----
-  const lastRun = readJson(LAST_RUN_FILE, null);
-  if (lastRun && lastRun.ts && Date.now() - lastRun.ts < FETCH_INTERVAL_MS) {
-    const left = Math.ceil((FETCH_INTERVAL_MS - (Date.now() - lastRun.ts)) / 3600000);
-    console.log(`SKIP: 距上次抓取不足 23 小时，${left} 小时后再次检查。`);
-    if (process.env.GITHUB_OUTPUT) {
-      appendFileSync(process.env.GITHUB_OUTPUT, 'skipped=true\n');
-    }
-    process.exit(0);
-  }
+async function fetchNews() {
   console.log('Fetching RSS from ' + RSS_URL);
   const res = await fetch(RSS_URL, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error('RSS http ' + res.status);
@@ -395,12 +610,12 @@ async function main() {
   console.log('Parsed items: ' + blocks.length);
   if (!blocks.length) throw new Error('no items parsed');
 
-  // ---- 2. load existing index (re-classify by title so rules stay consistent) ----
+  // ---- 1. load existing index (re-classify by title so rules stay consistent) ----
   let index = readJson(INDEX_FILE, []);
   for (const r of index) r.cat = classify(r.ru || '');
   const byLink = new Map(index.map((r) => [r.link, r]));
 
-  // ---- 3. collect new records ----
+  // ---- 2. collect new records ----
   const newRecords = [];
   for (const b of blocks.slice(0, MAX_ITEMS)) {
     const link = field(b, 'link').trim();
@@ -419,7 +634,7 @@ async function main() {
   }
   console.log('New articles: ' + newRecords.length);
 
-  // ---- 4. translate new records (title + summary) ----
+  // ---- 3. translate new records (title + summary) ----
   for (const rec of newRecords) {
     const desc = stripHtml(field(blocks.find((b) => field(b, 'link').trim() === rec.link) || '', 'description'));
     process.stdout.write(`  title: ${rec.ru.slice(0, 40)} ... `);
@@ -429,7 +644,7 @@ async function main() {
     await sleep(200 + Math.random() * 200);
   }
 
-  // ---- 5. full text for up to MAX_FULLTEXT (志愿者/活动优先, 再按最新) ----
+  // ---- 4. full text for up to MAX_FULLTEXT (志愿者/活动优先, 再按最新) ----
   const fulltextOrder = [...newRecords].sort(
     (a, b) => (CAT_RANK[a.cat || 'news'] || 2) - (CAT_RANK[b.cat || 'news'] || 2)
   );
@@ -460,11 +675,11 @@ async function main() {
     }
   }
 
-  // ---- 6. merge into index, sort desc ----
+  // ---- 5. merge into index, sort desc ----
   for (const rec of newRecords) byLink.set(rec.link, rec);
   const records = [...byLink.values()].sort((a, b) => new Date(b.isodate) - new Date(a.isodate));
 
-  // ---- 7. write article pages + persist ----
+  // ---- 6. write article pages + persist ----
   mkdirSync(ART_DIR, { recursive: true });
   for (const rec of newRecords) {
     writeFileSync(path.join(ART_DIR, `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
@@ -472,7 +687,10 @@ async function main() {
   writeFileSync(INDEX_FILE, JSON.stringify(records, null, 2), 'utf8');
   writeFileSync(LAST_RUN_FILE, JSON.stringify({ ts: Date.now(), iso: new Date().toISOString() }), 'utf8');
 
-  // ---- 8. build site ----
+  return { records, newCount: newRecords.length, fulltextDone };
+}
+
+async function buildSite(records, deals) {
   mkdirSync(OUT_DIR, { recursive: true });
   mkdirSync(path.join(OUT_DIR, 'article'), { recursive: true });
   const updated = nowBeijing();
@@ -484,7 +702,7 @@ async function main() {
   } catch (e) {
     console.log('widgets fetch fail: ' + e.message);
   }
-  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, updated, widgets), 'utf8');
+  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, updated, widgets), 'utf8');
   for (const rec of records) {
     try {
       writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
@@ -493,8 +711,35 @@ async function main() {
     }
   }
   copyFileSync(CSS_SRC, path.join(OUT_DIR, 'style.css'));
+}
 
-  console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newRecords.length} 篇（全文 ${fulltextDone} 篇）。`);
+async function main() {
+  // ---- 1. news 23h gate（只拦新闻，不拦超市折扣）----
+  const lastRun = readJson(LAST_RUN_FILE, null);
+  const gateBlocked = !!(lastRun && lastRun.ts && Date.now() - lastRun.ts < FETCH_INTERVAL_MS);
+
+  let records = [];
+  let newCount = 0;
+  let fulltextDone = 0;
+  if (gateBlocked) {
+    const left = Math.ceil((FETCH_INTERVAL_MS - (Date.now() - lastRun.ts)) / 3600000);
+    console.log(`SKIP news: 距上次抓取不足 23 小时，${left} 小时后再次检查。仍会抓取超市折扣并重建页面。`);
+    if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, 'news_skipped=true\n');
+    records = readJson(INDEX_FILE, []);
+  } else {
+    const r = await fetchNews();
+    records = r.records;
+    newCount = r.newCount;
+    fulltextDone = r.fulltextDone;
+  }
+
+  // ---- 2. 超市折扣（始终抓取）----
+  const deals = await fetchDeals();
+  console.log('Deals: ' + deals.length + ' 条');
+
+  // ---- 3. build site（始终重建）----
+  await buildSite(records, deals);
+  console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newCount} 篇（全文 ${fulltextDone} 篇），折扣 ${deals.length} 条。`);
 }
 
 main().catch((e) => {
