@@ -45,13 +45,14 @@ self.addEventListener('fetch', function (e) {
 
   e.respondWith(
     caches.match(req).then(function (hit) {
-      return hit || fetch(req).then(function (res) {
+      var upd = fetch(req).then(function (res) {
         if (res.ok) {
           var copy = res.clone();
           caches.open(CACHE).then(function (c) { c.put(req, copy); });
         }
         return res;
       });
+      return hit || upd;
     })
   );
 });
