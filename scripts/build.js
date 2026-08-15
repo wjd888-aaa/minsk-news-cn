@@ -44,6 +44,24 @@ const STORE_ZH = {
 };
 const zhStore = (s) => STORE_ZH[s] || s;
 
+const STORE_EN = {
+  Green: 'Green',
+  'Евроопт': 'Euroopt',
+  'АЛМИ': 'ALMI',
+  'Хит': 'Hit',
+  'Гиппо': 'Hippo',
+  'Копеечка': 'Kopeechka',
+  'Грошык': 'Groshyk',
+  'Санта': 'Santa',
+  'Fix Price': 'Fix Price',
+  'Корона': 'Korona',
+  'UniStore': 'UniStore',
+  'Три цены': 'Tri Tseny',
+  'Дионис': 'Dionis',
+  'ПерекрестОК': 'PerekrestOK',
+};
+const enStore = (s) => STORE_EN[s] || s;
+
 const DEAL_CHANNELS = [
   { user: 'shopsgreen', store: 'Green' },
   { user: 'evroopt_shop', store: 'Евроопт' },
@@ -570,19 +588,19 @@ function homepageHtml(records, deals, updated, widgets) {
     .sort((a, b) => storeCounts[b] - storeCounts[a])
     .map(
       (s) =>
-        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(zhStore(s))}<b>${storeCounts[s]}</b></button>`
+        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(enStore(s))}<b>${storeCounts[s]}</b></button>`
     )
     .join('\n');
   const dealBar = deals.length
     ? `<div class="deals-bar">
   <div class="storechips">
-    <button class="chip active" data-store="" type="button">全部</button>
+    <button class="chip active" data-store="" type="button">All</button>
     ${storeChips}
   </div>
   <div class="deal-sort">
-    <span class="deals-n">共 ${deals.length} 条</span>
-    <button class="sbtn active" data-sort="time" type="button">最新</button>
-    <button class="sbtn" data-sort="price" type="button">价格从低到高</button>
+    <span class="deals-n">${deals.length} deals</span>
+    <button class="sbtn active" data-sort="time" type="button">Newest</button>
+    <button class="sbtn" data-sort="price" type="button">Price (Low→High)</button>
   </div>
 </div>`
     : '';
