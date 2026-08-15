@@ -617,9 +617,10 @@ ${deals
     : d.discount != null
       ? `<div class="deal-price off">−${d.discount}%</div>`
       : ''}
-  <p class="deal-text">${escapeHtml((d.zh || d.text).slice(0, 300))}</p>
+  <p class="deal-text clamp">${escapeHtml((d.zh || d.text).slice(0, 1500))}</p>
+  <button class="deal-more" type="button" hidden>展开全文</button>
   <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
-  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">在源网站查看原文 ↗</a></div>
 </article>`
   )
   .join('\n')}
@@ -745,7 +746,28 @@ ${olderHtml}
       feed.style.display = dealVis ? '' : 'none';
     }
     sortDeals();
+    refreshDealButtons();
   }
+  function refreshDealButtons() {
+    document.querySelectorAll('.card.deal .deal-text').forEach(function (t) {
+      var btn = t.parentElement.querySelector('.deal-more');
+      if (!btn) return;
+      if (t.classList.contains('clamp')) {
+        btn.hidden = t.scrollHeight <= t.clientHeight + 2;
+        btn.textContent = '展开全文';
+      } else {
+        btn.hidden = false;
+        btn.textContent = '收起';
+      }
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.deal-more') : null;
+    if (!btn) return;
+    var t = btn.parentElement.querySelector('.deal-text');
+    if (t) t.classList.toggle('clamp');
+    refreshDealButtons();
+  });
   tabs.forEach(function (t) {
     t.addEventListener('click', function () {
       tabs.forEach(function (x) { x.classList.remove('active'); });

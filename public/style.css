@@ -282,6 +282,27 @@ main {
   word-break: break-word;
 }
 
+.card.deal .deal-text.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card.deal .deal-more {
+  display: block;
+  margin-top: 6px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #1e8a4c;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card.deal .deal-more:hover { text-decoration: underline; }
+
 .deal-feed { margin: 0 0 6px; }
 
 .deals-bar {
