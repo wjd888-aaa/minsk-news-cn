@@ -370,6 +370,57 @@ async function fetchPerekrestokPeriod(it) {
   return it;
 }
 
+function monthKey(w) {
+  const s = String(w || '').toLowerCase();
+  if (s.startsWith('январ')) return 0;
+  if (s.startsWith('феврал')) return 1;
+  if (s.startsWith('март')) return 2;
+  if (s.startsWith('апрел')) return 3;
+  if (s.startsWith('ма')) return 4;
+  if (s.startsWith('июн')) return 5;
+  if (s.startsWith('июл')) return 6;
+  if (s.startsWith('август')) return 7;
+  if (s.startsWith('сентябр')) return 8;
+  if (s.startsWith('октябр')) return 9;
+  if (s.startsWith('ноябр')) return 10;
+  if (s.startsWith('декабр')) return 11;
+  return -1;
+}
+
+function parseEndDate(str) {
+  if (!str) return null;
+  const t = String(str).trim();
+  let day, mon, yr;
+  let m = t.match(/^(\d{1,2})\s+([а-яё]+)\s+(\d{4})$/i);
+  if (m) {
+    day = +m[1]; mon = monthKey(m[2]); yr = +m[3];
+  } else {
+    m = t.match(/^(\d{1,2})\s+([а-яё]+)$/i);
+    if (m) { day = +m[1]; mon = monthKey(m[2]); }
+    else {
+      m = t.match(/^(\d{1,2})\.(\d{2})(?:\.(\d{4}))?$/);
+      if (m) { day = +m[1]; mon = +m[2] - 1; yr = m[3] ? +m[3] : undefined; }
+    }
+  }
+  if (day === undefined || mon === undefined || mon < 0) return null;
+  const now = new Date();
+  if (!yr) {
+    yr = now.getFullYear();
+    let d = new Date(yr, mon, day);
+    if (now - d > 120 * 86400000) d = new Date(yr + 1, mon, day);
+    return d;
+  }
+  return new Date(yr, mon, day);
+}
+
+function isDealExpired(d) {
+  const end = parseEndDate(d && d.endDate);
+  if (!end) return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return end.getTime() < today.getTime();
+}
+
 function extractDealFields(text, period) {
   const t = String(text || '');
   const out = { price: null, priceUnit: '', oldPrice: null, discount: null, endDate: '' };
@@ -532,7 +583,7 @@ async function fetchDeals() {
   const tgItems = [...tgMap.values()]
     .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
-  const deals = [...pageItems, ...tgItems].slice(0, DEAL_MAX);
+  const deals = [...pageItems, ...tgItems].filter((d) => !isDealExpired(d)).slice(0, DEAL_MAX);
   writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
   return deals;
 }
