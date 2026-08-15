@@ -26,6 +26,24 @@ const CHINA_KEYS = [
 const CAT_LABEL = { news: '新闻', event: '活动', volunteer: '志愿者', china: '中白' };
 const CAT_RANK = { volunteer: 0, event: 1, china: 2, news: 3 };
 
+const STORE_ZH = {
+  Green: '绿超市',
+  'Евроопт': '欧罗超市',
+  'АЛМИ': '阿尔米',
+  'Хит': '嗨特',
+  'Гиппо': '吉波',
+  'Копеечка': '小零钱',
+  'Грошык': '格罗什克',
+  'Санта': '圣诞超市',
+  'Fix Price': '固价超市',
+  'Корона': '皇冠超市',
+  'UniStore': '尤尼斯特',
+  'Три цены': '三价超市',
+  'Дионис': '迪奥尼斯',
+  'ПерекрестОК': '十字路口',
+};
+const zhStore = (s) => STORE_ZH[s] || s;
+
 const DEAL_CHANNELS = [
   { user: 'shopsgreen', store: 'Green' },
   { user: 'evroopt_shop', store: 'Евроопт' },
@@ -424,13 +442,21 @@ async function fetchDeals() {
       let kept = 0;
       for (const msg of msgs) {
         if (!msg.date || new Date(msg.date).getTime() < cutoff) continue;
-        tgMap.set(ch.user + '/' + msg.id, {
+        const key = ch.user + '/' + msg.id;
+        const prev = tgMap.get(key);
+        let zh = (prev && prev.zh) || '';
+        if (!zh) {
+          zh = (await translate(msg.text.slice(0, 1500))) || msg.text;
+          await sleep(150);
+        }
+        tgMap.set(key, {
           user: ch.user,
           store: ch.store,
           link: msg.link,
           date: msg.date,
           beijing: fmtBeijing(msg.date),
           text: msg.text,
+          zh,
           photo: msg.photo,
           ...extractDealFields(msg.text, ''),
         });
@@ -456,7 +482,14 @@ async function fetchDeals() {
           await src.enrich(it);
           await sleep(200);
         }
-        pageMap.set('page:' + src.id + '/' + it.id, {
+        const key = 'page:' + src.id + '/' + it.id;
+        const prev = pageMap.get(key);
+        let zh = (prev && prev.zh) || '';
+        if (!zh) {
+          zh = (await translate(it.text.slice(0, 1500))) || it.text;
+          await sleep(150);
+        }
+        pageMap.set(key, {
           user: 'page:' + src.id,
           id: it.id,
           store: src.store,
@@ -464,6 +497,7 @@ async function fetchDeals() {
           date: now,
           beijing: fmtBeijing(now),
           text: it.text,
+          zh,
           period: it.period || '',
           photo: '',
           ...extractDealFields(it.text, it.period || ''),
@@ -536,7 +570,7 @@ function homepageHtml(records, deals, updated, widgets) {
     .sort((a, b) => storeCounts[b] - storeCounts[a])
     .map(
       (s) =>
-        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(s)}<b>${storeCounts[s]}</b></button>`
+        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(zhStore(s))}<b>${storeCounts[s]}</b></button>`
     )
     .join('\n');
   const dealBar = deals.length
@@ -557,16 +591,17 @@ function homepageHtml(records, deals, updated, widgets) {
 ${dealBar}
 ${deals
   .map(
-    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}">
+    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" title="${escapeHtml((d.period ? d.period + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
-  <div class="deal-head"><span class="store-badge">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
+  <div class="deal-head"><span class="store-badge">${escapeHtml(zhStore(d.store))}</span> <span class="store-ru">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
     ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}</div>`
     : d.discount != null
       ? `<div class="deal-price off">−${d.discount}%</div>`
       : ''}
-  <p class="deal-text">${escapeHtml(d.text.slice(0, 300))}</p>
-  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">在 Telegram 查看原文 ↗</a></div>
+  <p class="deal-text">${escapeHtml((d.zh || d.text).slice(0, 300))}</p>
+  <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
+  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
 </article>`
   )
   .join('\n')}
@@ -574,9 +609,9 @@ ${deals
     : '';
   const cards = recent
     .map(
-      (c) => `<article class="card" data-cat="${c.cat || 'news'}">
+      (c) => `<article class="card" data-cat="${c.cat || 'news'}" title="${escapeHtml(c.ru.slice(0, 160))}">
   <h2 class="ttl"><a href="article/${encodeURIComponent(c.slug)}.html">${escapeHtml(c.zh)}</a></h2>
-  <div class="ru">${escapeHtml(c.ru)}</div>
+  <span class="ru-src" hidden>${escapeHtml(c.ru)}</span>
   ${(c.sum || '').length > 1 ? `<p class="sum">${escapeHtml(c.sum.slice(0, 160))} <a class="more" href="article/${encodeURIComponent(c.slug)}.html">阅读全文 ↗</a></p>` : ''}
   <div class="meta">${catBadge(c.cat)} <span class="mtime">● ${escapeHtml(c.beijing)}（北京时间）</span> <a href="${escapeHtml(c.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`

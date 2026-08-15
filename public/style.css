@@ -270,6 +270,11 @@ main {
   font-weight: 700;
 }
 
+.card.deal .store-ru {
+  font-size: 11px;
+  color: #a29c95;
+}
+
 .card.deal .deal-text {
   margin: 0;
   font-size: 14px;
