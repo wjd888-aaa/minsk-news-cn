@@ -1,0 +1,17 @@
+{
+  "name": "白俄新闻中文站",
+  "short_name": "白俄新闻",
+  "description": "白俄罗斯与明斯克新闻（自动翻译自 minsknews.by）与明斯克超市折扣汇总",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f5f1",
+  "theme_color": "#b33a2e",
+  "lang": "zh-CN",
+  "categories": ["news"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
