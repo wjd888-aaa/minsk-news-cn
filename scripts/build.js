@@ -98,6 +98,7 @@ const ART_DIR = path.join(ROOT, 'articles');
 const INDEX_FILE = path.join(ART_DIR, 'index.json');
 const LAST_RUN_FILE = path.join(ART_DIR, 'last_fetch.json');
 const DEALS_FILE = path.join(ART_DIR, 'deals.json');
+const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -421,6 +422,38 @@ function isDealExpired(d) {
   return end.getTime() < today.getTime();
 }
 
+function dealSig(d) {
+  const t = String(d.text || '')
+    .toLowerCase()
+    .replace(/\d{1,4}[.,]\d{2}/g, ' ')
+    .replace(/[\u4e00-\u9fff]/g, ' ')
+    .replace(/[^а-яёa-z0-9]+/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return (d.store + '|' + t).slice(0, 80);
+}
+
+function trendOf(d) {
+  const h = (d && d.history) || [];
+  if (h.length < 2) return '';
+  const cur = h[h.length - 1].p;
+  const prev = h[h.length - 2].p;
+  if (cur == null || prev == null || cur === prev) return '';
+  const delta = cur - prev;
+  return delta < 0 ? `▼${Math.abs(delta).toFixed(2)}` : `▲${delta.toFixed(2)}`;
+}
+
+function shareText(d) {
+  const zh = d.zh || d.text || '';
+  let prefix = '';
+  if (d.price != null) {
+    prefix = `${d.price.toFixed(2).replace('.', ',')} BYN${d.priceUnit ? '/' + d.priceUnit : ''}`;
+  } else if (d.discount != null && zh.indexOf('-' + d.discount + '%') === -1 && zh.indexOf('−' + d.discount + '%') === -1) {
+    prefix = `−${d.discount}%`;
+  }
+  return `【${zhStore(d.store)}】${prefix ? prefix + ' ' : ''}${zh.slice(0, 120)} — ${d.link}`;
+}
+
 function extractDealFields(text, period) {
   const t = String(text || '');
   const out = { price: null, priceUnit: '', oldPrice: null, discount: null, endDate: '' };
@@ -500,6 +533,25 @@ async function fetchDeals() {
   const tgMap = new Map(existing.filter((d) => !(d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
   const pageMap = new Map(existing.filter((d) => (d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
   const cutoff = Date.now() - DEAL_DAYS * 86400000;
+  const histMap = new Map();
+  for (const d of existing) {
+    if (!clean(d)) continue;
+    const k = dealSig(d);
+    histMap.set(k, (histMap.get(k) || []).concat((d.history || []).map((h) => ({ t: String(h.t || '').slice(0, 10), p: h.p }))));
+  }
+  const withHistory = (d) => {
+    const sig = dealSig(d);
+    const hist = (histMap.get(sig) || []).slice();
+    const today = new Date().toISOString().slice(0, 10);
+    const last = hist[hist.length - 1];
+    if (d.price != null && (!last || last.p !== d.price || last.t !== today)) {
+      hist.push({ t: today, p: d.price });
+    }
+    if (hist.length > 8) hist.splice(0, hist.length - 8);
+    histMap.set(sig, hist);
+    d.history = hist;
+    return d;
+  };
   for (const ch of DEAL_CHANNELS) {
     try {
       const res = await fetch(`https://t.me/s/${ch.user}`, {
@@ -518,8 +570,9 @@ async function fetchDeals() {
           zh = (await translate(msg.text.slice(0, 1500))) || msg.text;
           await sleep(150);
         }
-        tgMap.set(key, {
+        tgMap.set(key, withHistory({
           user: ch.user,
+          id: msg.id,
           store: ch.store,
           link: msg.link,
           date: msg.date,
@@ -528,7 +581,7 @@ async function fetchDeals() {
           zh,
           photo: msg.photo,
           ...extractDealFields(msg.text, ''),
-        });
+        }));
         kept++;
       }
       console.log(`  deals ${ch.user}: ${msgs.length} 帖，保留 ${kept}`);
@@ -558,7 +611,7 @@ async function fetchDeals() {
           zh = (await translate(it.text.slice(0, 1500))) || it.text;
           await sleep(150);
         }
-        pageMap.set(key, {
+        pageMap.set(key, withHistory({
           user: 'page:' + src.id,
           id: it.id,
           store: src.store,
@@ -570,7 +623,7 @@ async function fetchDeals() {
           period: it.period || '',
           photo: '',
           ...extractDealFields(it.text, it.period || ''),
-        });
+        }));
         kept++;
       }
       console.log(`  deals ${src.id}: ${items.length} 条，保留 ${kept}`);
@@ -631,6 +684,55 @@ function catBadge(cat) {
   return `<span class="badge badge-${c}">${CAT_LABEL[c] || '新闻'}</span>`;
 }
 
+function lifePageHtml(life) {
+  const secs = (life || [])
+    .map(
+      (s) => `<section class="life-sec">
+  <h2>${s.icon ? s.icon + ' ' : ''}${escapeHtml(s.title)}</h2>
+  <ul class="life-list">
+    ${(s.items || [])
+      .map(
+        (it) => `<li>
+      <div class="life-name">${escapeHtml(it.name)}${it.phone ? ` <span class="life-phone">${escapeHtml(it.phone)}</span>` : ''}</div>
+      ${it.addr ? `<div class="life-addr">📍 ${escapeHtml(it.addr)}</div>` : ''}
+      ${it.note ? `<div class="life-note">${escapeHtml(it.note)}</div>` : ''}
+      ${it.link ? `<div class="life-link"><a href="${escapeHtml(it.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(it.link.replace(/^https?:\/\//, ''))} ↗</a></div>` : ''}
+    </li>`
+      )
+      .join('\n')}
+  </ul>
+</section>`
+    )
+    .join('\n');
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生活指南 · 白俄新闻中文站</title>
+<meta name="description" content="在白俄罗斯生活的实用信息：紧急电话、中国驻白大使馆与签证、医疗就医、交通、中餐厅、中国超市、快递集运。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${PARENT_LINK}
+<nav class="crumb"><a href="index.html">← 返回首页</a></nav>
+<header class="site-head article-head">
+  <h1>📖 生活指南</h1>
+  <p class="sub">给在白俄罗斯的中国人：紧急电话 · 使馆签证 · 就医 · 出行 · 中餐 · 购物 · 快递</p>
+</header>
+<main>
+${secs}
+</main>
+<footer class="site-foot">
+  <p>信息仅供参考，地址和电话可能变动，请以官方渠道为准。</p>
+  <p><a href="index.html">← 返回首页</a></p>
+</footer>
+</body>
+</html>
+`;
+}
+
 function homepageHtml(records, deals, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
   const storeCounts = {};
@@ -652,6 +754,7 @@ function homepageHtml(records, deals, updated, widgets) {
     <span class="deals-n">${deals.length} deals</span>
     <button class="sbtn active" data-sort="time" type="button">Newest</button>
     <button class="sbtn" data-sort="price" type="button">Price (Low→High)</button>
+    <button class="sbtn favbtn" type="button">♡ 收藏</button>
   </div>
 </div>`
     : '';
@@ -660,18 +763,18 @@ function homepageHtml(records, deals, updated, widgets) {
 ${dealBar}
 ${deals
   .map(
-    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" title="${escapeHtml((d.period ? d.period + ' · ' : '') + d.text.slice(0, 160))}">
+    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((d.period ? d.period + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-badge">${escapeHtml(zhStore(d.store))}</span> <span class="store-ru">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
-    ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}</div>`
+    ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
     : d.discount != null
       ? `<div class="deal-price off">−${d.discount}%</div>`
       : ''}
   <p class="deal-text clamp">${escapeHtml((d.zh || d.text).slice(0, 1500))}</p>
   <button class="deal-more" type="button" hidden>展开全文</button>
   <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
-  <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">在源网站查看原文 ↗</a></div>
+  <div class="meta deal-actions"><button class="fav" type="button" data-key="${escapeHtml(d.user + '/' + d.id)}" title="收藏">♡</button><button class="share" type="button" data-share="${escapeHtml(shareText(d))}">分享</button><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`
   )
   .join('\n')}
@@ -732,6 +835,7 @@ ${widgets}
 <div class="tabs" role="tablist">
   <button class="tab active" data-f="all">全部</button>
   <button class="tab" data-f="deal">超市折扣</button>
+  <a class="tab tab-link" href="life.html" data-f="life">📖 生活指南</a>
   <button class="tab" data-f="news">新闻</button>
   <button class="tab" data-f="event">活动</button>
   <button class="tab" data-f="volunteer">志愿者</button>
@@ -757,8 +861,49 @@ ${olderHtml}
   var sbtns = document.querySelectorAll('.sbtn');
   var activeStore = '';
   var sortMode = 'time';
+  var favOnly = false;
   var feed = document.querySelector('.deal-feed');
   var origOrder = Array.prototype.slice.call(document.querySelectorAll('.card.deal'));
+  function favKeys() {
+    try { return JSON.parse(localStorage.getItem('favDeals') || '[]') || []; }
+    catch (e) { return []; }
+  }
+  function saveFavs(k) {
+    try { localStorage.setItem('favDeals', JSON.stringify(k)); } catch (e) {}
+  }
+  function renderFavs() {
+    var k = favKeys();
+    document.querySelectorAll('.card.deal .fav').forEach(function (b) {
+      b.textContent = k.indexOf(b.getAttribute('data-key')) !== -1 ? '♥' : '♡';
+    });
+    var fb = document.querySelector('.favbtn');
+    if (fb) fb.textContent = favOnly ? '♥ 收藏 ' + k.length : '♡ 收藏 ' + k.length;
+  }
+  function toast(msg) {
+    var el = document.getElementById('toast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'toast';
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.className = 'show';
+    clearTimeout(el._t);
+    el._t = setTimeout(function () { el.className = ''; }, 1800);
+  }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(t).then(function () { return true; });
+    }
+    return new Promise(function (res) {
+      var ta = document.createElement('textarea');
+      ta.value = t;
+      document.body.appendChild(ta);
+      ta.select();
+      try { res(document.execCommand('copy')); } catch (e) { res(false); }
+      document.body.removeChild(ta);
+    });
+  }
   function sortDeals() {
     if (!feed) return;
     var list;
@@ -784,7 +929,8 @@ ${olderHtml}
       var okCat = (f === 'all' || c.getAttribute('data-cat') === f);
       var okTxt = !q || (c.textContent || '').toLowerCase().indexOf(q) !== -1;
       var okStore = (c.getAttribute('data-cat') !== 'deal') || !activeStore || c.getAttribute('data-store') === activeStore;
-      var show = okCat && okTxt && okStore;
+      var okFav = (c.getAttribute('data-cat') !== 'deal') || !favOnly || favKeys().indexOf(c.getAttribute('data-key')) !== -1;
+      var show = okCat && okTxt && okStore && okFav;
       c.style.display = show ? '' : 'none';
       if (show) vis++;
     });
@@ -820,7 +966,8 @@ ${olderHtml}
     refreshDealButtons();
   });
   tabs.forEach(function (t) {
-    t.addEventListener('click', function () {
+    t.addEventListener('click', function (e) {
+      if (t.tagName === 'A') return;
       tabs.forEach(function (x) { x.classList.remove('active'); });
       t.classList.add('active');
       apply();
@@ -846,6 +993,32 @@ ${olderHtml}
       apply();
     });
   });
+  var favbtn = document.querySelector('.favbtn');
+  if (favbtn) favbtn.addEventListener('click', function () {
+    favOnly = !favOnly;
+    renderFavs();
+    apply();
+  });
+  document.addEventListener('click', function (e) {
+    var fav = e.target.closest ? e.target.closest('.fav') : null;
+    if (fav) {
+      var k = favKeys();
+      var key = fav.getAttribute('data-key');
+      var i = k.indexOf(key);
+      if (i === -1) k.push(key); else k.splice(i, 1);
+      saveFavs(k);
+      renderFavs();
+      apply();
+      return;
+    }
+    var sh = e.target.closest ? e.target.closest('.share') : null;
+    if (sh) {
+      copyText(sh.getAttribute('data-share') || '').then(function () {
+        toast('已复制，请粘贴到微信发送');
+      });
+    }
+  });
+  renderFavs();
   if (input) input.addEventListener('input', apply);
 })();
 </script>
@@ -956,6 +1129,7 @@ async function buildSite(records, deals) {
     console.log('widgets fetch fail: ' + e.message);
   }
   writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, updated, widgets), 'utf8');
+  writeFileSync(path.join(OUT_DIR, 'life.html'), lifePageHtml(readJson(LIFE_FILE, [])), 'utf8');
   for (const rec of records) {
     try {
       writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
