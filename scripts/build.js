@@ -7,6 +7,9 @@ const MAX_ITEMS = 120;
 const MAX_FULLTEXT = 20;
 const HOMEPAGE_RECENT = 60;
 
+const PARENT_LINK =
+  '<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城 minsktc.me ↗</a></div>';
+
 const EVENT_KEYS = [
   'выставк', 'концерт', 'фестивал', 'спектакл', 'форум', 'ярмарк', 'премьер',
   'показ', 'встреч', 'мастер-класс', 'экскурси', 'кино', 'лекци',
@@ -243,6 +246,7 @@ function articlePageHtml(rec) {
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+${PARENT_LINK}
 <nav class="crumb"><a href="../index.html">← 返回首页</a></nav>
 <header class="site-head article-head">
   <h1>${escapeHtml(rec.zh)}</h1>
@@ -309,6 +313,7 @@ function homepageHtml(records, updated, widgets) {
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+${PARENT_LINK}
 <header class="site-head">
   <h1>白俄新闻<span class="accent">中文站</span></h1>
   <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 中白 · 自动翻译自 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">minsknews.by</a> · 每 23 小时更新</p>
