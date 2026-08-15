@@ -277,6 +277,108 @@ main {
   word-break: break-word;
 }
 
+.deal-feed { margin: 0 0 6px; }
+
+.deals-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.storechips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1 1 auto;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12.5px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease;
+}
+
+.chip:hover { border-color: #d8b7ae; color: var(--accent); }
+
+.chip b {
+  margin-left: 4px;
+  font-weight: 700;
+  opacity: .65;
+}
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.chip.active b { opacity: .8; }
+
+.deal-sort {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.deals-n { font-size: 12.5px; color: var(--muted); margin-right: 6px; }
+
+.sbtn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.sbtn:hover { color: var(--accent); }
+
+.sbtn.active {
+  color: var(--accent);
+  font-weight: 700;
+  background: var(--accent-soft);
+}
+
+.card.deal .deal-price {
+  margin: 2px 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #c0392b;
+  line-height: 1.1;
+}
+
+.card.deal .deal-price .cur { font-size: 12px; font-weight: 600; color: var(--muted); margin-left: 2px; }
+
+.card.deal .deal-price s {
+  color: #9a958f;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.card.deal .deal-price.off { color: #1e8a4c; font-size: 17px; }
+
+@media (max-width: 700px) {
+  .card.deal .deal-price { font-size: 20px; }
+  .deal-sort { margin-left: 0; width: 100%; justify-content: flex-end; }
+}
+
 .site-foot {
   max-width: 780px;
   margin: 0 auto;

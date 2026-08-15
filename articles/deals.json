@@ -4,88 +4,128 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-08-15T14:43:23.190Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:48.535Z",
+    "beijing": "2026-08-15 23:13",
     "text": "-50% с 12 по 25 августа Горячие цены! Скидки до -50%!",
     "period": "с 12 по 25 августа",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 50,
+    "endDate": "25 августа"
   },
   {
     "user": "page:triceny",
     "id": "sale/aktsiya-s-kartoy-deshevle-v-tri-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aktsiya-s-kartoy-deshevle-v-tri-tseny/",
-    "date": "2026-08-15T14:43:23.190Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:48.535Z",
+    "beijing": "2026-08-15 23:13",
     "text": "С 12 по 25 августа Акция \"С картой дешевле\" в ТРИ ЦЕНЫ!",
     "period": "с 12 по 25 августа",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "25 августа"
   },
   {
     "user": "page:dionis",
     "id": "socialnaya-skidka",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/socialnaya-skidka",
-    "date": "2026-08-15T14:43:24.457Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.024Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Социальная скидка",
     "period": "1 июля 2025 - 31 декабря 2026",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "31 декабря 2026"
   },
   {
     "user": "page:dionis",
     "id": "mobilnoe-prilozhenie-oplati",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/mobilnoe-prilozhenie-oplati",
-    "date": "2026-08-15T14:43:24.457Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.024Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Мобильное приложение ОПЛАТИ",
     "period": "13 сентября 2022 - 31 декабря 2026",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "31 декабря 2026"
   },
   {
     "user": "page:dionis",
     "id": "ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
-    "date": "2026-08-15T14:43:24.457Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.024Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Cкидка 20% на готовую кулинарную продукцию \"Дионис\"",
     "period": "1 января 2024 - 31 декабря 2026",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 20,
+    "endDate": "31 декабря 2026"
   },
   {
     "user": "page:dionis",
     "id": "kozhnaya-pyatnica-rodnae-svayo",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/kozhnaya-pyatnica-rodnae-svayo",
-    "date": "2026-08-15T14:43:24.457Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.024Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Кожная пятніца – роднае, сваё",
     "period": "1 января 2026 - 31 декабря 2026",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "31 декабря 2026"
   },
   {
     "user": "page:perekrestok",
     "id": "discounts/tvoy-perekryestok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/tvoy-perekryestok/",
-    "date": "2026-08-15T14:43:25.500Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.473Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Твой ПерекрестОК",
     "period": "",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "page:perekrestok",
     "id": "discounts/karta-aktsiy-i-skidok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/karta-aktsiy-i-skidok/",
-    "date": "2026-08-15T14:43:25.500Z",
-    "beijing": "2026-08-15 22:43",
+    "date": "2026-08-15T15:13:49.473Z",
+    "beijing": "2026-08-15 23:13",
     "text": "Карта акций и скидок",
     "period": "",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -94,7 +134,12 @@
     "date": "2026-08-15T14:00:13+00:00",
     "beijing": "2026-08-15 22:00",
     "text": "БОЛЬШЕ ТОВАРОВ — БОЛЬШЕ ВЫГОДЫ 💰 Акция 2=1 в Fix Price 😎 📌 Мармелад фигурный (Стоимость: 3,25 рубля) с финиками порадует мягкой текстурой и насыщенным фруктовым вкусом. Отличный выбор для угощения гостей и сладкого десерта к чаю. Масса нетто: 143 г 📲 Арт: 1910291 Берите ещё больше любимых товаров, а платите — меньше&#33; 🎊 Срок действия акции — до 31.12.2026. Подробная информация на сайте fix-price.by . 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/sH6SgwTmd1MaVOxJDGoHSi6C4D1eU6kuFy7hltk1P2YFhVKZ8IAwZt83j7bAzuxfADUxwkBSvvkZWFCFCGnhEjgZnb3DnYM_B2k_jS31vT5fTlrEpggnL8-g_MVCBZ4KHzDUAUGY85vjA0nrtRgSJ-LEjIT4RpZ02uRFi1TJGFHFAHdpnbIu4xQCN2lhYv8XouVcnAn0ogPqvPqM-Fs7wcj7ALlNUws8H87SLRqgm2oGTAVShWn-9juPe5vNSAsjiMeMmm5vThQMrwfltKONFEONO0aGz_MU-wsfRpMcH50PKSY-miJ4fNDKigR9lZvNP6Lule_1eyMkeJiweHv8Kg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/sH6SgwTmd1MaVOxJDGoHSi6C4D1eU6kuFy7hltk1P2YFhVKZ8IAwZt83j7bAzuxfADUxwkBSvvkZWFCFCGnhEjgZnb3DnYM_B2k_jS31vT5fTlrEpggnL8-g_MVCBZ4KHzDUAUGY85vjA0nrtRgSJ-LEjIT4RpZ02uRFi1TJGFHFAHdpnbIu4xQCN2lhYv8XouVcnAn0ogPqvPqM-Fs7wcj7ALlNUws8H87SLRqgm2oGTAVShWn-9juPe5vNSAsjiMeMmm5vThQMrwfltKONFEONO0aGz_MU-wsfRpMcH50PKSY-miJ4fNDKigR9lZvNP6Lule_1eyMkeJiweHv8Kg.jpg",
+    "price": 3.25,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -103,7 +148,12 @@
     "date": "2026-08-15T13:00:06+00:00",
     "beijing": "2026-08-15 21:00",
     "text": "Малиновая выгода&#33; 🍓 🍒 📌 С 15 по 17 августа оформите заказ с самовывозом на сайте или в мобильном приложении Fix Price на сумму от 33 рублей. Примените промокод Е-МАЛИНА и сэкономьте 7 рублей на текущий заказ&#33; 🌸 Как работает промокод: Шаг 1: Выберите товары и добавьте их в корзину; Шаг 2: Нажмите кнопку «оформить заказ»; Шаг 3: В поле «промокод» введите название промокода Е-МАЛИНА и нажмите кнопку «применить». 🌸 Промокод не распространяется: - на заказы, в которые входит хоть один товар из алкогольной продукции; - на товары, добавленные в заказ на кассе розничного магазина; - на заказы, которые частично расформированы по инициативе клиента, и не соответствуют условиям акции. Подробнее об акции читайте на сайте fix-price.by #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/ZhoLfa7wIcIj-pCcuvjeDU27oOWLeLOazd6DpaN-e-cVESv9npcEF3n-rOSFFzPCESaD5ILd_HlRqjZbRJmf6LWhw3JsJrppBzsqmYxpyx4QUegZR4LQpqpSKLhK_340xy1DXhC2UnCdMh8AB5QrzROpfb0v4JgjUdewzoCfgoBTWJ1gDbktrOAIjdFE02QCUIOCadhFUcaHUeoF9Wymu5mj7S6rFfReX0LQcskYAAEPcLnX9T1CtP0XMT65r6DO3z_xnZwN3_L_PJQXykR4pZozo1F2OSDLslAkys9UWQLr7z7pNF-VTeNsE7MJukziZVVQJjqLu8kioH1d9dCSRw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/ZhoLfa7wIcIj-pCcuvjeDU27oOWLeLOazd6DpaN-e-cVESv9npcEF3n-rOSFFzPCESaD5ILd_HlRqjZbRJmf6LWhw3JsJrppBzsqmYxpyx4QUegZR4LQpqpSKLhK_340xy1DXhC2UnCdMh8AB5QrzROpfb0v4JgjUdewzoCfgoBTWJ1gDbktrOAIjdFE02QCUIOCadhFUcaHUeoF9Wymu5mj7S6rFfReX0LQcskYAAEPcLnX9T1CtP0XMT65r6DO3z_xnZwN3_L_PJQXykR4pZozo1F2OSDLslAkys9UWQLr7z7pNF-VTeNsE7MJukziZVVQJjqLu8kioH1d9dCSRw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "17 августа"
   },
   {
     "user": "fixprice_by",
@@ -112,7 +162,12 @@
     "date": "2026-08-15T12:00:10+00:00",
     "beijing": "2026-08-15 20:00",
     "text": "Сладкая троица, от которой невозможно отказаться 🍫 😍 📌 Шоколад белый «Angel hair» (Стоимость: 2 рубля) Rosso bianco – это изумительная сладость с малиновым вкусом, фисташковой начинкой и воздушным пишмание. 😍 Масса нетто: 45 г. 📲 Арт: 1900365 📌 Шоколад молочный (Стоимость: 3 рубля) Kinder Country — это настоящее лакомство для детей и взрослых&#33; 😍 Масса нетто: 23,5 г. 📲 Арт: 1902255 📌 Зефирная палочка, Князев (Стоимость: 4,60 рубля) – это нежный десерт с молочной начинкой в глазури. 😍 Масса нетто: 310 г. 📲 Арт: 1912117 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/FBY9m4-0Vr-XE77-9Jp-g_z3Ko7oUdl5AIesCn0NlqX0tYNWPCwtDTUOWNzmJtI1XTwwfPwTE9lGFemaJLfxRlAzv_pT1gWao8w3pldQzfEslEXXPyr54TLOlVxTfE0Z4Ry53DoID7musQcT1EecaJAH0_ZsBAGNkvih2EDibLDRklsWHf_wv33GUhE8ANjrCsi-b4sBUkH2Juw4e6HNNNQn4Q9hdRym2qa0e1iR2h322InaoPeXVc_6JWe5hQd738gGBe5tnDlTmV4V-OBlh9_nPBg3USL-dNbGOWi35eG3xUCI_TL74Vy5xw243iZjNlHC0Z05YWs-jC1rewTlRA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/FBY9m4-0Vr-XE77-9Jp-g_z3Ko7oUdl5AIesCn0NlqX0tYNWPCwtDTUOWNzmJtI1XTwwfPwTE9lGFemaJLfxRlAzv_pT1gWao8w3pldQzfEslEXXPyr54TLOlVxTfE0Z4Ry53DoID7musQcT1EecaJAH0_ZsBAGNkvih2EDibLDRklsWHf_wv33GUhE8ANjrCsi-b4sBUkH2Juw4e6HNNNQn4Q9hdRym2qa0e1iR2h322InaoPeXVc_6JWe5hQd738gGBe5tnDlTmV4V-OBlh9_nPBg3USL-dNbGOWi35eG3xUCI_TL74Vy5xw243iZjNlHC0Z05YWs-jC1rewTlRA.jpg",
+    "price": 4.6,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "groshyk",
@@ -121,7 +176,12 @@
     "date": "2026-08-15T11:51:53+00:00",
     "beijing": "2026-08-15 19:51",
     "text": "Девочки, зашла в Грошык за игровыми товарами, а в итоге залипла в отделе канцелярии и косметики&#33; 😂 Посмотрите, сколько классных штук я нашла для подготовки к учебному году и просто для настроения)) 🎒 ДЛЯ ШКОЛЫ И УНИВЕРА • Набор школьника (бутылочка + ланчбокс) — всего за 8,99 руб. Цвет — сочный апельсин&#33; 🍊 • Стаканы с котиками в стиле мема six, seven (425 мл) — 3,89 руб. Теперь пить кофе или какао будет в сто раз приятнее. 🐱 ☕️ • Силиконовые пеналы с джибитсами — 6,99 руб. Они такие тактильные, просто антистресс&#33; 🌸 ДЛЯ СЕБЯ ЛЮБИМОЙ • Гели для душа Palmolive Elixir (Орхидея и Георгин) — 8,99 руб. Ароматы просто люкс&#33; ✨ • Корейская пенка для умывания CONSLY с японской сливой — 19,99 руб. • Огромные флаконы шампуня WEPROVE — 16,99 руб. за 500 мл. Грошык как всегда радует: и к учебе подготовит, и полочку в ванной обновит 🤗 А что из этого вы бы купили первым делом? ❤️ — Стакан с котиком 6,7 🔥 — Набор для перекусов 😍 — Всё для ванной",
-    "photo": "https://cdn4.telesco.pe/file/TWnn8BbZkqKnv9F3GDKnxt7sghR1uqdg9anXRGQ6bsY0VTKV7NGVqHZ8wU7ykazSNTHxbP21fEwCBm7BwbWlWZek1w08p8scHS5YAqIz0fD8vTtoQ7cjQZsMgTWlMPPSjbXxY0sRSImk6_EdpsH64eTIrXT1QyLIIWlQqsKxIWyWsqQrbj-6kUKeEBuPQDrXReccaMVNnlajNCrrryE2kQTNpsB9okOXV7RDU7sE_hpZa9_hETwoNcV_-jpqMWBPBLNHDrwfqHtzzNvlKwgI1Njopmt4KS3jZ6qF94EH8NZv7P19vsYjw7vHEVQ_BC6ixP6xBYp3V5iIKmabvooBeQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/TWnn8BbZkqKnv9F3GDKnxt7sghR1uqdg9anXRGQ6bsY0VTKV7NGVqHZ8wU7ykazSNTHxbP21fEwCBm7BwbWlWZek1w08p8scHS5YAqIz0fD8vTtoQ7cjQZsMgTWlMPPSjbXxY0sRSImk6_EdpsH64eTIrXT1QyLIIWlQqsKxIWyWsqQrbj-6kUKeEBuPQDrXReccaMVNnlajNCrrryE2kQTNpsB9okOXV7RDU7sE_hpZa9_hETwoNcV_-jpqMWBPBLNHDrwfqHtzzNvlKwgI1Njopmt4KS3jZ6qF94EH8NZv7P19vsYjw7vHEVQ_BC6ixP6xBYp3V5iIKmabvooBeQ.jpg",
+    "price": 8.99,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -130,7 +190,12 @@
     "date": "2026-08-15T11:30:05+00:00",
     "beijing": "2026-08-15 19:30",
     "text": "Фокс подрос — выгода тоже&#33; 😍 🤩 📌 С 15 августа по 15 сентября приобретай товары из списка от Фокса на сайте fix-price.by или в мобильном приложении Fix Price. И получай в 3 раза больше баллов. База, пушка, имба — выбирай любое слово, смысл один: это выгодно&#33; 🌸 Срок активации баллов: 14 дней. Срок их действия: 180 дней со дня начисления. Подробнее об акции читайте на сайте fix-price.by #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/cM9WdoCG_6mh9PrupFsN0RUlHRQ-smE49tGlH39hTnOlEU2LHuxlkoYfoJwntZPkXnw5Bpz07SbzHaIswCeyHnfK6mfAe3LsMVSNnbaCm7pxli65_VXbwKbrnm7NFgvB9kVaQrRvp0-eAMQAyfcZ1dVO_JHoLJ13XRR3W2tdujpmV_JvdYAj9phHR0az9PEczySlVQ0_MBIaea-gqqJXKr1z4NoV5Ig5vWHlWZGVeeacjYeA3xTARQ96cdZEEbPXttGJUVyXROkRD_lOWJr7o1QMSWcci50PGqb4pTfEGP111JATwr8c1MAt8hSxvz2x-feYrs21ud9FFLnhuJaucw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/cM9WdoCG_6mh9PrupFsN0RUlHRQ-smE49tGlH39hTnOlEU2LHuxlkoYfoJwntZPkXnw5Bpz07SbzHaIswCeyHnfK6mfAe3LsMVSNnbaCm7pxli65_VXbwKbrnm7NFgvB9kVaQrRvp0-eAMQAyfcZ1dVO_JHoLJ13XRR3W2tdujpmV_JvdYAj9phHR0az9PEczySlVQ0_MBIaea-gqqJXKr1z4NoV5Ig5vWHlWZGVeeacjYeA3xTARQ96cdZEEbPXttGJUVyXROkRD_lOWJr7o1QMSWcci50PGqb4pTfEGP111JATwr8c1MAt8hSxvz2x-feYrs21ud9FFLnhuJaucw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "15 сентября"
   },
   {
     "user": "fixprice_by",
@@ -139,7 +204,12 @@
     "date": "2026-08-15T11:00:11+00:00",
     "beijing": "2026-08-15 19:00",
     "text": "Яркие и стильные, лёгкие и удобные... О чём это мы? Конечно же, о детских сабо из Fix Price 🔥 Каждая модель оснащена ремешками для фиксации на стопе и вентиляционными отверстиями, позволяющими ножкам «дышать» в жаркую погоду 👦 Выбирайте сабо по душе и наслаждайтесь последними летними деньками ☀️ 🍉 👉 Сабо в форме акулы — Арт: 5521196 👉 Цветные сабо — Арт: 5521069 👉 Сабо с собачьими мордочками — Арт: 5521195 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/KNzadyiDcrM6f8Ehb7Sqd3n_6_fUsp9CoF1LnD-Hk6F3FnPVEOR4f0hq_a_TvSm4w7t-fG1EEgN0Ec6vaCTdPMY5Wx404Ak0ZNlcZ3l0sChUYr8zB3yXxQjaKoR58GnWc49mOPDQQuL-ExuerDMvthbpWqoBRNgHPOYtdFTzOC5eP9z9DaSipBa7dDaZOJ0NxyQ7eCBXCBbqonfQe04hNM90ahmQhusJ-fssdwRov3rdiEY704uDzOJ_1tBW9HMjYhKIOrPjBf0uIbj1lm1NuU9lTk3fVVRhPSFxyGMde_qV7vOqEF0-p2iUcM7C_YvOgDhQHFLuqmyarX3gydtQLw"
+    "photo": "https://cdn4.telesco.pe/file/KNzadyiDcrM6f8Ehb7Sqd3n_6_fUsp9CoF1LnD-Hk6F3FnPVEOR4f0hq_a_TvSm4w7t-fG1EEgN0Ec6vaCTdPMY5Wx404Ak0ZNlcZ3l0sChUYr8zB3yXxQjaKoR58GnWc49mOPDQQuL-ExuerDMvthbpWqoBRNgHPOYtdFTzOC5eP9z9DaSipBa7dDaZOJ0NxyQ7eCBXCBbqonfQe04hNM90ahmQhusJ-fssdwRov3rdiEY704uDzOJ_1tBW9HMjYhKIOrPjBf0uIbj1lm1NuU9lTk3fVVRhPSFxyGMde_qV7vOqEF0-p2iUcM7C_YvOgDhQHFLuqmyarX3gydtQLw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -148,7 +218,12 @@
     "date": "2026-08-15T09:00:08+00:00",
     "beijing": "2026-08-15 17:00",
     "text": "Точно найдешь все для отличной учёбы&#33; ✏️ 📌 Бумага офисная \"Eco\", SvetoCopy (Стоимость: 12 рублей) — практичное решение для повседневной печати и копирования. Высокий показатель непрозрачности обеспечивает хорошую читаемость текста при двусторонней печати. В упаковке 500 листов. 😍 Формат: А4 (210×297 мм). 📲 Арт: 5710295 📌 Держатель для пропуска (Стоимость: 3 рубля) с лентой, Hupper Dupper, защитит карту или пропуск от влаги, царапин и загрязнений. Выполнен в ярком дизайне. Отличный вариант для школы и важных мероприятий&#33; Размер держателя: 6,5х10,5 см. 😍 Товар представлен в ассортименте. 📲 Арт: 5706429 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/vZHe44sEtOk00LKTz_wwcUFcXNDyl0M4gkfoz_lPMOrvcoifs2zkr7fD-iSjRh0Mn4CR5i1n0z1QRAs2NFf11LaJZfko3catpakF66LEgSosaJgbKmt8RJRU_oxQMxvBA4Lgn1gfl5570dppHdiLHUivDvk73cdH45Fg6hNFKI22rmSZkIoU-UyJtxMmALUuMDH4O6Rc_v8yIK-bY_hu8iiWviMEKt3ZQ56Xiv6MmoLKUISL2eoGHV1KGxjZxKJ9Yov9yqL827jKq1xnLCoYpHpj3iJ7q8J-xEveP7Cq54Dm7onVsUe1U0ckg1843qfNX6Zezfz0EY4xCnHxoBeMgg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/vZHe44sEtOk00LKTz_wwcUFcXNDyl0M4gkfoz_lPMOrvcoifs2zkr7fD-iSjRh0Mn4CR5i1n0z1QRAs2NFf11LaJZfko3catpakF66LEgSosaJgbKmt8RJRU_oxQMxvBA4Lgn1gfl5570dppHdiLHUivDvk73cdH45Fg6hNFKI22rmSZkIoU-UyJtxMmALUuMDH4O6Rc_v8yIK-bY_hu8iiWviMEKt3ZQ56Xiv6MmoLKUISL2eoGHV1KGxjZxKJ9Yov9yqL827jKq1xnLCoYpHpj3iJ7q8J-xEveP7Cq54Dm7onVsUe1U0ckg1843qfNX6Zezfz0EY4xCnHxoBeMgg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "evroopt_shop",
@@ -157,7 +232,12 @@
     "date": "2026-08-15T08:03:07+00:00",
     "beijing": "2026-08-15 16:03",
     "text": "😱 Гуашь за 1 рубль? Как ⁉️ Ловите момент и покупайте товары к школе с недетскими скидками&#33; По 16 августа для участников клуба «Еплюс. Детки» в магазинах «Евроопт» и «Хит&#33;» действуют предложения «Комбо»: покупайте один товар и забирайте второй по специальной цене. 🎒 Гуашь, рюкзаки, товары для рисования и другие предложения уже в карусели – листайте и выбирайте&#33; Еще больше предложений – в клубе «Еплюс. Детки». Как воспользоваться предложением? ✅ вступайте в клуб «Еплюс. Детки» в приложении «Еплюс» ✅ выбирайте понравившийся комбо-набор ✅ применяйте карту «Еплюс» на кассе – предложение сработает автоматически ⏳ Успейте закупиться выгодно к школе по 16 августа&#33; Специальное предложение действует только для участников клуба «Еплюс. Детки» . Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80 #Евроопт #ЕплюсДетки",
-    "photo": "https://cdn4.telesco.pe/file/enpPJD5dmBx7KvPcOMI1adHFUpAWobEx1mlhRYDIqjUFtq7hRRngW_IYJBHOLbStUsZsDbX1xpvC8Efgbfus1328oxn10B3L1uP2jMsWYLmI-L9w26qAeVwGO-a1XSlL6iXjp51bmgerfSLm_y0ozwcToq_uDLWYvN9jDV904L1xd-_rkAe7I7lR1UTZaN83-xXOcctsRnXi8BfWUgIAmIZmo0r_cUjSG5crVrR5iS_ShANO-mbCkNwjIXY1A-hTL7ujMV0uWdFYHQ4IFY1ZUF4KrWi2TTzM-xuAYjXHyoi9qYcHbDW7UMeqB4OjBCnAUDc7-8oYiIPo6Jhy7QBv3Q.jpg"
+    "photo": "https://cdn4.telesco.pe/file/enpPJD5dmBx7KvPcOMI1adHFUpAWobEx1mlhRYDIqjUFtq7hRRngW_IYJBHOLbStUsZsDbX1xpvC8Efgbfus1328oxn10B3L1uP2jMsWYLmI-L9w26qAeVwGO-a1XSlL6iXjp51bmgerfSLm_y0ozwcToq_uDLWYvN9jDV904L1xd-_rkAe7I7lR1UTZaN83-xXOcctsRnXi8BfWUgIAmIZmo0r_cUjSG5crVrR5iS_ShANO-mbCkNwjIXY1A-hTL7ujMV0uWdFYHQ4IFY1ZUF4KrWi2TTzM-xuAYjXHyoi9qYcHbDW7UMeqB4OjBCnAUDc7-8oYiIPo6Jhy7QBv3Q.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "16 августа"
   },
   {
     "user": "fixprice_by",
@@ -166,7 +246,12 @@
     "date": "2026-08-15T07:30:09+00:00",
     "beijing": "2026-08-15 15:30",
     "text": "Сегодня у нас особенный день&#33; Фоксу исполняется 1 год 🦊 🎉 Ровно год назад в нашей команде появился тот самый рыжий. С характером, чувством юмора и, кажется, отдельным талантом находить самые классные товары в Fix Price. За этот год Фокс успел стать нашим проводником в мир акций, мемов и неожиданных находок, а ещё - отличным напарником Фиппи. Правда, иногда они спорят, кто здесь главный. Но мы-то знаем: главный - наш покупатель 👀 😁 Фокс, поздравляем с первым годом в компании&#33; Желаем побольше приключений, крутых идей и поводов улыбаться. 💚 А Вы присоединяйтесь к поздравлениям&#33; Напишите Фоксу пару тёплых слов в комментариях 🥳 👇 #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/jmT-9gHUZ2UEKyFcUC8B9MUebxbz68UPzp9mzSZyPPUhgz7L6lMfHaA6hhzoHpU5bukpv_wCOWyhS611SWUPAOQlaSuNrBJMCg96p5R28hq7hYroSwJ4aGLBNTCLfBlHQ2ULVg67LjVTvOS-4AjfMjnmHVLLAEUJzQhblPQ3YJIqbLUK6iTppteignvOoCibVnN1GIU_8f9LxFvdq3NRfDciud5ZDwKsnu3L1yRa5mZWL_SG2rXtVIvUwafBv0z0JNbIhKIacdQ1E8vDWErUuoySaSxUuAqTzHBVkXA19y07aUW2-tVHIX0fxgYxmrpa5sOEooAytS0SINPczsj_yg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/jmT-9gHUZ2UEKyFcUC8B9MUebxbz68UPzp9mzSZyPPUhgz7L6lMfHaA6hhzoHpU5bukpv_wCOWyhS611SWUPAOQlaSuNrBJMCg96p5R28hq7hYroSwJ4aGLBNTCLfBlHQ2ULVg67LjVTvOS-4AjfMjnmHVLLAEUJzQhblPQ3YJIqbLUK6iTppteignvOoCibVnN1GIU_8f9LxFvdq3NRfDciud5ZDwKsnu3L1yRa5mZWL_SG2rXtVIvUwafBv0z0JNbIhKIacdQ1E8vDWErUuoySaSxUuAqTzHBVkXA19y07aUW2-tVHIX0fxgYxmrpa5sOEooAytS0SINPczsj_yg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -175,7 +260,12 @@
     "date": "2026-08-15T07:00:09+00:00",
     "beijing": "2026-08-15 15:00",
     "text": "БОЛЬШЕ ВЫГОДЫ СО СПЕЦ ЦЕНОЙ ПО КАРТЕ&#33; 😊 😍 Набор для малярных работ, Master Hand, включает в себя 3 валика, ручку для валика, малярную ванночку и мешалку для краски. Состав: полипропилен, полиэстер, сталь. Товар представлен в ассортименте. 💳 ЦЕНА ПО КАРТЕ FIX PRICE : 6,30 рублей. Цена без карты: 7 рублей. Арт: 5002044 🤗 Приобретайте товары, накапливайте баллы на бонусом счёте и приобретайте товары, обозначенные специальными ценниками, по более выгодной цене. 1 рубль= 1 балл *Действует на покупки во всех магазинах сети. Срок действия предложения и количество товаров ограничено. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/RKwQOFJuebWm9FT3L2uz3gJHvoM4JFhJxwFKkq9hIq6Z17J7MzeiPEG5p65Y0DbTQJtlafQhKuelgLbhu52F3GtHbaszcp5CgSczoGf7uR9YECBWnnErKk3vSgSmpehIz6q_5Aenu2cQqBGCRdY7ulfyDJsjktkatirtfFWa5N5UScDDfA-k4bcTRdczh4SWZQlQ-d4udXP642AVWuvLBsRH0nv_OAPpjEhS74ezJYvel2nMbupDE53OoEYN-xmcF5puGDDmeSDXf9TZrM9SpEXxGQoh7MIKbKXTzcPqCA4JQu8tn8LNyyn4dI5n3tSqoHW-yN4lulB3z2bI5NlHdQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/RKwQOFJuebWm9FT3L2uz3gJHvoM4JFhJxwFKkq9hIq6Z17J7MzeiPEG5p65Y0DbTQJtlafQhKuelgLbhu52F3GtHbaszcp5CgSczoGf7uR9YECBWnnErKk3vSgSmpehIz6q_5Aenu2cQqBGCRdY7ulfyDJsjktkatirtfFWa5N5UScDDfA-k4bcTRdczh4SWZQlQ-d4udXP642AVWuvLBsRH0nv_OAPpjEhS74ezJYvel2nMbupDE53OoEYN-xmcF5puGDDmeSDXf9TZrM9SpEXxGQoh7MIKbKXTzcPqCA4JQu8tn8LNyyn4dI5n3tSqoHW-yN4lulB3z2bI5NlHdQ.jpg",
+    "price": 6.3,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -184,7 +274,12 @@
     "date": "2026-08-15T06:31:30+00:00",
     "beijing": "2026-08-15 14:31",
     "text": "Заряжайтесь витаминками по оооочень выгодным ценам 🤩",
-    "photo": "https://cdn4.telesco.pe/file/m51nWoEDz0TBVbJGAg_znugeVA-tcIpwAOG7AFM5TzHFaiz94kMunJJHupqxInziPaXzQNtziU7fKxovJJTEubKrO0GQn9yi-UQJKr7upru6YinUMaq9uZBUxLE08g7kjFbvWlvQNlqaFJmYIqsxyJsmFlJU0soDSrk6mqt8qfSbi7bOfCtHreyLnWi1xn1tj3KYsXie2vlC5BEqOqoeZtoUuhURWGBNTwNa6dr6MxeeizVGXNZGT9Tr_QT0ZU-K9f_sasvGvCKdOVsZbmT-Bo2X73mWIYLML9tWumbO9vzhl1oBlAaMOAbMjQeG110RTJbwNtCE-KxuD6uYe35zPA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/m51nWoEDz0TBVbJGAg_znugeVA-tcIpwAOG7AFM5TzHFaiz94kMunJJHupqxInziPaXzQNtziU7fKxovJJTEubKrO0GQn9yi-UQJKr7upru6YinUMaq9uZBUxLE08g7kjFbvWlvQNlqaFJmYIqsxyJsmFlJU0soDSrk6mqt8qfSbi7bOfCtHreyLnWi1xn1tj3KYsXie2vlC5BEqOqoeZtoUuhURWGBNTwNa6dr6MxeeizVGXNZGT9Tr_QT0ZU-K9f_sasvGvCKdOVsZbmT-Bo2X73mWIYLML9tWumbO9vzhl1oBlAaMOAbMjQeG110RTJbwNtCE-KxuD6uYe35zPA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -193,7 +288,12 @@
     "date": "2026-08-15T05:00:05+00:00",
     "beijing": "2026-08-15 13:00",
     "text": "Друзья, распродажа товаров по 2 РУБЛЯ в самом разгаре&#33; 😍 😎 Пока Вы читаете это сообщение, товары по акции молниеносно покидают полки наших магазинов. 🤩 Советуем Вам не откладывать визит в Fix Price, чтобы успеть приобрести все необходимое всего лишь за 2 РУБЛЯ&#33; ☝️ Количество товаров ограничено запасами каждого конкретного магазина. Подробнее об акции - на сайте fix-price.by До встречи в магазинах Fix Price&#33; 💚 💙 #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/fAFB-9KhPPf2U76NN0AwcMEAI-KYkSENCuvF225MCcO3_dznbP-H2iMm0k8UnyBelbeBucy4kHgmuvs1E9a8J1BP98DxYiuaji6_PcZVgbFHHROz83WX-NVCM8-ZdJ1vwdXoiKDeV4BenzBX0uO3mzFIt6zmysf-J5qwOUKE8t9fLwhVlnPDN-ovefn1yRBdBxatG9WiqymqtNanT7zYQVE-HAKI42tACo0BjOQfgd_DjrDidg4y42salEPykOXd9soIP7E4H7fMB14xM1o31Uw11nT1R2BSpa_xEyj7jCOypAzj8YkuAjUEfV4mmUUae-o7YEldcMXmQCHhpSyhiw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/fAFB-9KhPPf2U76NN0AwcMEAI-KYkSENCuvF225MCcO3_dznbP-H2iMm0k8UnyBelbeBucy4kHgmuvs1E9a8J1BP98DxYiuaji6_PcZVgbFHHROz83WX-NVCM8-ZdJ1vwdXoiKDeV4BenzBX0uO3mzFIt6zmysf-J5qwOUKE8t9fLwhVlnPDN-ovefn1yRBdBxatG9WiqymqtNanT7zYQVE-HAKI42tACo0BjOQfgd_DjrDidg4y42salEPykOXd9soIP7E4H7fMB14xM1o31Uw11nT1R2BSpa_xEyj7jCOypAzj8YkuAjUEfV4mmUUae-o7YEldcMXmQCHhpSyhiw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "2 РУБЛЯ"
   },
   {
     "user": "fixprice_by",
@@ -202,7 +302,12 @@
     "date": "2026-08-14T17:00:08+00:00",
     "beijing": "2026-08-15 01:00",
     "text": "Ваши спутники чистоты: всегда под рукой 🤩 😍 📌 Влажные салфетки (Стоимость: 6 рублей) Cotte, отлично очищают и питают кожу. Содержат витамин Е. Без спирта. Перед использованием ознакомьтесь с мерами предосторожности на упаковке. 😃 Удобный формат: в упаковке 10 мини-пачек по 8 салфеток в каждой. 📲 Арт: 3105226 📌 Универсальное моющее средство (Стоимость: 5,50 рублей) Don Deletto, подойдёт для всех видов полов, кафельной плитки, стен из невпитывающих материалов. Эффективно удаляет загрязнения и оставляет после себя приятный аромат. Не оставляет разводов, обладает антибактериальным эффектом. 😃 Объём: 1 л. 📲 Арт: 3006113 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/TlX4EQ6wADL4w45zCtqbvN556XLC_uphQ5vdFUocEDf9SXZDTZ7BV4M2mLu29EoxerqwsLCLdJGanqIjCo8GVZfnAvoFe_gOpWa0G9S16X7zwRHHJdMGyeJS71ENAwJYDb2umPIKP5ZDqSDkb5Ip-Nh8UPp0vajaCasd9iDJs5_ymVjdjoWy6AYhV0s-5T_TAWonYF5xJwLZZW4PjjnBw_TGmDw-CpeBeyd1FOILTCvi5S4mgk6OfgLK_7dijy0dN7QOkHlP_byWeD5fSL8O-oO883piIUk5W5OxgtE-LRwPZN3NsHJeJb3XETb6_XxCJj-JxI-xgyRQqPQe_RKj8g.jpg"
+    "photo": "https://cdn4.telesco.pe/file/TlX4EQ6wADL4w45zCtqbvN556XLC_uphQ5vdFUocEDf9SXZDTZ7BV4M2mLu29EoxerqwsLCLdJGanqIjCo8GVZfnAvoFe_gOpWa0G9S16X7zwRHHJdMGyeJS71ENAwJYDb2umPIKP5ZDqSDkb5Ip-Nh8UPp0vajaCasd9iDJs5_ymVjdjoWy6AYhV0s-5T_TAWonYF5xJwLZZW4PjjnBw_TGmDw-CpeBeyd1FOILTCvi5S4mgk6OfgLK_7dijy0dN7QOkHlP_byWeD5fSL8O-oO883piIUk5W5OxgtE-LRwPZN3NsHJeJb3XETb6_XxCJj-JxI-xgyRQqPQe_RKj8g.jpg",
+    "price": 5.5,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "8 салфеток"
   },
   {
     "user": "fixprice_by",
@@ -211,7 +316,12 @@
     "date": "2026-08-14T15:00:11+00:00",
     "beijing": "2026-08-14 23:00",
     "text": "Если бы всё необходимое появлялось по одному взмаху руки — вот это была бы жизнь&#33; 😍 😁 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/SXD_ThzwBoYfisSIO-aEzqNMg6mPP403L6o4Az53EVzeebWq9BUfErDcH7MwzvxpfeEErJgAIIzYcex1fKO17JfBxc8PzIMbPk5rhmucGftsbF1U5mZq5hzy2pYeHBiQcYs0vjTr9gs0eTuOOCFfNFOMxGAZkiXtiibGL4v-JE4dfWQpyUql-p7MiYkC0jT7gda34OxsVZNhUeWSCHuZQlxB--k9YMyvCA7QAMlPKY3A0Qxu4kdAVC9IIRMlKHlVtThoIkDxn9wp0hRXR8eMY46wQhRonxr9WuHyXjCN06sKLWzbT42X1uBRxV4do8OqOSCrtP5MlUUZ5pj8WB8K8A"
+    "photo": "https://cdn4.telesco.pe/file/T9ZokJaFxrBFtbnBscTmZdlMZ3FXASIxr8306UEsJMfwCBhxZ5Ig2xyRKY9LjCC9R85BHwXt2egxFdwpioy9pHeL_R7CQP9mvoE9OwDFhMKz1pzlr56PUdEZd0GnSGkJfsmZSfsSYWkIpDpBq0QQaMSph4MsYDkp8F4XMe8hL22Rba_XXx22pBnew0TiQgiMdYYjBdxkgce6avtwYymBLFmXELEoHd30B7WNIYmdualbew4bQUjkw7bQKmh3LBau5IPsioOLYfV-i5pZdxvsdaVi4ltkbzgFO_IZzieOYhXcNchHBZi3AQqS5x7989lsM-rsT6Z-yzcs3F3V_xrDfw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -220,7 +330,12 @@
     "date": "2026-08-14T14:14:41+00:00",
     "beijing": "2026-08-14 22:14",
     "text": "Новинки творожных сыров “SVEZA” уже в Копеечках&#33; 3 новых вкуса, чтобы разнообразить ваши блюда&#33; Креветка Лосось Трюфель Подписывайтесь, чтобы быть в курсе всех новинок&#33; 🫶🏻",
-    "photo": "https://cdn4.telesco.pe/file/Vzk_qgjuXuefJFbyLyxEt6Urrrgs0JBEPG-nJXwDydbhAxPtIqwS-V2kH-6xy-A5aHhcKF4Jc5k4FBNE3weIx61m_08JkI1HMiZ3fMz3fP_RHxIohUkhIoLJGZO9ZlV9TpTLhOnPrgGHxbMQan-7sVwkNEFFu2QuCUnqHsjG2xP9FAI19wdAP11hqVjixKcwjnFG3HtFJDQeyF2CBuOrZqIe-pfpelJZyjR4BrOnWMu7iICVoKl37rQF28Di8mcxsCwBA9g0t7VLIslJ7XEDg0-wLH6etBCvyZJS1hSyFgBXOgUf1dokp61NbCTcbS2KKd1qnKN1JjxUvJVAWeiacQ"
+    "photo": "https://cdn4.telesco.pe/file/Vzk_qgjuXuefJFbyLyxEt6Urrrgs0JBEPG-nJXwDydbhAxPtIqwS-V2kH-6xy-A5aHhcKF4Jc5k4FBNE3weIx61m_08JkI1HMiZ3fMz3fP_RHxIohUkhIoLJGZO9ZlV9TpTLhOnPrgGHxbMQan-7sVwkNEFFu2QuCUnqHsjG2xP9FAI19wdAP11hqVjixKcwjnFG3HtFJDQeyF2CBuOrZqIe-pfpelJZyjR4BrOnWMu7iICVoKl37rQF28Di8mcxsCwBA9g0t7VLIslJ7XEDg0-wLH6etBCvyZJS1hSyFgBXOgUf1dokp61NbCTcbS2KKd1qnKN1JjxUvJVAWeiacQ",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -229,7 +344,12 @@
     "date": "2026-08-14T14:00:05+00:00",
     "beijing": "2026-08-14 22:00",
     "text": "БОЛЬШЕ ТОВАРОВ — БОЛЬШЕ ВЫГОДЫ 💰 Акция 2=1 в Fix Price 😎 📌 Чипсы рисовые (Стоимость: 1,68 рубля) отличаются воздушной текстурой и приятным хрустом&#33; Обладают ярким ароматом и интересным азиатским вкусом. Масса нетто: 45 г. Товар представлен в ассортименте. 📲 Арт: 1600778 Берите ещё больше любимых товаров, а платите — меньше&#33; 🎊 Срок действия акции — до 31.12.2026. Подробная информация на сайте fix-price.by . 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/GQhxWBK6hMNlbjkllsiqfjBxK9OyaCf5hD06rgrnewJIBFYTMatKR2VApgaX7ZvdirvPeXV6WpGSVH9G3iluHEXPOC3ufgwuOE1Bf50Tz2cj-C5SD5hF5ld_bAbVwYf47Jy_LglnPb7Ibb8G1s0eap6F1xLCk6jl68rxlpp_UUsmPu-fSB-pmqScnpx1DcsLU0SJd0mK_UmpdH5AceIYHQRZjbltOfAzd7xVExrbjXBbVlsXYzZSYpiktPexHfpoAZHOqyuO-Gmj64q5LTDEagAdA5_XHUp9d7ijaFTyXx_AdMhhLxZQCs_uhXqU0zhSFQsAFhBJLnZrH7nAvW-C_w.jpg"
+    "photo": "https://cdn4.telesco.pe/file/GQhxWBK6hMNlbjkllsiqfjBxK9OyaCf5hD06rgrnewJIBFYTMatKR2VApgaX7ZvdirvPeXV6WpGSVH9G3iluHEXPOC3ufgwuOE1Bf50Tz2cj-C5SD5hF5ld_bAbVwYf47Jy_LglnPb7Ibb8G1s0eap6F1xLCk6jl68rxlpp_UUsmPu-fSB-pmqScnpx1DcsLU0SJd0mK_UmpdH5AceIYHQRZjbltOfAzd7xVExrbjXBbVlsXYzZSYpiktPexHfpoAZHOqyuO-Gmj64q5LTDEagAdA5_XHUp9d7ijaFTyXx_AdMhhLxZQCs_uhXqU0zhSFQsAFhBJLnZrH7nAvW-C_w.jpg",
+    "price": 1.68,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "hitdiscount_by",
@@ -238,7 +358,12 @@
     "date": "2026-08-14T13:11:50+00:00",
     "beijing": "2026-08-14 21:11",
     "text": "🔥 В Минске открылся второй «Хит&#33; Дисконт»&#33; Удобный магазин рядом с домом с ценами жесткого дискаунтера заработал в Минске на ул. Карбышева, 13/2&#33; Стоимость товаров здесь как в «Грошыке», а некоторые популярные позиции стоят даже дешевле 👇 ✔️ Бананы – 2,59 руб. за 1 кг ✔️ Конфеты шоколадные «Даёжь&#33;», карамель, арахис, криспи, РФ – 14,99 рубля за 1 кг ✔️ Сахар «Городейский», РБ – 2,25 руб. за 1 кг ✔️ Вода минеральная Darida, газированная – 1,29 рубля за 1,5 л Бумага туалетная Papia, Bali flower, 3 слоя – всего 6,99 рубля за 8 рулонов Всего в магазине – более 1100 востребованных товаров для ежедневных покупок: хлеб, бакалея, овощи и фрукты, напитки, сладости, товары для дома и многое другое. Ставьте 💙 , если любите выгодные покупки&#33; И пишите в комментариях, где бы вы хотели, чтобы открылся «Хит&#33; Дисконт». *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. 🌐 Подробности на hitdiscount.by 📞 +375 44 500 11 99 #хит #хитдисконт #открытие",
-    "photo": "https://cdn4.telesco.pe/file/BxyOqjZVlyoJ0TS950yfOq-HTe7_elRPJs2Oq-OUK8_ALd51C6AlEXSwCougiPqrghFBDtG4GOcWSPgF1haEVNm_aJImHx5PxdMbGvT133aVLCasoOE5XHe4qjm34hsvjDCaZP8xdII5nCPPwBSn0N6nYQe4IlpWp3zXaTwrxwXe2tuJ7qWRKY17XHqME8wWcJ-S1vDdPJjj4JAWdbjrUI8uGof2KFtQZO41rr5_NdNHyH96SPnBD9ol_q6wyOkQIXsFeiUYIj6y5wo_FqYntnS37e--knxweQafRfpKqNBbSEdlhXrpplKcEPBS6f7kZzC1FDG3-8kXIXQL0yBFzw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/BxyOqjZVlyoJ0TS950yfOq-HTe7_elRPJs2Oq-OUK8_ALd51C6AlEXSwCougiPqrghFBDtG4GOcWSPgF1haEVNm_aJImHx5PxdMbGvT133aVLCasoOE5XHe4qjm34hsvjDCaZP8xdII5nCPPwBSn0N6nYQe4IlpWp3zXaTwrxwXe2tuJ7qWRKY17XHqME8wWcJ-S1vDdPJjj4JAWdbjrUI8uGof2KFtQZO41rr5_NdNHyH96SPnBD9ol_q6wyOkQIXsFeiUYIj6y5wo_FqYntnS37e--knxweQafRfpKqNBbSEdlhXrpplKcEPBS6f7kZzC1FDG3-8kXIXQL0yBFzw.jpg",
+    "price": 2.59,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -247,7 +372,12 @@
     "date": "2026-08-14T13:00:11+00:00",
     "beijing": "2026-08-14 21:00",
     "text": "Откройте яркие вкусы азиатских хитов 😋 📌 Клубника сублимированная (Стоимость: 3 рубля) в глазури со вкусом шоколада с вафельной крошкой – это хрустящее лакомство, которое станет прекрасным дополнением к чаю или кофе. Масса нетто: 32 г. 😃 Товар представлен в ассортименте. 📲 Арт: 2041427 📌 Снек пшеничный с пряностями (Стоимость: 5,30 рублей) \"Кошачьи ушки\" — популярная китайская закуска из обжаренного пшеничного теста с добавлением трав. Обладает нежным сладко-солёным вкусом и воздушной текстурой. Отличный вариант лёгкого перекуса&#33; Масса нетто: 168 г. 😃 Товар представлен в ассортименте. 📲 Арт: 1870024 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/cQw1k_tCE-xAX0rRPjJaousqBfjLWoUPm6Mx3d6jY7WD_-DR2rS9YPuUxGdXQPBtfHMJKXnZ08JFiYRllP2dc_Hpr0QNKQIPPxyhky8AP9uH5zv3ZlKtxQXx6y96po6BpMa0LJY0Uq1FsECHNIB6inq_ijJW_qMPiOdYP00GwNFLXE81mgN5ouCtgXi8lKMtV67MLxLnVEU9sN-LyAYb1_H7yHP0GeWifnc4tKqr4L_5owcXUjuCGpvXk9yg8iEY4jz_MxntoOHPoL_UVJgnj1LQc1Rc5tyWBAUQTW-s8h9SqkaCUTThUlad2NkmdN9qIWWQOJnvetyi9z19fmN_8A.jpg"
+    "photo": "https://cdn4.telesco.pe/file/cQw1k_tCE-xAX0rRPjJaousqBfjLWoUPm6Mx3d6jY7WD_-DR2rS9YPuUxGdXQPBtfHMJKXnZ08JFiYRllP2dc_Hpr0QNKQIPPxyhky8AP9uH5zv3ZlKtxQXx6y96po6BpMa0LJY0Uq1FsECHNIB6inq_ijJW_qMPiOdYP00GwNFLXE81mgN5ouCtgXi8lKMtV67MLxLnVEU9sN-LyAYb1_H7yHP0GeWifnc4tKqr4L_5owcXUjuCGpvXk9yg8iEY4jz_MxntoOHPoL_UVJgnj1LQc1Rc5tyWBAUQTW-s8h9SqkaCUTThUlad2NkmdN9qIWWQOJnvetyi9z19fmN_8A.jpg",
+    "price": 5.3,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "evroopt_shop",
@@ -256,7 +386,12 @@
     "date": "2026-08-14T12:03:28+00:00",
     "beijing": "2026-08-14 20:03",
     "text": "Монтажник из Минска выиграл 150 000 рублей&#33; Но сразу в это не поверил 😅 Когда Владимиру Семененко пытались дозвониться в прямом эфире, он был за рулем, поэтому разговаривала жена. «Положи трубку, это мошенники&#33;» – отрезал мужчина. И только на следующий день осознал, как ему повезло&#33; 🤩 Пусть повезет и вам&#33; Совершайте покупки в августе и получайте шанс выиграть столичную КВАРТИРУ, один из ТРЕХ автомобилей или 100 000 рублей&#33; Ставьте лайк на удачу&#33; 💚 Срок проведения рекламной игры «Удача в придачу&#33; Тур 218»: с 01.08.2026 по 05.11.2026, включая сроки выдачи призов и публикации результатов. Телефон горячей линии: + 375 (17) 388-76-76. Подробности: igra.evroopt.by #евроопт #хит #удачавпридачу #еплюс",
-    "photo": "https://cdn4.telesco.pe/file/czo8Dby-aiMJ7W1FU0fpiLajinyYHDWLuSKA3QGVRv5F7hTl0m0TomcX7jhR_t6ThgCSGZjPW6mX3IT5SCdJ1uD3UwcmATbMPvzec4X7VbQmjYggFaZivpV1KG4thSYFx73Ikx7f665pzHlraX4u-PRC4aRFVhcfTuJYwUIy0SxerRDn-uXtXGksakwPMFYO9gS_mmkyVEGbWzFWl23K014u8y9vU4gsKxAoanM4WflaQDSXtmNxiJXEm4Kpk1DHnaAOFXn-A5fHl_zell-1TwGR3AtZ63ESftrF5QszhnyDs59WZ9U07M_jUOTDachvAsTgpwrH-J0mE_uDs_bWmw"
+    "photo": "https://cdn4.telesco.pe/file/czo8Dby-aiMJ7W1FU0fpiLajinyYHDWLuSKA3QGVRv5F7hTl0m0TomcX7jhR_t6ThgCSGZjPW6mX3IT5SCdJ1uD3UwcmATbMPvzec4X7VbQmjYggFaZivpV1KG4thSYFx73Ikx7f665pzHlraX4u-PRC4aRFVhcfTuJYwUIy0SxerRDn-uXtXGksakwPMFYO9gS_mmkyVEGbWzFWl23K014u8y9vU4gsKxAoanM4WflaQDSXtmNxiJXEm4Kpk1DHnaAOFXn-A5fHl_zell-1TwGR3AtZ63ESftrF5QszhnyDs59WZ9U07M_jUOTDachvAsTgpwrH-J0mE_uDs_bWmw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "fixprice_by",
@@ -265,7 +400,12 @@
     "date": "2026-08-14T12:00:10+00:00",
     "beijing": "2026-08-14 20:00",
     "text": "Наполните дом теплом и яркими красками с коллекцией \"Марокко\"&#33; 😍 📌 Фигурка \"Касабланка\" (Стоимость: 7 рублей) поможет создать атмосферу восточной роскоши и уюта. Изящная женская фигура в золотистых одеяниях с декоративной вазой станет стильным украшением гостиной или спальни. 😃 Состав: полирезин. 📲 Арт: 5243847 📌 Декоративное кашпо (Стоимость: 14 рублей) \"Марракеш\" украшено традиционным марокканским орнаментом и станет стильным украшением интерьера. Состав: цемент, дерево. 😃 Товар представлен в ассортименте. 📲 Арт: 5130408 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/EW7rCNp5ItRXAA75a31uweD0G3d7kTNSTPVihGV-nmXvbEWHX-q3x04YVrxSAFyRP93cZHGaUH9uel0sZFYtqA9Zc4uumIa1dyHAbiFw-OQmWBrlwSGpIWcJZobb0letvK1ISDykjfHBI1D9ym1czSJG4ZbOLK09UJScdnflGlG4Wdon6_hAvIrtDlclYpvO0sN6emfbrs6e0ohYaEtl1DW8DGsg2RYDCw38ypzrY9udBWR7aRHM43u5N5I5rHez_8M9BAyMWOAk8U_7JdeH2q4tD5rFcnCEmn1xm9snTxDGtUnjz3vg6if1FDYcv3ULTfY3kJh385oU32K1uKYfcg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/EW7rCNp5ItRXAA75a31uweD0G3d7kTNSTPVihGV-nmXvbEWHX-q3x04YVrxSAFyRP93cZHGaUH9uel0sZFYtqA9Zc4uumIa1dyHAbiFw-OQmWBrlwSGpIWcJZobb0letvK1ISDykjfHBI1D9ym1czSJG4ZbOLK09UJScdnflGlG4Wdon6_hAvIrtDlclYpvO0sN6emfbrs6e0ohYaEtl1DW8DGsg2RYDCw38ypzrY9udBWR7aRHM43u5N5I5rHez_8M9BAyMWOAk8U_7JdeH2q4tD5rFcnCEmn1xm9snTxDGtUnjz3vg6if1FDYcv3ULTfY3kJh385oU32K1uKYfcg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -274,7 +414,12 @@
     "date": "2026-08-14T11:40:44+00:00",
     "beijing": "2026-08-14 19:40",
     "text": "В Пружанах появилась новая «Копеечка» с отличными ценами В Пружанах появился новый магазин «Копеечка». В нем собрали большой выбор популярных продуктов. Открытие прошло празднично: с музыкой, дегустациями и подарками. Магазин работает на улице Костякова, 67. Рядом находятся детский сад, почта и Беларусбанк, поэтому за покупками удобно зайти по дороге домой или по своим делам. На полках — все необходимое для ежедневных покупок: колбасы, молочная продукция, яйца, бакалея. В день открытия встречала покупателей ростовая кукла «Копеечка». Сейчас в магазине действуют специальные цены. Например, сахар «Копеечка» (1 кг) стоит 2,29 рубля, подсолнечное масло «Правило вкуса» (1 л) — 4,79 рубля, арбуз — 2,29 за кг, а сыр «Российский новый» — 12,99 за кг. Новая «Копеечка» работает с 9.00 до 22.00 на ул. Костякова, 67.",
-    "photo": "https://cdn4.telesco.pe/file/S7W_HtIhR5yLTLV8cZRMhRuKo10o9fnODViragOjiqNXtS4w1ju8_Gry1uPXu6DEYih3BIoq0plGZ1aVf0sjpBTngwLNrrihYAmfM-B_8CWIk5aYLc9xSAzhw5SJSbYUyJcaZ9B_11bEZpS964Yb7gn-oEQnIUwknq0KdlDwNl5vKcXmGrcUfunWK-piHaiDiHJvwj1Zubl1e5-cSi6Hc_g9VoFGnwk0W-Ti9DT0AR1otRcY36XNl-AJZ3jjyjnQI1w8-kU30iWuGdXHC3ooIirmoofg_FCikep4D4oy9eZn2xLNwPSIHjFSveqzNOlv3v--pXr6fXWbOoMyjND3hQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/S7W_HtIhR5yLTLV8cZRMhRuKo10o9fnODViragOjiqNXtS4w1ju8_Gry1uPXu6DEYih3BIoq0plGZ1aVf0sjpBTngwLNrrihYAmfM-B_8CWIk5aYLc9xSAzhw5SJSbYUyJcaZ9B_11bEZpS964Yb7gn-oEQnIUwknq0KdlDwNl5vKcXmGrcUfunWK-piHaiDiHJvwj1Zubl1e5-cSi6Hc_g9VoFGnwk0W-Ti9DT0AR1otRcY36XNl-AJZ3jjyjnQI1w8-kU30iWuGdXHC3ooIirmoofg_FCikep4D4oy9eZn2xLNwPSIHjFSveqzNOlv3v--pXr6fXWbOoMyjND3hQ.jpg",
+    "price": 2.29,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "almi_by",
@@ -283,7 +428,12 @@
     "date": "2026-08-14T11:12:51+00:00",
     "beijing": "2026-08-14 19:12",
     "text": "🎯 В самую ЦЕЛЬ — выгодными ценами&#33; 🔥 ТОП-ЦЕНА в АЛМИ. Всего 4 дня 📅 по 14 августа 💚 Все предложения на almi.by",
-    "photo": "https://cdn4.telesco.pe/file/NogqSbFtAviKl4IW1SG_F8UPkxrHed42TCMltReEpQELF5JHfDHaDs17dLiZImDTAmgbAC03aqbDq-w9S8Y8ebnBjXCrr0EelL4vs_qLctm36foki57qNUIv2kHNRJKiVGwKpZHsv5AAwZ5r-HXuWTnDKwehrvxJg6AZqhtWcFb9eIb90n14yL5tLAW6P5804wPEpLl7TDow51rjBRXYWBr8Zv6kjL8UMI4iQslmFlcPhaMEFMwMT1Aby0K2h1l7Bbp6zHBvakgr-auQQIJ1cnea0MdiQF37G1rrwq3ymYFXIJXttayEyricTuucdb-bxgDplF5edJBF1vvwn7DsIA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/NogqSbFtAviKl4IW1SG_F8UPkxrHed42TCMltReEpQELF5JHfDHaDs17dLiZImDTAmgbAC03aqbDq-w9S8Y8ebnBjXCrr0EelL4vs_qLctm36foki57qNUIv2kHNRJKiVGwKpZHsv5AAwZ5r-HXuWTnDKwehrvxJg6AZqhtWcFb9eIb90n14yL5tLAW6P5804wPEpLl7TDow51rjBRXYWBr8Zv6kjL8UMI4iQslmFlcPhaMEFMwMT1Aby0K2h1l7Bbp6zHBvakgr-auQQIJ1cnea0MdiQF37G1rrwq3ymYFXIJXttayEyricTuucdb-bxgDplF5edJBF1vvwn7DsIA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "14 августа"
   },
   {
     "user": "evroopt_shop",
@@ -292,7 +442,12 @@
     "date": "2026-08-14T11:01:00+00:00",
     "beijing": "2026-08-14 19:01",
     "text": "КОЖНАЯ ПЯТНІЦА – РОДНАЕ, СВАЁ&#33; 🇧🇾 В «Евроопт» продолжаются дегустации белорусских продуктов. В пятницу, 14 августа , в наших магазинах можно бесплатно попробовать продукцию любимых отечественных брендов. 📍 Локации: г. Витебск, ул. Строителей, 15 — 16:00 – 18:00 Кондитерская фабрика «Витьба»: шоколадные и молочные подушечки, вафельный батончик с клубникой и пирожные Snow Max . г. Могилев, ул. Гагарина, 79/1 — 15:00 – 18:00 «Бабушкина крынка»: сметанные соусы («Грибной» и «Пряная зелень») и глазированные сырки. А также дегустации продукции собственной торговой марки «СВАЁ» начнутся в 16:00 одновременно в шести гипермаркетах «Евроопт» 👇🏻 г. Минск: ул. Гошкевича, 3; ул. Монтажников, 2 г. Гродно: ул. Дубко, 17 г. Брест: Варшавское шоссе, 11 г. Витебск: пр-т Строителей, 15 г. Гомель: ул. Хатаевича, 9 Что можно попробовать: освежающие напитки (квас, ситро) и сладости (вафельные трубочки, зефир). Приходите в «Евроопт», дегустируйте и выбирайте любимые «Родныя тавары»&#33; ✨ 🥰 Подробнее: evroopt.by",
-    "photo": "https://cdn4.telesco.pe/file/O8IcAbMjWGpfQCCtubdjqu40U7ch2Qk-Km8bCv-CR5uCJKMFoIwT7pIzifYxwsiZ60ovMy977sJCJl8bXU8WD-jNuFPGapPwLhTdHfcGix3mgtFMtAraTR7j8yHZuQ3auSpwkkMpoFZf0J61beDRGGOcCpYd2ZkI6p3W_55VBEdV2gWSMLNwmgUSnA5Jk5k0cP_9fJIrJ1Xff8Y0B55lzSszepq2BvfIjsQdo9Z4F81XXAXzW-2NdNWfqwCLzU82Uo1-Jffhl4zaMuq6EmdIS3T6RyQZ-1BFRswSni6hqiFcdXEZe9FcLZWhmTtoRoDIkZueB8Dz8ClhPdKgzb3d0w.jpg"
+    "photo": "https://cdn4.telesco.pe/file/O8IcAbMjWGpfQCCtubdjqu40U7ch2Qk-Km8bCv-CR5uCJKMFoIwT7pIzifYxwsiZ60ovMy977sJCJl8bXU8WD-jNuFPGapPwLhTdHfcGix3mgtFMtAraTR7j8yHZuQ3auSpwkkMpoFZf0J61beDRGGOcCpYd2ZkI6p3W_55VBEdV2gWSMLNwmgUSnA5Jk5k0cP_9fJIrJ1Xff8Y0B55lzSszepq2BvfIjsQdo9Z4F81XXAXzW-2NdNWfqwCLzU82Uo1-Jffhl4zaMuq6EmdIS3T6RyQZ-1BFRswSni6hqiFcdXEZe9FcLZWhmTtoRoDIkZueB8Dz8ClhPdKgzb3d0w.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -301,7 +456,12 @@
     "date": "2026-08-14T08:52:54+00:00",
     "beijing": "2026-08-14 16:52",
     "text": "🐝 🍯 Конечно за мёдом - к Медовому Спасу&#33; Даже пчелы знают : в Green натуральный, ароматный мед на любой вкус 🥰 Выберите свой любимый — и пусть праздник будет сладким&#33; Вкусно с чаем, с фруктами, с тёплым хлебом и просто ложкой 😋",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -310,7 +470,12 @@
     "date": "2026-08-14T08:51:42+00:00",
     "beijing": "2026-08-14 16:51",
     "text": "",
-    "photo": "https://cdn4.telesco.pe/file/UoeJLcTmMjivLysFTE08EGxpha2wG4zLUvb6EBMdm5cK6GDihAm5sQ3MZR50TFptxBf-ANtLH_6aHoYEJiWJHH1wJbw-b2Qwig_xM0Z2iIqWmZtIx5YunuTYIJ7bYIZ0CPse9rXWeJgopy87q9th1WJHNoqxRhWI0VbLppEhT19J_Qydwusp7jpKZuYXeyWvK8QNgo02TuXLiJDkWrkw4QPUB-nbw3UUlo-lxxhXKL0rn4s3hwC7J0TDQejpYsDy4DII7FE0lPs2umUYmQDpQ-IXWzgKXiHqr94nqrV-VrWmYqz2m6j7YkTaV2oRSrfVBCjA2cN2Z0lsQZDjSXtL-A"
+    "photo": "https://cdn4.telesco.pe/file/UoeJLcTmMjivLysFTE08EGxpha2wG4zLUvb6EBMdm5cK6GDihAm5sQ3MZR50TFptxBf-ANtLH_6aHoYEJiWJHH1wJbw-b2Qwig_xM0Z2iIqWmZtIx5YunuTYIJ7bYIZ0CPse9rXWeJgopy87q9th1WJHNoqxRhWI0VbLppEhT19J_Qydwusp7jpKZuYXeyWvK8QNgo02TuXLiJDkWrkw4QPUB-nbw3UUlo-lxxhXKL0rn4s3hwC7J0TDQejpYsDy4DII7FE0lPs2umUYmQDpQ-IXWzgKXiHqr94nqrV-VrWmYqz2m6j7YkTaV2oRSrfVBCjA2cN2Z0lsQZDjSXtL-A",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -319,7 +484,12 @@
     "date": "2026-08-14T08:40:48+00:00",
     "beijing": "2026-08-14 16:40",
     "text": "Бз-з-з… 🐝 У этой пчёлки явно есть план&#33; Как думаете, куда она летит? Пишите свои варианты 👇",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "hitdiscount_by",
@@ -328,7 +498,12 @@
     "date": "2026-08-14T08:07:35+00:00",
     "beijing": "2026-08-14 16:07",
     "text": "🛒 Цены жесткого дискаунтера у дома: мы открыли второй «Хит&#33; Дисконт» в Минске на ул. Карбышева, 13/2. 🛍 Понятный ассортимент для ежедневных покупок: хлеб, бакалея, овощи и фрукты, напитки, кондитерские изделия, товары для семьи и дома. А самое приятное – ЦЕНЫ. Многие товары в «Хит&#33; Дисконт» стоят дешевле, чем в дискаунтере «Грошык» 👇🏻 ✔️ Бананы – 2,59 руб. за 1 кг ✔️ Конфеты шоколадные «Даёжъ&#33;», карамель, арахис, криспи, РФ – 14,99 руб. за 1 кг ✔️ Сахар «Городейский», РБ – 2,25 руб. за 1 кг ✔️ Вода минеральная Darida, газированная – 1,29 руб. за 1,5 л ✔️ Бумага туалетная Papia, Bali flower, 3 слоя – всего 6,99 руб. за 8 рулонов Для быстрого и комфортного расчета в магазине работает зона из четырех касс самообслуживания. 📍 г. Минск, ул. Карбышева, 13/2 💙 Будем вас ждать&#33; *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. 🌐 Подробности на hitdiscount.by 📞 +375 44 500 11 99 #хит #хитдисконт #открытие",
-    "photo": "https://cdn4.telesco.pe/file/lhTIvZ8cTHwtExK4rq53Rhay7rIEbLia-bGA7_nyPyk2ouSvm457a8mvxC6EjuapspN6EjdPPHI22ocWg6IwwD1vQ570RV9c9zokXJa9QHSWrMmtg1bw1yTl4OoBU50Hxyh01N2hOW6RdCDF7muDcimvBkmM-mBwcxd03sA5785tqnxj8Fsw88b-MArOZyqZ5vXd0Oor74tH9tbbyHQkwbkWnLxztgMa8xXiesWBhcORtQ0pTWeoyG5vDIcNmyCmBRS9sciRpiflfa5-SR8nNzVrkxUK4gxpRLPdxkDlI3_4Y_s7uQ2xo7gLkAq0r_MefkOtq4IO03s01424UxMchA"
+    "photo": "https://cdn4.telesco.pe/file/lhTIvZ8cTHwtExK4rq53Rhay7rIEbLia-bGA7_nyPyk2ouSvm457a8mvxC6EjuapspN6EjdPPHI22ocWg6IwwD1vQ570RV9c9zokXJa9QHSWrMmtg1bw1yTl4OoBU50Hxyh01N2hOW6RdCDF7muDcimvBkmM-mBwcxd03sA5785tqnxj8Fsw88b-MArOZyqZ5vXd0Oor74tH9tbbyHQkwbkWnLxztgMa8xXiesWBhcORtQ0pTWeoyG5vDIcNmyCmBRS9sciRpiflfa5-SR8nNzVrkxUK4gxpRLPdxkDlI3_4Y_s7uQ2xo7gLkAq0r_MefkOtq4IO03s01424UxMchA",
+    "price": 2.59,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "hitdiscount_by",
@@ -337,7 +512,12 @@
     "date": "2026-08-14T07:03:01+00:00",
     "beijing": "2026-08-14 15:03",
     "text": "🕘 «ЖЕЛТЫЕ ПЯТНИЦЫ И СУББОТЫ» стартовали&#33; 😍 14 и 15 августа не упустите возможность выгодно закупиться любимыми товарами в магазинах «Хит&#33;». Делитесь предложением с близкими и экономьте вместе. ❗️ Помните, что в «Хит&#33;» все всегда выгодно и по акционным ценам, а в эти пятницу и субботу – особенно&#33; *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. 🌐 Подробности на hitdiscount.by/zheltye-pyatnicy-i-subboty/ 📞 +375 44 500 11 99 #хит #магазинхит #желтыепятницыисубботы",
-    "photo": "https://cdn4.telesco.pe/file/VmwhVt_lyCyS9fYrwmZ_4gYtTa-TJ8-IRjxc2F1SOsNqmcWiCYiXO7q9x_AUuXL5kGbXr_lT8TtruWLMi0Za6BFPRzKMFS4nyZYSgqz3pMGvsAJh7sC0KjK7kQp4DZItl3nKj117VZrJuCKDqoLTpigkC_tLq1CmzYSqug_agOPA2vUn5wAxEPWVRtji2C4mNchwH7sMjNF_ghx208wYyT8yTXtL4q8jq_CSwAcDv49UXx_-67VhiTRyaZzs-QYiXiS31k9z4LK_JF0lhMBBQuMBjbGmRw8xFu6ym0aGBFiJzllZiEGAmwzqioPhRjfSVULYhNbjPLyjd756IU-3tA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/VmwhVt_lyCyS9fYrwmZ_4gYtTa-TJ8-IRjxc2F1SOsNqmcWiCYiXO7q9x_AUuXL5kGbXr_lT8TtruWLMi0Za6BFPRzKMFS4nyZYSgqz3pMGvsAJh7sC0KjK7kQp4DZItl3nKj117VZrJuCKDqoLTpigkC_tLq1CmzYSqug_agOPA2vUn5wAxEPWVRtji2C4mNchwH7sMjNF_ghx208wYyT8yTXtL4q8jq_CSwAcDv49UXx_-67VhiTRyaZzs-QYiXiS31k9z4LK_JF0lhMBBQuMBjbGmRw8xFu6ym0aGBFiJzllZiEGAmwzqioPhRjfSVULYhNbjPLyjd756IU-3tA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -346,7 +526,12 @@
     "date": "2026-08-14T06:04:07+00:00",
     "beijing": "2026-08-14 14:04",
     "text": "Наша любімае роднае сваё у Капеечцы 14 жнiўня&#33; 🕊",
-    "photo": "https://cdn4.telesco.pe/file/uYXNG_dZ5SetPc5XN3STFd4oGUIho06UKS6NS954hUQeYIOHMWQIjmgJu8ft4pHoZJaag85KGdPnKYLGNGBZdW3RWYqh2nvn2hITlpu93c4R4MFV_DjQDxJVbXPuj6Pi4RCThwGxas0t678VMQiV9vleNX5PYI5rr24WTj0SZwcwx6AU8IAs7uoGKNKZttBo5ZSK5bzUtEfiY6zvC_ZHP1kg_lgPQuwmGCNfzyyFbjdjFYWTduOEM73agMX0DXw62nteC4a7fo2rXeHLbYuT99qy2J14_QjzExRMUStI5Kh9kaGtrUMKzLB6H2cDDLhhQcZzeR-vGF5dZvQdmfjPSw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/uYXNG_dZ5SetPc5XN3STFd4oGUIho06UKS6NS954hUQeYIOHMWQIjmgJu8ft4pHoZJaag85KGdPnKYLGNGBZdW3RWYqh2nvn2hITlpu93c4R4MFV_DjQDxJVbXPuj6Pi4RCThwGxas0t678VMQiV9vleNX5PYI5rr24WTj0SZwcwx6AU8IAs7uoGKNKZttBo5ZSK5bzUtEfiY6zvC_ZHP1kg_lgPQuwmGCNfzyyFbjdjFYWTduOEM73agMX0DXw62nteC4a7fo2rXeHLbYuT99qy2J14_QjzExRMUStI5Kh9kaGtrUMKzLB6H2cDDLhhQcZzeR-vGF5dZvQdmfjPSw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "evroopt_shop",
@@ -355,7 +540,12 @@
     "date": "2026-08-14T06:03:05+00:00",
     "beijing": "2026-08-14 14:03",
     "text": "КОЖНАЯ ПЯТНІЦА – РОДНАЕ, СВАЁ&#33; 🇧🇾 Выходные с выгодой в «Евроопт»&#33; С 14 по 16 августа закупайтесь любимыми белорусскими продуктами по приятным ценам. Не забудьте карту лояльности «Еплюс», чтобы забрать скидки&#33; 🛒 ✨ Смотрите листовку, собирайте корзину и выбирайте свое, родное&#33; 💚 *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80 #ДзеньРоднагаСвайго #ДеньРодногоСвоего #Евроопт",
-    "photo": "https://cdn4.telesco.pe/file/abtyW7fa3zq1f9lkNRzgLTtl77MabrmRo87pxUcZjQ0LoMv9mrIk3frV55hSJ_xsjpMJ3UJrh_9-ddLJtonp_MYCt6-H8f9m_amyu1vKF6Mo2Kcq_yR4NdRxgG6TdK75QaM4mcBcEqSS_gKQ9CedAp9q8jkSSz6WaKw1aQe5aQy3PB4rRI7fRoX0D_y4CpQUqZS7j4pC5HlorOrWDTJKRP3of_jNMUMqpSp6fvPvFDm86E-G0MC3P1wHWmcLpbYYDrDuh8T4JaMVNkANFbPOfqFZw38Rs5ViJU6NCpogAubjUATM23VhQFJ4wth6xB7A87WN2QnGPfRa0kV9tO9lQw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/abtyW7fa3zq1f9lkNRzgLTtl77MabrmRo87pxUcZjQ0LoMv9mrIk3frV55hSJ_xsjpMJ3UJrh_9-ddLJtonp_MYCt6-H8f9m_amyu1vKF6Mo2Kcq_yR4NdRxgG6TdK75QaM4mcBcEqSS_gKQ9CedAp9q8jkSSz6WaKw1aQe5aQy3PB4rRI7fRoX0D_y4CpQUqZS7j4pC5HlorOrWDTJKRP3of_jNMUMqpSp6fvPvFDm86E-G0MC3P1wHWmcLpbYYDrDuh8T4JaMVNkANFbPOfqFZw38Rs5ViJU6NCpogAubjUATM23VhQFJ4wth6xB7A87WN2QnGPfRa0kV9tO9lQw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "16 августа"
   },
   {
     "user": "hitdiscount_by",
@@ -364,7 +554,12 @@
     "date": "2026-08-14T05:45:03+00:00",
     "beijing": "2026-08-14 13:45",
     "text": "КОЖНАЯ ПЯТНІЦА – РОДНАЕ, СВАЁ&#33; 🇧🇾 В магазинах «Хит&#33;» 14, 15 и 16 августа вас ждут отличные предложения на любимые товары от белорусских производителей&#33; 🥰 💳 Не забудьте использовать карту «Еплюс», чтобы закупиться выгодно&#33; Делитесь предложением с близкими и выбирайте родное вместе 😊 *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. 🌐 Подробности на hitdiscount.by 📞 +375 44 500 11 99 #хит #сваё #ДзеньРоднагаСвайго #ДеньРодногоСвоего",
-    "photo": "https://cdn4.telesco.pe/file/Ys8h8gHRYf-f455XxVr88RKoLC4sAKfQ7CXtIHX_8_HTMHx8DgSeLW37ue0xSW271GxskZ1MlnfHptijRM7wvlS4rR8yB5BTZLGmLAQlCi97L279FqLvhXgcL8AyLQ2cuBhAeL9iy8BWYjn1pbmoUJZYq65MzXwp9gpbyWg9O8qytZTaSvmAMBCRTAvvOTUYCTryO0E0H49awYdK_X7FFeL-o_rsyqRzH20d9Q_LblwNrkWNwAUlP7hvof25dWd-f2CP38bGv-TYBNful8dI2hpg31fJqxJ7vzPTIZwS2PD8XR-iZgGtLYfwjQ49MEyu-K4cAy167zAjDFnK_tB91w.jpg"
+    "photo": "https://cdn4.telesco.pe/file/Ys8h8gHRYf-f455XxVr88RKoLC4sAKfQ7CXtIHX_8_HTMHx8DgSeLW37ue0xSW271GxskZ1MlnfHptijRM7wvlS4rR8yB5BTZLGmLAQlCi97L279FqLvhXgcL8AyLQ2cuBhAeL9iy8BWYjn1pbmoUJZYq65MzXwp9gpbyWg9O8qytZTaSvmAMBCRTAvvOTUYCTryO0E0H49awYdK_X7FFeL-o_rsyqRzH20d9Q_LblwNrkWNwAUlP7hvof25dWd-f2CP38bGv-TYBNful8dI2hpg31fJqxJ7vzPTIZwS2PD8XR-iZgGtLYfwjQ49MEyu-K4cAy167zAjDFnK_tB91w.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -373,7 +568,12 @@
     "date": "2026-08-13T15:17:06+00:00",
     "beijing": "2026-08-13 23:17",
     "text": "Магазин GREEN по адресу ул. Притыцкого, 156 приглашает на работу&#33; 🙋‍♂️ Присоединяйся к нашей команде и получи бонус 1000 byn, премию за стаж работы в ритейле ☺️ 👉 Справки по телефону 7862&#33; GREEN - вместе мы сможем больше&#33; *предложение действует с 12.08.2026 по 30.09.2026*",
-    "photo": "https://cdn4.telesco.pe/file/o40jcVZ6GraeXvw6gWSBP0BppFRM9Z4lEOIKdHj2mwoi4_oytaJfeOT4PasSvChv6nnKc1OhPeNVtG0B7F6_pxMD9dBiMlyhsrzYTyW8yfSPwtGeRoGnjowl6kpeoDOgiCVKz1EixSquSGM70nnVrmtUhzIxJWkSKdWwwVwwdk7HV91ZksCMZc1F6RJO5odZ5fFuU2eQ4Ms0CEr8gaYsCUSoPk02n2bWis_mYxNBtNHNvWqdEO5yyENsWplAjS4E1MVovB-bkiAafEVo0aXHaYRLpfVI-ayUYwvsNCkiA1_GhZ4bTaolfOd7xf-u3Erb4z-_eIbx9mKpZbCOyA_a_A.jpg"
+    "photo": "https://cdn4.telesco.pe/file/mOtRfYEDIHy4hlM987e4HJF56UNhicsioi3PUL7Fod32HAh-B-WGNQyTvn0vGClK5kb9iVNgV_n0v7H5N9DchSiRxlqXTw0hZ0Gqwyia2uHNm0t3zhzdw8Jd4m2edyqg9EYk2_Qa7KlDNh4yLJmIz7laUTLNWCWbZlK5jJQrKOIFHCqVmFAvXG826GrgIuFOO2B-s1Ghi8axTP6Hwb7srIkzcIeKpy8B-03ghq9sT4jwyNGKccH6vqkxSZkpfH3KSkpNZeJVIuPd5-3rAAn8Q_DwjWZI1Az0HAsVZnyHU9Uwk2m-veq8FROqqitRteoSCkzIVTH00iXe36yXgH-E3A.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -382,7 +582,12 @@
     "date": "2026-08-13T13:52:41+00:00",
     "beijing": "2026-08-13 21:52",
     "text": "Для нас большая честь поддержать людей, которые своим трудом обеспечивают продовольственную и экономическую безопасность нашей страны. Сегодня мы хотим сказать слова благодарности хлеборобам Гомельской области&#33; Мы откликнулись на призыв Президента Республики Беларусь обратить особое внимание на наших передовиков, поблагодарить их за труд. Сегодня мы приехали сюда, чтобы поздравить лучших из лучших передовиков Жатвы 2026 года и вручить им сертификаты. Особенно приятно, что на наше мероприятие откликнулась многодетная семья одного из передовиков Антона Александровича. Мы понимаем, сколько забот у родителей накануне нового учебного года и надеемся, что наша поддержка станет хорошим подспорьем в подготовке к школе. Желаем семье здоровья, счастья, успехов детям в новом учебном году, а всем хлеборобам - хорошего урожая, благополучной уборочной кампании и мирного труда&#33; Сеть магазинов Копеечка всегда рядом с людьми и готова поддержать тех, кто своим трудом вносит вклад в развитие нашей страны.",
-    "photo": "https://cdn4.telesco.pe/file/jOxv_ziMfTBsPm_r-1DjoCkS9R77Gbg5b4MwsxYliXI65-6NbW5M-2Rlsby1sQot7DBXlgVJNGG2lLN9QHsmDswdrRolDJOQZkEt5wRqgIydf1HBNzs3PZ-ofNubEz2hg7SBF3z6D7TxAOUluBQ-V9tc9Rz6sU2sGNqzla5Zj_BUrNhtuYdSHi0y1Zu6kVQmsj-4i9M0PZu67-e1lNLeDSHFSop2gKOyrAErl0duSV4OIYEOD7fM0tv1cnK1rmqq0Onr10qrvl6k8TcSQ4Zhxq6vOpT80Pw_9ovQBgFQd-drfNpD83W-la1sYOhJI-kNCFlsV_FI_1j0NXrNoj-pyg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/jOxv_ziMfTBsPm_r-1DjoCkS9R77Gbg5b4MwsxYliXI65-6NbW5M-2Rlsby1sQot7DBXlgVJNGG2lLN9QHsmDswdrRolDJOQZkEt5wRqgIydf1HBNzs3PZ-ofNubEz2hg7SBF3z6D7TxAOUluBQ-V9tc9Rz6sU2sGNqzla5Zj_BUrNhtuYdSHi0y1Zu6kVQmsj-4i9M0PZu67-e1lNLeDSHFSop2gKOyrAErl0duSV4OIYEOD7fM0tv1cnK1rmqq0Onr10qrvl6k8TcSQ4Zhxq6vOpT80Pw_9ovQBgFQd-drfNpD83W-la1sYOhJI-kNCFlsV_FI_1j0NXrNoj-pyg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -391,7 +596,12 @@
     "date": "2026-08-13T13:01:26+00:00",
     "beijing": "2026-08-13 21:01",
     "text": "Ох уж этот Человек-паук 🕷️ 🕸️ Не успел выйти, а уже урвал себе нашу новинку - Сервелат «НАШЫ СМАКI. На расхват», тем самым оправдав его название. Вы следующие?",
-    "photo": "https://cdn4.telesco.pe/file/v0heHBnr2IDV5cEfEL-UngAXYCq8-eOJ-kRMpUIVRvMDQ8C1kuNjDTRPwEdFLI-37TX_lib7d86cHGSDqrIMqE4vxp-DGGAWiY_zCs6XvZaD1XsgoVaF0djcK_iIseWDIKNO4Rwn9bSUt8b4BbspEOzX1b5J7iPXbCt8cjw2Zq6ZudugcaVSFcURWn6LEBakUl_1jnGfW0OV-_3bpmFUSx_PMgu7VSIwTV3oI770swCF3-5YlWKoeiExCgqFsh1Op-4J53WzW3iYFaKk2GHNOkQBUZaGXLJU2O4I3qAJLiqnBvXVuflYhEUlmSECc79yczdUszTTWOEXb4I0-pHJow.jpg"
+    "photo": "https://cdn4.telesco.pe/file/v0heHBnr2IDV5cEfEL-UngAXYCq8-eOJ-kRMpUIVRvMDQ8C1kuNjDTRPwEdFLI-37TX_lib7d86cHGSDqrIMqE4vxp-DGGAWiY_zCs6XvZaD1XsgoVaF0djcK_iIseWDIKNO4Rwn9bSUt8b4BbspEOzX1b5J7iPXbCt8cjw2Zq6ZudugcaVSFcURWn6LEBakUl_1jnGfW0OV-_3bpmFUSx_PMgu7VSIwTV3oI770swCF3-5YlWKoeiExCgqFsh1Op-4J53WzW3iYFaKk2GHNOkQBUZaGXLJU2O4I3qAJLiqnBvXVuflYhEUlmSECc79yczdUszTTWOEXb4I0-pHJow.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "kopeechka_by",
@@ -400,7 +610,12 @@
     "date": "2026-08-13T09:40:56+00:00",
     "beijing": "2026-08-13 17:40",
     "text": "ОМГ.. ЧИПСЫ, которые не нуждаются в представлении&#33;&#33;&#33; Lay’s Белые грибы со сметаной 🍄‍🟫 Уже в Копеечках&#33;",
-    "photo": "https://cdn4.telesco.pe/file/oThdnbgcMtHcrB-_frOJ7Vr6XEB4ZbCHvaYaHk9Nq_XsFcTiKxCwxj1vWlPn3PsNVRtRcxLflR8g_raAKP82a8iQAVgG4wg6ToWa_dkoAzyYX_vK6mdnP777jaQnlzBdptu6dy-KMcIfOpkwOpOtNi0vUhpdSuwnBSsiXI_DTPzZDI14zXB9r0SogjBhFpLZ9M_7KPSEYrwxNRlv7N0vbyvp6x-SUH699O7g-oCEgWlAENHrHzM7G-0VX_N4TIMX5y9EfGRw3uhatp_PJc-jf8Q0zFtCoZSkVjSz5qO7ZyeVe_Y7lUXKY1VmZgxKmjpdnyixdGBsrPPzpPN_0ZNyDA"
+    "photo": "https://cdn4.telesco.pe/file/oThdnbgcMtHcrB-_frOJ7Vr6XEB4ZbCHvaYaHk9Nq_XsFcTiKxCwxj1vWlPn3PsNVRtRcxLflR8g_raAKP82a8iQAVgG4wg6ToWa_dkoAzyYX_vK6mdnP777jaQnlzBdptu6dy-KMcIfOpkwOpOtNi0vUhpdSuwnBSsiXI_DTPzZDI14zXB9r0SogjBhFpLZ9M_7KPSEYrwxNRlv7N0vbyvp6x-SUH699O7g-oCEgWlAENHrHzM7G-0VX_N4TIMX5y9EfGRw3uhatp_PJc-jf8Q0zFtCoZSkVjSz5qO7ZyeVe_Y7lUXKY1VmZgxKmjpdnyixdGBsrPPzpPN_0ZNyDA",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -409,7 +624,12 @@
     "date": "2026-08-13T09:29:12+00:00",
     "beijing": "2026-08-13 17:29",
     "text": "Летний урожай в Green ☀️ Акция «Консервируй выгоду» — это идеальный повод наполнить корзину свежими, сочными овощами 😍 🍅 🥒 🥕 🌶️ 🥬 🍅 🌶️ 🥒 🥬 Отправляйтесь в Green и запасайтесь витаминами 💚",
-    "photo": "https://cdn4.telesco.pe/file/CW8NlEamcbNk6g0U0valIkbY4GWhOFMTBWLKqpb9TRdmuzftQxOZy3TXODKtWhXcBtvFNKHP1_akkXSlM2aJiNluCOD-Bqzt-V2wSSpho_VY5C9V32OLjgc8JiINzeftxaJSdYhkArPm4-cmY0mYnhHZ3NL5b1VpFOHUzrQeN8ZXYR5DmrHZHEnlvnGPao-9EfU-Q9ikE5lDG9Ls_G04sRC86sG0zCYNSecOheLtIzKY0Aol5DVKb6aNW2TzFjPpZf3_u80T5uDiXUQ9jnppOqL2-TzmiV-q7m5M7bvP-aPSxk6fpQ4Y3uVOoxYrHWy1tLTYaRy4abn_nQDM5rQeJQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/CW8NlEamcbNk6g0U0valIkbY4GWhOFMTBWLKqpb9TRdmuzftQxOZy3TXODKtWhXcBtvFNKHP1_akkXSlM2aJiNluCOD-Bqzt-V2wSSpho_VY5C9V32OLjgc8JiINzeftxaJSdYhkArPm4-cmY0mYnhHZ3NL5b1VpFOHUzrQeN8ZXYR5DmrHZHEnlvnGPao-9EfU-Q9ikE5lDG9Ls_G04sRC86sG0zCYNSecOheLtIzKY0Aol5DVKb6aNW2TzFjPpZf3_u80T5uDiXUQ9jnppOqL2-TzmiV-q7m5M7bvP-aPSxk6fpQ4Y3uVOoxYrHWy1tLTYaRy4abn_nQDM5rQeJQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "hitdiscount_by",
@@ -418,7 +638,12 @@
     "date": "2026-08-13T06:29:50+00:00",
     "beijing": "2026-08-13 14:29",
     "text": "🕘 «ЖЕЛТЫЕ ПЯТНИЦЫ И СУББОТЫ» уже совсем скоро&#33; 😍 14 и 15 августа не упустите возможность выгодно закупиться любимыми товарами в магазинах «Хит&#33;» . Делитесь предложением с близкими и экономьте вместе. ❗️ Помните, что в «Хит&#33;» все всегда выгодно и по акционным ценам, а в эти пятницу и субботу – особенно&#33; *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. 🌐 Подробности на hitdiscount.by/zheltye-pyatnicy-i-subboty/ 📞 +375 44 500 11 99 #хит #магазинхит #желтыепятницыисубботы",
-    "photo": "https://cdn4.telesco.pe/file/UcFOXE2tWD97mBkWuLJYFejOcpY19z-fLCkbdKWImX043Yb9Xc9K_QBkDq5AeB7phJvvg0cxDslG8nwH4pqlMJcMizeuFWE1KagOCvYg1Iw2Gs00bnNKCpCw4r08jWX-PCkTRPdbaLEE3JzpOiHk1cSn2OQrFT3pqU-JcHdau17kzbiQigBkuB-n9o8bUiMaC8EsdQYMJ9gQ7ZoTksNluAD_Pr4VbpMpixCdmKPi9cN-fUnM74ybYLuAjS_cOfoVyzb6JVitIwtK68p6ajni6p2TrbTM7jTy7yvh1-nGJSyKSQTeX8l4uhZ8DXyJr4lofOnIeCUTE_ClMNVEMVtl7w.jpg"
+    "photo": "https://cdn4.telesco.pe/file/UcFOXE2tWD97mBkWuLJYFejOcpY19z-fLCkbdKWImX043Yb9Xc9K_QBkDq5AeB7phJvvg0cxDslG8nwH4pqlMJcMizeuFWE1KagOCvYg1Iw2Gs00bnNKCpCw4r08jWX-PCkTRPdbaLEE3JzpOiHk1cSn2OQrFT3pqU-JcHdau17kzbiQigBkuB-n9o8bUiMaC8EsdQYMJ9gQ7ZoTksNluAD_Pr4VbpMpixCdmKPi9cN-fUnM74ybYLuAjS_cOfoVyzb6JVitIwtK68p6ajni6p2TrbTM7jTy7yvh1-nGJSyKSQTeX8l4uhZ8DXyJr4lofOnIeCUTE_ClMNVEMVtl7w.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "evroopt_shop",
@@ -427,7 +652,12 @@
     "date": "2026-08-13T06:02:57+00:00",
     "beijing": "2026-08-13 14:02",
     "text": "🔥 ЧЕРНЫЕ ЦЕНЫ В ЛЕТНЕМ РЕЖИМЕ 🔥 Всего 3 дня - с 13 по 15 августа - в гипермаркетах «Евроопт»&#33; Успейте забрать сочные скидки и товары для летних выходных 👇🏻 ✔️ Шашлык из свиной шеи «Классический» - 18,99 руб. за 1 кг ✔️ Форель, свежемороженая - 29,99 руб. за 1 кг ✔️ Сыр «Маасдам элит», 45% - 11,99 руб. за 1 кг ✔️ Виноград зеленый - 6,99 руб. за 1 кг ✔️ Арбуз - 1,79 руб. за 1 кг ✔️ Конфеты Belgian legend, Бельгия - 7,99 руб. за 200 г Смотрите листовку и планируйте покупки 👌🏻 *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80",
-    "photo": "https://cdn4.telesco.pe/file/L6NQD5PCMvqIEglh-crafCmwBd90GWimnFv-Amy5QW2uWJjgzAepzAPwOjnSWix_emtz9X3qHcCyST4MugOXyteWQoTDUq5nk6zvZDjGn1frc2KCXgXCKWdk2hRBu1fVhwZgiyupLM1dGure1HV5SsJCUy4nutmOVQj5T36jrY-Jo-mZt-lNFyo5xGsZEUm0iXZ9BHMfR-TMSHuAVA5w2GhTrxbknEyWW7Lk5G2S5wwYrEh1i2jMOgHBvKHFL0qcb_mAM4I0zbUzWs4b0Z7mXaI0LBjSQtL_XiJmuthtpFY5uvNus0vMCV4ygrMLg_Rvlthi7qHih9C5LCTJzzP0VQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/L6NQD5PCMvqIEglh-crafCmwBd90GWimnFv-Amy5QW2uWJjgzAepzAPwOjnSWix_emtz9X3qHcCyST4MugOXyteWQoTDUq5nk6zvZDjGn1frc2KCXgXCKWdk2hRBu1fVhwZgiyupLM1dGure1HV5SsJCUy4nutmOVQj5T36jrY-Jo-mZt-lNFyo5xGsZEUm0iXZ9BHMfR-TMSHuAVA5w2GhTrxbknEyWW7Lk5G2S5wwYrEh1i2jMOgHBvKHFL0qcb_mAM4I0zbUzWs4b0Z7mXaI0LBjSQtL_XiJmuthtpFY5uvNus0vMCV4ygrMLg_Rvlthi7qHih9C5LCTJzzP0VQ.jpg",
+    "price": 18.99,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 45,
+    "endDate": "15 августа"
   },
   {
     "user": "evroopt_shop",
@@ -436,7 +666,12 @@
     "date": "2026-08-12T14:44:09+00:00",
     "beijing": "2026-08-12 22:44",
     "text": "🏠 Покупайте&#33; Переезжайте&#33; Показали случайному прохожему квартиру, которую можно выиграть в игре «Удача в придачу&#33;» за покупки в августе&#33; 🤩 А еще будут разыграны: 🚙 ТРИ автомобиля BELGEE X80 💰 100 000 рублей 🛒 и 10 000 сертификатов по 10 рублей на покупки в магазинах «Евроопт» и «Хит&#33;» Весь август покупайте «товары удачи» с картой «Еплюс» и получайте 1 игровой код за каждые 2 рубля их стоимости в чеке. Розыгрыш призов состоится 4 сентября&#33; Ставьте 💚 на удачу&#33; Пусть повезет&#33; 💫 Срок проведения рекламной игры «Удача в придачу&#33; Тур 218»: с 01.08.2026 по 05.11.2026, включая сроки выдачи призов и публикации результатов. Телефон горячей линии: + 375 (17) 388-76-76. Подробности: igra.evroopt.by #евроопт #хит #удачавпридачу #еплюс",
-    "photo": "https://cdn4.telesco.pe/file/POtKR6_PdqtRLdh52DLPQ86aKpUXOe740HiXMJkkeSBotCnTLrObFKQRESLgMD0poGhHPAF2zVqP4rZ5IFa1RptxGZp8aS9plUO6c3r__FPs3-3DbPSx3P_lIq-3SqJKb1YEKgTcvZKPqMu0CXUjFT5NIzYW8D5KQum6o1TKG1LzzCvIIgwwPZEtnqq6VEjCS6T9bAjFLVOt6TU4aD6ZVQPfzvgff46LLkfSIqRYZwjz2uvPF9t29nNOx8M551tz9YjoykXH0qapCquLqDdaZOMT27E4YyGxlTGW8UPNnMrnZ0v_jUJN3_ZsBjJj_vAjQy9A0G187SLwJpUq_qnTtw"
+    "photo": "https://cdn4.telesco.pe/file/POtKR6_PdqtRLdh52DLPQ86aKpUXOe740HiXMJkkeSBotCnTLrObFKQRESLgMD0poGhHPAF2zVqP4rZ5IFa1RptxGZp8aS9plUO6c3r__FPs3-3DbPSx3P_lIq-3SqJKb1YEKgTcvZKPqMu0CXUjFT5NIzYW8D5KQum6o1TKG1LzzCvIIgwwPZEtnqq6VEjCS6T9bAjFLVOt6TU4aD6ZVQPfzvgff46LLkfSIqRYZwjz2uvPF9t29nNOx8M551tz9YjoykXH0qapCquLqDdaZOMT27E4YyGxlTGW8UPNnMrnZ0v_jUJN3_ZsBjJj_vAjQy9A0G187SLwJpUq_qnTtw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "10 рублей"
   },
   {
     "user": "kopeechka_by",
@@ -445,7 +680,12 @@
     "date": "2026-08-12T14:14:41+00:00",
     "beijing": "2026-08-12 22:14",
     "text": "БЫСТРЫЙ ОБЗОР сладостей из Копеечки&#33; Подписывайтесь, чтобы первыми узнавать об акциях и интересных новинках в нашей сети&#33; ❤️",
-    "photo": "https://cdn4.telesco.pe/file/BVVV4-kWoha_mVqDX0Ot7UF3fXhdQvGdWMm1hNfyayiUL1Jr27ruv_bgJNdKSK5PXt_HFCavJo8CXEpghn5TSP4bHUzfIxBUnMQ5vGiPd2tJFo0YIrAmte4N1235IeZrJMIw7pLL6BC8H4ycZyHnsYgJnhwI7mTF3JwQBGmZ4vXO24NaBX_aQDDo4ga_0hvXo18-1ie4zpD-d1ITKaK2_Q_CGp8SB-tPu3rinYJPiPZ6sjTaTEvnCVmgjCWK892EadipYx-gmoKqyBHCMN3kt8V0a6cG8IOMxvRjY4uadeGtll3ujTYSc7d4V4M3MJ80G2PsJHMyfa83UjJPNiaJiw"
+    "photo": "https://cdn4.telesco.pe/file/BVVV4-kWoha_mVqDX0Ot7UF3fXhdQvGdWMm1hNfyayiUL1Jr27ruv_bgJNdKSK5PXt_HFCavJo8CXEpghn5TSP4bHUzfIxBUnMQ5vGiPd2tJFo0YIrAmte4N1235IeZrJMIw7pLL6BC8H4ycZyHnsYgJnhwI7mTF3JwQBGmZ4vXO24NaBX_aQDDo4ga_0hvXo18-1ie4zpD-d1ITKaK2_Q_CGp8SB-tPu3rinYJPiPZ6sjTaTEvnCVmgjCWK892EadipYx-gmoKqyBHCMN3kt8V0a6cG8IOMxvRjY4uadeGtll3ujTYSc7d4V4M3MJ80G2PsJHMyfa83UjJPNiaJiw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -454,7 +694,12 @@
     "date": "2026-08-12T14:03:10+00:00",
     "beijing": "2026-08-12 22:03",
     "text": "УРА&#33; Завтра четверг&#33; А это значит - ДЕНЬ КОТА в ГИППО 😻 Давайте радовать наших пушиствх друзей самыми вкусными лакомствами 🛒",
-    "photo": "https://cdn4.telesco.pe/file/h9IVmHNDD8kJ8g5k9vdfOmEES42vbzGXNM2jMAASdcwTYnZyY40vis3GL6x035djIOqJNug3Xt6FE7PfEQIbgO37bVFCBZn91aNcmNxAtq3lmjYKGni6Z_ung7d2Dqe8LFZiBUdBvv3JfTqizmSM-k1g4-AUSzIypcAh53QmmBpwcGSiMPjIHzgmNn9W4ND8EGPlMfj5zwuyC8CePHUhnLrWP7Elf23qL50mb4iQiqfaNA_LdLWWOqcwRnWoCWWO_sppUVAsaR6U2c7ineaY5BxqPs8ApAGBIUfz1Z6U6q2N8ZrA6OAyuuoeHhCqA4UOXY3g3KEDtFFSi3Ij5m8ioA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/h9IVmHNDD8kJ8g5k9vdfOmEES42vbzGXNM2jMAASdcwTYnZyY40vis3GL6x035djIOqJNug3Xt6FE7PfEQIbgO37bVFCBZn91aNcmNxAtq3lmjYKGni6Z_ung7d2Dqe8LFZiBUdBvv3JfTqizmSM-k1g4-AUSzIypcAh53QmmBpwcGSiMPjIHzgmNn9W4ND8EGPlMfj5zwuyC8CePHUhnLrWP7Elf23qL50mb4iQiqfaNA_LdLWWOqcwRnWoCWWO_sppUVAsaR6U2c7ineaY5BxqPs8ApAGBIUfz1Z6U6q2N8ZrA6OAyuuoeHhCqA4UOXY3g3KEDtFFSi3Ij5m8ioA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "evroopt_shop",
@@ -463,7 +708,12 @@
     "date": "2026-08-12T14:01:17+00:00",
     "beijing": "2026-08-12 22:01",
     "text": "КАЖДЫЙ ДЕНЬ - ВЫГОДНЫЕ ЦЕНЫ В «ЕВРООПТ»&#33; Предложение действует с 13 по 19 августа во всех магазинах «Евроопт». *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80",
-    "photo": "https://cdn4.telesco.pe/file/VDyfXJYuKHD7gJEjx_wE793lTnIBjnOvLP0Vd49C3LSCeQ52C-i6x0ZEvs2Qq_q4L5Anx8JKmoA2Ks8Vwvu4ISPydUqE3qShUHCQG979DEPTpM2mqshQcmHX2C76l-k14B_hBVFbqv27yQoabL6KzUo6LlPj4cltc57I7WcsCOthyDRTkooKJ5V_jkrnVuBXUVkBygbUDvKvI2_Evgps8tKriYlI8fJaAbkOWXbV_1ko7CPi5ob_h1yUOkaYjZFt5e1vXIpDmuWJrfwbtu2WD-GJCUzRh59cJKGKjeeoDoCDviL212Vq-iw-ep-uA2tgirAGG2wVUFEU1KN4AJPTyQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/VDyfXJYuKHD7gJEjx_wE793lTnIBjnOvLP0Vd49C3LSCeQ52C-i6x0ZEvs2Qq_q4L5Anx8JKmoA2Ks8Vwvu4ISPydUqE3qShUHCQG979DEPTpM2mqshQcmHX2C76l-k14B_hBVFbqv27yQoabL6KzUo6LlPj4cltc57I7WcsCOthyDRTkooKJ5V_jkrnVuBXUVkBygbUDvKvI2_Evgps8tKriYlI8fJaAbkOWXbV_1ko7CPi5ob_h1yUOkaYjZFt5e1vXIpDmuWJrfwbtu2WD-GJCUzRh59cJKGKjeeoDoCDviL212Vq-iw-ep-uA2tgirAGG2wVUFEU1KN4AJPTyQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "19 августа"
   },
   {
     "user": "kopeechka_by",
@@ -472,7 +722,12 @@
     "date": "2026-08-12T11:08:19+00:00",
     "beijing": "2026-08-12 19:08",
     "text": "ЗАБУДЬ ВСЕ, что тебе бабушка говорила про халву&#33; В Копеечке 2 новинки для истинных ценителей сладкого&#33; 🌻 Халва подсолнечная с ЦЕЛЬНЫМИ ядрами подсолнечника 🌻 Халва со вкусом ПАРМЕЗАНА и БАЛЬЗАМИЧЕСКОГО УКСУСА Очередные ВАУ сочетания от белорусов, обязательно на пробу&#33; 🔥",
-    "photo": "https://cdn4.telesco.pe/file/OlaKBvMNcfbKI43eE0BPmoE45b9yXA-gjmWTYisCrPGpISwY4Iu4RStU5EOnMLqQOhNIPdd1lq8XvIqYxSfYn7TvzLoGQnm25tEQ-b0v-4AQ7bXESUA9KX2Ql4h3qF9laudkyEjfPVJgQbyQ0t32Ui8eEK4hknEVYFSV5gY3IiCpAgYJSF8X9d7k04VHmGype-wyQYKz6hXGnicPK_GwS677CWg0vT8ivS3CwqtoTw-RcYX8RWoXYWsebrNoUYiraCBOIdi8NgxLpo1gtk4HuLEL12peP5St1kKcyKyfxDk6GdeF5SxHvDTu1g3eBPLlBhUau4bnHn4nnLsh_Nh_RA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/OlaKBvMNcfbKI43eE0BPmoE45b9yXA-gjmWTYisCrPGpISwY4Iu4RStU5EOnMLqQOhNIPdd1lq8XvIqYxSfYn7TvzLoGQnm25tEQ-b0v-4AQ7bXESUA9KX2Ql4h3qF9laudkyEjfPVJgQbyQ0t32Ui8eEK4hknEVYFSV5gY3IiCpAgYJSF8X9d7k04VHmGype-wyQYKz6hXGnicPK_GwS677CWg0vT8ivS3CwqtoTw-RcYX8RWoXYWsebrNoUYiraCBOIdi8NgxLpo1gtk4HuLEL12peP5St1kKcyKyfxDk6GdeF5SxHvDTu1g3eBPLlBhUau4bnHn4nnLsh_Nh_RA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -481,7 +736,12 @@
     "date": "2026-08-12T08:56:13+00:00",
     "beijing": "2026-08-12 16:56",
     "text": "Что может быть лучше мороженого летом? ☀️ Сладкое и манящее мороженое, которое хочется всегда. Сложно сделать выбор? Подкиньте кубик и он подскажет каким мороженым полакомиться сегодня 😍 Нажмите на 🎲 , чтобы скопировать, а затем вставьте в комментарии. Выпавшее число станет ответом&#33; Какое мороженое выпало вам? Делитесь в комментариях 👇🏼",
-    "photo": "https://cdn4.telesco.pe/file/gg7jzEw7kZyFcS_4DG4dWrAqRvuW66CP_XHsC7WYTNj-F35_njLH4Djqj3njORYgiaSq8WsQ8upoFwC2z6AtHsd-JBRQV-ZumHdZb5jjw1uQ8FeBw-VRtrElIcpq5VzBWMN3_vF292j4fLjwuLgJbdtyYmHNJi8IEhGWTP62aFcvLuLqu8i9zd8SoRCj6JfiSnpctO3AMnlnpbUwGq_I1Pd4CkS34g97vHKsNS5zvyjMRVae0sQ5ACpNjIZEDvLi-mPEITm5I49oYuLPLyiDS1lZA-zezm5lyG9U71HBKNetVhAIQl-CTdngHpWFYgi9FQbmCECCouEWzFYT00UCVw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/gg7jzEw7kZyFcS_4DG4dWrAqRvuW66CP_XHsC7WYTNj-F35_njLH4Djqj3njORYgiaSq8WsQ8upoFwC2z6AtHsd-JBRQV-ZumHdZb5jjw1uQ8FeBw-VRtrElIcpq5VzBWMN3_vF292j4fLjwuLgJbdtyYmHNJi8IEhGWTP62aFcvLuLqu8i9zd8SoRCj6JfiSnpctO3AMnlnpbUwGq_I1Pd4CkS34g97vHKsNS5zvyjMRVae0sQ5ACpNjIZEDvLi-mPEITm5I49oYuLPLyiDS1lZA-zezm5lyG9U71HBKNetVhAIQl-CTdngHpWFYgi9FQbmCECCouEWzFYT00UCVw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -490,7 +750,12 @@
     "date": "2026-08-11T14:23:30+00:00",
     "beijing": "2026-08-11 22:23",
     "text": "Green дарит подарки 🎁 🎁 💚 А если ваши следующие покупки будут за наш счёт? Разыгрываем сертификат на 100 рублей — возможно, именно вам повезёт&#33; ✨ Участвуйте в розыгрыше с 11 по 18 августа и выигрывайте 👐 🏆 1 победитель получит: 💫 Сертификат на сумму 100 руб от Green Как принять участие: 1️⃣ Подпишитесь на канал Green 2️⃣ Нажмите «Я в деле» под этим постом Чтобы увеличить шансы на победу: 😉 👍 Поставьте реакции на публикации в канале 💬 Оставьте комментарии под постами 🔁 Репост друзьям — плюс к удаче 🏆 Итоги подведём 18 августа в 15:00 с помощью рандомайзера. Пусть именно вам повезёт 🍀 * Участвовать могут только жители РБ",
-    "photo": "https://cdn4.telesco.pe/file/KV_1C7Q7NVvKgNWQteLMguBxnPU2ABtBaAoVytGnpaoeUb1bwYxdNezt4OQA5q-hK9aJ6BjY0v3VmPwFBUKydgXU2qAzlJBrISqwliqoMaydT8Hjo65mOYkuTMZDn9ouXxqhwYP89JUP6Y-N_SuxWgdGzFmFV6unF6qBMQwezSNhHS-ktKKx_fAMheYwweXK4Kn8PtN620HwBAx5eOnaysjhVvWPvW5AiUb8xsLz0pZnhtvxJQ7zTPB3ReTNbiJDguHH0zXu3EB0WbVcMfAbVekGvJo0BpoGUljpXvlseran9RX7z3VCYTp94V5Gv-wcDeOTgFb-oSOdKI9ZToh3wQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/KV_1C7Q7NVvKgNWQteLMguBxnPU2ABtBaAoVytGnpaoeUb1bwYxdNezt4OQA5q-hK9aJ6BjY0v3VmPwFBUKydgXU2qAzlJBrISqwliqoMaydT8Hjo65mOYkuTMZDn9ouXxqhwYP89JUP6Y-N_SuxWgdGzFmFV6unF6qBMQwezSNhHS-ktKKx_fAMheYwweXK4Kn8PtN620HwBAx5eOnaysjhVvWPvW5AiUb8xsLz0pZnhtvxJQ7zTPB3ReTNbiJDguHH0zXu3EB0WbVcMfAbVekGvJo0BpoGUljpXvlseran9RX7z3VCYTp94V5Gv-wcDeOTgFb-oSOdKI9ZToh3wQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "18 августа"
   },
   {
     "user": "gippoby_offical",
@@ -499,7 +764,12 @@
     "date": "2026-08-11T07:48:40+00:00",
     "beijing": "2026-08-11 15:48",
     "text": "АКЦИЯ&#33; АКЦИЯ&#33; АКЦИЯ&#33; с 11 по 17 августа ждем вас в наших магазинах за выгодными покупками 🛒 Больше товаров на сайте www.gippo.by",
-    "photo": "https://cdn4.telesco.pe/file/PgbCkAmRQUnk9dmQf8bVHUpFnjJXMKVBGauTt6Vd80q4EmXQSTaCVNespRmgwEaK-mVjFvtSVC0Kaur-BV4ajrgQTOudo7yFnySI3nizsAQv36KWsSpBPaeeLisp8Bs7pgurxxDihZB4xKDPg2ajfOJqvwtqawFmwGPhekpYSo4wAmZlJvJ6W9w91ygKqwVCScqaL2P7tn1cCgL1-u6rOtUGWZwiKNTEG_8sYIPPsd5BobkPHLwUKKqGJOIczMo2AhNYXXZZKGIoS_M0ZmQaPsaJ6g9vE8Aw8E3csBecxPSewNS-kYgDDhSGcUnB6RC8Kv9CKEu2ikBdkRAIIwhwWQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/PgbCkAmRQUnk9dmQf8bVHUpFnjJXMKVBGauTt6Vd80q4EmXQSTaCVNespRmgwEaK-mVjFvtSVC0Kaur-BV4ajrgQTOudo7yFnySI3nizsAQv36KWsSpBPaeeLisp8Bs7pgurxxDihZB4xKDPg2ajfOJqvwtqawFmwGPhekpYSo4wAmZlJvJ6W9w91ygKqwVCScqaL2P7tn1cCgL1-u6rOtUGWZwiKNTEG_8sYIPPsd5BobkPHLwUKKqGJOIczMo2AhNYXXZZKGIoS_M0ZmQaPsaJ6g9vE8Aw8E3csBecxPSewNS-kYgDDhSGcUnB6RC8Kv9CKEu2ikBdkRAIIwhwWQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "17 августа"
   },
   {
     "user": "shopsgreen",
@@ -508,7 +778,12 @@
     "date": "2026-08-10T14:10:33+00:00",
     "beijing": "2026-08-10 22:10",
     "text": "Одна выгодная цена хорошо, а две - еще лучше 🔥 🔥 🔥 С 10 по 16 августа объявляем выгодную цену на 2 главных хита этой недели 💚 👉 подробности тут",
-    "photo": "https://cdn4.telesco.pe/file/CLw9LaGWcYtCNVrTQ9MTZCUrtEdJeHxxi1FCO4SYEGIojoj41FLRTbx4S1_lYXoYKpgMPBw7g8Vj0u6PCujlIU7jn7Q0YS_1AJYkH8CAEzbr1ttL703LRONqRp3pWQN29eVrrxLdunVaLapxjH-e-yhKcz_Zt8XEeq7q9nzFFayWsnQWwhEWHvhU5WyCdt5TXF9LPiq7_yHnCMQ7ZtufA6zVOErptDtBbVaCwJIIyCF45vzwvimUe9JDuGgkhiCd4iticRt4oIqORuLAp-gbnQBiOA0nLsVt12ihxWebeHMk1kkC6mfebjNerjPovNBLpeWfXUHVukZsEB7yYT2PMw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/CLw9LaGWcYtCNVrTQ9MTZCUrtEdJeHxxi1FCO4SYEGIojoj41FLRTbx4S1_lYXoYKpgMPBw7g8Vj0u6PCujlIU7jn7Q0YS_1AJYkH8CAEzbr1ttL703LRONqRp3pWQN29eVrrxLdunVaLapxjH-e-yhKcz_Zt8XEeq7q9nzFFayWsnQWwhEWHvhU5WyCdt5TXF9LPiq7_yHnCMQ7ZtufA6zVOErptDtBbVaCwJIIyCF45vzwvimUe9JDuGgkhiCd4iticRt4oIqORuLAp-gbnQBiOA0nLsVt12ihxWebeHMk1kkC6mfebjNerjPovNBLpeWfXUHVukZsEB7yYT2PMw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "16 августа"
   },
   {
     "user": "groshyk",
@@ -517,7 +792,12 @@
     "date": "2026-08-08T12:55:10+00:00",
     "beijing": "2026-08-08 20:55",
     "text": "Ребята, вы это видели?&#33; 😱 В «Грошыке» начался новый тур игры «Шчаслівы кошык&#33;», и на этот раз призы просто за гранью реальности&#33; 🤌 Ставки удвоены - сразу два новеньких автомобиля GEELY Cityray &#33; 😍 Представьте, как круто будет на таком гонять по делам. А кроме машины в розыгрыше: 💰 Денежные призы на 50 000 и 25 000 рублей, а ещё 20 призов по 5 000 рублей &#33; 🛍 И очень много сертификатов: 2000 штук по 50 руб. и 2000 штук по 25 руб. Правила всё такие же: покупаем товары-партнеры (Kinder, Mentos, Persil, Черноголовка и др.) на сумму от 3 рублей в чеке, 3 рубля = 1 игровой код. 🎫 Участвуем с 1 августа по 13 сентября, а розыгрыш — 23 сентября&#33; Все подробности на сайте igra.groshyk.by . 🍀 Ну что, за каким призом идем в этот раз? ❤️ — Хочу Geely Cityray&#33; 🔥 — Только кэш&#33; 😍 — Буду рада любому сертификату",
-    "photo": "https://cdn4.telesco.pe/file/pBNdU4q98vOGIx27RZuzZPcbUaSMjO47NgNftLIi7QEJ-BUCjEiFBYpjultpqPGqOa8dEVmQVgKbLrUmZu2k2VXmA1B8OnmS3_hL8P__a61qmK1wSdxw1s-44qnGEJpzaIDe2hq0DfN2kCLWjUWDyWApVxnjqnScTjgAGGtE1bhuo4o5qmW12WMgNvvV2sBJi2BNBaPfRkaem0xfEVIqWgKnTkjUPp4nslyknAfjnJoNQwUKjnOcK6BrjKsSYWbtVBNRfEBqZSGyaBEMM9IiISUeAaizhG4oLQ59OpgTvK-QR6tuRX041MXV6i8dpRZF4vUpy1xL0l4PjQRBPruwng.jpg"
+    "photo": "https://cdn4.telesco.pe/file/pBNdU4q98vOGIx27RZuzZPcbUaSMjO47NgNftLIi7QEJ-BUCjEiFBYpjultpqPGqOa8dEVmQVgKbLrUmZu2k2VXmA1B8OnmS3_hL8P__a61qmK1wSdxw1s-44qnGEJpzaIDe2hq0DfN2kCLWjUWDyWApVxnjqnScTjgAGGtE1bhuo4o5qmW12WMgNvvV2sBJi2BNBaPfRkaem0xfEVIqWgKnTkjUPp4nslyknAfjnJoNQwUKjnOcK6BrjKsSYWbtVBNRfEBqZSGyaBEMM9IiISUeAaizhG4oLQ59OpgTvK-QR6tuRX041MXV6i8dpRZF4vUpy1xL0l4PjQRBPruwng.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "50 руб"
   },
   {
     "user": "unistoreminsk",
@@ -526,7 +806,12 @@
     "date": "2026-08-06T09:30:26+00:00",
     "beijing": "2026-08-06 17:30",
     "text": "☀️ 06.08–07.08 — лето в самом разгаре, а значит пора собрать витаминную корзину со свежими овощами в Unistore опт&розница и Unistore дискаунтер &#33; Стоимость указана за 1 кг: 🌽 Кукуруза сладкая — 3,29 руб. Источник витаминов группы B, которые помогают поддерживать обмен веществ, а также содержит клетчатку для комфортного пищеварения. 🍄‍🟫 Грибы шампиньоны(упаковка 600 г) — 5,19 руб. Содержат витамины группы B и витамин D, которые способствуют поддержанию энергии и здоровья костей. 🫑 Перец грунтовый — 3,75 руб. Один из лидеров по содержанию витамина C, а также источник витамина A для поддержки здоровья кожи и зрения. 🥒 Огурец колючий — 1,69 руб. Содержит витамин K, витамин C и много воды, помогая поддерживать водный баланс организма. Добавляйте больше пользы в ежедневное меню и покупайте любимые овощи по выгодным ценам&#33; 🛒 #юнистор #unistore #витамины #скидкиминск #акцииминск",
-    "photo": "https://cdn4.telesco.pe/file/NEAVoejnq3Do8otB3n2e_qvm1aTVYEFokQEzDYSSBLbOBy7NGOOAPlIjW4iWas93c9jzyLv_-uMoQRp9tSFML-7dMRFLDf11Z4Tro20nefrzEtzZ79Dzx1RH9tqNvOHIgWhePmb5Rp5zaEhCsWuyXZIedMui6KFJ6-pR3lmWc_vgY2cFPUbfhwuCNrJA-Kg1PSAOAhKE15utaiFjsTBdhzlBgbq9ozJKX2s_KFEgF9kt4_84GmIOxtz_xAIk5KrNfCTNMboDWxeJo3tBBPRFJgZNXzuK-TigAxPddi8uvu0PUYTFvkHQ9LmA_uAygyY_BpApPLTsx1BI9GKyIX_gGA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/NEAVoejnq3Do8otB3n2e_qvm1aTVYEFokQEzDYSSBLbOBy7NGOOAPlIjW4iWas93c9jzyLv_-uMoQRp9tSFML-7dMRFLDf11Z4Tro20nefrzEtzZ79Dzx1RH9tqNvOHIgWhePmb5Rp5zaEhCsWuyXZIedMui6KFJ6-pR3lmWc_vgY2cFPUbfhwuCNrJA-Kg1PSAOAhKE15utaiFjsTBdhzlBgbq9ozJKX2s_KFEgF9kt4_84GmIOxtz_xAIk5KrNfCTNMboDWxeJo3tBBPRFJgZNXzuK-TigAxPddi8uvu0PUYTFvkHQ9LmA_uAygyY_BpApPLTsx1BI9GKyIX_gGA.jpg",
+    "price": 7.08,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -535,7 +820,12 @@
     "date": "2026-08-06T09:04:26+00:00",
     "beijing": "2026-08-06 17:04",
     "text": "Тук-тук&#33; 🍉 Вы тоже не верите своим глазам? Арбуз в Green всего 1.59/кг с 5 по 11 августа ☀️ Сочный, сладкий, ароматный, а вкус просто вау&#33; 💥 Ждем за покупками в Green 💚",
-    "photo": "https://cdn4.telesco.pe/file/ESaDlAb2oUql1et_BZ8oAFPzqJ9sbwA0eFvPLadqbio1iV519xHMIyx9BaZiBN5w9zvsdvV3cbt2-fLst1HNoAM5cTI0MY01lFzovvHe5YJ87R1UiBpBw1DlHZnjc5CHwP4oIJARyLXQMa8r0IrJC2cSOcEjtaH-pWa-K6E307Vm_GLv2aBp3VuL0cBDpRQ6I1ZzHCMjn-ZkGln5LaN-KenKeoGV5REotuNJv10n50dyaXF-6Wl9iL54lO9rwkbmR1EG3W6XGIMhhdMVZcYOueN61-Gmc46O3XhLADzeqqZ1QiwKF47hCi-q7AFaFXEedQIPLUXueEE5LW1ArK-l8w.jpg"
+    "photo": "https://cdn4.telesco.pe/file/ESaDlAb2oUql1et_BZ8oAFPzqJ9sbwA0eFvPLadqbio1iV519xHMIyx9BaZiBN5w9zvsdvV3cbt2-fLst1HNoAM5cTI0MY01lFzovvHe5YJ87R1UiBpBw1DlHZnjc5CHwP4oIJARyLXQMa8r0IrJC2cSOcEjtaH-pWa-K6E307Vm_GLv2aBp3VuL0cBDpRQ6I1ZzHCMjn-ZkGln5LaN-KenKeoGV5REotuNJv10n50dyaXF-6Wl9iL54lO9rwkbmR1EG3W6XGIMhhdMVZcYOueN61-Gmc46O3XhLADzeqqZ1QiwKF47hCi-q7AFaFXEedQIPLUXueEE5LW1ArK-l8w.jpg",
+    "price": 1.59,
+    "priceUnit": "/кг",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "11 августа"
   },
   {
     "user": "gippoby_offical",
@@ -544,7 +834,12 @@
     "date": "2026-08-05T14:40:28+00:00",
     "beijing": "2026-08-05 22:40",
     "text": "🔥 Самое время попробовать СЛАДКИЙ И СОЧНЫЙ ЛИЧИ&#33;",
-    "photo": "https://cdn4.telesco.pe/file/BGM7z8n0QkOSh5DCAvPVx4PeM31FSa4NHKs7CdGDLQA4q8NZ94QIJ6rRIg363LgAey-ibvbgCH7voLc2oPqaNMpMWXMXpMtztfbzlI9Sp_yO1yPfunDkvrRCruNPQ0bmuMgNmQa_Pbl-lGpqLICKjeYPSkED-xmw9sKxZgEvAcNaUOq4gkgFYVR9BAti_EJb84aglfYFGPU6gBGrGKHXv8ODXVvwqQ0ZodVYzNyVPDrhkqenxtPl7MAoiBVgt6gTksM033sDB9GE0WreuEb_Sayi5XmsrRZHzsxqnQAnt973nXDW1X965NCPtsrqeWN-o3pPq7eOPmOOugg5cGQumg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/BGM7z8n0QkOSh5DCAvPVx4PeM31FSa4NHKs7CdGDLQA4q8NZ94QIJ6rRIg363LgAey-ibvbgCH7voLc2oPqaNMpMWXMXpMtztfbzlI9Sp_yO1yPfunDkvrRCruNPQ0bmuMgNmQa_Pbl-lGpqLICKjeYPSkED-xmw9sKxZgEvAcNaUOq4gkgFYVR9BAti_EJb84aglfYFGPU6gBGrGKHXv8ODXVvwqQ0ZodVYzNyVPDrhkqenxtPl7MAoiBVgt6gTksM033sDB9GE0WreuEb_Sayi5XmsrRZHzsxqnQAnt973nXDW1X965NCPtsrqeWN-o3pPq7eOPmOOugg5cGQumg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -553,7 +848,12 @@
     "date": "2026-08-05T10:54:53+00:00",
     "beijing": "2026-08-05 18:54",
     "text": "ФЕСТИВАЛЬ СЫРА С 5 ПО 11 АВГУСТА 🧀 🧀 🧀 👉 Твёрдый, мягкий, плавленый - более 60 видов акционных предложений ☺️ Самое время устроить себе маленький сырный праздник 🧀 ✨",
-    "photo": "https://cdn4.telesco.pe/file/nPCPX0jPqwKeUvKzUJAjhduAQ9TyAxs7VyuiphZppJWPC_DKeGgvtadSs3hAJn6SPgxZ_BN3OgwK4Xh5tzAn3x78E03g_SSXkWXGpsuGq2wqqQNRZiBuklHTV3opE4jAOu5LsHS1OvtDUc4Wle-aho2x6cooIV0Na8GJNhIIHbQQ46240Zn6F_fVZrhuVL6A8h_6pU_8sA_3b9T1CGKxIl9LMjTluTxcDkyyIUqFAqbJK5rbgRPRZpDjBp6Bnv1BKhZJGBmkwsOgID7s9FrgLIRy6CysbhCYvym3ycsNaBGc3vbOuNILqGQwHRN__vz9qd9VFUftpE3v3wja2F0mHw"
+    "photo": "https://cdn4.telesco.pe/file/nPCPX0jPqwKeUvKzUJAjhduAQ9TyAxs7VyuiphZppJWPC_DKeGgvtadSs3hAJn6SPgxZ_BN3OgwK4Xh5tzAn3x78E03g_SSXkWXGpsuGq2wqqQNRZiBuklHTV3opE4jAOu5LsHS1OvtDUc4Wle-aho2x6cooIV0Na8GJNhIIHbQQ46240Zn6F_fVZrhuVL6A8h_6pU_8sA_3b9T1CGKxIl9LMjTluTxcDkyyIUqFAqbJK5rbgRPRZpDjBp6Bnv1BKhZJGBmkwsOgID7s9FrgLIRy6CysbhCYvym3ycsNaBGc3vbOuNILqGQwHRN__vz9qd9VFUftpE3v3wja2F0mHw",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "11 АВГУСТА"
   },
   {
     "user": "gippoby_offical",
@@ -562,7 +862,12 @@
     "date": "2026-08-04T14:36:09+00:00",
     "beijing": "2026-08-04 22:36",
     "text": "НОВАЯ НЕДЕЛЯ ДЛЯ ВЫГОДНЫХ ПОКУПОК&#33; 🍉 Сочные фрукты и овощи 🍖 Мясо для гриля 🦐 Рыба и морепродукты и ещё много всего вкусного &#33; За покупками - в ГИППО&#33; 🛒",
-    "photo": "https://cdn4.telesco.pe/file/o7CQkM7OAP9_fMN69D7U11XTXCyw6yHUAT6rlSLkWhGMRcvEglQ5NfRpWPe9F4JRLlZWe2kr8fyMFr4PmB7c_sDsiCxPAcwhM38HafbLI8R8tDdSEAY0cSDR3m4p_yV6umclP61-9PxzCdS4k5RIMJW6t9IIynoWyho831ZECoVnZUN5jZsJfgpDNDVM0hmjOXrYKb6HtAyik6YzYo6uyOqducknShw4L6Esx9plMCuw9VpIwLg4NerpKsml0WaPnM-ruROHIpXl8ODD7QdwY4guPOaQGivibKl7-lDVPfpQSh-zceV5QI1pxISKwfd4AkTLYPIhs0dps83eKmDdRQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/o7CQkM7OAP9_fMN69D7U11XTXCyw6yHUAT6rlSLkWhGMRcvEglQ5NfRpWPe9F4JRLlZWe2kr8fyMFr4PmB7c_sDsiCxPAcwhM38HafbLI8R8tDdSEAY0cSDR3m4p_yV6umclP61-9PxzCdS4k5RIMJW6t9IIynoWyho831ZECoVnZUN5jZsJfgpDNDVM0hmjOXrYKb6HtAyik6YzYo6uyOqducknShw4L6Esx9plMCuw9VpIwLg4NerpKsml0WaPnM-ruROHIpXl8ODD7QdwY4guPOaQGivibKl7-lDVPfpQSh-zceV5QI1pxISKwfd4AkTLYPIhs0dps83eKmDdRQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -571,7 +876,12 @@
     "date": "2026-08-04T11:31:44+00:00",
     "beijing": "2026-08-04 19:31",
     "text": "✅ К НОВОМУ УЧЕБНОМУ ГОДУ ГОТОВЫ&#33; Мы собрали всё необходимое для подготовки к новому школьному сезону: от школьной одежды до стильных канцтоваров и рюкзаков&#33; 📚 Подготовка к школе - легко&#33; Посмотреть каталог здесь 🧡 ГИППО. Люблю и всё тут&#33;",
-    "photo": "https://cdn4.telesco.pe/file/LYW25jlx9WL_8-i66-qLlnRoCBUFmZnop10SMrHRDl5gUXgXi10lbDilO8xV4lkEI--ooiv8knIv25XkXA1hIR1G4tl9S3S_szYmpQ7HWVwD9sQd_9yLd-Fj5Hm-gHOpIZrm_RQjjeJS_ghPLKeTAzDuwOIax4ZdCcAAlrdCpCJx7129szbvqVsNpV8vcAUfWbZi7fdqLL1i8N5h9B9RvTgSJNj6QBIIqpamYwL-wE0NxCOibhMoD6f1KawD27JSgLPdhafaXA7_AcZqStXk4sxOTpzgp7dL3o-cDQrANPaR8m5hQrEErX_XKERCHfzrU0kKlNrvgCz3H5fWEOTlaA.jpg"
+    "photo": "https://cdn4.telesco.pe/file/LYW25jlx9WL_8-i66-qLlnRoCBUFmZnop10SMrHRDl5gUXgXi10lbDilO8xV4lkEI--ooiv8knIv25XkXA1hIR1G4tl9S3S_szYmpQ7HWVwD9sQd_9yLd-Fj5Hm-gHOpIZrm_RQjjeJS_ghPLKeTAzDuwOIax4ZdCcAAlrdCpCJx7129szbvqVsNpV8vcAUfWbZi7fdqLL1i8N5h9B9RvTgSJNj6QBIIqpamYwL-wE0NxCOibhMoD6f1KawD27JSgLPdhafaXA7_AcZqStXk4sxOTpzgp7dL3o-cDQrANPaR8m5hQrEErX_XKERCHfzrU0kKlNrvgCz3H5fWEOTlaA.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -580,7 +890,12 @@
     "date": "2026-08-04T09:40:24+00:00",
     "beijing": "2026-08-04 17:40",
     "text": "👉 Удвойте удовольствие и побалуйте себя и близких — сразу две выгодные акции в Green с 3 по 31 августа&#33;",
-    "photo": "https://cdn4.telesco.pe/file/Cs4sXD_8LhpF8mz2koaTnrRuGGXGCS7uIOLRsWMVyOuZ6ynRX0TV3GdzXj6UhtnRRq40vQ7lI_8iXG0jejLyOn368qAWJkKspBmkgzX2QhgcmbC5nk0lDSDF7T8u6MTC6Tb4Ucy_Y7QusTjEtQsoj4CfnMuX3K3vP4zDZhCUN-njE0bEuVEFDhBh6jTt2KOj_UEqC0nR19C_MfQJ01aIe_1c7lguMsDnsOeZDxp2hgeuM-T_GT-uHUIVmZ7P7qqP-vCRuicYgm9Su9oeP0EvCy6JPX06EDmrq8e_p5kw1DP5UMsnMesMAa2HbOBB5-uPbmvQdiZAf1dxMtNYdProEQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/Cs4sXD_8LhpF8mz2koaTnrRuGGXGCS7uIOLRsWMVyOuZ6ynRX0TV3GdzXj6UhtnRRq40vQ7lI_8iXG0jejLyOn368qAWJkKspBmkgzX2QhgcmbC5nk0lDSDF7T8u6MTC6Tb4Ucy_Y7QusTjEtQsoj4CfnMuX3K3vP4zDZhCUN-njE0bEuVEFDhBh6jTt2KOj_UEqC0nR19C_MfQJ01aIe_1c7lguMsDnsOeZDxp2hgeuM-T_GT-uHUIVmZ7P7qqP-vCRuicYgm9Su9oeP0EvCy6JPX06EDmrq8e_p5kw1DP5UMsnMesMAa2HbOBB5-uPbmvQdiZAf1dxMtNYdProEQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "31 августа"
   },
   {
     "user": "shopsgreen",
@@ -589,7 +904,12 @@
     "date": "2026-08-03T14:13:06+00:00",
     "beijing": "2026-08-03 22:13",
     "text": "С 3 по 9 августа 2026 объявляем ВЫГОДНУЮ ЦЕНУ на два главных хита этой недели в магазинах Green: ☺️ Колбаса \"Домашняя\" п/ф, охл. — 10,99/кг 🎂 Торт «Новый медовый» — 27,99/кг 👉 подробности и адреса на сайте",
-    "photo": "https://cdn4.telesco.pe/file/rjMw78JkXX9nZ2xSCBxbky5rTJNm9g0WX7USIIsHCaMft7ckraBwasrXdo1N62kW_jx3HZ0YTs6QCM5I8U2BnbuSPNh8IzPxgidiaxNJL1dgT5tYnRcCeEe0XfCdt_wkago9JcYtTfi6EaWdgXu7nejk7QXg8tosMXkbTZqm6XVftkSKbRL02qjt_oCyamwDXurlggqSfsGwvXbzguEr84bqdY-Oxr1HlE6Qca9dv8E2suGegcPK5C3CXNn1vx9lXa4q7NYlR-MDEdnIbk3enWxube8BeEd3Sd84uGc49pHrvdRQUdxfQrV0NT32Q-YuC6OUsV-T79DbOCtVBl0kTQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/rjMw78JkXX9nZ2xSCBxbky5rTJNm9g0WX7USIIsHCaMft7ckraBwasrXdo1N62kW_jx3HZ0YTs6QCM5I8U2BnbuSPNh8IzPxgidiaxNJL1dgT5tYnRcCeEe0XfCdt_wkago9JcYtTfi6EaWdgXu7nejk7QXg8tosMXkbTZqm6XVftkSKbRL02qjt_oCyamwDXurlggqSfsGwvXbzguEr84bqdY-Oxr1HlE6Qca9dv8E2suGegcPK5C3CXNn1vx9lXa4q7NYlR-MDEdnIbk3enWxube8BeEd3Sd84uGc49pHrvdRQUdxfQrV0NT32Q-YuC6OUsV-T79DbOCtVBl0kTQ.jpg",
+    "price": 10.99,
+    "priceUnit": "/кг",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "9 августа 2026"
   },
   {
     "user": "gippoby_offical",
@@ -598,7 +918,12 @@
     "date": "2026-08-03T13:12:23+00:00",
     "beijing": "2026-08-03 21:12",
     "text": "ВНИМАНИЕ&#33; ВНИМАНИЕ&#33; У НАС ВАЖНАЯ НОВОСТЬ&#33; С 1 августа в ГИППО начала действовать обновлённая программа лояльности. Вместо накопления бонусных баллов держатели карт \"АсобаЯ\" будут получать персональную скидку на покупки в следующем месяце. Её размер будет зависеть от суммы покупок за предыдущий календарный месяц: до 499,99 руб. - 1 % от 500 руб. до 999,99 руб. - 3 % от 1000 руб. - 5 % Подробности на сайте: gippo.by",
-    "photo": "https://cdn4.telesco.pe/file/XW7dVlgQPstPgQlZyzaZwHkVhUNqZd3ZwZlb555_4t4HnQHdpCiVLialF69foBbhM5NFS5t8PurXNLjQKv-zCR7AShH6T0MZALk90Rfl0ymN_JqoBWRTXBjt6tcHwaouxV2k8Uh_kk3F3asYqVdcXJJPwl5YIkdf0uTHQElwL2b-0rOat9kIdT2hqLNH3VQAEs2xTh1ETT3SKrNVJ26ylBjjbuwPoemF9_JYDE7kgP4r0vai5j0N39ZbhwnGALhovukrDBL17wjjX_-HiXhJrUPGWrviIDDO2JN7V5tP0S-t7ad2FTMz7OQPwmVEQQdsgx8DBrzsdJTEJ9FMcYc1Jw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/XW7dVlgQPstPgQlZyzaZwHkVhUNqZd3ZwZlb555_4t4HnQHdpCiVLialF69foBbhM5NFS5t8PurXNLjQKv-zCR7AShH6T0MZALk90Rfl0ymN_JqoBWRTXBjt6tcHwaouxV2k8Uh_kk3F3asYqVdcXJJPwl5YIkdf0uTHQElwL2b-0rOat9kIdT2hqLNH3VQAEs2xTh1ETT3SKrNVJ26ylBjjbuwPoemF9_JYDE7kgP4r0vai5j0N39ZbhwnGALhovukrDBL17wjjX_-HiXhJrUPGWrviIDDO2JN7V5tP0S-t7ad2FTMz7OQPwmVEQQdsgx8DBrzsdJTEJ9FMcYc1Jw.jpg",
+    "price": 499.99,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 1,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -607,7 +932,12 @@
     "date": "2026-08-03T12:07:23+00:00",
     "beijing": "2026-08-03 20:07",
     "text": "ВРЕМЯ ВКУСНОЙ ВЫГОДЫ 😍 Собрали для вас вкусные предложения августа 💚 Сохраняйте и ждем вас за покупками в Green 🛒 👉 адреса действия предложений узнавайте на сайте",
-    "photo": "https://cdn4.telesco.pe/file/gXL7u3j_edldHxocUY8l50lEkmRZWDehboLcrP-FGZa10G7AqaUFZY125DnV-8wRmq_IXLVwsXCgRdYOQSd-Cdhsymv-R8ZojC1b33PCNZ4Xo3NGcnO7lDwPJ9wcNIjBndDB7cfP3Rlgf0odsdOdnyvRXZ54UPRgpVUj8rfLsVb1hXV33GiHhxi8VfLVAmCvqKlvGZCCm8EPHNvTnHv-0aBV7MqqM08OhrFoO2IW9yU-Napkuj4qgGGSKZal2A2nOSmbFYVsAtmf7DIn10wqNHHMlf-mcXMmE31hnIrtgLXKARgdbEL8DzowaY9OtEBNNSnxHd-V7r8_qtN-47z5pQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/gXL7u3j_edldHxocUY8l50lEkmRZWDehboLcrP-FGZa10G7AqaUFZY125DnV-8wRmq_IXLVwsXCgRdYOQSd-Cdhsymv-R8ZojC1b33PCNZ4Xo3NGcnO7lDwPJ9wcNIjBndDB7cfP3Rlgf0odsdOdnyvRXZ54UPRgpVUj8rfLsVb1hXV33GiHhxi8VfLVAmCvqKlvGZCCm8EPHNvTnHv-0aBV7MqqM08OhrFoO2IW9yU-Napkuj4qgGGSKZal2A2nOSmbFYVsAtmf7DIn10wqNHHMlf-mcXMmE31hnIrtgLXKARgdbEL8DzowaY9OtEBNNSnxHd-V7r8_qtN-47z5pQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "unistoreminsk",
@@ -616,7 +946,12 @@
     "date": "2026-08-03T11:29:27+00:00",
     "beijing": "2026-08-03 19:29",
     "text": "☀️ Лето продолжается — продолжаются и выгодные покупки&#33; С 03.08 по 16.08 в Unistore опт&розница и Unistore дискаунтер действует новая акционная листовка. Всё, что пригодится для летних прогулок, отдыха на природе и вкусных ужинов — по выгодным ценам уже от 1 единицы товара. 🥤 Коктейль молочный ТОП Power Банан/Кокос-миндаль/Ванильная вафля, 450 г — 2,69 руб. 🔥 Маршмеллоу ЗЕФИРЮШКИ Воздушный BBQ XXL, 200 г — 7,29 руб. 🍓 Напиток DARIDA Снежок Газированный, Мохито, клубника, 1,45 л — 2,39 руб. 🧀 Сыр копченый полутвердый BONFESTO Provoletta 45%, 120 г — 5,95 руб. 🍦 Мороженое FEELIN Пломбир шоколадный, рисовые шарики с ароматом фисташки и темным шоколадом, 75 г — 2,05 руб. ☕ Кофейный напиток растворимый NESCAFE Latte/Capucchino, 18 г — 0,98 руб. В акции вас ждут напитки, молочная гастрономия, бакалея, кондитерские изделия и множество других товаров. Закупайтесь выгодно — для отдыха, дома и всей семьи&#33; 🛒 #unistore #юнистор #акцииминск #скидкиминск #продуктывыгодно",
-    "photo": "https://cdn4.telesco.pe/file/G3nnjGL3xvJRESblg02QLNaHrvLK3O_OnASgOyRBRtjqiUviZ69bmNsOaRzUAOQXyhMHlqGt6pTFJ-X2asZmT1n-Tvi54qEKa1PlPAplmf6lfFHLH-FjPz3XnFa7ePAdvUfqZrbCGamEGM1uGWPkQcPldr2gvNrw0-4X-ygkBDUSkwveNMFvIC4o2Gt7xQfkCpVogP3V3HYYzMRzxHnOvJhjfnSYZKDf0PUVGNA87hwikDRZhpo3j-KP7xSeyQMBa7KXbW5z_y9JhncLio6APMOt5XX2Gt3Bd4D-cUcuFqUivVaYaeSiW24j2PJ2iCIqIUrr7_aWq5mMM4D9bljtSw.jpg"
+    "photo": "https://cdn4.telesco.pe/file/G3nnjGL3xvJRESblg02QLNaHrvLK3O_OnASgOyRBRtjqiUviZ69bmNsOaRzUAOQXyhMHlqGt6pTFJ-X2asZmT1n-Tvi54qEKa1PlPAplmf6lfFHLH-FjPz3XnFa7ePAdvUfqZrbCGamEGM1uGWPkQcPldr2gvNrw0-4X-ygkBDUSkwveNMFvIC4o2Gt7xQfkCpVogP3V3HYYzMRzxHnOvJhjfnSYZKDf0PUVGNA87hwikDRZhpo3j-KP7xSeyQMBa7KXbW5z_y9JhncLio6APMOt5XX2Gt3Bd4D-cUcuFqUivVaYaeSiW24j2PJ2iCIqIUrr7_aWq5mMM4D9bljtSw.jpg",
+    "price": 16.08,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 45,
+    "endDate": ""
   },
   {
     "user": "unistoreminsk",
@@ -625,7 +960,12 @@
     "date": "2026-07-31T11:59:09+00:00",
     "beijing": "2026-07-31 19:59",
     "text": "📚 Учебный год уже совсем близко&#33; В Unistore опт&розница и Unistore дискаунтер вы найдете всё необходимое для школьников и студентов: канцтовары, товары для учебы и многое другое — по выгодным ценам. Листайте карусель, сохраняйте подборку и собирайте всё необходимое к учебному году выгодно с Unistore&#33; 🛒 *Цены актуальны на момент публикации поста. #unistore #юнистор #учебныйгод #школьныепринадлежности #продуктывыгодно",
-    "photo": "https://cdn4.telesco.pe/file/aptgD9r76EDIdEBZArqrmTZQdx4GgsgI4hryrZ1Ir0zE0QAch1FkQwRetW6POuAieyoChRu2mxOCQdm_QX943aXma8xf1UJdfNo1u0cwIJ58ABhr2eyRekSgBDMePJk4tnfYR5I7xcvdQqTUA-JtC7yhEaVZx18_wg1XPBedZs4Ig_-9L6q5XzkPDR4fovAPeniABgsXSy6B0MSKipVXBsjYtOFBpC5wK1E5HqHBUs12dlfcxNsTeJ7pgW1nfMb-KG6-r4Ev-llcyfxcRHLaDetS9-7yLomD4J1GW9aqpzI2YaFoYDU_277x7yfS09ipkUY2Ddzi0pnDB6Xik3m3wg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/aptgD9r76EDIdEBZArqrmTZQdx4GgsgI4hryrZ1Ir0zE0QAch1FkQwRetW6POuAieyoChRu2mxOCQdm_QX943aXma8xf1UJdfNo1u0cwIJ58ABhr2eyRekSgBDMePJk4tnfYR5I7xcvdQqTUA-JtC7yhEaVZx18_wg1XPBedZs4Ig_-9L6q5XzkPDR4fovAPeniABgsXSy6B0MSKipVXBsjYtOFBpC5wK1E5HqHBUs12dlfcxNsTeJ7pgW1nfMb-KG6-r4Ev-llcyfxcRHLaDetS9-7yLomD4J1GW9aqpzI2YaFoYDU_277x7yfS09ipkUY2Ddzi0pnDB6Xik3m3wg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -634,7 +974,12 @@
     "date": "2026-07-31T06:52:17+00:00",
     "beijing": "2026-07-31 14:52",
     "text": "Не знаете, что подарить? 🎁 Покупайте подарочные сертификаты Green онлайн за пару минут ☺️ 👉 КУПИТЬ",
-    "photo": "https://cdn4.telesco.pe/file/XhLtmaxMYmdnL7oTQxGmqnUVSOWaMs4Vg4ipXwUi01rNM0PuhrWiu1sw6AGlbtDTeOZ4ztuB7tzyzOBQZKDHgqGtUEbw0fRzNSO1B-L_gb1iRJzC6OwMEhB3_F9xsQtAJwQyRb07nNOeDzD22oHNMgBlPjs8Ycb_isDaEqYLJsvE4gOgEE7_FR8cXn6rrq9PVMi7XOSbHlreV7cwsCP1A-vb7TZhuMXQ5iQBSpKOA1u_aG0x0HSclp8dBQSvf0YB1eBCblROrENLi_tr13zzoWyniYtpdS97IRblU4QvhE-5LOFcQ68NGK7agw1PKE0WyWEI18w_AVgt7UdOiRwFoQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/XhLtmaxMYmdnL7oTQxGmqnUVSOWaMs4Vg4ipXwUi01rNM0PuhrWiu1sw6AGlbtDTeOZ4ztuB7tzyzOBQZKDHgqGtUEbw0fRzNSO1B-L_gb1iRJzC6OwMEhB3_F9xsQtAJwQyRb07nNOeDzD22oHNMgBlPjs8Ycb_isDaEqYLJsvE4gOgEE7_FR8cXn6rrq9PVMi7XOSbHlreV7cwsCP1A-vb7TZhuMXQ5iQBSpKOA1u_aG0x0HSclp8dBQSvf0YB1eBCblROrENLi_tr13zzoWyniYtpdS97IRblU4QvhE-5LOFcQ68NGK7agw1PKE0WyWEI18w_AVgt7UdOiRwFoQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "shopsgreen",
@@ -643,7 +988,12 @@
     "date": "2026-07-30T14:44:41+00:00",
     "beijing": "2026-07-30 22:44",
     "text": "А за самым вкусным шоколадом приходите в Green 🥰 У нас найдутся варианты на любой вкус&#33; 💚 🍫",
-    "photo": ""
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "unistoreminsk",
@@ -652,7 +1002,12 @@
     "date": "2026-07-23T08:24:34+00:00",
     "beijing": "2026-07-23 16:24",
     "text": "Лето будет ещё вкуснее вместе с «Витаминной корзиной» в Unistore опт&розница и Unistore дискаунтер&#33; ☀️ 🗓 23–24.07 выбирайте спелые сезонные фрукты по выгодным ценам. Стоимость указана за 1 кг : 🍑 Абрикос — 6,98 руб. Витамины A и C поддерживают иммунную систему и здоровье кожи. 🍊 Грейпфрут красный — 2,99 руб. Освежающий цитрус, богатый витамином C и антиоксидантами. 🍑 Нектарин — 5,59 руб. Сочный летний фрукт с клетчаткой и витаминами, который станет отличным перекусом в теплый день. Ждём вас за выгодными покупками&#33; 🛒 #юнистор #unistore #витамины #акцииминск #скидкиминск",
-    "photo": "https://cdn4.telesco.pe/file/cckpibXJcY7e2pEyPofDreC2abuXZzf_ybeOKhDef9yNx5DLFzrdbuTTeEKl7SAEoz4hcZgDZjWvJk8nyWi4-3BuslmFhxVqAtIEYpZqLtWaPnZgnea96zEcJaIuEK2DZVpQ34uE8lR5tycKFSWq-exGqqGi_CsTTVwNkI2kU1nOZqedvtPkhCfIUK_LUC3a9G83OgJAgM4mu3UQ67fmtkZKrLg7sbatisQ2fGNteO4YjyPGdo99gAGIVN3dTeZlb_9XaJmZpeLyxUaAlUX9GmB-RB34S9_F0yets5CSQWTzBbCZiHx5uecHUfwpUortnQDYxh9F-Fn68wZRHCGYwQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/cckpibXJcY7e2pEyPofDreC2abuXZzf_ybeOKhDef9yNx5DLFzrdbuTTeEKl7SAEoz4hcZgDZjWvJk8nyWi4-3BuslmFhxVqAtIEYpZqLtWaPnZgnea96zEcJaIuEK2DZVpQ34uE8lR5tycKFSWq-exGqqGi_CsTTVwNkI2kU1nOZqedvtPkhCfIUK_LUC3a9G83OgJAgM4mu3UQ67fmtkZKrLg7sbatisQ2fGNteO4YjyPGdo99gAGIVN3dTeZlb_9XaJmZpeLyxUaAlUX9GmB-RB34S9_F0yets5CSQWTzBbCZiHx5uecHUfwpUortnQDYxh9F-Fn68wZRHCGYwQ.jpg",
+    "price": 24.07,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -661,7 +1016,12 @@
     "date": "2026-07-17T13:27:47+00:00",
     "beijing": "2026-07-17 21:27",
     "text": "На входе в магазин ГИППО обязательно берите тележку побольше&#33; Ведь у нас ЕСТЬ ВСЁ , чтобы провести эти выходные вкусно&#33; Уже чувствуете этот волшебный аромат гриля? 😋",
-    "photo": "https://cdn4.telesco.pe/file/qbU7CRMwZ7QZKseKWc7zeHp8J8J6TgaeG-_smHrIfHmO-iarstupURLC4s23R1M2fuyqMgIQzVtsNlLR2s2AaAzKXcbjd-krVfAxWcRPSl8iK_rexsgPL0SYqlRZOB7u8vwqGDBLp7-8pLkCJKgZBRQjicNAu5Rf_I3UHsoiPwMCs4nFy2DkeQGuSJJe0CxlEmroeKZryFu8n4yvBwHo5pZtWoq44qWqoXm4YAU8nEo2vehK_qzNERD5AIvd04gNkrj6dYmvSqQqCt4gamwiIlxf94FKCiXE2KEtWCSCHtIWkT39UgFW-AhRRFte3RuY9uk5XOnuhnTEpoiUzq6XUg.jpg"
+    "photo": "https://cdn4.telesco.pe/file/qbU7CRMwZ7QZKseKWc7zeHp8J8J6TgaeG-_smHrIfHmO-iarstupURLC4s23R1M2fuyqMgIQzVtsNlLR2s2AaAzKXcbjd-krVfAxWcRPSl8iK_rexsgPL0SYqlRZOB7u8vwqGDBLp7-8pLkCJKgZBRQjicNAu5Rf_I3UHsoiPwMCs4nFy2DkeQGuSJJe0CxlEmroeKZryFu8n4yvBwHo5pZtWoq44qWqoXm4YAU8nEo2vehK_qzNERD5AIvd04gNkrj6dYmvSqQqCt4gamwiIlxf94FKCiXE2KEtWCSCHtIWkT39UgFW-AhRRFte3RuY9uk5XOnuhnTEpoiUzq6XUg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -670,7 +1030,12 @@
     "date": "2026-07-17T08:39:14+00:00",
     "beijing": "2026-07-17 16:39",
     "text": "У ГІППА заўсёды вялікі выбар вашых любімых тавараў беларускіх вытворцаў па выгадных коштах. Далучайцеся да акцыі і купляйце нашае, лепшае&#33; 💙 💙 💙 💙 💙 💙 💙",
-    "photo": "https://cdn4.telesco.pe/file/oRMaIDKU4RvhDrdnJP1OZBZM6hbVGSFADNTCgT2eWz94HvmEu23cFe1vXn_Z793pYg42_Wzl9jf13LLf-YVZjaGCas0FsyYyu_btRaF5B4qnA-vAwGSkULNavOQdI7YjW-8swYIa7cIv-oojU68GIH4ZEpwwubTJi_VIWd__QnQW0JBDhbADtA53cki2bl3_i6OQmh-PMTIq253WyE38t7m22SRAafEcJIQx9dYFQOTA0u3yFaAhhQ2xJ6AM8NGbLl6yna-Wt97Of_ouzSEOJsn8wjktNe09mYaZ1jh1kIKlDccrpGud_lY-GNx_UtjTtWmQGXUZfD9RhcVJ2nuToQ.jpg"
+    "photo": "https://cdn4.telesco.pe/file/oRMaIDKU4RvhDrdnJP1OZBZM6hbVGSFADNTCgT2eWz94HvmEu23cFe1vXn_Z793pYg42_Wzl9jf13LLf-YVZjaGCas0FsyYyu_btRaF5B4qnA-vAwGSkULNavOQdI7YjW-8swYIa7cIv-oojU68GIH4ZEpwwubTJi_VIWd__QnQW0JBDhbADtA53cki2bl3_i6OQmh-PMTIq253WyE38t7m22SRAafEcJIQx9dYFQOTA0u3yFaAhhQ2xJ6AM8NGbLl6yna-Wt97Of_ouzSEOJsn8wjktNe09mYaZ1jh1kIKlDccrpGud_lY-GNx_UtjTtWmQGXUZfD9RhcVJ2nuToQ.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   },
   {
     "user": "gippoby_offical",
@@ -679,6 +1044,11 @@
     "date": "2026-07-17T08:33:57+00:00",
     "beijing": "2026-07-17 16:33",
     "text": "КОЖНАЯ ПЯТНIЦА - РОДНАЕ, СВАЁ&#33; 💙",
-    "photo": "https://cdn4.telesco.pe/file/Zp1WMycJTY60USsg_ns6Web97Wg7nKlonQVOhC5GdWPnvmHdNr_SsnXVntuL1N_HVNNIW1oQcSBmRbf_NztXiiPzB7l7KZcVKjqm3Q5nR2k5mDIuxpc0VCWsnVCHPqc43T0aok5Dt8QKH2Ik4DcTyU_LU7iyIDDe1VEI0ijFrMt4AyttNm_MVVYQ_Ft3RbWgdlqBUw4tC1RndZPUWqqfWd6yIfNNDf3dOwIWbOGZ3H7UHrFgnvGjtQ655Qc7xnF3wdP04UE0JluzkFgGUDdlBbsXIPrBNIkbEk9Q0OfZ6vY-pDdDimTRS9eWXxqTPwrCiAECpxb0UMxe_pmMg41C0g.jpg"
+    "photo": "https://cdn4.telesco.pe/file/Zp1WMycJTY60USsg_ns6Web97Wg7nKlonQVOhC5GdWPnvmHdNr_SsnXVntuL1N_HVNNIW1oQcSBmRbf_NztXiiPzB7l7KZcVKjqm3Q5nR2k5mDIuxpc0VCWsnVCHPqc43T0aok5Dt8QKH2Ik4DcTyU_LU7iyIDDe1VEI0ijFrMt4AyttNm_MVVYQ_Ft3RbWgdlqBUw4tC1RndZPUWqqfWd6yIfNNDf3dOwIWbOGZ3H7UHrFgnvGjtQ655Qc7xnF3wdP04UE0JluzkFgGUDdlBbsXIPrBNIkbEk9Q0OfZ6vY-pDdDimTRS9eWXxqTPwrCiAECpxb0UMxe_pmMg41C0g.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": ""
   }
 ]

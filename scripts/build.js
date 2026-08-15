@@ -334,6 +334,51 @@ async function fetchPerekrestokPeriod(it) {
   return it;
 }
 
+function extractDealFields(text, period) {
+  const t = String(text || '');
+  const out = { price: null, priceUnit: '', oldPrice: null, discount: null, endDate: '' };
+  if (!t) return out;
+  const num = (s) => (s ? Number(s.replace(',', '.')) : null);
+  const oldM = t.match(/вместо\s+(\d{1,4}[.,]\d{2})/i);
+  if (oldM) out.oldPrice = num(oldM[1]);
+  const discM = t.match(/(?:скидк[а-яё]*\s+(?:до\s+)?)?[-−]?\s*(\d{1,3})\s*%/i);
+  if (discM) out.discount = Number(discM[1]);
+  const months = /(?:январ|феврал|март|апрел|ма[йя]|июн|июл|август|сентябр|октябр|ноябр|декабр)/i;
+  const re = /(\d{1,4}[.,]\d{2})(?!\d)/gi;
+  for (const m of t.matchAll(re)) {
+    if (oldM && m[1] === oldM[1]) continue;
+    const day = parseInt(m[1], 10);
+    const head = t.slice(Math.max(0, m.index - 26), m.index);
+    const tail = t.slice(m.index + m[0].length, m.index + m[0].length + 26);
+    const unitM = t.slice(m.index + m[0].length, m.index + m[0].length + 12).match(/\/кг|за\s*кг|\/шт|за\s*шт|\/л|за\s*л|кг|шт|литр/);
+    const unit = unitM ? unitM[0].replace(/за\s+/, '/') : '';
+    const isDate =
+      day <= 31 &&
+      !unit &&
+      (/\.\d{2,4}/.test(tail) ||
+        /(?:по|до|с)\s+\d{1,2}[.,]\d{2}/.test(tail) ||
+        /(?:с|по|до)\s+\d{1,2}[.,]\d{2}/.test(head) ||
+        months.test(tail.slice(0, 14)) ||
+        months.test(head.slice(-14)));
+    if (isDate) continue;
+    out.price = num(m[1]);
+    out.priceUnit = unit;
+    break;
+  }
+  const src = String(period || text || '');
+  const full = src.match(/\d{1,2}\s+[а-яё]+\s+\d{4}/gi);
+  if (full && full.length) out.endDate = full[full.length - 1];
+  else {
+    const rel = src.match(/(?:по|до)\s+(\d{1,2}\s+[а-яё]+)/i);
+    if (rel) out.endDate = rel[1];
+    else {
+      const dotted = src.match(/(\d{1,2}\.\d{2}(?:\.\d{4})?)\s*$/);
+      if (dotted) out.endDate = dotted[1];
+    }
+  }
+  return out;
+}
+
 function parseTelegramPage(html) {
   const out = [];
   const posts = [];
@@ -387,6 +432,7 @@ async function fetchDeals() {
           beijing: fmtBeijing(msg.date),
           text: msg.text,
           photo: msg.photo,
+          ...extractDealFields(msg.text, ''),
         });
         kept++;
       }
@@ -420,6 +466,7 @@ async function fetchDeals() {
           text: it.text,
           period: it.period || '',
           photo: '',
+          ...extractDealFields(it.text, it.period || ''),
         });
         kept++;
       }
@@ -483,17 +530,47 @@ function catBadge(cat) {
 
 function homepageHtml(records, deals, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
+  const storeCounts = {};
+  for (const d of deals) storeCounts[d.store] = (storeCounts[d.store] || 0) + 1;
+  const storeChips = Object.keys(storeCounts)
+    .sort((a, b) => storeCounts[b] - storeCounts[a])
+    .map(
+      (s) =>
+        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(s)}<b>${storeCounts[s]}</b></button>`
+    )
+    .join('\n');
+  const dealBar = deals.length
+    ? `<div class="deals-bar">
+  <div class="storechips">
+    <button class="chip active" data-store="" type="button">全部</button>
+    ${storeChips}
+  </div>
+  <div class="deal-sort">
+    <span class="deals-n">共 ${deals.length} 条</span>
+    <button class="sbtn active" data-sort="time" type="button">最新</button>
+    <button class="sbtn" data-sort="price" type="button">价格从低到高</button>
+  </div>
+</div>`
+    : '';
   const dealCards = deals.length
-    ? deals
-        .map(
-          (d) => `<article class="card deal" data-cat="deal">
+    ? `<div class="deal-feed">
+${dealBar}
+${deals
+  .map(
+    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-badge">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
+  ${d.price != null
+    ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}</div>`
+    : d.discount != null
+      ? `<div class="deal-price off">−${d.discount}%</div>`
+      : ''}
   <p class="deal-text">${escapeHtml(d.text.slice(0, 300))}</p>
   <div class="meta"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">在 Telegram 查看原文 ↗</a></div>
 </article>`
-        )
-        .join('\n')
+  )
+  .join('\n')}
+</div>`
     : '';
   const cards = recent
     .map(
@@ -571,6 +648,28 @@ ${olderHtml}
   var arch = document.querySelector('.archive');
   var input = document.getElementById('search');
   var nores = document.getElementById('nores');
+  var chips = document.querySelectorAll('.chip[data-store]');
+  var sbtns = document.querySelectorAll('.sbtn');
+  var activeStore = '';
+  var sortMode = 'time';
+  var feed = document.querySelector('.deal-feed');
+  var origOrder = Array.prototype.slice.call(document.querySelectorAll('.card.deal'));
+  function sortDeals() {
+    if (!feed) return;
+    var list;
+    if (sortMode === 'price') {
+      list = Array.prototype.slice.call(feed.querySelectorAll('.card.deal')).sort(function (a, b) {
+        var pa = parseFloat(a.getAttribute('data-price') || '');
+        var pb = parseFloat(b.getAttribute('data-price') || '');
+        pa = isNaN(pa) ? 1e12 : pa;
+        pb = isNaN(pb) ? 1e12 : pb;
+        return pa - pb;
+      });
+    } else {
+      list = origOrder.slice();
+    }
+    list.forEach(function (el) { feed.appendChild(el); });
+  }
   function apply() {
     var active = document.querySelector('.tab.active');
     var f = active ? active.getAttribute('data-f') : 'all';
@@ -579,17 +678,45 @@ ${olderHtml}
     items.forEach(function (c) {
       var okCat = (f === 'all' || c.getAttribute('data-cat') === f);
       var okTxt = !q || (c.textContent || '').toLowerCase().indexOf(q) !== -1;
-      var show = okCat && okTxt;
+      var okStore = (c.getAttribute('data-cat') !== 'deal') || !activeStore || c.getAttribute('data-store') === activeStore;
+      var show = okCat && okTxt && okStore;
       c.style.display = show ? '' : 'none';
       if (show) vis++;
     });
     if (nores) nores.hidden = vis !== 0;
     if (arch) arch.open = (q !== '' || f !== 'all');
+    if (feed) {
+      var dealVis = Array.prototype.some.call(feed.querySelectorAll('.card.deal'), function (c) {
+        return c.style.display !== 'none';
+      });
+      feed.style.display = dealVis ? '' : 'none';
+    }
+    sortDeals();
   }
   tabs.forEach(function (t) {
     t.addEventListener('click', function () {
       tabs.forEach(function (x) { x.classList.remove('active'); });
       t.classList.add('active');
+      apply();
+    });
+  });
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      activeStore = c.getAttribute('data-store');
+      chips.forEach(function (x) { x.classList.toggle('active', x === c); });
+      var dealTab = document.querySelector('.tab[data-f="deal"]');
+      if (dealTab) {
+        tabs.forEach(function (x) { x.classList.remove('active'); });
+        dealTab.classList.add('active');
+      }
+      apply();
+    });
+  });
+  sbtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      sortMode = b.getAttribute('data-sort');
+      sbtns.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
       apply();
     });
   });
