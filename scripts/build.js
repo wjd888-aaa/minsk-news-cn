@@ -1073,7 +1073,7 @@ ${deals
 
   const counts = { news: 0, event: 0, volunteer: 0, china: 0 };
   for (const r of records) counts[r.cat || 'news']++;
-  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 志愿者 ${counts.volunteer} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条`;
+  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条`;
 
   return `<!DOCTYPE html>
 <html lang="zh-CN">
