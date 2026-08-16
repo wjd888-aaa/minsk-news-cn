@@ -792,7 +792,6 @@ ${PARENT_LINK}
 <nav class="crumb"><a href="index.html">← 返回首页</a></nav>
 <header class="site-head article-head">
   <h1>📖 生活指南</h1>
-  <p class="sub">给在白俄罗斯的中国人：紧急电话 · 使馆签证 · 就医 · 出行 · 中餐 · 购物 · 快递</p>
 </header>
 <main>
 ${secs}
@@ -899,7 +898,6 @@ ${PWA_HEAD}
 ${PARENT_LINK}
 <header class="site-head">
   <h1>白俄新闻<span class="accent">中文站</span></h1>
-  <p class="sub">白俄罗斯 &amp; 明斯克最新新闻 · 活动 · 志愿者 · 中白 · 超市折扣 · minsknews.by（自动翻译）· 白通社中文版 · 新闻每 23 小时更新 · 折扣每 30 分钟更新</p>
   <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
 </header>
 ${widgets}
