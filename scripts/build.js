@@ -86,7 +86,6 @@ const storeIcon = (s) => STORE_ICON[s] || '';
 const DEAL_CHANNELS = [
   { user: 'shopsgreen', store: 'Green' },
   { user: 'evroopt_shop', store: 'Евроопт' },
-  { user: 'almi_by', store: 'АЛМИ' },
   { user: 'hitdiscount_by', store: 'Хит' },
   { user: 'gippoby_offical', store: 'Гиппо' },
   { user: 'kopeechka_by', store: 'Копеечка' },
@@ -103,6 +102,7 @@ const DEAL_PAGES = [
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
+  { id: 'almi', store: 'АЛМИ', url: 'https://www.almi.by/shares/', parse: parseAlmiShares, limit: 12 },
 ];
 
 function classify(text) {
@@ -434,6 +434,29 @@ function parsePerekrestokDiscounts(html) {
       link: 'https://perekrestok24.by' + m[1],
       text,
       period: periodM ? `с ${periodM[1]} по ${periodM[2]}` : '',
+    });
+  }
+  return out;
+}
+
+function parseAlmiShares(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/<div class="item">([\s\S]*?)(?=<div class="item">|<footer|<\/main>)/g)) {
+    const block = m[1];
+    const hrefM = block.match(/href="(\/shares\/[^"]+)/);
+    const titleM = block.match(/<div class="title"><a[^>]*>([\s\S]*?)<\/a>/);
+    if (!hrefM) continue;
+    const text = titleM ? stripHtml(titleM[1]).replace(/\s+/g, ' ').trim() : '';
+    if (!text) continue;
+    const slug = hrefM[1].replace(/^\/|\/$/g, '');
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    out.push({
+      id: slug,
+      link: 'https://www.almi.by' + hrefM[1],
+      text,
+      period: '',
     });
   }
   return out;
