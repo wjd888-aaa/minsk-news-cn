@@ -336,6 +336,18 @@ main {
   font-family: inherit;
   cursor: pointer;
   transition: border-color .15s ease, color .15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+
+.chip-ico {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  border-radius: 3px;
+  flex: none;
 }
 
 .chip:hover { border-color: #d8b7ae; color: var(--accent); }

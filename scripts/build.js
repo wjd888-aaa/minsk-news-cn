@@ -1,4 +1,4 @@
-const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync } = require('fs');
+const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync } = require('fs');
 const path = require('path');
 
 const RSS_URL = 'https://minsknews.by/feed/';
@@ -64,6 +64,24 @@ const STORE_EN = {
   'ПерекрестОК': 'PerekrestOK',
 };
 const enStore = (s) => STORE_EN[s] || s;
+
+const STORE_ICON = {
+  Green: 'stores/Green.png',
+  'Евроопт': 'stores/Euroopt.png',
+  'АЛМИ': 'stores/ALMI.png',
+  'Хит': 'stores/Hit.png',
+  'Гиппо': 'stores/Hippo.png',
+  'Копеечка': 'stores/Kopeechka.png',
+  'Грошык': 'stores/Groshyk.png',
+  'Санта': 'stores/Santa.png',
+  'Fix Price': 'stores/FixPrice.png',
+  'Корона': 'stores/Korona.png',
+  'UniStore': 'stores/UniStore.png',
+  'Три цены': 'stores/Triceny.png',
+  'Дионис': 'stores/Dionis.png',
+  'ПерекрестОК': 'stores/Perekrestok.png',
+};
+const storeIcon = (s) => STORE_ICON[s] || '';
 
 const DEAL_CHANNELS = [
   { user: 'shopsgreen', store: 'Green' },
@@ -822,7 +840,7 @@ function homepageHtml(records, deals, updated, widgets) {
     .sort((a, b) => storeCounts[b] - storeCounts[a])
     .map(
       (s) =>
-        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${escapeHtml(enStore(s))}<b>${storeCounts[s]}</b></button>`
+        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${storeIcon(s) ? `<img class="chip-ico" src="${storeIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(s))}<b>${storeCounts[s]}</b></button>`
     )
     .join('\n');
   const dealBar = deals.length
@@ -1257,6 +1275,11 @@ async function buildSite(records, deals) {
   }
   copyFileSync(CSS_SRC, path.join(OUT_DIR, 'style.css'));
   for (const f of PWA_FILES) copyFileSync(path.join(ROOT, 'public', f), path.join(OUT_DIR, f));
+  const storesDir = path.join(OUT_DIR, 'stores');
+  mkdirSync(storesDir, { recursive: true });
+  for (const f of readdirSync(path.join(ROOT, 'public', 'stores'))) {
+    copyFileSync(path.join(ROOT, 'public', 'stores', f), path.join(storesDir, f));
+  }
 }
 
 async function main() {
