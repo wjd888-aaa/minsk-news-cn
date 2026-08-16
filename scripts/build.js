@@ -1056,7 +1056,7 @@ ${deals
   <h2 class="ttl"><a href="article/${encodeURIComponent(c.slug)}.html">${escapeHtml(c.zh)}</a></h2>
   <span class="ru-src" hidden>${escapeHtml(c.ru)}</span>
   ${(c.sum || '').length > 1 ? `<p class="sum">${escapeHtml(c.sum.slice(0, 160))} <a class="more" href="article/${encodeURIComponent(c.slug)}.html">阅读全文 ↗</a></p>` : ''}
-  <div class="meta">${catBadge(c.cat)} <span class="mtime">● ${escapeHtml(c.beijing)}（北京时间）</span> <a href="${escapeHtml(c.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
+  <div class="meta">${catBadge(c.cat)} <span class="mtime">● ${escapeHtml(c.beijing)}（北京时间）</span> <a href="article/${encodeURIComponent(c.slug)}.html">中文全文 ↗</a></div>
 </article>`
     )
     .join('\n');
