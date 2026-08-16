@@ -302,6 +302,8 @@ main {
   cursor: pointer;
 }
 
+.card.deal .deal-more[hidden] { display: none; }
+
 .card.deal .deal-more:hover { text-decoration: underline; }
 
 .deal-feed { margin: 0 0 6px; }
