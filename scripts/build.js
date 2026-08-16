@@ -492,6 +492,10 @@ function isDealExpired(d) {
   return end.getTime() < today.getTime();
 }
 
+function isRealDeal(d) {
+  return d != null && (d.price != null || d.oldPrice != null || d.discount != null);
+}
+
 function dealSig(d) {
   const t = String(d.text || '')
     .toLowerCase()
@@ -633,6 +637,8 @@ async function fetchDeals() {
       let kept = 0;
       for (const msg of msgs) {
         if (!msg.date || new Date(msg.date).getTime() < cutoff) continue;
+        const fields = extractDealFields(msg.text, '');
+        if (!isRealDeal(fields)) continue;
         const key = ch.user + '/' + msg.id;
         const prev = tgMap.get(key);
         let zh = (prev && prev.zh) || '';
@@ -650,7 +656,7 @@ async function fetchDeals() {
           text: msg.text,
           zh,
           photo: msg.photo,
-          ...extractDealFields(msg.text, ''),
+          ...fields,
         }));
         kept++;
       }
@@ -706,7 +712,9 @@ async function fetchDeals() {
   const tgItems = [...tgMap.values()]
     .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
-  const deals = [...pageItems, ...tgItems].filter((d) => !isDealExpired(d)).slice(0, DEAL_MAX);
+  const deals = [...pageItems, ...tgItems]
+    .filter((d) => !isDealExpired(d) && isRealDeal(d))
+    .slice(0, DEAL_MAX);
   writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
   return deals;
 }
