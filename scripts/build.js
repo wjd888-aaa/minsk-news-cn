@@ -1288,6 +1288,8 @@ ${olderHtml}
     }
   });
   renderFavs();
+  refreshDealButtons();
+  if (window.addEventListener) window.addEventListener('load', refreshDealButtons);
   if (input) input.addEventListener('input', apply);
 })();
 </script>
