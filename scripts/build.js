@@ -831,7 +831,7 @@ async function fetchDeals() {
         const prev = tgMap.get(key);
         let zh = (prev && prev.zh) || '';
         if (!zh) {
-          zh = (await translate(msg.text.slice(0, 6000))) || msg.text;
+          zh = (await translate(msg.text.slice(0, 1500))) || msg.text;
           await sleep(150);
         }
         tgMap.set(key, withHistory({
@@ -869,7 +869,7 @@ async function fetchDeals() {
         const prev = pageMap.get(key);
         let zh = (prev && prev.zh) || '';
         if (!zh) {
-          zh = (await translate(it.text.slice(0, 6000))) || it.text;
+          zh = (await translate(it.text.slice(0, 1500))) || it.text;
           await sleep(150);
         }
         pageMap.set(key, withHistory({
@@ -902,64 +902,6 @@ async function fetchDeals() {
     .slice(0, DEAL_MAX);
   writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
   return deals;
-}
-
-function dealSlug(d) {
-  const raw = `${d.user || 'deal'}-${d.id || ''}`;
-  return raw
-    .replace(/[^A-Za-z0-9._-]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 120);
-}
-
-function dealPageHtml(d) {
-  const dPeriod = ruDateToNumeric(d.period);
-  const name = enStore(d.store);
-  const icon = storeIcon(d.store).replace(/^stores\//, '../stores/');
-  const priceHtml =
-    d.price != null
-      ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
-      : d.discount != null
-        ? `<div class="deal-price off">−${d.discount}%</div>`
-        : '';
-  return `<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${escapeHtml(d.zh || d.text)} · ${escapeHtml(name)}折扣 · 白俄新闻中文站</title>
-<meta name="description" content="${escapeHtml((d.zh || d.text).slice(0, 160))}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏪</text></svg>">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-${PARENT_LINK}
-<nav class="crumb"><a href="../index.html">← 返回首页</a></nav>
-<header class="site-head article-head">
-  <h1>${escapeHtml(d.zh || d.text)}</h1>
-  <div class="deal-head"><span class="store-chip">${icon ? `<img class="chip-ico" src="${escapeHtml(icon)}" alt="" loading="lazy">` : ''}${escapeHtml(name)}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
-  ${priceHtml}
-</header>
-${d.photo ? `<p><img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer"></p>` : ''}
-<div class="article-body">
-${String(d.zh || d.text).split('\n').map((p) => p.trim() ? `<p>${escapeHtml(p)}</p>` : '').join('\n') || `<p>${escapeHtml(d.zh || d.text)}</p>`}
-</div>
-<div class="meta deal-actions"><button class="share" type="button" data-share="${escapeHtml(shareText(d))}">分享</button><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">查看俄语原文 ↗</a></div>
-<p class="note">本站译文仅供参考。原文链接为超市官网页面。</p>
-<script>
-(function () {
-  var sh = document.querySelector('.share');
-  if (sh) sh.addEventListener('click', function () {
-    var t = sh.getAttribute('data-share') || '';
-    if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { alert('已复制，请粘贴到微信发送'); });
-    else prompt('复制此文本', t);
-  });
-})();
-</script>
-${PWA_REGISTER_DEEP}
-</body>
-</html>
-`;
 }
 
 function articlePageHtml(rec) {
@@ -1098,10 +1040,10 @@ ${deals
     : d.discount != null
       ? `<div class="deal-price off">−${d.discount}%</div>`
       : ''}
-  <p class="deal-text clamp">${escapeHtml(d.zh || d.text)}</p>
+  <p class="deal-text clamp">${escapeHtml((d.zh || d.text).slice(0, 1500))}</p>
   <button class="deal-more" type="button" hidden>展开全文</button>
   <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
-  <div class="meta deal-actions"><button class="fav" type="button" data-key="${escapeHtml(d.user + '/' + d.id)}" title="收藏">♡</button><button class="share" type="button" data-share="${escapeHtml(shareText(d))}">分享</button><a href="deal/${encodeURIComponent(dealSlug(d))}.html">中文详情 ↗</a> <a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
+  <div class="meta deal-actions"><button class="fav" type="button" data-key="${escapeHtml(d.user + '/' + d.id)}" title="收藏">♡</button><button class="share" type="button" data-share="${escapeHtml(shareText(d))}">分享</button><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`;
   }
   )
@@ -1488,7 +1430,6 @@ async function fetchNews() {
 async function buildSite(records, deals) {
   mkdirSync(OUT_DIR, { recursive: true });
   mkdirSync(path.join(OUT_DIR, 'article'), { recursive: true });
-  mkdirSync(path.join(OUT_DIR, 'deal'), { recursive: true });
   const updated = nowBeijing();
   let widgets = '';
   try {
@@ -1503,17 +1444,6 @@ async function buildSite(records, deals) {
   for (const rec of records) {
     try {
       writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
-    } catch {
-      continue;
-    }
-  }
-  const seenSlug = new Set();
-  for (const d of deals) {
-    const slug = dealSlug(d);
-    if (seenSlug.has(slug)) continue;
-    seenSlug.add(slug);
-    try {
-      writeFileSync(path.join(OUT_DIR, 'deal', `${slug}.html`), dealPageHtml(d), 'utf8');
     } catch {
       continue;
     }

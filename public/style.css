@@ -276,53 +276,6 @@ main {
   vertical-align: middle;
 }
 
-.deal-head .store-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 3px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg);
-  color: #1e8a4c;
-  font-size: 13px;
-  font-weight: 700;
-  vertical-align: middle;
-}
-
-.deal-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 8px;
-  font-size: 12px;
-  color: var(--muted);
-  flex-wrap: wrap;
-}
-
-.deal-price {
-  font-size: 20px;
-  font-weight: 800;
-  color: #c0392b;
-  margin: 6px 0 10px;
-}
-.deal-price .cur { font-size: 12px; font-weight: 600; color: var(--muted); margin-left: 2px; }
-.deal-price s { color: var(--muted); font-weight: 500; font-size: 15px; margin-left: 4px; }
-.deal-price.off { color: #1e8a4c; font-size: 17px; }
-.deal-price .trend { font-size: 12px; font-weight: 700; margin-left: 4px; }
-.deal-price .trend.down { color: #1e8a4c; }
-.deal-price .trend.up { color: #c0392b; }
-
-.deal-img {
-  display: block;
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 4px 0 14px;
-  background: #f0ede6;
-}
-
 .card.deal .deal-text {
   margin: 0;
   font-size: 14px;
