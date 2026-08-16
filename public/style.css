@@ -459,6 +459,14 @@ main {
 
 .article-body a { color: var(--accent); }
 
+.article-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 18px;
+  border-radius: 10px;
+}
+
 .article-body .note {
   font-size: 13px;
   color: var(--muted);

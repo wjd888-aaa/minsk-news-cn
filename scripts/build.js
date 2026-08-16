@@ -1,4 +1,4 @@
-const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync } = require('fs');
+const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync } = require('fs');
 const path = require('path');
 
 const RSS_URL = 'https://minsknews.by/feed/';
@@ -258,9 +258,9 @@ function slugFromUrl(url) {
   return slug || 'article-' + Math.random().toString(36).slice(2, 8);
 }
 
-function extractArticleBody(html) {
+function articleContentRegion(html) {
   const s1 = html.indexOf('class="page-content"');
-  if (s1 < 0) return [];
+  if (s1 < 0) return null;
   let s2 = html.indexOf('class="page-content"', s1 + 30);
   let end = html.length;
   if (s2 > s1) end = s2;
@@ -270,7 +270,13 @@ function extractArticleBody(html) {
     const candidates = [a, f].filter((x) => x > s1);
     if (candidates.length) end = Math.min(...candidates);
   }
-  const seg = html.slice(s1, end);
+  return { start: s1, end };
+}
+
+function extractArticleBody(html) {
+  const region = articleContentRegion(html);
+  if (!region) return [];
+  const seg = html.slice(region.start, region.end);
   const paras = [];
   const re = /<p[^>]*>([\s\S]*?)<\/p>/g;
   let m;
@@ -279,6 +285,73 @@ function extractArticleBody(html) {
     if (t.length > 15) paras.push(t);
   }
   return paras;
+}
+
+function extractArticleImages(html) {
+  const region = articleContentRegion(html);
+  const seg = region ? html.slice(region.start, region.end) : html;
+  return extractImageUrls(seg);
+}
+
+function extractBeltaImages(html) {
+  return extractImageUrls(html);
+}
+
+function extractImageUrls(seg) {
+  const out = [];
+  const re = /<img[^>]+src=["']([^"']+)["']/gi;
+  let m;
+  while ((m = re.exec(seg)) && out.length < 6) {
+    const u = (m[1] || '').trim();
+    if (!u || /^data:/i.test(u) || /\.svg(\?|$)/i.test(u)) continue;
+    if (/yandex|mc\.|pixel|tracker/i.test(u)) continue;
+    if (/\/banners?\//i.test(u)) continue;
+    if (/logo|t-me\.png|favicon|avatar/i.test(u)) continue;
+    if (/-80x80|-50x50|-150x130|\.thumbs\//i.test(u)) continue;
+    if (out.includes(u)) continue;
+    out.push(u);
+  }
+  return out;
+}
+
+function resolveUrl(u, base) {
+  if (/^https?:\/\//i.test(u)) return u;
+  try {
+    return new URL(u, base).href;
+  } catch {
+    return null;
+  }
+}
+
+async function downloadArticleImages(urls, slug, base) {
+  const dir = path.join(ART_DIR, 'imgs', slug);
+  mkdirSync(dir, { recursive: true });
+  const local = [];
+  let i = 0;
+  let totalBytes = 0;
+  for (const u of urls) {
+    i++;
+    const abs = resolveUrl(u, base);
+    if (!abs) continue;
+    try {
+      const res = await fetch(abs, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' } });
+      if (!res.ok) continue;
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 500 || totalBytes + buf.length > 4 * 1024 * 1024) continue;
+      const ct = res.headers.get('content-type') || '';
+      let ext = '.jpg';
+      if (ct.includes('png')) ext = '.png';
+      else if (ct.includes('webp')) ext = '.webp';
+      else if (ct.includes('gif')) ext = '.gif';
+      writeFileSync(path.join(dir, `img${i}${ext}`), buf);
+      totalBytes += buf.length;
+      local.push(`../imgs/${slug}/img${i}${ext}`);
+      await sleep(150);
+    } catch {
+      continue;
+    }
+  }
+  return local;
 }
 
 function extractBeltaBody(html) {
@@ -788,7 +861,8 @@ function articlePageHtml(rec) {
   const origLabel = isBelta ? '查看中文原文 ↗' : '查看俄语原文 ↗';
   let bodyHtml;
   if (rec.body && rec.body.length) {
-    bodyHtml = rec.body.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n');
+    const imgs = (rec.images || []).map((src) => `<img class="article-img" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`).join('\n');
+    bodyHtml = (imgs ? imgs + '\n' : '') + rec.body.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n');
   } else {
     bodyHtml = `<p>${escapeHtml(rec.sum || rec.zh)} <a href="${escapeHtml(rec.link)}" target="_blank" rel="noopener noreferrer">${origLabel}</a></p>
 <p class="note">本文尚无全文译文，请看摘要或原文。</p>`;
@@ -1259,9 +1333,10 @@ async function fetchNews() {
         const html = await pr.text();
         if (rec.source === 'belta') {
           rec.body = extractBeltaBody(html).slice(0, 30);
+          rec.images = await downloadArticleImages(extractBeltaImages(html), rec.slug, rec.link);
           if (rec.body.length) fulltextDone++;
           beltaDone++;
-          console.log(`done (${rec.body.length} 段)`);
+          console.log(`done (${rec.body.length} 段, ${rec.images.length} 图)`);
         } else {
           const paras = extractArticleBody(html);
           rec.body = [];
@@ -1270,8 +1345,9 @@ async function fetchNews() {
             if (zh) rec.body.push(zh);
             await sleep(200 + Math.random() * 200);
           }
+          rec.images = await downloadArticleImages(extractArticleImages(html), rec.slug, rec.link);
           if (rec.body.length) fulltextDone++;
-          console.log(`done (${rec.body.length} 段)`);
+          console.log(`done (${rec.body.length} 段, ${rec.images.length} 图)`);
         }
       } else {
         rec.body = [];
@@ -1325,6 +1401,20 @@ async function buildSite(records, deals) {
   mkdirSync(storesDir, { recursive: true });
   for (const f of readdirSync(path.join(ROOT, 'public', 'stores'))) {
     copyFileSync(path.join(ROOT, 'public', 'stores', f), path.join(storesDir, f));
+  }
+  const imgsDir = path.join(ART_DIR, 'imgs');
+  if (existsSync(imgsDir)) {
+    const outImgs = path.join(OUT_DIR, 'imgs');
+    const walk = (from, to) => {
+      mkdirSync(to, { recursive: true });
+      for (const f of readdirSync(from)) {
+        const s = path.join(from, f);
+        const d = path.join(to, f);
+        if (statSync(s).isDirectory()) walk(s, d);
+        else copyFileSync(s, d);
+      }
+    };
+    walk(imgsDir, outImgs);
   }
 }
 
