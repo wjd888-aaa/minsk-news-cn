@@ -911,7 +911,6 @@ ${widgets}
   <a class="tab tab-link" href="life.html" data-f="life">📖 生活指南</a>
   <button class="tab" data-f="news">新闻</button>
   <button class="tab" data-f="event">活动</button>
-  <button class="tab" data-f="volunteer">志愿者</button>
   <button class="tab" data-f="china">中白</button>
 </div>
 <p id="nores" class="nores" hidden>没有匹配的结果，换个关键词试试。</p>
