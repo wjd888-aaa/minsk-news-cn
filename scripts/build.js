@@ -598,6 +598,54 @@ function monthKey(w) {
   return -1;
 }
 
+function ruDateToNumeric(str) {
+  const t = String(str || '').trim();
+  if (!t) return '';
+  const p = (n) => String(n).padStart(2, '0');
+  const num = (s) => (s ? Number(s) : null);
+  let m;
+  // 12.08.2026 - 25.08.2026
+  m = t.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})\s*[-–—]\s*(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+  if (m) return `${m[3]}-${p(m[2])}-${p(m[1])} 至 ${m[6]}-${p(m[5])}-${p(m[4])}`;
+  // 1 января 2024 - 31 декабря 2026
+  m = t.match(/(\d{1,2})\s+([а-яё]+)\s+(\d{4})\s*[-–—]\s*(\d{1,2})\s+([а-яё]+)\s+(\d{4})/i);
+  if (m) {
+    const a = monthKey(m[2]), b = monthKey(m[5]);
+    if (a >= 0 && b >= 0) return `${m[3]}-${p(a + 1)}-${p(m[1])} 至 ${m[6]}-${p(b + 1)}-${p(m[4])}`;
+  }
+  // с 1 сентября по 30 сентября
+  m = t.match(/с\s+(\d{1,2})\s+([а-яё]+)\s+по\s+(\d{1,2})\s+([а-яё]+)/i);
+  if (m) {
+    const a = monthKey(m[2]), b = monthKey(m[4]);
+    if (a >= 0 && b >= 0) return `${p(a + 1)}-${p(m[1])} 至 ${p(b + 1)}-${p(m[3])}`;
+  }
+  // с 12 по 25 августа
+  m = t.match(/с\s+(\d{1,2})\s+по\s+(\d{1,2})\s+([а-яё]+)/i);
+  if (m) {
+    const mo = monthKey(m[3]);
+    if (mo >= 0) return `${p(mo + 1)}-${p(m[1])} 至 ${p(mo + 1)}-${p(m[2])}`;
+  }
+  // 12 августа - 25 августа
+  m = t.match(/(\d{1,2})\s+([а-яё]+)\s*[-–—]\s*(\d{1,2})\s+([а-яё]+)/i);
+  if (m) {
+    const a = monthKey(m[2]), b = monthKey(m[4]);
+    if (a >= 0 && b >= 0) return `${p(a + 1)}-${p(m[1])} 至 ${p(b + 1)}-${p(m[3])}`;
+  }
+  // с 03.08 по 16.08
+  m = t.match(/с\s+(\d{1,2})\.(\d{1,2})\s+по\s+(\d{1,2})\.(\d{1,2})/i);
+  if (m) return `${p(m[2])}-${p(m[1])} 至 ${p(m[4])}-${p(m[3])}`;
+  // 12.08.2026 (single)
+  m = t.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+  if (m) return `${m[3]}-${p(m[2])}-${p(m[1])}`;
+  // 12 августа (single)
+  m = t.match(/(\d{1,2})\s+([а-яё]+)/i);
+  if (m) {
+    const mo = monthKey(m[2]);
+    if (mo >= 0) return `${p(mo + 1)}-${p(m[1])}`;
+  }
+  return t;
+}
+
 function parseEndDate(str) {
   if (!str) return null;
   const t = String(str).trim();
@@ -982,9 +1030,11 @@ function homepageHtml(records, deals, updated, widgets) {
 ${dealBar}
 ${deals
   .map(
-    (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((d.period ? d.period + ' · ' : '') + d.text.slice(0, 160))}">
+    (d) => {
+    const dPeriod = ruDateToNumeric(d.period);
+    return `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
-  <div class="deal-head"><span class="store-chip">${storeIcon(d.store) ? `<img class="chip-ico" src="${storeIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(d.store))}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
+  <div class="deal-head"><span class="store-chip">${storeIcon(d.store) ? `<img class="chip-ico" src="${storeIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
     ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
     : d.discount != null
@@ -994,7 +1044,8 @@ ${deals
   <button class="deal-more" type="button" hidden>展开全文</button>
   <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
   <div class="meta deal-actions"><button class="fav" type="button" data-key="${escapeHtml(d.user + '/' + d.id)}" title="收藏">♡</button><button class="share" type="button" data-share="${escapeHtml(shareText(d))}">分享</button><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
-</article>`
+</article>`;
+  }
   )
   .join('\n')}
 </div>`
