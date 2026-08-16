@@ -30,7 +30,7 @@ jobs:
 
       - name: Fetch & translate
         id: build
-        run: node --use-system-ca scripts/build.js
+        run: node scripts/build.js
         timeout-minutes: 25
 
       - name: Commit new articles

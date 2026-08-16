@@ -102,7 +102,7 @@ const DEAL_PAGES = [
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
-  { id: 'almi', store: 'АЛМИ', url: 'https://www.almi.by/shares/', parse: parseAlmiShares, limit: 12 },
+  { id: 'almi', store: 'АЛМИ', url: 'https://www.almi.by/shares/', parse: parseAlmiShares, limit: 12, insecure: true },
 ];
 
 function classify(text) {
@@ -482,6 +482,32 @@ async function fetchPerekrestokPeriod(it) {
   return it;
 }
 
+async function fetchPageHtml(url, insecure) {
+  if (!insecure) {
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' } });
+    if (!res.ok) throw new Error('http ' + res.status);
+    return await res.text();
+  }
+  const https = require('https');
+  return await new Promise((resolve, reject) => {
+    const req = https.get(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+      rejectUnauthorized: false,
+    }, (res) => {
+      if (res.statusCode !== 200) {
+        res.resume();
+        return reject(new Error('http ' + res.statusCode));
+      }
+      let body = '';
+      res.setEncoding('utf8');
+      res.on('data', (c) => { body += c; });
+      res.on('end', () => resolve(body));
+    });
+    req.on('error', reject);
+    req.setTimeout(25000, () => { req.destroy(new Error('timeout')); });
+  });
+}
+
 function monthKey(w) {
   const s = String(w || '').toLowerCase();
   if (s.startsWith('январ')) return 0;
@@ -709,11 +735,8 @@ async function fetchDeals() {
   }
   for (const src of DEAL_PAGES) {
     try {
-      const res = await fetch(src.url, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
-      });
-      if (!res.ok) throw new Error('http ' + res.status);
-      const items = src.parse(await res.text());
+      const html = await fetchPageHtml(src.url, !!src.insecure);
+      const items = src.parse(html);
       const now = new Date().toISOString();
       let kept = 0;
       for (const it of items.slice(0, src.limit || 8)) {
