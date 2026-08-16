@@ -52,7 +52,7 @@ const STORE_EN = {
   'Евроопт': 'Euroopt',
   'АЛМИ': 'ALMI',
   'Хит': 'Hit',
-  'Гиппо': 'Hippo',
+  'Гиппо': 'Gippo',
   'Копеечка': 'Kopeechka',
   'Грошык': 'Groshyk',
   'Санта': 'Santa',
@@ -70,7 +70,7 @@ const STORE_ICON = {
   'Евроопт': 'stores/Euroopt.png',
   'АЛМИ': 'stores/ALMI.png',
   'Хит': 'stores/Hit.png',
-  'Гиппо': 'stores/Hippo.png',
+  'Гиппо': 'stores/Gippo.png',
   'Копеечка': 'stores/Kopeechka.png',
   'Грошык': 'stores/Groshyk.png',
   'Санта': 'stores/Santa.png',
@@ -910,7 +910,7 @@ ${deals
   .map(
     (d) => `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((d.period ? d.period + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
-  <div class="deal-head"><span class="store-badge">${escapeHtml(zhStore(d.store))}</span> <span class="store-ru">${escapeHtml(d.store)}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
+  <div class="deal-head"><span class="store-chip">${storeIcon(d.store) ? `<img class="chip-ico" src="${storeIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(d.store))}</span> <span class="mtime">● ${escapeHtml(d.period || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
     ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
     : d.discount != null
