@@ -1008,7 +1008,7 @@ function lifePageHtml(life) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生活指南 · 白俄新闻中文站</title>
-<meta name="description" content="在白俄罗斯生活的实用信息：紧急电话、中国驻白大使馆与签证、医疗就医、交通、中餐厅、中国超市、快递集运。">
+<meta name="description" content="在白俄罗斯生活的实用信息：紧急电话、中国驻白大使馆与签证、医疗就医、交通出行、白俄高校地址。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
