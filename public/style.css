@@ -308,6 +308,16 @@ main {
 
 .deal-feed { margin: 0 0 6px; }
 
+.deal-empty {
+  margin: 0 0 14px;
+  padding: 22px 14px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+}
+
 .deals-bar {
   display: flex;
   flex-wrap: wrap;

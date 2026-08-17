@@ -44,6 +44,7 @@ const STORE_ZH = {
   'Три цены': '三价超市',
   'Дионис': '迪奥尼斯',
   'ПерекрестОК': '十字路口',
+  'ProStore': '普罗超市',
 };
 const zhStore = (s) => STORE_ZH[s] || s;
 
@@ -62,6 +63,7 @@ const STORE_EN = {
   'Три цены': 'Tri Tseny',
   'Дионис': 'Dionis',
   'ПерекрестОК': 'PerekrestOK',
+  'ProStore': 'ProStore',
 };
 const enStore = (s) => STORE_EN[s] || s;
 
@@ -80,6 +82,7 @@ const STORE_ICON = {
   'Три цены': 'stores/Triceny.png',
   'Дионис': 'stores/Dionis.png',
   'ПерекрестОК': 'stores/Perekrestok.png',
+  'ProStore': 'stores/ProStore.png',
 };
 const storeIcon = (s) => STORE_ICON[s] || '';
 
@@ -103,7 +106,10 @@ const DEAL_PAGES = [
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
   { id: 'almi', store: 'АЛМИ', url: 'https://www.almi.by/shares/', parse: parseAlmiShares, limit: 12, insecure: true },
+  { id: 'prostore', store: 'ProStore', url: 'https://www.prostore.by/specialnye-predlozheniya', parse: parseProstoreSpecials, limit: 8 },
 ];
+
+const ALL_STORES = [...new Set([...DEAL_CHANNELS.map((c) => c.store), ...DEAL_PAGES.map((p) => p.store)])];
 
 function classify(text) {
   const t = String(text || '').toLowerCase();
@@ -535,6 +541,29 @@ function parseAlmiShares(html) {
   return out;
 }
 
+function parseProstoreSpecials(html) {
+  const out = [];
+  const seen = new Set();
+  const cards = html.matchAll(/<a\b[^>]*href="(specialnye-predlozheniya\/[a-z0-9-]+)"[^>]*>([\s\S]*?)<\/a>/g);
+  for (const m of cards) {
+    const slug = m[1].split('/').pop();
+    if (seen.has(slug)) continue;
+    const block = m[2];
+    const text = stripHtml(block).replace(/\s+/g, ' ').trim();
+    if (!text) continue;
+    seen.add(slug);
+    const priceM = text.match(/(?:за|по)\s+(\d{1,4}[.,]\d{2})\s*руб/i);
+    out.push({
+      id: slug,
+      link: 'https://www.prostore.by/' + m[1],
+      text,
+      period: '',
+      price: priceM ? Number(priceM[1].replace(',', '.')) : null,
+    });
+  }
+  return out;
+}
+
 async function fetchPerekrestokPeriod(it) {
   try {
     const res = await fetch(it.link, {
@@ -681,7 +710,9 @@ function isDealExpired(d) {
 }
 
 function isRealDeal(d) {
-  return d != null && (d.price != null || d.oldPrice != null || d.discount != null);
+  if (d == null) return false;
+  if (d.price != null || d.oldPrice != null || d.discount != null) return true;
+  return (d.user || '').startsWith('page:') && String(d.text || '').length > 1;
 }
 
 function dealSig(d) {
@@ -1004,15 +1035,15 @@ function homepageHtml(records, deals, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
   const storeCounts = {};
   for (const d of deals) storeCounts[d.store] = (storeCounts[d.store] || 0) + 1;
-  const storeChips = Object.keys(storeCounts)
-    .sort((a, b) => storeCounts[b] - storeCounts[a])
+  const storeChips = ALL_STORES
+    .map((s) => ({ s, n: storeCounts[s] || 0 }))
+    .sort((a, b) => b.n - a.n)
     .map(
-      (s) =>
-        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${storeIcon(s) ? `<img class="chip-ico" src="${storeIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(s))}<b>${storeCounts[s]}</b></button>`
+      ({ s, n }) =>
+        `<button class="chip" data-store="${escapeHtml(s)}" type="button">${storeIcon(s) ? `<img class="chip-ico" src="${storeIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(s))}<b>${n}</b></button>`
     )
     .join('\n');
-  const dealBar = deals.length
-    ? `<div class="deals-bar">
+  const dealBar = `<div class="deals-bar">
   <div class="storechips">
     <button class="chip active" data-store="" type="button">All</button>
     ${storeChips}
@@ -1023,11 +1054,10 @@ function homepageHtml(records, deals, updated, widgets) {
     <button class="sbtn" data-sort="price" type="button">Price (Low→High)</button>
     <button class="sbtn favbtn" type="button">♡ 收藏</button>
   </div>
-</div>`
-    : '';
-  const dealCards = deals.length
-    ? `<div class="deal-feed">
+</div>`;
+  const dealCards = `<div class="deal-feed">
 ${dealBar}
+<div class="deal-empty" hidden>该超市暂无折扣信息</div>
 ${deals
   .map(
     (d) => {
@@ -1048,8 +1078,7 @@ ${deals
   }
   )
   .join('\n')}
-</div>`
-    : '';
+</div>`;
   const cards = recent
     .map(
       (c) => `<article class="card" data-cat="${c.cat || 'news'}" title="${escapeHtml((c.ru || c.zh).slice(0, 160))}">
@@ -1209,7 +1238,14 @@ ${olderHtml}
       var dealVis = Array.prototype.some.call(feed.querySelectorAll('.card.deal'), function (c) {
         return c.style.display !== 'none';
       });
-      feed.style.display = dealVis ? '' : 'none';
+      var empty = feed.querySelector('.deal-empty');
+      if (activeStore) {
+        feed.style.display = '';
+        if (empty) empty.hidden = dealVis;
+      } else {
+        feed.style.display = dealVis ? '' : 'none';
+        if (empty) empty.hidden = true;
+      }
     }
     sortDeals();
     refreshDealButtons();
