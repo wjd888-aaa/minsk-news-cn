@@ -188,7 +188,7 @@ const DEALS_FILE = path.join(ART_DIR, 'deals.json');
 const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
-const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg'];
+const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.svg'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
 <link rel="apple-touch-icon" href="icon.svg">`;
@@ -1243,8 +1243,9 @@ function lifePageHtml(life) {
       .map(
         (it) => `<li>
       <div class="life-name">${escapeHtml(it.name)}${it.phone ? ` <span class="life-phone">${escapeHtml(it.phone)}</span>` : ''}</div>
+      ${it.img ? `<img class="life-img" src="${escapeHtml(it.img)}" alt="${escapeHtml(it.name)}" loading="lazy">` : ''}
       ${it.addr ? `<div class="life-addr">📍 ${escapeHtml(it.addr)}</div>` : ''}
-      ${it.note ? `<div class="life-note">${escapeHtml(it.note)}</div>` : ''}
+      ${it.note ? `<div class="life-note">${escapeHtml(it.note).split('\n').join('<br>')}</div>` : ''}
       ${it.link ? `<div class="life-link"><a href="${escapeHtml(it.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(it.link.replace(/^https?:\/\//, ''))} ↗</a></div>` : ''}
     </li>`
       )

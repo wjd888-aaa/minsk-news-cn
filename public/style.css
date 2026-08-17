@@ -671,6 +671,16 @@ main {
 
 .life-addr { color: var(--muted); }
 .life-note { color: var(--muted); font-size: 12.5px; }
+.life-img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 10px 0 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
 .life-link a { color: var(--accent); text-decoration: none; word-break: break-all; }
 .life-link a:hover { text-decoration: underline; }
 
