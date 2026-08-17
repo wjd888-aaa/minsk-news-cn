@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 214" font-family="Arial, 'Noto Sans', 'Microsoft YaHei', sans-serif">
+  <rect width="360" height="214" fill="#fbfbf8"/>
+  <text x="14" y="26" font-size="17" font-weight="bold" fill="#222">白俄罗斯行政区划 · 各州首府</text>
+  <text x="14" y="44" font-size="11" fill="#666">示意图：6 州首府中文名称（白俄语名/Беларусь）</text>
+
+  <polygon points="6.8,106.4 13.6,136.8 6.8,178.6 6.8,190 102,190 187,167.2 255,190 319.6,190 319.6,144.4 329.8,106.4 316.2,57 278.8,11.4 221,3.8 187,19 153,3.8 95.2,19 51,11.4 17,41.8 6.8,76"
+    fill="#eef4e6" stroke="#3a7d3a" stroke-width="3" stroke-linejoin="round"/>
+
+  <g font-size="12" fill="#222">
+    <circle cx="23.5" cy="159.6" r="4.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+    <text x="33" y="163" font-weight="bold">布列斯特</text>
+    <text x="33" y="174" font-size="9" fill="#666">Брэст · Brest</text>
+
+    <circle cx="28.2" cy="99.9" r="4.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+    <text x="20" y="103" text-anchor="end" font-weight="bold">格罗德诺</text>
+    <text x="20" y="114" text-anchor="end" font-size="9" fill="#666">Гродна · Grodno</text>
+
+    <circle cx="245.8" cy="42.2" r="4.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+    <text x="254" y="46" font-weight="bold">维捷布斯克</text>
+    <text x="254" y="57" font-size="9" fill="#666">Віцебск · Vitebsk</text>
+
+    <circle cx="155.4" cy="91.2" r="5.5" fill="#1a5276" stroke="#fff" stroke-width="2"/>
+    <text x="164" y="95" font-weight="bold">明斯克（首都）</text>
+    <text x="164" y="106" font-size="9" fill="#666">Мінск · Minsk</text>
+
+    <circle cx="249.2" cy="91.2" r="4.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+    <text x="258" y="95" font-weight="bold">莫吉廖夫</text>
+    <text x="258" y="106" font-size="9" fill="#666">Магілёў · Mogilev</text>
+
+    <circle cx="272" cy="146.7" r="4.5" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+    <text x="280" y="150" font-weight="bold">戈梅利</text>
+    <text x="280" y="161" font-size="9" fill="#666">Гомель · Gomel</text>
+  </g>
+</svg>
