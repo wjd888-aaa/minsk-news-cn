@@ -1356,7 +1356,6 @@ ${list.map(ffCard).join('\n')}
   const fastfoodCards = `<section class="ff-section">
 <div class="ff-title">
   <h2>🍔 明斯克快餐折扣</h2>
-  <span class="ff-sub">来源：官方 Telegram · 官网促销 · 聚合站 · Viber 无公开接口无法自动抓取 · 每 30 分钟自动更新</span>
 </div>
 <div class="deal-feed ff-feed">
 ${fastfoodBar}
@@ -1453,7 +1452,6 @@ ${widgets}
   <input id="search" type="search" placeholder="🔍 搜索中文或俄语标题…" autocomplete="off" aria-label="站内搜索">
 </div>
 <div class="tabs" role="tablist">
-  <button class="tab active" data-f="all">全部</button>
   <button class="tab" data-f="deal">超市折扣</button>
   <button class="tab" data-f="ff">快餐折扣</button>
   <a class="tab tab-link" href="life.html" data-f="life">📖 生活指南</a>
@@ -1487,6 +1485,7 @@ ${olderHtml}
   var origOrder = Array.prototype.slice.call(document.querySelectorAll('.card.deal'));
   var ffChips = document.querySelectorAll('.ff-chip');
   var ffFeed = document.querySelector('.ff-feed');
+  var ffSection = document.querySelector('.ff-section');
   var activeFf = '';
   function favKeys() {
     try { return JSON.parse(localStorage.getItem('favDeals') || '[]') || []; }
@@ -1594,12 +1593,12 @@ ${olderHtml}
         if (empty) empty.hidden = true;
       }
     }
-    if (ffFeed) {
+    if (ffSection) {
       if (f === 'all' || f === '' || f === 'ff') {
-        ffFeed.style.display = '';
+        ffSection.style.display = '';
         applyFf();
       } else {
-        ffFeed.style.display = 'none';
+        ffSection.style.display = 'none';
       }
     }
     sortDeals();

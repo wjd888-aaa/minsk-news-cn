@@ -349,11 +349,6 @@ main {
   color: var(--ink);
 }
 
-.ff-title .ff-sub {
-  font-size: 12px;
-  color: var(--muted);
-}
-
 .ff-group {
   margin: 14px 0 4px;
   padding: 0 2px;
