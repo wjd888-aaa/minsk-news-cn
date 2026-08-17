@@ -111,6 +111,43 @@ const DEAL_PAGES = [
 
 const ALL_STORES = [...new Set([...DEAL_CHANNELS.map((c) => c.store), ...DEAL_PAGES.map((p) => p.store)])];
 
+const FF_ZH = {
+  KFC: '肯德基',
+  Mak: '麦当劳（Mak.by）',
+  DodoPizza: '多多披萨',
+  Domino: '达美乐披萨',
+  BurgerKing: '汉堡王',
+  PizzaTempo: '披萨快节奏',
+};
+const ffZh = (s) => FF_ZH[s] || s;
+
+const FF_ICON = {
+  KFC: 'stores/KFC.png',
+  Mak: 'stores/Mak.png',
+  DodoPizza: 'stores/DodoPizza.png',
+  Domino: 'stores/Domino.png',
+  BurgerKing: 'stores/BurgerKing.png',
+  PizzaTempo: 'stores/PizzaTempo.png',
+};
+const ffIcon = (s) => FF_ICON[s] || '';
+
+const FASTFOOD_TG = [
+  { user: 'kfcbelarus', store: 'KFC' },
+  { user: 'dodopizza_belarus', store: 'DodoPizza' },
+  { user: 'burgerkingbelarus', store: 'BurgerKing' },
+  { user: 'dominospizzabelarus', store: 'Domino' },
+];
+const FASTFOOD_DAYS = 30;
+const FASTFOOD_MAX = 60;
+
+const FASTFOOD_PAGES = [
+  { id: 'mak', store: 'Mak', url: 'https://mak.by/news/?group=promotions', parse: parseMakPromos, limit: 6 },
+  { id: 'dominosite', store: 'Domino', url: 'https://dominos.by/ru/minsk/promo/', parse: parseDominoSitePromos, limit: 6 },
+  { id: 'tempo', store: 'PizzaTempo', url: 'https://pizzatempo.by/discounts', parse: parseTempoDiscounts, limit: 6 },
+];
+
+const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store)])];
+
 function classify(text) {
   const t = String(text || '').toLowerCase();
   for (const k of VOLUNTEER_KEYS) if (t.includes(k)) return 'volunteer';
@@ -131,6 +168,7 @@ const ART_DIR = path.join(ROOT, 'articles');
 const INDEX_FILE = path.join(ART_DIR, 'index.json');
 const LAST_RUN_FILE = path.join(ART_DIR, 'last_fetch.json');
 const DEALS_FILE = path.join(ART_DIR, 'deals.json');
+const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
 const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg'];
@@ -564,6 +602,67 @@ function parseProstoreSpecials(html) {
   return out;
 }
 
+function parseMakPromos(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/class="promocode"[^>]*>([\s\S]*?)<\/div>/gi)) {
+    const text = stripHtml(m[1]).replace(/\s+/g, ' ').trim();
+    if (!text) continue;
+    const slug = text.toLowerCase().replace(/[^a-zа-яё0-9]+/g, '-').slice(0, 50);
+    if (seen.has(slug) || seen.size >= 4) continue;
+    seen.add(slug);
+    out.push({
+      id: slug,
+      link: 'https://mak.by/news/?group=promotions',
+      text,
+      period: '',
+    });
+  }
+  return out;
+}
+
+function parseDominoSitePromos(html) {
+  const out = [];
+  const text = stripHtml(html).replace(/\s+/g, ' ').trim();
+  const m = text.match(/(Только в понедельник[^.!?]*\d+[.,]\d{2}[^.!?]*)/i);
+  if (m) {
+    out.push({
+      id: 'monday',
+      link: 'https://dominos.by/ru/minsk/promo/',
+      text: m[1].trim(),
+      period: '',
+    });
+  }
+  return out;
+}
+
+function parseTempoDiscounts(html) {
+  const out = [];
+  const seen = new Set();
+  let idx = 0;
+  for (const m of html.matchAll(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/gi)) {
+    const head = stripHtml(m[1]).replace(/\s+/g, ' ').trim();
+    if (!head || /^[a-zа-яё]{1,3}$/i.test(head)) continue;
+    if (seen.has(head) || seen.size >= 6) continue;
+    const tail = html.slice(m.index + m[0].length, m.index + m[0].length + 700);
+    const bodyM = tail.match(/<p[^>]*>([\s\S]*?)<\/p>/);
+    let body = '';
+    if (bodyM) {
+      body = stripHtml(bodyM[1]).replace(/\s+/g, ' ').trim();
+    }
+    const text = (head + (body ? ' — ' + body : '')).slice(0, 500);
+    if (!/\d/.test(text) && !/акци|скидк|промо|бонус|%/.test(text)) continue;
+    seen.add(head);
+    out.push({
+      id: 'tempo-' + (idx++),
+      link: 'https://pizzatempo.by/discounts',
+      text,
+      period: '',
+    });
+  }
+  return out;
+}
+
 async function fetchPerekrestokPeriod(it) {
   try {
     const res = await fetch(it.link, {
@@ -712,7 +811,9 @@ function isDealExpired(d) {
 function isRealDeal(d) {
   if (d == null) return false;
   if (d.price != null || d.oldPrice != null || d.discount != null) return true;
-  return (d.user || '').startsWith('page:') && String(d.text || '').length > 1;
+  const t = String(d.text || '');
+  if (/промокод|промо-код|по промокод/i.test(t) || /BYN|бел\. руб|бел. руб/i.test(t)) return true;
+  return (d.user || '').startsWith('page:') && t.length > 1;
 }
 
 function dealSig(d) {
@@ -935,6 +1036,118 @@ async function fetchDeals() {
   return deals;
 }
 
+async function fetchFastfoods() {
+  mkdirSync(ART_DIR, { recursive: true });
+  const existing = readJson(FASTFOODS_FILE, []);
+  const clean = (d) => (d.user || '').length > 1 && d.id && d.id !== 'undefined';
+  const tgMap = new Map(existing.filter((d) => !(d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
+  const pageMap = new Map(existing.filter((d) => (d.user || '').startsWith('page:') && clean(d)).map((d) => [d.user + '/' + d.id, d]));
+  const cutoff = Date.now() - FASTFOOD_DAYS * 86400000;
+  const histMap = new Map();
+  for (const d of existing) {
+    if (!clean(d)) continue;
+    const k = dealSig(d);
+    histMap.set(k, (histMap.get(k) || []).concat((d.history || []).map((h) => ({ t: String(h.t || '').slice(0, 10), p: h.p }))));
+  }
+  const withHistory = (d) => {
+    const sig = dealSig(d);
+    const hist = (histMap.get(sig) || []).slice();
+    const today = new Date().toISOString().slice(0, 10);
+    const last = hist[hist.length - 1];
+    if (d.price != null && (!last || last.p !== d.price || last.t !== today)) {
+      hist.push({ t: today, p: d.price });
+    }
+    if (hist.length > 8) hist.splice(0, hist.length - 8);
+    histMap.set(sig, hist);
+    d.history = hist;
+    return d;
+  };
+  for (const ch of FASTFOOD_TG) {
+    try {
+      const res = await fetch(`https://t.me/s/${ch.user}`, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+      });
+      if (!res.ok) throw new Error('http ' + res.status);
+      const html = await res.text();
+      const msgs = parseTelegramPage(html);
+      let kept = 0;
+      for (const msg of msgs) {
+        if (!msg.date || new Date(msg.date).getTime() < cutoff) continue;
+        const fields = extractDealFields(msg.text, '');
+        if (!isRealDeal({ ...fields, text: msg.text })) continue;
+        const key = ch.user + '/' + msg.id;
+        const prev = tgMap.get(key);
+        let zh = (prev && prev.zh) || '';
+        if (!zh) {
+          zh = (await translate(msg.text.slice(0, 1500))) || msg.text;
+          await sleep(150);
+        }
+        tgMap.set(key, withHistory({
+          user: ch.user,
+          id: msg.id,
+          store: ch.store,
+          link: msg.link,
+          date: msg.date,
+          beijing: fmtBeijing(msg.date),
+          text: msg.text,
+          zh,
+          photo: msg.photo,
+          ...fields,
+        }));
+        kept++;
+      }
+      console.log(`  fastfood ${ch.user}: ${msgs.length} 帖，保留 ${kept}`);
+    } catch (e) {
+      console.log(`  fastfood ${ch.user} fail: ${e.message}`);
+    }
+    await sleep(300);
+  }
+  for (const src of FASTFOOD_PAGES) {
+    try {
+      const html = await fetchPageHtml(src.url, !!src.insecure);
+      const items = src.parse(html);
+      const now = new Date().toISOString();
+      let kept = 0;
+      for (const it of items.slice(0, src.limit || 6)) {
+        const key = 'page:' + src.id + '/' + it.id;
+        const prev = pageMap.get(key);
+        let zh = (prev && prev.zh) || '';
+        if (!zh) {
+          zh = (await translate(it.text.slice(0, 1500))) || it.text;
+          await sleep(150);
+        }
+        pageMap.set(key, withHistory({
+          user: 'page:' + src.id,
+          id: it.id,
+          store: src.store,
+          link: it.link,
+          date: now,
+          beijing: fmtBeijing(now),
+          text: it.text,
+          zh,
+          period: it.period || '',
+          photo: '',
+          ...extractDealFields(it.text, it.period || ''),
+        }));
+        kept++;
+      }
+      console.log(`  fastfood ${src.id}: ${items.length} 条，保留 ${kept}`);
+    } catch (e) {
+      console.log(`  fastfood ${src.id} fail: ${e.message}`);
+    }
+    await sleep(300);
+  }
+  const pageItems = [...pageMap.values()];
+  const tgItems = [...tgMap.values()]
+    .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const items = [...pageItems, ...tgItems]
+    .filter((d) => !isDealExpired(d) && isRealDeal(d))
+    .slice(0, FASTFOOD_MAX);
+  writeFileSync(FASTFOODS_FILE, JSON.stringify(items, null, 2), 'utf8');
+  return items;
+}
+
 function articlePageHtml(rec) {
   const isBelta = rec.source === 'belta';
   const origLabel = isBelta ? '查看中文原文 ↗' : '查看俄语原文 ↗';
@@ -1031,7 +1244,17 @@ ${PWA_REGISTER}
 `;
 }
 
-function homepageHtml(records, deals, updated, widgets) {
+function highlightPromoCode(text) {
+  const t = String(text || '');
+  const m = t.match(/промокод[а-яё]*\s*[:№\s»«"'\u00A0]*\s*([A-ZА-ЯЁ0-9]{3,12})/i);
+  if (!m) return '';
+  const raw = m[1];
+  if (!/[0-9A-ZА-ЯЁ]/.test(raw) || /[а-яё]/.test(raw)) return '';
+  const code = raw.toUpperCase();
+  return `<div class="promo-code">🎟️ 优惠码 <b>${escapeHtml(code)}</b></div>`;
+}
+
+function homepageHtml(records, deals, fastfoods, updated, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
   const storeCounts = {};
   for (const d of deals) storeCounts[d.store] = (storeCounts[d.store] || 0) + 1;
@@ -1043,6 +1266,50 @@ function homepageHtml(records, deals, updated, widgets) {
         `<button class="chip" data-store="${escapeHtml(s)}" type="button">${storeIcon(s) ? `<img class="chip-ico" src="${storeIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(s))}<b>${n}</b></button>`
     )
     .join('\n');
+  const ffCounts = {};
+  for (const d of fastfoods) ffCounts[d.store] = (ffCounts[d.store] || 0) + 1;
+  const ffChips = ALL_FASTFOOD
+    .map((s) => ({ s, n: ffCounts[s] || 0 }))
+    .sort((a, b) => b.n - a.n)
+    .map(
+      ({ s, n }) =>
+        `<button class="chip ff-chip" data-ffstore="${escapeHtml(s)}" type="button">${ffIcon(s) ? `<img class="chip-ico" src="${ffIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(ffZh(s))}<b>${n}</b></button>`
+    )
+    .join('\n');
+  const fastfoodBar = `<div class="deals-bar ff-bar">
+  <div class="storechips">
+    <button class="chip ff-chip active" data-ffstore="" type="button">All</button>
+    ${ffChips}
+  </div>
+  <div class="deal-sort">
+    <span class="deals-n">🍔 ${fastfoods.length} deals</span>
+  </div>
+</div>`;
+  const fastfoodCards = `<div class="deal-feed ff-feed">
+${fastfoodBar}
+<div class="deal-empty" hidden>该快餐品牌暂无折扣信息</div>
+${fastfoods
+  .map(
+    (d) => {
+    const dPeriod = ruDateToNumeric(d.period);
+    return `<article class="card deal ff-deal" data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
+  ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
+  <div class="deal-head"><span class="store-chip ff-store-chip">${ffIcon(d.store) ? `<img class="chip-ico" src="${ffIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(ffZh(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
+  ${d.price != null
+    ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
+    : d.discount != null
+      ? `<div class="deal-price off">−${d.discount}%</div>`
+      : ''}
+  <p class="deal-text clamp">${escapeHtml((d.zh || d.text).slice(0, 1500))}</p>
+  ${highlightPromoCode((d.text || ''))}
+  <button class="deal-more" type="button" hidden>展开全文</button>
+  <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
+  <div class="meta deal-actions"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
+</article>`;
+  }
+  )
+  .join('\n')}
+</div>`;
   const dealBar = `<div class="deals-bar">
   <div class="storechips">
     <button class="chip active" data-store="" type="button">All</button>
@@ -1141,6 +1408,7 @@ ${widgets}
 </div>
 <p id="nores" class="nores" hidden>没有匹配的结果，换个关键词试试。</p>
 ${dealCards}
+${fastfoodCards}
 ${cards}
 ${olderHtml}
 </main>
@@ -1162,6 +1430,9 @@ ${olderHtml}
   var favOnly = false;
   var feed = document.querySelector('.deal-feed');
   var origOrder = Array.prototype.slice.call(document.querySelectorAll('.card.deal'));
+  var ffChips = document.querySelectorAll('.ff-chip');
+  var ffFeed = document.querySelector('.ff-feed');
+  var activeFf = '';
   function favKeys() {
     try { return JSON.parse(localStorage.getItem('favDeals') || '[]') || []; }
     catch (e) { return []; }
@@ -1201,6 +1472,18 @@ ${olderHtml}
       try { res(document.execCommand('copy')); } catch (e) { res(false); }
       document.body.removeChild(ta);
     });
+  }
+  function applyFf() {
+    if (!ffFeed) return;
+    var vis = 0;
+    ffFeed.querySelectorAll('.ff-deal').forEach(function (c) {
+      var show = !activeFf || c.getAttribute('data-ffstore') === activeFf;
+      c.style.display = show ? '' : 'none';
+      if (show) vis++;
+    });
+    var empty = ffFeed.querySelector('.deal-empty');
+    if (empty) empty.hidden = vis !== 0;
+    ffFeed.style.display = vis ? '' : 'none';
   }
   function sortDeals() {
     if (!feed) return;
@@ -1247,6 +1530,14 @@ ${olderHtml}
         if (empty) empty.hidden = true;
       }
     }
+    if (ffFeed) {
+      if (f === 'all' || f === '') {
+        ffFeed.style.display = '';
+        applyFf();
+      } else {
+        ffFeed.style.display = 'none';
+      }
+    }
     sortDeals();
     refreshDealButtons();
   }
@@ -1288,6 +1579,13 @@ ${olderHtml}
         dealTab.classList.add('active');
       }
       apply();
+    });
+  });
+  ffChips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      activeFf = c.getAttribute('data-ffstore');
+      ffChips.forEach(function (x) { x.classList.toggle('active', x === c); });
+      applyFf();
     });
   });
   sbtns.forEach(function (b) {
@@ -1463,7 +1761,7 @@ async function fetchNews() {
   return { records, newCount: newRecords.length, fulltextDone };
 }
 
-async function buildSite(records, deals) {
+async function buildSite(records, deals, fastfoods) {
   mkdirSync(OUT_DIR, { recursive: true });
   mkdirSync(path.join(OUT_DIR, 'article'), { recursive: true });
   const updated = nowBeijing();
@@ -1475,7 +1773,7 @@ async function buildSite(records, deals) {
   } catch (e) {
     console.log('widgets fetch fail: ' + e.message);
   }
-  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, updated, widgets), 'utf8');
+  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, fastfoods || [], updated, widgets), 'utf8');
   writeFileSync(path.join(OUT_DIR, 'life.html'), lifePageHtml(readJson(LIFE_FILE, [])), 'utf8');
   for (const rec of records) {
     try {
@@ -1531,9 +1829,13 @@ async function main() {
   const deals = await fetchDeals();
   console.log('Deals: ' + deals.length + ' 条');
 
+  // ---- 2.5 快餐折扣（始终抓取）----
+  const fastfoods = await fetchFastfoods();
+  console.log('Fastfoods: ' + fastfoods.length + ' 条');
+
   // ---- 3. build site（始终重建）----
-  await buildSite(records, deals);
-  console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newCount} 篇（全文 ${fulltextDone} 篇），折扣 ${deals.length} 条。`);
+  await buildSite(records, deals, fastfoods);
+  console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newCount} 篇（全文 ${fulltextDone} 篇），折扣 ${deals.length} 条，快餐 ${fastfoods.length} 条。`);
 }
 
 main().catch((e) => {

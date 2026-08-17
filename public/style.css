@@ -318,6 +318,41 @@ main {
   font-size: 14px;
 }
 
+.ff-bar {
+  margin-top: 18px;
+  border-color: #e8c96a;
+  background: linear-gradient(180deg, #fffaf0, var(--card));
+}
+
+.ff-bar .chip.active {
+  background: #d19a2e;
+  border-color: #d19a2e;
+}
+
+.ff-feed { margin: 0 0 6px; }
+
+.promo-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 2px;
+  padding: 5px 10px;
+  border: 1px dashed #d19a2e;
+  border-radius: 8px;
+  background: #fff7e0;
+  color: #7a5a00;
+  font-size: 13px;
+}
+
+.promo-code b {
+  padding: 1px 8px;
+  border-radius: 5px;
+  background: #d19a2e;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
 .deals-bar {
   display: flex;
   flex-wrap: wrap;
