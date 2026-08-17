@@ -107,7 +107,8 @@
       { "name": "中国驻白俄罗斯大使馆", "link": "https://by.china-embassy.gov.cn", "note": "签证、领事保护、公证认证信息" },
       { "name": "汇率查询（MyFin）", "link": "https://myfin.by/currency/minsk", "note": "美元/欧元/卢布等货币汇率行情" },
       { "name": "白俄罗斯航空（Belavia）", "link": "https://belavia.by", "note": "白俄国家航空公司，国内国际机票预订" },
-      { "name": "白俄铁路", "link": "https://www.rw.by", "note": "火车时刻表和购票" }
+      { "name": "白俄铁路", "link": "https://www.rw.by", "note": "火车时刻表和购票" },
+      { "name": "明斯克同城闲置", "link": "https://minsktc.me", "note": "明斯克二手闲置交易平台" }
     ]
   }
 ]
