@@ -123,6 +123,18 @@ const FF_ZH = {
 };
 const ffZh = (s) => FF_ZH[s] || s;
 
+const FF_EN = {
+  KFC: 'KFC',
+  Mak: 'Mak',
+  DodoPizza: 'Dodo Pizza',
+  Domino: "Domino's",
+  BurgerKing: 'Burger King',
+  PizzaTempo: 'Pizza Tempo',
+  PapaDoner: 'Papa Doner',
+  Ramiz: 'Ramiz',
+};
+const ffEn = (s) => FF_EN[s] || s;
+
 const FF_ICON = {
   KFC: 'stores/KFC.png',
   Mak: 'stores/Mak.png',
@@ -1299,7 +1311,7 @@ function homepageHtml(records, deals, fastfoods, updated, widgets) {
     .sort((a, b) => b.n - a.n)
     .map(
       ({ s, n }) =>
-        `<button class="chip ff-chip" data-ffstore="${escapeHtml(s)}" type="button">${ffIcon(s) ? `<img class="chip-ico" src="${ffIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(ffZh(s))}<b>${n}</b></button>`
+        `<button class="chip ff-chip" data-ffstore="${escapeHtml(s)}" type="button">${ffIcon(s) ? `<img class="chip-ico" src="${ffIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(s))}<b>${n}</b></button>`
     )
     .join('\n');
   const fastfoodBar = `<div class="deals-bar ff-bar">
@@ -1311,21 +1323,11 @@ function homepageHtml(records, deals, fastfoods, updated, widgets) {
     <span class="deals-n">🍔 ${fastfoods.length} deals</span>
   </div>
 </div>`;
-  const fastfoodCards = `<section class="ff-section">
-<div class="ff-title">
-  <h2>🍔 明斯克快餐折扣</h2>
-  <span class="ff-sub">来源：官方 Telegram · 官网促销 · 聚合站 · Viber 无公开接口无法自动抓取 · 每 30 分钟自动更新</span>
-</div>
-<div class="deal-feed ff-feed">
-${fastfoodBar}
-<div class="deal-empty" hidden>该快餐品牌暂无折扣信息</div>
-${fastfoods
-  .map(
-    (d) => {
+  const ffCard = (d) => {
     const dPeriod = ruDateToNumeric(d.period);
     return `<article class="card deal ff-deal" data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
-  <div class="deal-head"><span class="store-chip ff-store-chip">${ffIcon(d.store) ? `<img class="chip-ico" src="${ffIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(ffZh(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
+  <div class="deal-head"><span class="store-chip ff-store-chip">${ffIcon(d.store) ? `<img class="chip-ico" src="${ffIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
     ? `<div class="deal-price">${d.price.toFixed(2).replace('.', ',')}${d.priceUnit ? ' ' + escapeHtml(d.priceUnit) : ''}<span class="cur"> BYN</span>${d.oldPrice != null ? ` <s>${d.oldPrice.toFixed(2).replace('.', ',')}</s>` : ''}${trendOf(d) ? ` <span class="trend ${trendOf(d)[0] === '▼' ? 'down' : 'up'}">${trendOf(d)}</span>` : ''}</div>`
     : d.discount != null
@@ -1337,9 +1339,29 @@ ${fastfoods
   <span class="ru-src" hidden>${escapeHtml(d.text)}</span>
   <div class="meta deal-actions"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`;
-  }
-  )
-  .join('\n')}
+  };
+  const ffGroupOf = (s) => {
+    const list = fastfoods.filter((d) => d.store === s);
+    if (!list.length) return '';
+    return `<section class="ff-group" data-ffgroup="${escapeHtml(s)}">
+<h3 class="ff-group-h">${ffIcon(s) ? `<img class="chip-ico" src="${ffIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(s))}<b>${list.length}</b></h3>
+${list.map(ffCard).join('\n')}
+</section>`;
+  };
+  const ffGroups = [...ALL_FASTFOOD]
+    .map((s) => ({ s, n: fastfoods.filter((d) => d.store === s).length }))
+    .sort((a, b) => b.n - a.n)
+    .map((o) => ffGroupOf(o.s))
+    .join('\n');
+  const fastfoodCards = `<section class="ff-section">
+<div class="ff-title">
+  <h2>🍔 明斯克快餐折扣</h2>
+  <span class="ff-sub">来源：官方 Telegram · 官网促销 · 聚合站 · Viber 无公开接口无法自动抓取 · 每 30 分钟自动更新</span>
+</div>
+<div class="deal-feed ff-feed">
+${fastfoodBar}
+<div class="deal-empty" hidden>该快餐品牌暂无折扣信息</div>
+${ffGroups}
 </div>
 </section>`;
   const dealBar = `<div class="deals-bar">
@@ -1433,6 +1455,7 @@ ${widgets}
 <div class="tabs" role="tablist">
   <button class="tab active" data-f="all">全部</button>
   <button class="tab" data-f="deal">超市折扣</button>
+  <button class="tab" data-f="ff">快餐折扣</button>
   <a class="tab tab-link" href="life.html" data-f="life">📖 生活指南</a>
   <button class="tab" data-f="news">新闻</button>
   <button class="tab" data-f="event">活动</button>
@@ -1507,21 +1530,30 @@ ${olderHtml}
   }
   function applyFf() {
     if (!ffFeed) return;
+    var q = (input && input.value || '').toLowerCase().trim();
     var vis = 0;
     ffFeed.querySelectorAll('.ff-deal').forEach(function (c) {
-      var show = !activeFf || c.getAttribute('data-ffstore') === activeFf;
-      c.style.display = show ? '' : 'none';
-      if (show) vis++;
+      var ok = (!activeFf || c.getAttribute('data-ffstore') === activeFf) &&
+               (!q || (c.textContent || '').toLowerCase().indexOf(q) !== -1);
+      c.style.display = ok ? '' : 'none';
+      if (ok) vis++;
+    });
+    ffFeed.querySelectorAll('.ff-group').forEach(function (g) {
+      var any = Array.prototype.some.call(g.querySelectorAll('.ff-deal'), function (c) {
+        return c.style.display !== 'none';
+      });
+      g.style.display = any ? '' : 'none';
     });
     var empty = ffFeed.querySelector('.deal-empty');
     if (empty) empty.hidden = vis !== 0;
     ffFeed.style.display = vis ? '' : 'none';
   }
+  var origSuper = origOrder.filter(function (el) { return !el.classList.contains('ff-deal'); });
   function sortDeals() {
     if (!feed) return;
     var list;
     if (sortMode === 'price') {
-      list = Array.prototype.slice.call(feed.querySelectorAll('.card.deal')).sort(function (a, b) {
+      list = origSuper.slice().sort(function (a, b) {
         var pa = parseFloat(a.getAttribute('data-price') || '');
         var pb = parseFloat(b.getAttribute('data-price') || '');
         pa = isNaN(pa) ? 1e12 : pa;
@@ -1529,7 +1561,7 @@ ${olderHtml}
         return pa - pb;
       });
     } else {
-      list = origOrder.slice();
+      list = origSuper.slice();
     }
     list.forEach(function (el) { feed.appendChild(el); });
   }
@@ -1563,7 +1595,7 @@ ${olderHtml}
       }
     }
     if (ffFeed) {
-      if (f === 'all' || f === '') {
+      if (f === 'all' || f === '' || f === 'ff') {
         ffFeed.style.display = '';
         applyFf();
       } else {
@@ -1617,7 +1649,12 @@ ${olderHtml}
     c.addEventListener('click', function () {
       activeFf = c.getAttribute('data-ffstore');
       ffChips.forEach(function (x) { x.classList.toggle('active', x === c); });
-      applyFf();
+      var ffTab = document.querySelector('.tab[data-f="ff"]');
+      if (ffTab) {
+        tabs.forEach(function (x) { x.classList.remove('active'); });
+        ffTab.classList.add('active');
+      }
+      apply();
     });
   });
   sbtns.forEach(function (b) {
