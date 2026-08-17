@@ -11,7 +11,7 @@ const MAX_FULLTEXT = 20;
 const HOMEPAGE_RECENT = 60;
 
 const PARENT_LINK =
-  '<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城 minsktc.me ↗</a></div>';
+  '<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城闲置 minsktc.me ↗</a></div>';
 
 const EVENT_KEYS = [
   'выставк', 'концерт', 'фестивал', 'спектакл', 'форум', 'ярмарк', 'премьер',
