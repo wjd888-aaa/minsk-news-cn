@@ -118,6 +118,8 @@ const FF_ZH = {
   Domino: '达美乐披萨',
   BurgerKing: '汉堡王',
   PizzaTempo: '披萨快节奏',
+  PapaDoner: '帕帕多纳（Papa Doner）',
+  Ramiz: '拉米兹（Ramiz）',
 };
 const ffZh = (s) => FF_ZH[s] || s;
 
@@ -128,6 +130,8 @@ const FF_ICON = {
   Domino: 'stores/Domino.png',
   BurgerKing: 'stores/BurgerKing.png',
   PizzaTempo: 'stores/PizzaTempo.png',
+  PapaDoner: 'stores/PapaDoner.png',
+  Ramiz: 'stores/Ramiz.png',
 };
 const ffIcon = (s) => FF_ICON[s] || '';
 
@@ -144,9 +148,10 @@ const FASTFOOD_PAGES = [
   { id: 'mak', store: 'Mak', url: 'https://mak.by/news/?group=promotions', parse: parseMakPromos, limit: 6 },
   { id: 'dominosite', store: 'Domino', url: 'https://dominos.by/ru/minsk/promo/', parse: parseDominoSitePromos, limit: 6 },
   { id: 'tempo', store: 'PizzaTempo', url: 'https://pizzatempo.by/discounts', parse: parseTempoDiscounts, limit: 6 },
+  { id: 'papadoner', store: 'PapaDoner', url: 'https://skidy.by/company/papa-doner', parse: parseSkidyCompany, limit: 4 },
 ];
 
-const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store)])];
+const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store), 'Ramiz'])];
 
 function classify(text) {
   const t = String(text || '').toLowerCase();
@@ -659,6 +664,27 @@ function parseTempoDiscounts(html) {
       text,
       period: '',
     });
+  }
+  return out;
+}
+
+function parseSkidyCompany(html) {
+  const out = [];
+  const seen = new Set();
+  const hits = [];
+  let pos = -1;
+  while ((pos = html.indexOf('w-object-promocode-catalog-list-item', pos + 1)) !== -1) hits.push(pos);
+  for (let k = 0; k < hits.length; k++) {
+    const seg = html.slice(hits[k], Math.min((k + 1 < hits.length ? hits[k + 1] : hits[k] + 9000), hits[k] + 9000));
+    const linkM = seg.match(/href="(https:\/\/skidy\.by\/promo\/[a-z0-9-]+)"/);
+    const altM = seg.match(/alt="([^"]+)"/);
+    if (!linkM || !altM) continue;
+    const slug = linkM[1].split('/').pop();
+    if (seen.has(slug)) continue;
+    const text = altM[1].replace(/\s+/g, ' ').trim();
+    if (!text) continue;
+    seen.add(slug);
+    out.push({ id: slug, link: linkM[1], text, period: '' });
   }
   return out;
 }
@@ -1285,7 +1311,12 @@ function homepageHtml(records, deals, fastfoods, updated, widgets) {
     <span class="deals-n">🍔 ${fastfoods.length} deals</span>
   </div>
 </div>`;
-  const fastfoodCards = `<div class="deal-feed ff-feed">
+  const fastfoodCards = `<section class="ff-section">
+<div class="ff-title">
+  <h2>🍔 明斯克快餐折扣</h2>
+  <span class="ff-sub">来源：官方 Telegram · 官网促销 · 聚合站 · Viber 无公开接口无法自动抓取 · 每 30 分钟自动更新</span>
+</div>
+<div class="deal-feed ff-feed">
 ${fastfoodBar}
 <div class="deal-empty" hidden>该快餐品牌暂无折扣信息</div>
 ${fastfoods
@@ -1309,7 +1340,8 @@ ${fastfoods
   }
   )
   .join('\n')}
-</div>`;
+</div>
+</section>`;
   const dealBar = `<div class="deals-bar">
   <div class="storechips">
     <button class="chip active" data-store="" type="button">All</button>
@@ -1369,7 +1401,7 @@ ${deals
 
   const counts = { news: 0, event: 0, volunteer: 0, china: 0 };
   for (const r of records) counts[r.cat || 'news']++;
-  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条`;
+  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条 · 快餐 ${fastfoods.length} 条`;
 
   return `<!DOCTYPE html>
 <html lang="zh-CN">
