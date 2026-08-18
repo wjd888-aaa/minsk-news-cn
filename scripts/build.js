@@ -192,7 +192,7 @@ const DEALS_FILE = path.join(ART_DIR, 'deals.json');
 const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
-const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg'];
+const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
 <link rel="apple-touch-icon" href="icon.svg">`;
@@ -1484,9 +1484,11 @@ ${PWA_HEAD}
 </head>
 <body>
 ${PARENT_LINK}
-<header class="site-head">
-  <h1>白俄新闻<span class="accent">中文站</span></h1>
-  <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
+<header class="hero">
+  <div class="site-head hero-in">
+    <h1>白俄新闻<span class="accent">中文站</span></h1>
+    <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
+  </div>
 </header>
 ${widgets}
 <main>
