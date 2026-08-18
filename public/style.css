@@ -75,7 +75,8 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  background: #232323 url('minskgate.png') center 32% / cover no-repeat;
+  min-height: 340px;
+  background: #232323 url('minskgate.png') center 36% / cover no-repeat;
 }
 .hero::before {
   content: '';
@@ -705,6 +706,7 @@ main {
 .life-link a:hover { text-decoration: underline; }
 
 @media (max-width: 560px) {
+  .hero { min-height: 0; }
   .hero .site-head { padding-top: 30px; padding-bottom: 38px; }
   .hero h1 { font-size: 27px; }
   .hero .updated { font-size: 11.5px; }
