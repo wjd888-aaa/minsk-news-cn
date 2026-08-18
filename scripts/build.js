@@ -477,11 +477,11 @@ async function fetchWeather() {
     const cur = j.current || {};
     const d = j.daily || {};
     const nowDesc = WMO_DESC[cur.weather_code] || ['🌡', ''];
-    const days = (d.time || []).slice(0, 4).map((t, i) => {
+    const dayLabels = ['今天', '明天'];
+    const days = (d.time || []).slice(0, 2).map((t, i) => {
       const code = (d.weather_code || [])[i];
       const em = wmo(code, ['&#9679;']);
-      const day = String(t).slice(5).replace('-', '/');
-      return `${em} ${day} ${Math.round(d.temperature_2m_min[i])}~${Math.round(d.temperature_2m_max[i])}°`;
+      return `${em} ${dayLabels[i]} ${Math.round(d.temperature_2m_min[i])}~${Math.round(d.temperature_2m_max[i])}°`;
     });
     return `📍 明斯克天气 ${nowDesc[0]} ${Math.round(cur.temperature_2m)}°（体感 ${Math.round(cur.apparent_temperature)}°）${nowDesc[1]} · ${days.join(' ')}`;
   } catch (e) {
