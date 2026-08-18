@@ -75,9 +75,9 @@
       { "name": "地铁", "note": "明斯克地铁共 3 条线路 33 个车站，覆盖市中心主要区域，是最快捷的市内交通" },
       {
         "name": "明斯克地铁高清线路图",
-        "img": "metro-map.svg",
-        "note": "矢量高清示意图，点击可放大。每个车站标注编号（数字）+ 俄语名称，数据整理自 minsktc.me。",
-        "link": "https://www.metro.by"
+        "img": "metro-map.jpg",
+        "note": "官方线路图（来源 metropoliten.by），点击可放大。",
+        "link": "https://metropoliten.by"
       },
       {
         "name": "白俄全境地图",
