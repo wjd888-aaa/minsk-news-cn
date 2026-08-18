@@ -490,21 +490,49 @@ async function fetchWeather() {
   }
 }
 
+async function fetchUnionpayBynCny() {
+  const beijing = new Date(Date.now() + 8 * 3600 * 1000);
+  const dow = beijing.getUTCDay();
+  let dt = beijing;
+  if (dow === 6) dt = new Date(beijing.getTime() - 86400000);
+  if (dow === 0) dt = new Date(beijing.getTime() - 2 * 86400000);
+  const url =
+    'https://www.unionpayintl.com/upload/jfimg/' +
+    dt.getUTCFullYear() +
+    String(dt.getUTCMonth() + 1).padStart(2, '0') +
+    String(dt.getUTCDate()).padStart(2, '0') +
+    '.json';
+  const res = await fetch(url, {
+    headers: { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.unionpayintl.com/cn/rate/' },
+  });
+  if (!res.ok) throw new Error('unionpay http ' + res.status);
+  const j = await res.json();
+  const row = (j.exchangeRateJson || []).find((x) => x.transCur === 'BYN' && x.baseCur === 'CNY');
+  if (!row) throw new Error('unionpay BYN missing');
+  return Number(row.rateData);
+}
+
 async function fetchRates() {
   try {
-    const url = 'https://api.nbrb.by/exrates/rates?periodicity=0';
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    const res = await fetch('https://api.nbrb.by/exrates/rates?periodicity=0', {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+    });
     if (!res.ok) throw new Error('rates http ' + res.status);
     const list = await res.json();
-    const get = (ab) => list.find((x) => x.Cur_Abbreviation === ab && x.Cur_Scale);
-    const usd = get('USD');
-    const cny = get('CNY');
-    if (!usd || !cny) return '';
+    const usd = list.find((x) => x.Cur_Abbreviation === 'USD' && x.Cur_Scale);
+    if (!usd) return '';
     const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
-    const cnyRate = Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale);
-    const usdInCny = usdRate / cnyRate;
-    const bynInCny = 1 / cnyRate;
-    return `🇧🇾 白央行汇率 1 卢布 ≈ ${bynInCny.toFixed(2)} 人民币 · 1 美元 ≈ ${usdInCny.toFixed(2)} 人民币`;
+    let bynInCny;
+    try {
+      bynInCny = await fetchUnionpayBynCny();
+    } catch (e) {
+      console.log('unionpay fail: ' + e.message);
+      const cny = list.find((x) => x.Cur_Abbreviation === 'CNY' && x.Cur_Scale);
+      bynInCny = cny ? 1 / (Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale)) : null;
+    }
+    if (bynInCny == null) return '';
+    const usdInCny = usdRate * bynInCny;
+    return `🇧🇾 白央行汇率 1 卢布 ≈ ${bynInCny.toFixed(2)} 人民币（银联） · 1 美元 ≈ ${usdInCny.toFixed(2)} 人民币`;
   } catch (e) {
     console.log('rates fetch fail: ' + e.message);
     return '';
