@@ -147,7 +147,7 @@ main {
 .widgets {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 3px;
   margin: 14px 0 20px;
 }
 
