@@ -496,17 +496,15 @@ async function fetchRates() {
     const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
     if (!res.ok) throw new Error('rates http ' + res.status);
     const list = await res.json();
-    const want = ['USD', 'CNY', 'RUB', 'EUR'];
-    const parts = [];
-    for (const w of want) {
-      const r = list.find((x) => x.Cur_Abbreviation === w && x.Cur_Scale);
-      if (!r) continue;
-      const rate = Number(r.Cur_OfficialRate);
-      const scale = Number(r.Cur_Scale);
-      const one = rate / scale;
-      parts.push(`${scale} ${w} = ${rate.toFixed(2)} BYN`);
-    }
-    return `🇧🇾 白央行汇率 ` + parts.join(' · ');
+    const get = (ab) => list.find((x) => x.Cur_Abbreviation === ab && x.Cur_Scale);
+    const usd = get('USD');
+    const cny = get('CNY');
+    if (!usd || !cny) return '';
+    const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
+    const cnyRate = Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale);
+    const usdInCny = usdRate / cnyRate;
+    const bynInCny = 1 / cnyRate;
+    return `🇧🇾 白央行汇率 1 卢布 ≈ ${bynInCny.toFixed(2)} 人民币 · 1 美元 ≈ ${usdInCny.toFixed(2)} 人民币`;
   } catch (e) {
     console.log('rates fetch fail: ' + e.message);
     return '';
