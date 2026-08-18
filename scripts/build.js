@@ -352,6 +352,15 @@ function extractArticleBody(html) {
   return paras;
 }
 
+function beltaContentRegion(html) {
+  const s1 = html.indexOf('class="inner_content"');
+  if (s1 < 0) return null;
+  const ends = ['class="rubricNews"', 'class="one_right_col"', '<div class="clear"']
+    .map((k) => html.indexOf(k, s1))
+    .filter((x) => x > s1);
+  return { start: s1, end: ends.length ? Math.min(...ends) : html.length };
+}
+
 function extractArticleImages(html) {
   const region = articleContentRegion(html);
   const seg = region ? html.slice(region.start, region.end) : html;
@@ -359,7 +368,9 @@ function extractArticleImages(html) {
 }
 
 function extractBeltaImages(html) {
-  return extractImageUrls(html);
+  const region = beltaContentRegion(html);
+  const seg = region ? html.slice(region.start, region.end) : html;
+  return extractImageUrls(seg);
 }
 
 function extractImageUrls(seg) {
@@ -369,9 +380,9 @@ function extractImageUrls(seg) {
   while ((m = re.exec(seg)) && out.length < 6) {
     const u = (m[1] || '').trim();
     if (!u || /^data:/i.test(u) || /\.svg(\?|$)/i.test(u)) continue;
-    if (/yandex|mc\.|pixel|tracker/i.test(u)) continue;
-    if (/\/banners?\//i.test(u)) continue;
-    if (/logo|t-me\.png|favicon|avatar/i.test(u)) continue;
+    if (/yandex|mc\.|pixel|tracker|informer|top-fwz1|mail\.ru/i.test(u)) continue;
+    if (/banner|adfox|wpadcenter|adv\b/i.test(u)) continue;
+    if (/logo|icon|favicon|avatar|desimages|dzen|google-logo|t-me|subscribe|social|share/i.test(u)) continue;
     if (/-80x80|-50x50|-150x130|\.thumbs\//i.test(u)) continue;
     if (out.includes(u)) continue;
     out.push(u);
