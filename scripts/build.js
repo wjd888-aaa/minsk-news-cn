@@ -45,6 +45,7 @@ const STORE_ZH = {
   'Дионис': '迪奥尼斯',
   'ПерекрестОК': '十字路口',
   'ProStore': '普罗超市',
+  'Соседи': '邻居超市',
 };
 const zhStore = (s) => STORE_ZH[s] || s;
 
@@ -64,6 +65,7 @@ const STORE_EN = {
   'Дионис': 'Dionis',
   'ПерекрестОК': 'PerekrestOK',
   'ProStore': 'ProStore',
+  'Соседи': 'Sosedi',
 };
 const enStore = (s) => STORE_EN[s] || s;
 
@@ -83,6 +85,7 @@ const STORE_ICON = {
   'Дионис': 'stores/Dionis.png',
   'ПерекрестОК': 'stores/Perekrestok.png',
   'ProStore': 'stores/ProStore.png',
+  'Соседи': 'stores/Sosedi.png',
 };
 const storeIcon = (s) => STORE_ICON[s] || '';
 
@@ -97,6 +100,7 @@ const DEAL_CHANNELS = [
   { user: 'fixprice_by', store: 'Fix Price' },
   { user: 'koronaby', store: 'Корона' },
   { user: 'unistoreminsk', store: 'UniStore' },
+  { user: 'magazin_sosedi', store: 'Соседи' },
 ];
 const DEAL_DAYS = 30;
 const DEAL_MAX = 100;
