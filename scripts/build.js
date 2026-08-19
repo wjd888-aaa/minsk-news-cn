@@ -1462,10 +1462,6 @@ ${deals
 <ul>${list}</ul></details>`;
   }
 
-  const counts = { news: 0, event: 0, volunteer: 0, china: 0 };
-  for (const r of records) counts[r.cat || 'news']++;
-  const catInfo = `新闻 ${counts.news} · 活动 ${counts.event} · 中白 ${counts.china} · 超市折扣 ${deals.length} 条 · 快餐 ${fastfoods.length} 条`;
-
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -1487,13 +1483,12 @@ ${PARENT_LINK}
 <header class="hero">
   <div class="site-head hero-in">
     <h1>白俄新闻<span class="accent">中文站</span></h1>
-    <p class="updated">更新于 ${updated}（北京时间）· 收录 ${records.length} 篇 · ${catInfo}</p>
   </div>
 </header>
 ${widgets}
 <main>
 <div class="searchbar">
-  <input id="search" type="search" placeholder="🔍 搜索中文或俄语标题…" autocomplete="off" aria-label="站内搜索">
+  <input id="search" type="search" placeholder="更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
 </div>
 <div class="tabs" role="tablist">
   <button class="tab" data-f="deal">超市折扣</button>
