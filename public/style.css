@@ -165,9 +165,19 @@ main {
 .searchbar {
   position: relative;
   margin: 0 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .searchbar input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid var(--line);
@@ -205,14 +215,15 @@ main {
 }
 
 .search-ico {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  position: relative;
+  right: 26px;
   color: #bdb7af;
-  pointer-events: none;
   font-size: 14px;
   line-height: 1;
+  pointer-events: none;
 }
 
 .searchbar input:focus {

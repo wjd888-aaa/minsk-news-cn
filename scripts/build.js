@@ -192,6 +192,7 @@ const DEALS_FILE = path.join(ART_DIR, 'deals.json');
 const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
+const CSS_VERSION = 'v5';
 const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
@@ -1246,7 +1247,7 @@ function articlePageHtml(rec) {
 <title>${escapeHtml(rec.zh)} · 白俄新闻中文站</title>
 <meta name="description" content="${escapeHtml((rec.sum || rec.zh).slice(0, 160))}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.${CSS_VERSION}.css">
 </head>
 <body>
 ${PARENT_LINK}
@@ -1303,7 +1304,7 @@ function lifePageHtml(life) {
 <title>生活指南 · 白俄新闻中文站</title>
 <meta name="description" content="在白俄罗斯生活的实用信息：紧急电话、中国驻白大使馆与签证、医疗就医、交通出行、白俄高校地址。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.${CSS_VERSION}.css">
 </head>
 <body>
 ${PARENT_LINK}
@@ -1476,7 +1477,7 @@ ${deals
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 ${PWA_HEAD}
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.${CSS_VERSION}.css">
 </head>
 <body>
 ${PARENT_LINK}
@@ -1901,7 +1902,10 @@ async function buildSite(records, deals, fastfoods) {
     }
   }
   copyFileSync(CSS_SRC, path.join(OUT_DIR, 'style.css'));
+  copyFileSync(CSS_SRC, path.join(OUT_DIR, 'style.' + CSS_VERSION + '.css'));
   for (const f of PWA_FILES) copyFileSync(path.join(ROOT, 'public', f), path.join(OUT_DIR, f));
+  const swPath = path.join(OUT_DIR, 'sw.js');
+  writeFileSync(swPath, readFileSync(swPath, 'utf8').split('./style.css').join('./style.' + CSS_VERSION + '.css'));
   const storesDir = path.join(OUT_DIR, 'stores');
   mkdirSync(storesDir, { recursive: true });
   for (const f of readdirSync(path.join(ROOT, 'public', 'stores'))) {

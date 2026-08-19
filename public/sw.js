@@ -1,8 +1,8 @@
-var CACHE = 'bkcn-v4';
+var CACHE = 'bkcn-v5';
 var ASSETS = [
   './',
   './index.html',
-  './style.css',
+  './style.v5.css',
   './life.html',
   './manifest.json',
   './icon.svg',
