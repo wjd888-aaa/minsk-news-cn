@@ -75,29 +75,22 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-}
-.hero-bg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(18, 20, 26, 0.62) 0%, rgba(18, 20, 26, 0.18) 48%, rgba(18, 20, 26, 0.58) 100%);
-}
-.hero .hero-in {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(#14161c57 0%, #14161c99 100%), #232323 url('minskgate.png') 50% 32%/cover no-repeat;
+  padding: 80px 20px 84px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.hero .site-head { padding: 24px 20px; }
-.hero h1 { color: #fff; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+.hero .site-head {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.hero h1 { color: #fff; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45); }
 .hero h1 .accent { color: #f0c078; }
 .hero .updated {
   background: rgba(255, 255, 255, 0.16);
@@ -773,8 +766,12 @@ main {
 .life-link a:hover { text-decoration: underline; }
 
 @media (max-width: 560px) {
-  .hero { min-height: 0; }
-  .hero .site-head { padding: 16px 14px; }
+  .hero {
+    background: linear-gradient(#14161c57 0%, #14161c99 100%), #232323 url('minskgate.png') 50% 28%/cover no-repeat;
+    padding: 52px 16px 60px;
+    min-height: 230px;
+  }
+  .hero .site-head { padding: 0; }
   .hero h1 { font-size: 27px; }
   .hero .updated { font-size: 11.5px; }
   .site-head { padding-top: 34px; }
