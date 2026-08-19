@@ -561,7 +561,7 @@ async function fetchErApiRates() {
 }
 
 function fmtRate(bynInCny, usdInCny, note) {
-  return `🇧🇾 银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥${note || ''}`;
+  return `🇧🇾 今日银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥${note || ''}`;
 }
 
 function saveRatesCache(rates) {
