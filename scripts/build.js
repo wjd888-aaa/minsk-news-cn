@@ -543,7 +543,7 @@ async function fetchRates() {
     }
     if (bynInCny == null) return '';
     const usdInCny = usdRate * bynInCny;
-    return `🇧🇾 银联汇率 1 卢布 ≈ ${bynInCny.toFixed(2)} 人民币 · 1 美元 ≈ ${usdInCny.toFixed(2)} 人民币`;
+    return `🇧🇾 银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥`;
   } catch (e) {
     console.log('rates fetch fail: ' + e.message);
     return '';
