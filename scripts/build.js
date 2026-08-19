@@ -1544,9 +1544,9 @@ ${PARENT_LINK}
   <button class="tab" data-f="deal">超市折扣</button>
   <button class="tab" data-f="ff">快餐折扣</button>
   <a class="tab tab-link" href="life.html" data-f="life">📖 生活指南</a>
-  <button class="tab" data-f="news">新闻</button>
-  <button class="tab" data-f="event">活动</button>
-  <button class="tab" data-f="china">中白</button>
+  <button class="tab" data-f="news">热点新闻</button>
+  <button class="tab" data-f="event">娱乐活动</button>
+  <button class="tab" data-f="china">中白关系</button>
 </div>
 <p id="nores" class="nores" hidden>没有匹配的结果，换个关键词试试。</p>
 ${dealCards}
