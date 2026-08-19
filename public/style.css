@@ -177,6 +177,7 @@ main {
   padding: 9px 40px 9px 28px;
   font-size: 14px;
   font-family: inherit;
+  -webkit-appearance: none;
   transition: border-color .15s ease;
 }
 
@@ -188,8 +189,14 @@ main {
   width: 1.5px;
   height: 13px;
   background: #bdb7af;
+  -webkit-animation: caret-blink 1s step-end infinite;
   animation: caret-blink 1s step-end infinite;
   pointer-events: none;
+}
+
+@-webkit-keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @keyframes caret-blink {
@@ -213,6 +220,9 @@ main {
   border-color: var(--accent);
 }
 
+.searchbar input::-webkit-input-placeholder { color: #bdb7af; font-size: 11px; opacity: 1; }
+.searchbar input::-moz-placeholder { color: #bdb7af; font-size: 11px; opacity: 1; }
+.searchbar input:-ms-input-placeholder { color: #bdb7af; font-size: 11px; opacity: 1; }
 .searchbar input::placeholder {
   color: #bdb7af;
   font-size: 11px;
