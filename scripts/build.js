@@ -124,6 +124,8 @@ const FF_ZH = {
   PizzaTempo: '披萨快节奏',
   PapaDoner: '帕帕多纳（Papa Doner）',
   Ramiz: '拉米兹（Ramiz）',
+  Cofix: '科菲克斯（Cofix）',
+  Hotfix: '霍特菲克斯（Hotfix）',
 };
 const ffZh = (s) => FF_ZH[s] || s;
 
@@ -136,6 +138,8 @@ const FF_EN = {
   PizzaTempo: 'Pizza Tempo',
   PapaDoner: 'Papa Doner',
   Ramiz: 'Ramiz',
+  Cofix: 'Cofix',
+  Hotfix: 'Hotfix',
 };
 const ffEn = (s) => FF_EN[s] || s;
 
@@ -148,6 +152,8 @@ const FF_ICON = {
   PizzaTempo: 'stores/PizzaTempo.png',
   PapaDoner: 'stores/PapaDoner.png',
   Ramiz: 'stores/Ramiz.png',
+  Cofix: 'stores/Cofix.png',
+  Hotfix: 'stores/Hotfix.png',
 };
 const ffIcon = (s) => FF_ICON[s] || '';
 
@@ -156,6 +162,7 @@ const FASTFOOD_TG = [
   { user: 'dodopizza_belarus', store: 'DodoPizza' },
   { user: 'burgerkingbelarus', store: 'BurgerKing' },
   { user: 'dominospizzabelarus', store: 'Domino' },
+  { user: 'cofixbelarus', store: 'Cofix' },
 ];
 const FASTFOOD_DAYS = 30;
 const FASTFOOD_MAX = 60;
@@ -165,6 +172,7 @@ const FASTFOOD_PAGES = [
   { id: 'dominosite', store: 'Domino', url: 'https://dominos.by/ru/minsk/promo/', parse: parseDominoSitePromos, limit: 6 },
   { id: 'tempo', store: 'PizzaTempo', url: 'https://pizzatempo.by/discounts', parse: parseTempoDiscounts, limit: 6 },
   { id: 'papadoner', store: 'PapaDoner', url: 'https://skidy.by/company/papa-doner', parse: parseSkidyCompany, limit: 4 },
+  { id: 'hotfix', store: 'Hotfix', url: 'https://hotfixcafe.by/news/', parse: parseHotfixNews, limit: 6 },
 ];
 
 const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store), 'Ramiz'])];
@@ -788,6 +796,39 @@ function parseSkidyCompany(html) {
   return out;
 }
 
+function parseHotfixNews(html) {
+  const out = [];
+  const seen = new Set();
+  const cutoff = Date.now() - FASTFOOD_DAYS * 86400000;
+  const hits = [];
+  let pos = -1;
+  while ((pos = html.indexOf('class="news-item row"', pos + 1)) !== -1) hits.push(pos);
+  for (let k = 0; k < hits.length; k++) {
+    const seg = html.slice(hits[k], Math.min((k + 1 < hits.length ? hits[k + 1] : hits[k] + 9000), hits[k] + 9000));
+    const dateM = seg.match(/<div class="date">\s*([^<]+?)\s*<\/div>/);
+    if (!dateM) continue;
+    const d = parseEndDate(dateM[1].trim());
+    if (!d || d.getTime() < cutoff) continue;
+    const linkM = seg.match(/href="(\/news\/[^"]+)"/);
+    const titleM = seg.match(/class="title">\s*([\s\S]*?)\s*<\/a>/);
+    if (!linkM || !titleM) continue;
+    const title = stripHtml(titleM[1]).replace(/\s+/g, ' ').trim();
+    const prevM = seg.match(/<div class="preview-text">\s*([\s\S]*?)\s*<\/div>/);
+    const preview = prevM ? stripHtml(prevM[1]).replace(/\s+/g, ' ').trim() : '';
+    const text = (title + (preview ? ' — ' + preview : '')).slice(0, 500);
+    const slug = linkM[1].split('/').filter(Boolean).pop() || 'n' + k;
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    out.push({
+      id: slug,
+      link: 'https://hotfixcafe.by' + linkM[1],
+      text,
+      period: '',
+    });
+  }
+  return out;
+}
+
 async function fetchPerekrestokPeriod(it) {
   try {
     const res = await fetch(it.link, {
@@ -991,11 +1032,12 @@ function extractDealFields(text, period) {
     const tail = t.slice(m.index + m[0].length, m.index + m[0].length + 26);
     const unitM = t.slice(m.index + m[0].length, m.index + m[0].length + 12).match(/\/кг|за\s*кг|\/шт|за\s*шт|\/л|за\s*л|кг|шт|литр/);
     const unit = unitM ? unitM[0].replace(/за\s+/, '/') : '';
-    const isDate =
+const isDate =
       day <= 31 &&
       !unit &&
       (/\.\d{2,4}/.test(tail) ||
-        /(?:по|до|с)\s+\d{1,2}[.,]\d{2}/.test(tail) ||
+        /\d{1,2}\.\d{2}\s*[-–]\s*$/.test(head.slice(-14)) ||
+        /(?:по|до)\s+\d{1,2}[.,]\d{2}/.test(tail) ||
         /(?:с|по|до)\s+\d{1,2}[.,]\d{2}/.test(head) ||
         months.test(tail.slice(0, 14)) ||
         months.test(head.slice(-14)));
