@@ -193,7 +193,7 @@ const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const RATES_CACHE_FILE = path.join(ART_DIR, 'rates-cache.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
-const CSS_VERSION = 'v6';
+const CSS_VERSION = 'v7';
 const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
@@ -1530,8 +1530,8 @@ ${PARENT_LINK}
   <div class="site-head hero-in">
     <h1>白俄新闻<span class="accent">中文站</span></h1>
   </div>
+  ${widgets}
 </header>
-${widgets}
 <main>
 <div class="searchbar">
   <span class="type-caret" id="typeCaret" aria-hidden="true"></span>
