@@ -1334,7 +1334,7 @@ function highlightPromoCode(text) {
   return `<div class="promo-code">🎟️ 优惠码 <b>${escapeHtml(code)}</b></div>`;
 }
 
-function homepageHtml(records, deals, fastfoods, updated, widgets) {
+function homepageHtml(records, deals, fastfoods, widgets) {
   const recent = records.slice(0, HOMEPAGE_RECENT);
   const storeCounts = {};
   for (const d of deals) storeCounts[d.store] = (storeCounts[d.store] || 0) + 1;
@@ -1489,7 +1489,7 @@ ${widgets}
 <main>
 <div class="searchbar">
   <span class="type-caret" id="typeCaret" aria-hidden="true"></span>
-  <input id="search" type="search" placeholder="更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
+  <input id="search" type="search" placeholder="搜索中文或俄语标题…" autocomplete="off" aria-label="站内搜索">
   <span class="search-ico" aria-hidden="true">🔍</span>
 </div>
 <div class="tabs" role="tablist">
@@ -1883,7 +1883,6 @@ async function fetchNews() {
 async function buildSite(records, deals, fastfoods) {
   mkdirSync(OUT_DIR, { recursive: true });
   mkdirSync(path.join(OUT_DIR, 'article'), { recursive: true });
-  const updated = nowBeijing();
   let widgets = '';
   try {
     const [w1, r1] = await Promise.all([fetchWeather(), fetchRates()]);
@@ -1892,7 +1891,7 @@ async function buildSite(records, deals, fastfoods) {
   } catch (e) {
     console.log('widgets fetch fail: ' + e.message);
   }
-  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, fastfoods || [], updated, widgets), 'utf8');
+  writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, fastfoods || [], widgets), 'utf8');
   writeFileSync(path.join(OUT_DIR, 'life.html'), lifePageHtml(readJson(LIFE_FILE, [])), 'utf8');
   for (const rec of records) {
     try {
