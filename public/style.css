@@ -204,7 +204,8 @@ main {
   transform: translateY(-50%);
   color: #bdb7af;
   pointer-events: none;
-  display: flex;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .searchbar input:focus {
