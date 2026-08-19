@@ -191,6 +191,7 @@ const LAST_RUN_FILE = path.join(ART_DIR, 'last_fetch.json');
 const DEALS_FILE = path.join(ART_DIR, 'deals.json');
 const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
+const RATES_CACHE_FILE = path.join(ART_DIR, 'rates-cache.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
 const CSS_VERSION = 'v5';
 const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
@@ -524,31 +525,75 @@ async function fetchUnionpayBynCny() {
   return Number(row.rateData);
 }
 
+async function fetchNbrbRates() {
+  const res = await fetch('https://api.nbrb.by/exrates/rates?periodicity=0', {
+    headers: { 'User-Agent': 'Mozilla/5.0' },
+  });
+  if (!res.ok) throw new Error('rates http ' + res.status);
+  const list = await res.json();
+  const usd = list.find((x) => x.Cur_Abbreviation === 'USD' && x.Cur_Scale);
+  if (!usd) throw new Error('NBRB USD missing');
+  const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
+  let bynInCny = null;
+  try {
+    bynInCny = await fetchUnionpayBynCny();
+  } catch (e) {
+    console.log('unionpay fail: ' + e.message);
+  }
+  if (bynInCny == null) {
+    const cny = list.find((x) => x.Cur_Abbreviation === 'CNY' && x.Cur_Scale);
+    if (cny) bynInCny = 1 / (Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale));
+  }
+  if (bynInCny == null) throw new Error('NBRB CNY missing');
+  return { bynInCny, usdInCny: usdRate * bynInCny };
+}
+
+async function fetchErApiRates() {
+  const res = await fetch('https://open.er-api.com/v6/latest/USD', {
+    headers: { 'User-Agent': 'Mozilla/5.0' },
+  });
+  if (!res.ok) throw new Error('erapi http ' + res.status);
+  const j = await res.json();
+  if (!j.rates || !j.rates.CNY || !j.rates.BYN) throw new Error('erapi rates missing');
+  const usdInCny = Number(j.rates.CNY);
+  const bynInCny = usdInCny / Number(j.rates.BYN);
+  return { bynInCny, usdInCny };
+}
+
+function fmtRate(bynInCny, usdInCny, note) {
+  return `🇧🇾 银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥${note || ''}`;
+}
+
+function saveRatesCache(rates) {
+  try {
+    mkdirSync(ART_DIR, { recursive: true });
+    writeFileSync(RATES_CACHE_FILE, JSON.stringify({ ...rates, ts: Date.now() }), 'utf8');
+  } catch (e) {
+    console.log('rates cache write fail: ' + e.message);
+  }
+}
+
 async function fetchRates() {
   try {
-    const res = await fetch('https://api.nbrb.by/exrates/rates?periodicity=0', {
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
-    if (!res.ok) throw new Error('rates http ' + res.status);
-    const list = await res.json();
-    const usd = list.find((x) => x.Cur_Abbreviation === 'USD' && x.Cur_Scale);
-    if (!usd) return '';
-    const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
-    let bynInCny;
-    try {
-      bynInCny = await fetchUnionpayBynCny();
-    } catch (e) {
-      console.log('unionpay fail: ' + e.message);
-      const cny = list.find((x) => x.Cur_Abbreviation === 'CNY' && x.Cur_Scale);
-      bynInCny = cny ? 1 / (Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale)) : null;
-    }
-    if (bynInCny == null) return '';
-    const usdInCny = usdRate * bynInCny;
-    return `🇧🇾 银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥`;
+    const rates = await fetchNbrbRates();
+    saveRatesCache(rates);
+    return fmtRate(rates.bynInCny, rates.usdInCny);
   } catch (e) {
     console.log('rates fetch fail: ' + e.message);
-    return '';
   }
+  try {
+    const rates = await fetchErApiRates();
+    saveRatesCache(rates);
+    return fmtRate(rates.bynInCny, rates.usdInCny);
+  } catch (e) {
+    console.log('erapi fail: ' + e.message);
+  }
+  const cached = readJson(RATES_CACHE_FILE, null);
+  if (cached && cached.bynInCny != null && cached.usdInCny != null) {
+    const d = new Date(cached.ts || Date.now());
+    return fmtRate(cached.bynInCny, cached.usdInCny, `（缓存 ${d.getUTCMonth() + 1}-${d.getUTCDate()}）`);
+  }
+  return '';
 }
 
 function parse3CeniSales(html) {
@@ -1482,6 +1527,7 @@ ${PWA_HEAD}
 <body>
 ${PARENT_LINK}
 <header class="hero">
+  <img class="hero-bg" src="minskgate.png" alt="" aria-hidden="true">
   <div class="site-head hero-in">
     <h1>白俄新闻<span class="accent">中文站</span></h1>
   </div>
