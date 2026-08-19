@@ -1306,6 +1306,7 @@ ${PARENT_LINK}
 ${bodyHtml}
 </main>
 <footer class="site-foot">
+  <p>©2026 MwM 版权所有</p>
   <p>${isBelta ? '本文转载自白通社中文版（chn.belta.by），版权归原作者所有。' : '本文由机器自动翻译，可能存在不准确之处，仅供学习交流。'}</p>
   <p><a href="../index.html">← 返回首页</a></p>
 </footer>
@@ -1361,6 +1362,7 @@ ${PARENT_LINK}
 ${secs}
 </main>
 <footer class="site-foot">
+  <p>©2026 MwM 版权所有</p>
   <p>信息仅供参考，地址和电话可能变动，请以官方渠道为准。</p>
   <p><a href="index.html">← 返回首页</a></p>
 </footer>
@@ -1553,8 +1555,9 @@ ${cards}
 ${olderHtml}
 </main>
 <footer class="site-foot">
-  <p>本站由机器自动抓取并翻译新闻，仅供学习交流，版权归原始来源 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">«Минск-новости»</a> 所有。</p>
-  <p>时间均为北京时间 · <a href="https://github.com/wjd888-aaa/minsk-news-cn" target="_blank" rel="noopener noreferrer">开源项目</a></p>
+  <p>©2026 MwM 版权所有</p>
+  <p>新闻为机器翻译，仅供学习交流，版权归原始来源 <a href="https://minsknews.by" target="_blank" rel="noopener noreferrer">«Минск-новости»</a> 所有。</p>
+  <p>业务合作：business<span style="display:none">advert</span>@minsktc.me · 技术维护：tech<span style="display:none">fix</span>@minsktc.me</p>
 </footer>
 <script>
 (function () {
