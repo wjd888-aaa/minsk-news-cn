@@ -206,7 +206,7 @@ main {
 
 .search-ico {
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   color: #bdb7af;
