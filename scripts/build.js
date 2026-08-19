@@ -1668,15 +1668,28 @@ ${olderHtml}
     if (nores) nores.hidden = vis !== 0;
     if (arch) arch.open = (q !== '' || f !== 'all');
     if (feed) {
+      var dealCtx = (f === 'all' || f === 'deal');
       var dealVis = Array.prototype.some.call(feed.querySelectorAll('.card.deal'), function (c) {
         return c.style.display !== 'none';
       });
       var empty = feed.querySelector('.deal-empty');
-      if (activeStore) {
+      if (!dealCtx) {
+        feed.style.display = 'none';
+      } else if (favOnly && favKeys().length === 0) {
         feed.style.display = '';
-        if (empty) empty.hidden = dealVis;
+        if (nores) nores.hidden = true;
+        if (empty) {
+          empty.hidden = false;
+          empty.textContent = '暂无收藏，点击商品卡片上的 ♡ 即可收藏';
+        }
+      } else if (activeStore) {
+        feed.style.display = '';
+        if (empty) {
+          empty.hidden = dealVis;
+          empty.textContent = '该超市暂无折扣信息';
+        }
       } else {
-        feed.style.display = dealVis ? '' : 'none';
+        feed.style.display = '';
         if (empty) empty.hidden = true;
       }
     }
