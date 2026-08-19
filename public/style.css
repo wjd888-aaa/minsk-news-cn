@@ -168,23 +168,31 @@ main {
 
 .hero .widgets {
   position: absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  width: min(92%, 760px);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin: 0;
-  gap: 6px;
+  padding: 28px 20px;
+  pointer-events: none;
 }
 
 .hero .widget {
-  background: rgba(20, 22, 28, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: none;
+  border: none;
   color: #fff;
-  padding: 8px 14px;
-  font-size: 12.5px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.65);
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .searchbar {
@@ -274,15 +282,10 @@ main {
 
 @media (max-width: 700px) {
   .widgets { grid-template-columns: 1fr; }
-  .hero {
-    flex-direction: column;
-  }
   .hero .widgets {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin: 16px 0 0;
+    padding: 20px 14px;
   }
+  .hero .widget { font-size: 12px; }
 }
 
 .card .meta .mtime { margin-right: 8px; }

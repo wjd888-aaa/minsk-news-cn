@@ -193,7 +193,7 @@ const FASTFOODS_FILE = path.join(ART_DIR, 'fastfoods.json');
 const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const RATES_CACHE_FILE = path.join(ART_DIR, 'rates-cache.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
-const CSS_VERSION = 'v8';
+const CSS_VERSION = 'v9';
 const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
@@ -490,13 +490,13 @@ async function fetchWeather() {
     const cur = j.current || {};
     const d = j.daily || {};
     const nowDesc = WMO_DESC[cur.weather_code] || ['🌡', ''];
-    const dayLabels = ['今天', '明天'];
+    const dayLabels = ['今', '明'];
     const days = (d.time || []).slice(0, 2).map((t, i) => {
       const code = (d.weather_code || [])[i];
       const em = wmo(code, ['&#9679;']);
       return `${em} ${dayLabels[i]} ${Math.round(d.temperature_2m_min[i])}~${Math.round(d.temperature_2m_max[i])}°`;
     });
-    return `📍 明斯克天气 ${nowDesc[0]} ${Math.round(cur.temperature_2m)}°（体感 ${Math.round(cur.apparent_temperature)}°）${nowDesc[1]} · ${days.join(' ')}`;
+    return `📍 明斯克天气 ${nowDesc[0]} ${Math.round(cur.temperature_2m)}° ${nowDesc[1]} · ${days.join(' ')}`;
   } catch (e) {
     console.log('weather fetch fail: ' + e.message);
     return '';
