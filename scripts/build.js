@@ -1488,7 +1488,7 @@ ${PARENT_LINK}
 ${widgets}
 <main>
 <div class="searchbar">
-  <input id="search" type="search" placeholder="更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
+  <input id="search" type="search" placeholder="🔍 更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
 </div>
 <div class="tabs" role="tablist">
   <button class="tab" data-f="deal">超市折扣</button>

@@ -184,6 +184,12 @@ main {
   border-color: var(--accent);
 }
 
+.searchbar input::placeholder {
+  color: #bdb7af;
+  font-size: 12px;
+  opacity: 1;
+}
+
 .nores {
   text-align: center;
   color: var(--muted);
