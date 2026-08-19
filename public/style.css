@@ -163,6 +163,7 @@ main {
 }
 
 .searchbar {
+  position: relative;
   margin: 0 0 12px;
 }
 
@@ -173,10 +174,37 @@ main {
   background: var(--card);
   color: var(--text);
   border-radius: 999px;
-  padding: 9px 18px;
+  padding: 9px 40px 9px 28px;
   font-size: 14px;
   font-family: inherit;
   transition: border-color .15s ease;
+}
+
+.type-caret {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5px;
+  height: 13px;
+  background: #bdb7af;
+  animation: caret-blink 1s step-end infinite;
+  pointer-events: none;
+}
+
+@keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.search-ico {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bdb7af;
+  pointer-events: none;
+  display: flex;
 }
 
 .searchbar input:focus {
@@ -186,7 +214,7 @@ main {
 
 .searchbar input::placeholder {
   color: #bdb7af;
-  font-size: 12px;
+  font-size: 11px;
   opacity: 1;
 }
 

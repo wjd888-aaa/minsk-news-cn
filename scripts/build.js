@@ -1488,7 +1488,9 @@ ${PARENT_LINK}
 ${widgets}
 <main>
 <div class="searchbar">
-  <input id="search" type="search" placeholder="🔍 更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
+  <span class="type-caret" id="typeCaret" aria-hidden="true"></span>
+  <input id="search" type="search" placeholder="更新于 ${updated}（北京时间）" autocomplete="off" aria-label="站内搜索">
+  <span class="search-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg></span>
 </div>
 <div class="tabs" role="tablist">
   <button class="tab" data-f="deal">超市折扣</button>
@@ -1731,7 +1733,17 @@ ${olderHtml}
   renderFavs();
   refreshDealButtons();
   if (window.addEventListener) window.addEventListener('load', refreshDealButtons);
-  if (input) input.addEventListener('input', apply);
+  if (input) {
+    input.addEventListener('input', apply);
+    input.addEventListener('focus', function () {
+      var el = document.getElementById('typeCaret');
+      if (el) el.style.display = 'none';
+    });
+    input.addEventListener('blur', function () {
+      var el = document.getElementById('typeCaret');
+      if (el) el.style.display = '';
+    });
+  }
 })();
 </script>
 ${PWA_REGISTER}
