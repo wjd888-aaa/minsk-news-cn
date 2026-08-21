@@ -142,15 +142,15 @@ const FF_EN = {
 const ffEn = (s) => FF_EN[s] || s;
 
 const FF_ICON = {
-  KFC: 'stores/KFC.png',
+  KFC: 'stores/KFC.png?v=20260821',
   Mak: 'stores/Mak.png',
   DodoPizza: 'stores/DodoPizza.png',
   Domino: 'stores/Domino.png',
   BurgerKing: 'stores/BurgerKing.png',
   PizzaTempo: 'stores/PizzaTempo.png',
   PapaDoner: 'stores/PapaDoner.png',
-  Cofix: 'stores/Cofix.png',
-  Hotfix: 'stores/Hotfix.png',
+  Cofix: 'stores/Cofix.png?v=20260821',
+  Hotfix: 'stores/Hotfix.png?v=20260821',
 };
 const ffIcon = (s) => FF_ICON[s] || '';
 
