@@ -2011,6 +2011,9 @@ async function buildSite(records, deals, fastfoods) {
   for (const f of readdirSync(path.join(ROOT, 'public', 'stores'))) {
     copyFileSync(path.join(ROOT, 'public', 'stores', f), path.join(storesDir, f));
   }
+  const wellKnownDir = path.join(OUT_DIR, '.well-known');
+  mkdirSync(wellKnownDir, { recursive: true });
+  copyFileSync(path.join(ROOT, 'public', '.well-known', 'assetlinks.json'), path.join(wellKnownDir, 'assetlinks.json'));
   const imgsDir = path.join(ART_DIR, 'imgs');
   if (existsSync(imgsDir)) {
     const outImgs = path.join(OUT_DIR, 'imgs');
