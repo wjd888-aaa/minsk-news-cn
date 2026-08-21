@@ -123,7 +123,6 @@ const FF_ZH = {
   BurgerKing: '汉堡王',
   PizzaTempo: '披萨快节奏',
   PapaDoner: '帕帕多纳（Papa Doner）',
-  Ramiz: '拉米兹（Ramiz）',
   Cofix: '科菲克斯（Cofix）',
   Hotfix: '霍特菲克斯（Hotfix）',
 };
@@ -137,7 +136,6 @@ const FF_EN = {
   BurgerKing: 'Burger King',
   PizzaTempo: 'Pizza Tempo',
   PapaDoner: 'Papa Doner',
-  Ramiz: 'Ramiz',
   Cofix: 'Cofix',
   Hotfix: 'Hotfix',
 };
@@ -151,7 +149,6 @@ const FF_ICON = {
   BurgerKing: 'stores/BurgerKing.png',
   PizzaTempo: 'stores/PizzaTempo.png',
   PapaDoner: 'stores/PapaDoner.png',
-  Ramiz: 'stores/Ramiz.png',
   Cofix: 'stores/Cofix.png',
   Hotfix: 'stores/Hotfix.png',
 };
@@ -175,7 +172,7 @@ const FASTFOOD_PAGES = [
   { id: 'hotfix', store: 'Hotfix', url: 'https://hotfixcafe.by/news/', parse: parseHotfixNews, limit: 6 },
 ];
 
-const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store), 'Ramiz'])];
+const ALL_FASTFOOD = [...new Set([...FASTFOOD_TG.map((c) => c.store), ...FASTFOOD_PAGES.map((p) => p.store)])];
 
 function classify(text) {
   const t = String(text || '').toLowerCase();
