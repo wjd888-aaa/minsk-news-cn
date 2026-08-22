@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b33a2e">
+<title>登录 / 注册 - 明斯克生活导航</title>
+<link rel="stylesheet" href="style.css?v=v9">
+<link rel="icon" href="icon.svg">
+<style>
+  .auth-wrap { max-width: 420px; margin: 40px auto; padding: 0 16px; }
+  .auth-card { background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+  .auth-loading { text-align: center; color: #999; font-size: 14px; padding: 20px 0; }
+  .auth-msg { min-height: 20px; font-size: 13px; margin: 10px 0; color: #c0392b; word-break: break-all; text-align: center; }
+  .auth-user { display: none; text-align: center; }
+  .auth-user .avatar { width: 56px; height: 56px; border-radius: 50%; background: #b33a2e; color: #fff; font-size: 24px; line-height: 56px; margin: 0 auto 10px; }
+  .back-home { display: block; text-align: center; margin-top: 18px; color: #888; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-loading" id="loading">正在加载登录服务…</div>
+    <div id="clerkSignIn"></div>
+    <div class="auth-msg" id="msg"></div>
+    <div class="auth-user" id="authUser">
+      <div class="avatar" id="uAvatar">?</div>
+      <h3 id="uName"></h3>
+      <p style="color:#999;font-size:13px;margin:6px 0 18px" id="uEmail"></p>
+      <button class="auth-btn" id="btnLogout" style="width:100%;padding:12px 0;border:none;border-radius:8px;background:#eee;color:#c0392b;font-size:16px;cursor:pointer">退出登录</button>
+    </div>
+  </div>
+  <a class="back-home" href="/">← 返回首页</a>
+</div>
+<script src="clerk-auth.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  function showUser(u) {
+    $('loading').style.display = 'none';
+    $('clerkSignIn').style.display = 'none';
+    var email = '';
+    var name = u.username || u.firstName;
+    if (u.primaryEmailAddress && typeof u.primaryEmailAddress === 'object') {
+      email = u.primaryEmailAddress.emailAddress || '';
+    } else if (u.emailAddresses && u.emailAddresses.length) {
+      for (var i = 0; i < u.emailAddresses.length; i++) {
+        if (u.id && u.primaryEmailAddressId === u.emailAddresses[i].id) { email = u.emailAddresses[i].emailAddress; break; }
+        if (!email) email = u.emailAddresses[i].emailAddress;
+      }
+    }
+    $('uName').textContent = name || email.split('@')[0];
+    $('uEmail').textContent = email;
+    $('uAvatar').textContent = (name || email).charAt(0).toUpperCase();
+    $('authUser').style.display = '';
+  }
+
+  var initialMode = location.search.indexOf('mode=register') > -1 ? 'register' : 'login';
+
+  function setMode(m) {
+    var mount = m === 'login' ? BKAuth.mountSignIn : BKAuth.mountSignUp;
+    mount($('clerkSignIn')).catch(function (e) {
+      $('msg').textContent = (e && e.message) || '组件加载失败';
+    });
+  }
+
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('.cl-footerActionLink') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    ev.preventDefault();
+    if (/sign-up/i.test(href)) setMode('register');
+    else if (/sign-in/i.test(href)) setMode('login');
+  });
+
+  BKAuth.init().then(function (Clerk) {
+    return Clerk.addListener(function (e) {
+      if (e.client && e.client.sessions) {
+        var s = e.client.sessions[0];
+        if (s && s.user) showUser(s.user);
+      }
+    });
+  }).then(function () {
+    return BKAuth.user().then(function (u) {
+      if (u) { showUser(u); }
+      else {
+        $('loading').style.display = 'none';
+        $('clerkSignIn').style.display = '';
+        setMode(initialMode);
+      }
+    });
+  }).catch(function (e) {
+    $('loading').textContent = '登录服务加载失败：' + ((e && e.message) || '网络错误');
+  });
+
+  // 登录成功后 Clerk 组件内部跳转/刷新会触发 session 变化；兜底：3 秒轮询一次用户态
+  setInterval(function () {
+    BKAuth.user().then(function (u) {
+      if (u && $('authUser').style.display === 'none') showUser(u);
+    }).catch(function () {});
+  }, 3000);
+
+  $('btnLogout').onclick = function () {
+    BKAuth.logout().then(function () { location.reload(); });
+  };
+})();
+</script>
+</body>
+</html>

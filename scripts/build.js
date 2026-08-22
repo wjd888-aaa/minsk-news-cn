@@ -199,7 +199,7 @@ const LIFE_FILE = path.join(ART_DIR, 'life.json');
 const RATES_CACHE_FILE = path.join(ART_DIR, 'rates-cache.json');
 const CSS_SRC = path.join(ROOT, 'public', 'style.css');
 const CSS_VERSION = 'v9';
-const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'icon-512.png', 'icon-maskable-512.png', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png'];
+const PWA_FILES = ['manifest.json', 'sw.js', 'icon.svg', 'icon-maskable.svg', 'icon-512.png', 'icon-maskable-512.png', 'metro-map.jpg', 'belarus-map.svg', 'minskgate.png', 'clerk-auth.js', 'login.html'];
 const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#b33a2e">
 <link rel="apple-touch-icon" href="icon.svg">`;

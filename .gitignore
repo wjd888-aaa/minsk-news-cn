@@ -1,2 +1,6 @@
 node_modules/
 out/
+.wrangler/
+.env
+.env.local
+.env*.local
