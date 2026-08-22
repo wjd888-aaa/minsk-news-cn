@@ -53,6 +53,7 @@
     $('uName').textContent = name || email.split('@')[0];
     $('uEmail').textContent = email;
     $('uAvatar').textContent = (name || email).charAt(0).toUpperCase();
+    try { localStorage.setItem('bk_user', JSON.stringify({ n: $('uName').textContent, e: email })); } catch (e) {}
     $('authUser').style.display = '';
   }
 
@@ -102,6 +103,7 @@
   }, 3000);
 
   $('btnLogout').onclick = function () {
+    try { localStorage.removeItem('bk_user'); } catch (e) {}
     BKAuth.logout().then(function () { location.reload(); });
   };
 })();

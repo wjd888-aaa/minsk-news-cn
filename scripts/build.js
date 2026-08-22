@@ -11,7 +11,10 @@ const MAX_FULLTEXT = 20;
 const HOMEPAGE_RECENT = 60;
 
 const PARENT_LINK =
-  '<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城闲置 minsktc.me ↗</a></div>';
+  `<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城闲置 minsktc.me ↗</a>` +
+  `<a id="bkUserLink" href="login.html" style="float:right;color:#b33a2e;font-weight:600;text-decoration:none">登录 / 注册</a>` +
+  `<script>(function(){try{var u=JSON.parse(localStorage.getItem('bk_user')||'null');if(u&&u.n){var el=document.getElementById('bkUserLink');if(el)el.textContent='👤 '+(u.n.length>10?u.n.slice(0,10)+'…':u.n);}}catch(e){}})();` +
+  `</scr` + `ipt></div>`;
 
 const EVENT_KEYS = [
   'выставк', 'концерт', 'фестивал', 'спектакл', 'форум', 'ярмарк', 'премьер',
