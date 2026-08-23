@@ -4,17 +4,34 @@
   var SDK_URL = FAPI + '/npm/@clerk/clerk-js@5/dist/clerk.browser.js';
 
   var APPEARANCE = {
+    logoImageUrl: '/icon.svg',
     variables: {
       colorPrimary: '#b33a2e',
       colorBackground: '#ffffff',
       colorText: '#333333',
       colorInputBackground: '#ffffff',
-      borderRadius: '0.5rem',
-      fontSize: '15px'
+      borderRadius: '0.625rem',
+      fontSize: '15px',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif'
+    },
+    layout: {
+      logoPlacement: 'top',
+      showOptionalFields: false
     },
     elements: {
       rootBox: { width: '100%', margin: '0 auto' },
-      card: { boxShadow: 'none', border: 'none' }
+      card: { boxShadow: 'none', border: 'none', padding: '4px 0 0' },
+      headerTitle: { fontSize: '19px', fontWeight: '600', color: '#222', marginBottom: '4px' },
+      headerSubtitle: { fontSize: '13px', color: '#999', marginBottom: '18px' },
+      logoImage: { width: '44px', height: '44px', margin: '0 auto 10px' },
+      dividerLine: { background: '#f0ede8' },
+      dividerText: { fontSize: '12px', color: '#bbb' },
+      formFieldLabel: { fontSize: '13px', color: '#555' },
+      formFieldInput: { borderRadius: '9px', borderColor: '#e5e0da' },
+      formButtonPrimary: { borderRadius: '9px', fontSize: '15px', fontWeight: '600', padding: '11px 0' },
+      socialButtonsBlockButton: { borderRadius: '9px', borderColor: '#e5e0da', fontSize: '14px' },
+      footerActionLink: { color: '#b33a2e', fontSize: '14px' },
+      identityPreviewText: { fontSize: '14px' }
     }
   };
 
@@ -51,13 +68,10 @@
     '#bkGate{position:fixed;left:0;top:0;right:0;bottom:0;z-index:99998;display:-webkit-flex;display:flex;' +
     '-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding:18px;font-family:inherit}' +
     '.bk-gate-mask{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(24,24,30,.58)}' +
-    '.bk-gate-card{position:relative;width:100%;max-width:400px;max-height:92vh;overflow-y:auto;overflow-x:hidden;background:#fff;' +
-    'border-radius:14px;padding:26px 22px 20px;box-shadow:0 12px 48px rgba(0,0,0,.28);text-align:center;-webkit-overflow-scrolling:touch}' +
+    '.bk-gate-card{position:relative;width:100%;max-width:380px;max-height:92vh;overflow-y:auto;overflow-x:hidden;background:#fff;' +
+    'border-radius:16px;padding:24px 22px 18px;box-shadow:0 12px 48px rgba(0,0,0,.28);text-align:center;-webkit-overflow-scrolling:touch}' +
     '.bk-gate-box{width:100%;max-width:100%}' +
     '.bk-gate-box iframe,.bk-gate-box .cl-rootBox,.bk-gate-box .cl-card{max-width:100%!important}' +
-    '.bk-gate-logo{font-size:34px;line-height:1}' +
-    '.bk-gate-title{margin:10px 0 2px;font-size:19px;color:#222}' +
-    '.bk-gate-sub{margin:0 0 14px;font-size:13px;color:#888}' +
     '.bk-gate-load{color:#999;font-size:14px;padding:18px 0}' +
     '.bk-gate-msg{min-height:18px;font-size:13px;color:#c0392b;margin:8px 0 0;word-break:break-all}' +
     '.bk-gate-retry{margin-top:6px;padding:9px 22px;border:none;border-radius:8px;background:#b33a2e;color:#fff;font-size:14px;cursor:pointer}';
@@ -114,8 +128,15 @@
       if (mountedKind === 'signIn') { try { Clerk.unmountSignIn(el); } catch (e) {} }
       else if (mountedKind === 'signUp') { try { Clerk.unmountSignUp(el); } catch (e) {} }
       el.innerHTML = '';
-      if (kind === 'signIn') Clerk.mountSignIn(el, { appearance: APPEARANCE });
-      else Clerk.mountSignUp(el, { appearance: APPEARANCE });
+      var opts = {
+        appearance: APPEARANCE,
+        localization: {
+          signIn: { start: { title: '欢迎回来', subtitle: '登录后解锁全部内容' } },
+          signUp: { start: { title: '创建账户', subtitle: '注册即解锁全部内容' } }
+        }
+      };
+      if (kind === 'signIn') Clerk.mountSignIn(el, opts);
+      else Clerk.mountSignUp(el, opts);
       mountedKind = kind;
     });
   }
@@ -159,9 +180,6 @@
       ov.innerHTML =
         '<div class="bk-gate-mask"></div>' +
         '<div class="bk-gate-card" role="dialog" aria-modal="true">' +
-          '<div class="bk-gate-logo">🌏</div>' +
-          '<h2 class="bk-gate-title">白俄新闻中文站</h2>' +
-          '<p class="bk-gate-sub">免费注册 / 登录，查看全部内容</p>' +
           '<div class="bk-gate-load">正在加载登录服务…</div>' +
           '<div class="bk-gate-box"></div>' +
           '<div class="bk-gate-msg"></div>' +
