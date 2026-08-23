@@ -384,7 +384,24 @@ function slugFromUrl(url) {
   return slug || 'article-' + Math.random().toString(36).slice(2, 8);
 }
 
+function findDivBlock(html, classPart) {
+  const openRe = new RegExp(`<div\\b[^>]*class="[^"]*${classPart}[^"]*"[^>]*>`, 'i');
+  const m = openRe.exec(html);
+  if (!m) return null;
+  let depth = 0;
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = m.index;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    if (t[0][1] === '/') { depth--; if (depth === 0) return { start: m.index, end: tagRe.lastIndex }; }
+    else depth++;
+  }
+  return { start: m.index, end: html.length };
+}
+
 function articleContentRegion(html) {
+  const blk = findDivBlock(html, 'news-whole-post');
+  if (blk) return blk;
   const s1 = html.indexOf('class="page-content"');
   if (s1 < 0) return null;
   let s2 = html.indexOf('class="page-content"', s1 + 30);
@@ -403,12 +420,17 @@ function extractArticleBody(html) {
   const region = articleContentRegion(html);
   if (!region) return [];
   const seg = html.slice(region.start, region.end);
+  const STOP = /Читайте также|Подписывайтесь|Наш канал|Смотрите также/i;
   const paras = [];
   const re = /<p[^>]*>([\s\S]*?)<\/p>/g;
   let m;
   while ((m = re.exec(seg))) {
     const t = stripHtml(m[1]);
-    if (t.length > 15) paras.push(t);
+    if (t.length > 15) {
+      if (STOP.test(t)) break;
+      paras.push(t);
+    }
+    if (paras.length >= 40) break;
   }
   return paras;
 }
@@ -430,8 +452,10 @@ function extractArticleImages(html) {
 
 function extractBeltaImages(html) {
   const region = beltaContentRegion(html);
-  const seg = region ? html.slice(region.start, region.end) : html;
-  return extractImageUrls(seg);
+  let seg = region ? html.slice(region.start, region.end) : '';
+  const blk = findDivBlock(html, 'js-mediator-article');
+  if (blk) seg += '\n' + html.slice(blk.start, blk.end);
+  return extractImageUrls(seg || html);
 }
 
 function extractImageUrls(seg) {
@@ -492,6 +516,15 @@ async function downloadArticleImages(urls, slug, base) {
 }
 
 function extractBeltaBody(html) {
+  const blk = findDivBlock(html, 'js-mediator-article');
+  if (blk) {
+    const seg = html
+      .slice(blk.start, blk.end)
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/(p|div|h[1-6])>/gi, '\n');
+    const paras = seg.split('\n').map((x) => stripHtml(x)).filter((t) => t.length > 10);
+    if (paras.length) return paras.slice(0, 30);
+  }
   const paras = [];
   const re = /<p[^>]*class="MsoNormal"[^>]*>([\s\S]*?)<\/p>/gi;
   let m;
