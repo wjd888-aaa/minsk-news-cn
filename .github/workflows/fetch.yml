@@ -31,7 +31,7 @@ jobs:
       - name: Fetch & translate
         id: build
         run: node scripts/build.js
-        timeout-minutes: 25
+        timeout-minutes: 45
 
       - name: Commit new articles
         run: |
