@@ -1,4 +1,4 @@
-const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync } = require('fs');
+﻿const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync } = require('fs');
 const path = require('path');
 
 const RSS_URL = 'https://minsknews.by/feed/';
@@ -254,22 +254,52 @@ function escapeHtml(s) {
     .replace(/'/g, '&#39;');
 }
 
-async function translateChunk(q) {
+async function translateViaGoogleapis(q) {
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=zh-CN&dt=t&q=${encodeURIComponent(q)}`;
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-      if (!res.ok) throw new Error('http ' + res.status);
-      const data = await res.json();
-      const parts = (Array.isArray(data) && Array.isArray(data[0]) ? data[0] : [])
-        .map((p) => (Array.isArray(p) && p[0] ? p[0] : ''))
-        .join('');
-      if (parts.trim()) return parts.trim();
-      throw new Error('empty result');
-    } catch (e) {
-      if (attempt === 3) break;
-      await sleep([1000, 2500][attempt - 1] || 1000);
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } });
+  const ct = res.headers.get('content-type') || '';
+  if (!ct.includes('json')) throw new Error('rate-limited');
+  const data = await res.json();
+  const parts = (Array.isArray(data) && Array.isArray(data[0]) ? data[0] : [])
+    .map((p) => (Array.isArray(p) && p[0] ? p[0] : ''))
+    .join('');
+  if (!parts.trim()) throw new Error('empty result');
+  return parts.trim();
+}
+
+async function translateViaClients5(q) {
+  const url = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=ru&tl=zh-CN&q=${encodeURIComponent(q)}`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const d = await res.json();
+  if (Array.isArray(d)) return d.map((x) => (Array.isArray(x) ? x[0] : x)).join('');
+  if (d && d.sentences) return d.sentences.map((s) => s.trans).join('');
+  throw new Error('bad shape');
+}
+
+async function translateViaMymemory(q) {
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=ru|zh-CN`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const d = await res.json();
+  if (d && d.responseData && d.responseData.translatedText) return d.responseData.translatedText;
+  throw new Error('no data');
+}
+
+const TRANSLATE_CHANNELS = [translateViaGoogleapis, translateViaClients5, translateViaMymemory];
+let translatePreferred = 0;
+
+async function translateChunk(q) {
+  for (let round = 0; round < 2; round++) {
+    for (let i = 0; i < TRANSLATE_CHANNELS.length; i++) {
+      const ch = (translatePreferred + i) % TRANSLATE_CHANNELS.length;
+      try {
+        const out = await TRANSLATE_CHANNELS[ch](q);
+        translatePreferred = ch;
+        return out;
+      } catch (e) {
+        await sleep(600);
+      }
     }
+    await sleep(2000);
   }
   return '';
 }
@@ -1953,9 +1983,9 @@ async function fetchNews() {
     if (rec.source === 'belta') continue;
     const desc = stripHtml(field(blocks.find((b) => field(b, 'link').trim() === rec.link) || '', 'description'));
     process.stdout.write(`  title: ${rec.ru.slice(0, 40)} ... `);
-    rec.zh = (await translate(rec.ru)) || rec.ru;
+    rec.zh = await translate(rec.ru);
     rec.sum = desc ? (await translate(desc.slice(0, 700))) || '' : '';
-    console.log('done');
+    if (!rec.zh) { console.log('!! 翻译失败，回退俄语 !!'); rec.zh = rec.ru; } else { console.log('done'); }
     await sleep(200 + Math.random() * 200);
   }
 
