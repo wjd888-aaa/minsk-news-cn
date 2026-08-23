@@ -1,4 +1,4 @@
-var CACHE = 'bkcn-v14';
+var CACHE = 'bkcn-v15';
 var ASSETS = [
   './',
   './index.html',

@@ -49,19 +49,23 @@
 
   var LOCALIZATION = {
     signIn: {
-      start: { title: '欢迎回来', subtitle: '登录后解锁全部内容', footerActionText: '还没有账户？', footerActionLink: '注册' },
+      start: { title: '欢迎回来', subtitle: '登录后解锁全部内容' },
       emailCode: { title: '查收验证码', subtitle: '我们已将验证码发送到你的邮箱' }
     },
     signUp: {
-      start: { title: '创建账户', subtitle: '注册即解锁全部内容', footerActionText: '已有账户？', footerActionLink: '登录' },
+      start: { title: '创建账户', subtitle: '注册即解锁全部内容' },
       emailCode: { title: '查收验证码', subtitle: '我们已将验证码发送到你的邮箱' }
     },
-    formButtonPrimary: '继续',
-    dividerText: '或',
-    footerActionText: '还没有账户？',
-    footerActionLink: '注册',
-    formFieldLabel: { emailAddress: '邮箱地址' },
-    formFieldInputPlaceholder: { emailAddress: '请输入邮箱地址' }
+    'formButtonPrimary': '继续',
+    'dividerText': '或',
+    'formFieldLabel__emailAddress': '邮箱地址',
+    'formFieldLabel__password': '密码',
+    'formFieldInputPlaceholder__emailAddress': '请输入邮箱地址',
+    'formFieldInputPlaceholder__password': '请输入密码',
+    'signIn.start.actionText': '还没有账户？',
+    'signIn.start.actionLink': '注册',
+    'signUp.start.actionText': '已有账户？',
+    'signUp.start.actionLink': '登录'
   };
 
   var loading = null;
