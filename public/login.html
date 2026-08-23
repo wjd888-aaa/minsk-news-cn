@@ -9,7 +9,8 @@
 <link rel="icon" href="icon.svg">
 <style>
   .auth-wrap { max-width: 420px; margin: 40px auto; padding: 0 16px; }
-  .auth-card { background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+  .auth-card { background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08); overflow-x: hidden; }
+  .auth-card iframe, .auth-card .cl-rootBox, .auth-card .cl-card { max-width: 100% !important; }
   .auth-loading { text-align: center; color: #999; font-size: 14px; padding: 20px 0; }
   .auth-msg { min-height: 20px; font-size: 13px; margin: 10px 0; color: #c0392b; word-break: break-all; text-align: center; }
   .auth-user { display: none; text-align: center; }
@@ -32,7 +33,7 @@
   </div>
   <a class="back-home" href="/">← 返回首页</a>
 </div>
-<script src="clerk-auth.js?v=v11"></script>
+<script src="clerk-auth.js?v=v12"></script>
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };

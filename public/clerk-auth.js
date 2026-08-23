@@ -51,8 +51,10 @@
     '#bkGate{position:fixed;left:0;top:0;right:0;bottom:0;z-index:99998;display:-webkit-flex;display:flex;' +
     '-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding:18px;font-family:inherit}' +
     '.bk-gate-mask{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(24,24,30,.58)}' +
-    '.bk-gate-card{position:relative;width:100%;max-width:400px;max-height:92vh;overflow-y:auto;background:#fff;' +
-    'border-radius:14px;padding:26px 22px 20px;box-shadow:0 12px 48px rgba(0,0,0,.28);text-align:center}' +
+    '.bk-gate-card{position:relative;width:100%;max-width:400px;max-height:92vh;overflow-y:auto;overflow-x:hidden;background:#fff;' +
+    'border-radius:14px;padding:26px 22px 20px;box-shadow:0 12px 48px rgba(0,0,0,.28);text-align:center;-webkit-overflow-scrolling:touch}' +
+    '.bk-gate-box{width:100%;max-width:100%}' +
+    '.bk-gate-box iframe,.bk-gate-box .cl-rootBox,.bk-gate-box .cl-card{max-width:100%!important}' +
     '.bk-gate-logo{font-size:34px;line-height:1}' +
     '.bk-gate-title{margin:10px 0 2px;font-size:19px;color:#222}' +
     '.bk-gate-sub{margin:0 0 14px;font-size:13px;color:#888}' +
