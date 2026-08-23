@@ -4,7 +4,7 @@
   var SDK_URL = FAPI + '/npm/@clerk/clerk-js@5/dist/clerk.browser.js';
 
   var APPEARANCE = {
-    logoImageUrl: '/icon.svg',
+    logoImageUrl: '/icon-512.png',
     variables: {
       colorPrimary: '#b33a2e',
       colorBackground: '#ffffff',
@@ -47,13 +47,30 @@
     document.head.appendChild(s);
   }
 
+  var LOCALIZATION = {
+    signIn: {
+      start: { title: '欢迎回来', subtitle: '登录后解锁全部内容', footerActionText: '还没有账户？', footerActionLink: '注册' },
+      emailCode: { title: '查收验证码', subtitle: '我们已将验证码发送到你的邮箱' }
+    },
+    signUp: {
+      start: { title: '创建账户', subtitle: '注册即解锁全部内容', footerActionText: '已有账户？', footerActionLink: '登录' },
+      emailCode: { title: '查收验证码', subtitle: '我们已将验证码发送到你的邮箱' }
+    },
+    formButtonPrimary: '继续',
+    dividerText: '或',
+    footerActionText: '还没有账户？',
+    footerActionLink: '注册',
+    formFieldLabel: { emailAddress: '邮箱地址' },
+    formFieldInputPlaceholder: { emailAddress: '请输入邮箱地址' }
+  };
+
   var loading = null;
   function getClerk() {
     if (!loading) {
       loading = new Promise(function (resolve, reject) {
         loadSdk(function (err, Clerk) {
           if (err) return reject(err);
-          Clerk.load().then(function () { resolve(Clerk); }).catch(reject);
+          Clerk.load({ localization: LOCALIZATION }).then(function () { resolve(Clerk); }).catch(reject);
         });
       });
     }
@@ -128,15 +145,8 @@
       if (mountedKind === 'signIn') { try { Clerk.unmountSignIn(el); } catch (e) {} }
       else if (mountedKind === 'signUp') { try { Clerk.unmountSignUp(el); } catch (e) {} }
       el.innerHTML = '';
-      var opts = {
-        appearance: APPEARANCE,
-        localization: {
-          signIn: { start: { title: '欢迎回来', subtitle: '登录后解锁全部内容' } },
-          signUp: { start: { title: '创建账户', subtitle: '注册即解锁全部内容' } }
-        }
-      };
-      if (kind === 'signIn') Clerk.mountSignIn(el, opts);
-      else Clerk.mountSignUp(el, opts);
+      if (kind === 'signIn') Clerk.mountSignIn(el, { appearance: APPEARANCE });
+      else Clerk.mountSignUp(el, { appearance: APPEARANCE });
       mountedKind = kind;
     });
   }
