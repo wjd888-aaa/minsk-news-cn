@@ -61,13 +61,18 @@
     '.bk-gate-retry{margin-top:6px;padding:9px 22px;border:none;border-radius:8px;background:#b33a2e;color:#fff;font-size:14px;cursor:pointer}';
 
   var LOCK_CSS =
-    '.bk-locked{position:relative !important}' +
-    '.bk-locked::before{content:\'\';position:absolute;left:-2px;top:-2px;right:-2px;bottom:-2px;z-index:4;' +
-    '-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);background:rgba(250,250,250,.22);border-radius:inherit}' +
-    '.bk-locked::after{content:\'🔒 注册 / 登录后查看\';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);' +
-    'z-index:5;background:#b33a2e;color:#fff;font-size:13px;line-height:1;padding:9px 16px;border-radius:999px;' +
-    'box-shadow:0 4px 14px rgba(0,0,0,.28);white-space:nowrap;pointer-events:none;font-family:inherit}' +
-    '.bk-locked a,.bk-locked button{pointer-events:none}';
+    '.bk-hidden{display:none !important}' +
+    '.bk-banner{margin:14px 0;padding:14px 16px;background:#fff;border:1px dashed #e5b5b0;border-radius:12px;text-align:center}' +
+    '.bk-banner b{color:#b33a2e;font-size:14px;font-weight:600;display:block;margin-bottom:9px}' +
+    '.bk-banner button{padding:9px 24px;border:none;border-radius:999px;background:#b33a2e;color:#fff;' +
+    'font-size:14px;cursor:pointer;font-family:inherit;-webkit-appearance:none;appearance:none}' +
+    '.bk-cover-wrap{position:relative !important}' +
+    '.bk-cover{position:absolute;left:0;top:0;right:0;bottom:0;z-index:9;background:#fdfcfb;border-radius:12px;' +
+    'display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;' +
+    '-webkit-justify-content:center;justify-content:center;gap:12px;padding:30px 18px;text-align:center}' +
+    '.bk-cover .ico{font-size:34px;line-height:1}' +
+    '.bk-cover p{margin:0;color:#666;font-size:14px}' +
+    '.bk-cover button{padding:10px 28px;border:none;border-radius:999px;background:#b33a2e;color:#fff;font-size:15px;cursor:pointer;font-family:inherit}';
 
   var PANEL_CSS =
     '#bkPanelWrap{position:fixed;left:0;top:0;right:0;bottom:0;z-index:99997;display:-webkit-flex;display:flex;' +
@@ -284,44 +289,98 @@
     },
 
     locks: function () {
-      var els = Array.prototype.slice.call(document.querySelectorAll('[data-lock]'));
-      var pageLock = !!window.BK_LOCK_PAGE;
-      var pageMain = pageLock ? (document.querySelector('main') || document.body) : null;
-      if (!els.length && !pageLock) return Promise.resolve(false);
+      function start() {
+        var els = Array.prototype.slice.call(document.querySelectorAll('[data-lock]'));
+        var pageLock = !!window.BK_LOCK_PAGE;
+        if (!els.length && !pageLock) return;
 
-      try {
-        var st = document.createElement('style');
-        st.textContent = LOCK_CSS;
-        document.head.appendChild(st);
-      } catch (e) {}
+        try {
+          var st = document.createElement('style');
+          st.textContent = LOCK_CSS;
+          document.head.appendChild(st);
+        } catch (e) {}
 
-      function applyLock() {
-        els.forEach(function (el) { el.classList.add('bk-locked'); });
-        if (pageMain) pageMain.classList.add('bk-locked');
+        var nDeal = 0, nFf = 0, nList = 0;
+        els.forEach(function (el) {
+          el.classList.add('bk-hidden');
+          if (el.classList.contains('ff-deal')) nFf++;
+          else if (el.classList.contains('deal')) nDeal++;
+          else nList++;
+        });
+
+        function makeBanner(n) {
+          var d = document.createElement('div');
+          d.className = 'bk-banner';
+          var b = document.createElement('b');
+          b.textContent = '🔒 还有 ' + n + ' 条内容，登录后即可查看';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = '注册 / 登录';
+          btn.addEventListener('click', function () { window.BKAuth.gate(); });
+          d.appendChild(b);
+          d.appendChild(btn);
+          return d;
+        }
+
+        function addBanner(container, n, atEnd) {
+          if (!container || !n) return;
+          if (atEnd) container.appendChild(makeBanner(n));
+          else container.parentNode.insertBefore(makeBanner(n), container.nextSibling);
+        }
+
+        var dealFeed = document.querySelector('.deal-feed:not(.ff-feed)');
+        addBanner(dealFeed, nDeal, true);
+
+        var ffFeed = document.querySelector('.ff-feed');
+        addBanner(ffFeed, nFf, true);
+
+        if (nList > 0) {
+          var lifeMain = document.querySelector('.life-list') ? document.querySelector('main') : null;
+          if (lifeMain) {
+            addBanner(lifeMain, nList, true);
+          } else {
+            var tabs = document.querySelector('.tabs');
+            if (tabs) addBanner(tabs, nList, false);
+          }
+        }
+
+        if (pageLock) {
+          var m = document.querySelector('main');
+          if (m) {
+            m.classList.add('bk-cover-wrap');
+            var cov = document.createElement('div');
+            cov.className = 'bk-cover';
+            cov.innerHTML = '<div class="ico">🔒</div><p>这篇文章需要注册 / 登录后才能阅读全文</p>';
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = '注册 / 登录';
+            btn.addEventListener('click', function () { window.BKAuth.gate(); });
+            cov.appendChild(btn);
+            m.appendChild(cov);
+          }
+        }
+
+        function unlockAll() {
+          els.forEach(function (el) { el.classList.remove('bk-hidden'); });
+          Array.prototype.slice.call(document.querySelectorAll('.bk-banner')).forEach(function (b) { b.parentNode.removeChild(b); });
+          var cov = document.querySelector('.bk-cover');
+          if (cov) cov.parentNode.removeChild(cov);
+          var m2 = pageLock ? document.querySelector('main') : null;
+          if (m2) m2.classList.remove('bk-cover-wrap');
+        }
+
+        BKAuth.onAuth(function () { unlockAll(); });
+
+        return BKAuth.user().then(function (u) {
+          if (u) unlockAll();
+          else if (pageLock) window.BKAuth.gate();
+        }).catch(function () {
+          if (pageLock) window.BKAuth.gate();
+        });
       }
 
-      function unlockAll() {
-        els.forEach(function (el) { el.classList.remove('bk-locked'); });
-        if (pageMain) pageMain.classList.remove('bk-locked');
-      }
-
-      applyLock();
-
-      BKAuth.onAuth(function () { unlockAll(); });
-
-      document.addEventListener('click', function (ev) {
-        var t = ev.target && ev.target.closest ? ev.target.closest('.bk-locked') : null;
-        if (!t) return;
-        ev.preventDefault();
-        ev.stopPropagation();
-        window.BKAuth.gate();
-      }, true);
-
-      return BKAuth.user().then(function (u) {
-        if (u) { unlockAll(); return true; }
-        if (pageLock) window.BKAuth.gate();
-        return false;
-      }).catch(function () { return false; });
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+      else start();
     },
 
     panel: function () {
@@ -357,17 +416,32 @@
       function close() { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }
       function stop(e) { if (e.target === this) close(); }
 
+      function toState(u) {
+        if (!u) return null;
+        if (u._local) return { name: u.username || '用户', email: u.email || '' };
+        var email = userEmailOf(u);
+        var name = u.username || u.firstName || (email ? email.split('@')[0] : '用户');
+        return { name: name, email: email };
+      }
+
+      function localState() {
+        try {
+          var info = JSON.parse(localStorage.getItem('bk_user') || 'null');
+          if (info && info.n) return { _local: true, username: info.n, email: info.e || '' };
+        } catch (e) {}
+        return null;
+      }
+
       function render(u) {
+        var s = typeof u !== 'undefined' && arguments.length ? toState(u) : localState();
         var avatar = wrap.querySelector('#bkPfAvatar');
         var nameEl = wrap.querySelector('#bkPfName');
         var emailEl = wrap.querySelector('#bkPfEmail');
         btnArea.innerHTML = '';
-        if (u) {
-          var email = userEmailOf(u);
-          var name = u.username || u.firstName || (email ? email.split('@')[0] : '用户');
-          avatar.textContent = (name || '?').charAt(0).toUpperCase();
-          nameEl.textContent = name;
-          emailEl.textContent = email || '';
+        if (s) {
+          avatar.textContent = (s.name || '?').charAt(0).toUpperCase();
+          nameEl.textContent = s.name;
+          emailEl.textContent = s.email;
           var out = document.createElement('button');
           out.type = 'button';
           out.className = 'bk-pf-btn outline';
@@ -395,6 +469,7 @@
 
       wrap.querySelector('.bk-panel-mask').addEventListener('click', stop);
       BKAuth.onAuth(function (u) { render(u); });
+      render();
       BKAuth.user().then(render).catch(function () {});
     }
   };
