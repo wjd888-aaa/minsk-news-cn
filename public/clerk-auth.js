@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   var PUB_KEY = 'pk_live_Y2xlcmsubmV3cy5taW5za3RjLm1lJA';
   var FAPI = 'https://clerk.news.minsktc.me';
   var SDK_URL = FAPI + '/npm/@clerk/clerk-js@5/dist/clerk.browser.js';
@@ -20,7 +20,7 @@
     },
     elements: {
       rootBox: { width: '100%', margin: '0 auto' },
-      card: { boxShadow: 'none', border: 'none', padding: '4px 0 0' },
+      card: { boxShadow: 'none', border: 'none', padding: '22px 20px 12px' },
       headerTitle: { fontSize: '19px', fontWeight: '600', color: '#222', marginBottom: '4px' },
       headerSubtitle: { fontSize: '13px', color: '#999', marginBottom: '18px' },
       logoImage: { width: '44px', height: '44px', margin: '0 auto 10px' },
@@ -85,12 +85,12 @@
     '#bkGate{position:fixed;left:0;top:0;right:0;bottom:0;z-index:99998;display:-webkit-flex;display:flex;' +
     '-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding:18px;font-family:inherit}' +
     '.bk-gate-mask{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(24,24,30,.58)}' +
-    '.bk-gate-card{position:relative;width:100%;max-width:380px;max-height:92vh;overflow-y:auto;overflow-x:hidden;background:#fff;' +
+    '.bk-gate-card{position:relative;width:100%;max-width:330px;max-height:92vh;overflow-y:auto;overflow-x:hidden;background:#fff;' +
     'border-radius:16px;padding:0;box-shadow:0 12px 48px rgba(0,0,0,.28);text-align:center;-webkit-overflow-scrolling:touch}' +
     '.bk-gate-box{width:100%;max-width:100%}' +
     '.bk-gate-box iframe,.bk-gate-box .cl-rootBox,.bk-gate-box .cl-card{max-width:100%!important}' +
     '.bk-gate-load{color:#999;font-size:14px;padding:34px 24px}' +
-    '.bk-gate-msg{min-height:16px;font-size:13px;color:#c0392b;margin:4px 14px;word-break:break-all}' +
+    '.bk-gate-msg{font-size:13px;color:#c0392b;margin:4px 18px;word-break:break-all}.bk-gate-msg:not(:empty){min-height:18px;padding-bottom:6px}' +
     '.bk-gate-retry{margin-top:6px;padding:9px 22px;border:none;border-radius:8px;background:#b33a2e;color:#fff;font-size:14px;cursor:pointer}';
 
   var LOCK_CSS =
