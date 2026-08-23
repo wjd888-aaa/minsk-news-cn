@@ -1,5 +1,874 @@
 [
   {
+    "slug": "belarus-i-kitaj-otrabatyvayut-shturmovye-dejstviya-na-ucheniyah-stremitelnyj-orel-2026",
+    "link": "https://minsknews.by/belarus-i-kitaj-otrabatyvayut-shturmovye-dejstviya-na-ucheniyah-stremitelnyj-orel-2026/",
+    "ru": "Беларусь и Китай отрабатывают штурмовые действия на учениях «Стремительный орел — 2026»",
+    "cat": "china",
+    "isodate": "Sun, 23 Aug 2026 10:29:33 +0000",
+    "beijing": "2026-08-23 18:29",
+    "zh": "Беларусь и Китай отрабатывают штурмовые действия на учениях «Стремительный орел — 2026»",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "46538-2026",
+    "link": "https://chn.belta.by/society/view/-46538-2026/",
+    "ru": "",
+    "zh": "白俄罗斯和中国军人在“敏捷之鹰”演习中锤炼突击技能",
+    "source": "belta",
+    "cat": "china",
+    "isodate": "Sun, 23 Aug 2026 13:13:00 +0300",
+    "beijing": "2026-08-23 18:13",
+    "body": [],
+    "images": [
+      "../imgs/46538-2026/img1.jpg"
+    ]
+  },
+  {
+    "slug": "ya-umel-obshhatsya-s-lyudmi-vzhivuyu-rasskazyvaem-o-chlene-soveta-starejshin-ruslane-mashk",
+    "link": "https://minsknews.by/ya-umel-obshhatsya-s-lyudmi-vzhivuyu-rasskazyvaem-o-chlene-soveta-starejshin-ruslane-mashkovskom/",
+    "ru": "Юбиляр Машковский. Родился под бомбами, прошел путь от комиссара до председателя Заводского района, обманул время",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 10:02:54 +0000",
+    "beijing": "2026-08-23 18:02",
+    "zh": "Юбиляр Машковский. Родился под бомбами, прошел путь от комиссара до председателя Заводского района, обманул время",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "dva-pyanyh-inostrancza-pohitili-iz-avto-turisticheskie-prinadlezhnosti-chtoby-perenochevat",
+    "link": "https://minsknews.by/dva-pyanyh-inostrancza-pohitili-iz-avto-turisticheskie-prinadlezhnosti-chtoby-perenochevat-na-ulicze/",
+    "ru": "Два пьяных иностранца похитили из авто туристические принадлежности, чтобы переночевать на улице",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 09:37:32 +0000",
+    "beijing": "2026-08-23 17:37",
+    "zh": "Два пьяных иностранца похитили из авто туристические принадлежности, чтобы переночевать на улице",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "24-46537-2026",
+    "link": "https://chn.belta.by/society/view/24-46537-2026/",
+    "ru": "",
+    "zh": "内务部：明斯克珠宝店抢劫案嫌疑人在24小时内被抓获",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 12:14:00 +0300",
+    "beijing": "2026-08-23 17:14",
+    "body": [],
+    "images": [
+      "../imgs/24-46537-2026/img1.jpg"
+    ]
+  },
+  {
+    "slug": "chto-takoe-skorostnaya-radiotelegrafiya-i-kakovy-uspehi-belorusov-v-etom-vide-sporta",
+    "link": "https://minsknews.by/chto-takoe-skorostnaya-radiotelegrafiya-i-kakovy-uspehi-belorusov-v-etom-vide-sporta/",
+    "ru": "Что такое скоростная радиотелеграфия, и каковы успехи белорусов в этом виде спорта",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 09:13:31 +0000",
+    "beijing": "2026-08-23 17:13",
+    "zh": "Что такое скоростная радиотелеграфия, и каковы успехи белорусов в этом виде спорта",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "v-minske-zaderzhali-muzhchinu-sovershivshego-razbojnoe-napadenie-na-yuvelirnyj-magazin",
+    "link": "https://minsknews.by/v-minske-zaderzhali-muzhchinu-sovershivshego-razbojnoe-napadenie-na-yuvelirnyj-magazin/",
+    "ru": "В Минске задержали мужчину, совершившего разбойное нападение на ювелирный магазин",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 08:52:01 +0000",
+    "beijing": "2026-08-23 16:52",
+    "zh": "В Минске задержали мужчину, совершившего разбойное нападение на ювелирный магазин",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "yajcza-i-maslo-podesheveli-muka-i-krupy-podorozhali-kak-menyalis-czeny-v-etom-godu",
+    "link": "https://minsknews.by/yajcza-i-maslo-podesheveli-muka-i-krupy-podorozhali-kak-menyalis-czeny-v-etom-godu/",
+    "ru": "Яйца и масло подешевели, мука и крупы подорожали. Как менялись цены в этом году",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 08:36:25 +0000",
+    "beijing": "2026-08-23 16:36",
+    "zh": "Яйца и масло подешевели, мука и крупы подорожали. Как менялись цены в этом году",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "opasnyj-obed-pochemu-pokupka-produktov-s-ruk-ne-luchshaya-ideya",
+    "link": "https://minsknews.by/opasnyj-obed-pochemu-pokupka-produktov-s-ruk-ne-luchshaya-ideya/",
+    "ru": "Опасный обед: почему покупка продуктов с рук — не лучшая идея",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 08:18:30 +0000",
+    "beijing": "2026-08-23 16:18",
+    "zh": "Опасный обед: почему покупка продуктов с рук — не лучшая идея",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46536-2026",
+    "link": "https://chn.belta.by/society/view/-46536-2026/",
+    "ru": "",
+    "zh": "巴拉涅茨谈反无人机作战的组成部分：不仅是防空和电子战系统，还有拦截无人机",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 11:00:00 +0300",
+    "beijing": "2026-08-23 16:00",
+    "body": [],
+    "images": [
+      "../imgs/46536-2026/img1.png"
+    ]
+  },
+  {
+    "slug": "spasateli-prodolzhayut-likvidirovat-posledstviya-nepogody-v-belarusi",
+    "link": "https://minsknews.by/spasateli-prodolzhayut-likvidirovat-posledstviya-nepogody-v-belarusi/",
+    "ru": "Спасатели продолжают ликвидировать последствия непогоды в Беларуси",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 07:50:50 +0000",
+    "beijing": "2026-08-23 15:50",
+    "zh": "Спасатели продолжают ликвидировать последствия непогоды в Беларуси",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "uspet-do-oseni-i-ne-volnovatsya-pochemu-registracziyu-spm-nuzhno-projti-imenno-sejchas",
+    "link": "https://minsknews.by/uspet-do-oseni-i-ne-volnovatsya-pochemu-registracziyu-spm-nuzhno-projti-imenno-sejchas/",
+    "ru": "Успеть до осени и не волноваться. Почему регистрацию СПМ нужно пройти именно сейчас",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 07:29:06 +0000",
+    "beijing": "2026-08-23 15:29",
+    "zh": "Успеть до осени и не волноваться. Почему регистрацию СПМ нужно пройти именно сейчас",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "obshhaya-kartina-nebes-ili-veselyj-astrologicheskij-prognoz-na-24-30-avgusta",
+    "link": "https://minsknews.by/obshhaya-kartina-nebes-ili-veselyj-astrologicheskij-prognoz-na-24-30-avgusta/",
+    "ru": "Общая картина небес, или Веселый астрологический прогноз на 24–30 августа",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 07:03:02 +0000",
+    "beijing": "2026-08-23 15:03",
+    "zh": "Общая картина небес, или Веселый астрологический прогноз на 24–30 августа",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "2026-46535-2026",
+    "link": "https://chn.belta.by/society/view/2026-46535-2026/",
+    "ru": "",
+    "zh": "明斯克三个孩子的母亲安娜·马茨克维奇成为“白俄罗斯美人2026”竞赛获胜者",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 10:01:00 +0300",
+    "beijing": "2026-08-23 15:01",
+    "body": [],
+    "images": [
+      "../imgs/2026-46535-2026/img1.jpg",
+      "../imgs/2026-46535-2026/img2.jpg",
+      "../imgs/2026-46535-2026/img3.jpg",
+      "../imgs/2026-46535-2026/img4.jpg",
+      "../imgs/2026-46535-2026/img5.jpg",
+      "../imgs/2026-46535-2026/img6.jpg"
+    ]
+  },
+  {
+    "slug": "belorusskaya-velogonshhicza-angelina-shestak-vyigrala-zoloto-yuniorskogo-chempionata-mira",
+    "link": "https://minsknews.by/belorusskaya-velogonshhicza-angelina-shestak-vyigrala-zoloto-yuniorskogo-chempionata-mira/",
+    "ru": "Белорусская велогонщица Ангелина Шестак выиграла золото юниорского чемпионата мира",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 06:50:34 +0000",
+    "beijing": "2026-08-23 14:50",
+    "zh": "Белорусская велогонщица Ангелина Шестак выиграла золото юниорского чемпионата мира",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46534-2026",
+    "link": "https://chn.belta.by/society/view/-46534-2026/",
+    "ru": "",
+    "zh": "已婚、受过高等教育、有两个孩子。白俄罗斯国家统计委员会普通员工是什么样？",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 09:39:00 +0300",
+    "beijing": "2026-08-23 14:39",
+    "body": [],
+    "images": [
+      "../imgs/46534-2026/img1.jpg"
+    ]
+  },
+  {
+    "slug": "spasateli-preduprezhdayut-belorusov-o-silnom-vetre-23-avgusta",
+    "link": "https://minsknews.by/spasateli-preduprezhdayut-belorusov-o-silnom-vetre-23-avgusta/",
+    "ru": "Спасатели предупреждают белорусов о сильном ветре 23 августа",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 06:31:49 +0000",
+    "beijing": "2026-08-23 14:31",
+    "zh": "Спасатели предупреждают белорусов о сильном ветре 23 августа",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "zhivye-shahmaty-trofejnaya-mebel-zhukova-i-legendarnyj-zil-158-etot-den-v-istorii-23-avgus",
+    "link": "https://minsknews.by/zhivye-shahmaty-trofejnaya-mebel-zhukova-i-legendarnyj-zil-158-etot-den-v-istorii-23-avgusta/",
+    "ru": "Живые шахматы, трофейная мебель Жукова и легендарный ЗИЛ-158. Этот день в истории: 23 августа",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 06:02:51 +0000",
+    "beijing": "2026-08-23 14:02",
+    "zh": "Живые шахматы, трофейная мебель Жукова и легендарный ЗИЛ-158. Этот день в истории: 23 августа",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46533-2026",
+    "link": "https://chn.belta.by/president/view/-46533-2026/",
+    "ru": "",
+    "zh": "卢卡申科祝贺统计工作者：每个数字背后是团队的辛勤劳动",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 09:00:00 +0300",
+    "beijing": "2026-08-23 14:00",
+    "body": [],
+    "images": [
+      "../imgs/46533-2026/img1.jpg"
+    ]
+  },
+  {
+    "slug": "v-minske-v-novom-uchebnom-godu-budut-rabotat-787-uchrezhdeniy-obrazovaniya",
+    "link": "https://minsknews.by/v-minske-v-novom-uchebnom-godu-budut-rabotat-787-uchrezhdeniy-obrazovaniya/",
+    "ru": "В Минске в новом учебном году будут работать 787 учреждений образования",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 05:46:24 +0000",
+    "beijing": "2026-08-23 13:46",
+    "zh": "В Минске в новом учебном году будут работать 787 учреждений образования",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "lukashenko-pozdravil-rabotnikov-organov-statistiki-s-professionalnym-prazdnikom",
+    "link": "https://minsknews.by/lukashenko-pozdravil-rabotnikov-organov-statistiki-s-professionalnym-prazdnikom/",
+    "ru": "Лукашенко поздравил работников органов статистики с профессиональным праздником",
+    "cat": "event",
+    "isodate": "Sun, 23 Aug 2026 05:44:33 +0000",
+    "beijing": "2026-08-23 13:44",
+    "zh": "Лукашенко поздравил работников органов статистики с профессиональным праздником",
+    "sum": "",
+    "body": [],
+    "images": [
+      "../imgs/lukashenko-pozdravil-rabotnikov-organov-statistiki-s-professionalnym-prazdnikom/img1.jpg",
+      "../imgs/lukashenko-pozdravil-rabotnikov-organov-statistiki-s-professionalnym-prazdnikom/img2.jpg",
+      "../imgs/lukashenko-pozdravil-rabotnikov-organov-statistiki-s-professionalnym-prazdnikom/img3.jpg"
+    ]
+  },
+  {
+    "slug": "zhile-i-vyplata-kak-podderzhivayut-bezrabotnyh-minchan-pri-pereezde-v-selskuyu-mestnost",
+    "link": "https://minsknews.by/zhile-i-vyplata-kak-podderzhivayut-bezrabotnyh-minchan-pri-pereezde-v-selskuyu-mestnost/",
+    "ru": "Жилье и выплата. Как поддерживают безработных минчан при переезде в сельскую местность",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 05:22:25 +0000",
+    "beijing": "2026-08-23 13:22",
+    "zh": "Жилье и выплата. Как поддерживают безработных минчан при переезде в сельскую местность",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "pilotnyj-proekt-po-uglublennomu-izucheniyu-shkolnyh-predmetov-zapustyat-v-chetyreh-gimnazi",
+    "link": "https://minsknews.by/pilotnyj-proekt-po-uglublennomu-izucheniyu-shkolnyh-predmetov-zapustyat-v-chetyreh-gimnaziyah-minska/",
+    "ru": "Пилотный проект по углубленному изучению школьных предметов запустят в четырех гимназиях Минска",
+    "cat": "news",
+    "isodate": "Sun, 23 Aug 2026 05:00:02 +0000",
+    "beijing": "2026-08-23 13:00",
+    "zh": "Пилотный проект по углубленному изучению школьных предметов запустят в четырех гимназиях Минска",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-belarusi-uzhe-bolee-65-tys-elektromobilej-chast-iz-nih-sovershila-probeg-iz-minska-v-ost",
+    "link": "https://minsknews.by/v-belarusi-uzhe-bolee-65-tys-elektromobilej-chast-iz-nih-sovershila-probeg-iz-minska-v-ostrovecz/",
+    "ru": "В Беларуси уже более 65 тыс. электромобилей. Часть из них совершила пробег из Минска в Островец",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 19:04:26 +0000",
+    "beijing": "2026-08-23 03:04",
+    "zh": "В Беларуси уже более 65 тыс. электромобилей. Часть из них совершила пробег из Минска в Островец",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46532-2026",
+    "link": "https://chn.belta.by/society/view/-46532-2026/",
+    "ru": "",
+    "zh": "战斗激光与轨道炮？军事评论员畅想未来武器",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 22:00:00 +0300",
+    "beijing": "2026-08-23 03:00",
+    "body": [],
+    "images": [
+      "../imgs/46532-2026/img1.png"
+    ]
+  },
+  {
+    "slug": "u-dvorcza-sporta-speli-horom-kak-minsk-gulyal-pod-hity-soloduhi-i-bity-molodyh-artistov",
+    "link": "https://minsknews.by/u-dvorcza-sporta-speli-horom-kak-minsk-gulyal-pod-hity-soloduhi-i-bity-molodyh-artistov/",
+    "ru": "У Дворца спорта спели хором: как Минск гулял под хиты Солодухи и биты молодых артистов",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:55:51 +0000",
+    "beijing": "2026-08-23 02:55",
+    "zh": "У Дворца спорта спели хором: как Минск гулял под хиты Солодухи и биты молодых артистов",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "okolo-21-s-i-bez-sushhestvennyh-osadkov-budet-v-minske-23-avgusta",
+    "link": "https://minsknews.by/okolo-21-s-i-bez-sushhestvennyh-osadkov-budet-v-minske-23-avgusta/",
+    "ru": "Около +21 °С и без существенных осадков будет в Минске 23 августа",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:48:44 +0000",
+    "beijing": "2026-08-23 02:48",
+    "zh": "Около +21 °С и без существенных осадков будет в Минске 23 августа",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46529-2026",
+    "link": "https://chn.belta.by/society/view/-46529-2026/",
+    "ru": "",
+    "zh": "惊艳味蕾，愉悦心灵：\"沃罗诺沃土豆饼\"土豆节盛况",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 21:46:00 +0300",
+    "beijing": "2026-08-23 02:46",
+    "body": [],
+    "images": [
+      "../imgs/46529-2026/img1.jpg",
+      "../imgs/46529-2026/img2.jpg",
+      "../imgs/46529-2026/img3.jpg",
+      "../imgs/46529-2026/img4.jpg",
+      "../imgs/46529-2026/img5.jpg",
+      "../imgs/46529-2026/img6.jpg"
+    ]
+  },
+  {
+    "slug": "46528-2026",
+    "link": "https://chn.belta.by/society/view/-46528-2026/",
+    "ru": "",
+    "zh": "自行车选手舍斯塔克以世界纪录夺得世界青年锦标赛计时赛金牌",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 21:29:00 +0300",
+    "beijing": "2026-08-23 02:29"
+  },
+  {
+    "slug": "glavnoe-zhelanie-kak-ustroitsya-na-rabotu-cheloveku-kotoryj-poluchil-uslovnyj-srok",
+    "link": "https://minsknews.by/glavnoe-zhelanie-kak-ustroitsya-na-rabotu-cheloveku-kotoryj-poluchil-uslovnyj-srok/",
+    "ru": "Главное — желание: как устроиться на работу человеку, который получил условный срок",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:28:02 +0000",
+    "beijing": "2026-08-23 02:28",
+    "zh": "Главное — желание: как устроиться на работу человеку, который получил условный срок",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "belorusy-gnedchik-i-korzhavin-vyigrali-estafetu-na-chempionate-mira-u15-po-sovremennomu-py",
+    "link": "https://minsknews.by/belorusy-gnedchik-i-korzhavin-vyigrali-estafetu-na-chempionate-mira-u15-po-sovremennomu-pyatiboryu/",
+    "ru": "Белорусы Гнедчик и Коржавин выиграли эстафету на чемпионате мира U15 по современному пятиборью",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:07:09 +0000",
+    "beijing": "2026-08-23 02:07",
+    "zh": "Белорусы Гнедчик и Коржавин выиграли эстафету на чемпионате мира U15 по современному пятиборью",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "u20-46527-2026",
+    "link": "https://chn.belta.by/society/view/u20-46527-2026/",
+    "ru": "",
+    "zh": "白俄罗斯U20女排闯入欧洲锦标赛资格赛决赛",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 20:53:00 +0300",
+    "beijing": "2026-08-23 01:53"
+  },
+  {
+    "slug": "para-iz-minska-otmetila-55-letie-supruzheskoj-zhizni-i-rasskazala-kak-poznakomilas",
+    "link": "https://minsknews.by/para-iz-minska-otmetila-55-letie-supruzheskoj-zhizni-i-rasskazala-kak-poznakomilas/",
+    "ru": "Пара из Минска отметила 55-летие супружеской жизни и рассказала, как познакомилась",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:45:30 +0000",
+    "beijing": "2026-08-23 01:45",
+    "zh": "Пара из Минска отметила 55-летие супружеской жизни и рассказала, как познакомилась",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "muzhchina-povis-na-urovne-devyatogo-etazha-v-minske-ego-uspeli-spasti",
+    "link": "https://minsknews.by/muzhchina-povis-na-urovne-devyatogo-etazha-v-minske-ego-uspeli-spasti/",
+    "ru": "Мужчина повис на уровне девятого этажа в Минске — его успели спасти",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:32:01 +0000",
+    "beijing": "2026-08-23 01:32",
+    "zh": "Мужчина повис на уровне девятого этажа в Минске — его успели спасти",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "prilozhenie-dlya-kontrolya-lekarstv-park-pisatelej-kak-pobediteli-minskoj-smeny-menyayut-s",
+    "link": "https://minsknews.by/prilozhenie-dlya-kontrolya-lekarstv-park-pisatelej-kak-pobediteli-minskoj-smeny-menyayut-stoliczu/",
+    "ru": "Приложение для контроля лекарств, «Парк писателей». Как победители «Минской смены» меняют столицу",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:18:43 +0000",
+    "beijing": "2026-08-23 01:18",
+    "zh": "Приложение для контроля лекарств, «Парк писателей». Как победители «Минской смены» меняют столицу",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "659-46526-2026",
+    "link": "https://chn.belta.by/society/view/659-46526-2026/",
+    "ru": "",
+    "zh": "能源部门正在659个居民点抢修\"普里斯卡\"气旋造成的破坏",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 20:15:00 +0300",
+    "beijing": "2026-08-23 01:15"
+  },
+  {
+    "slug": "dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026",
+    "link": "https://minsknews.by/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/",
+    "ru": "«Для нас мама — уже победительница»: как прошел финал конкурса «Краса Беларуси — 2026»",
+    "cat": "event",
+    "isodate": "Sat, 22 Aug 2026 16:59:00 +0000",
+    "beijing": "2026-08-23 00:59",
+    "zh": "«Для нас мама — уже победительница»: как прошел финал конкурса «Краса Беларуси — 2026»",
+    "sum": "",
+    "body": [],
+    "images": [
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img1.jpg",
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img2.jpg",
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img3.jpg",
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img4.jpg",
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img5.jpg",
+      "../imgs/dlya-nas-mama-uzhe-pobeditelnicza-kak-proshel-final-konkursa-krasa-belarusi-2026/img6.jpg"
+    ]
+  },
+  {
+    "slug": "u17-46525-2026",
+    "link": "https://chn.belta.by/society/view/u17-46525-2026/",
+    "ru": "",
+    "zh": "白俄罗斯选手在欧洲U17滑水锦标赛首日斩获四枚奖牌",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 19:27:00 +0300",
+    "beijing": "2026-08-23 00:27"
+  },
+  {
+    "slug": "v-minske-padali-derevya-v-oblasti-postradali-deti-mchs-ustranyaet-posledstviya-nepogody",
+    "link": "https://minsknews.by/v-minske-padali-derevya-v-oblasti-postradali-deti-mchs-ustranyaet-posledstviya-nepogody/",
+    "ru": "В Минске падали деревья, в области пострадали дети — МЧС устраняет последствия непогоды",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:24:49 +0000",
+    "beijing": "2026-08-23 00:24",
+    "zh": "В Минске падали деревья, в области пострадали дети — МЧС устраняет последствия непогоды",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-minske-osudili-pensionera-kotoryj-pohitil-zabytyj-v-magazine-koshelek",
+    "link": "https://minsknews.by/v-minske-osudili-pensionera-kotoryj-pohitil-zabytyj-v-magazine-koshelek/",
+    "ru": "В Минске осудили пенсионера, который похитил забытый в магазине кошелек",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:12:41 +0000",
+    "beijing": "2026-08-23 00:12",
+    "zh": "В Минске осудили пенсионера, который похитил забытый в магазине кошелек",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "u15-46524-2026",
+    "link": "https://chn.belta.by/society/view/u15-46524-2026/",
+    "ru": "",
+    "zh": "白俄罗斯选手克鲁克与班丘克在欧洲U15举重锦标赛中获奖",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:57:00 +0300",
+    "beijing": "2026-08-22 23:57"
+  },
+  {
+    "slug": "goryachuyu-vodu-otklyuchat-po-ryadu-stolichnyh-adresov-24-26-avgusta",
+    "link": "https://minsknews.by/goryachuyu-vodu-otklyuchat-po-ryadu-stolichnyh-adresov-24-26-avgusta/",
+    "ru": "Горячую воду отключат по ряду столичных адресов 24–26 августа",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 15:52:33 +0000",
+    "beijing": "2026-08-22 23:52",
+    "zh": "Горячую воду отключат по ряду столичных адресов 24–26 августа",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "u15-46523-2026",
+    "link": "https://chn.belta.by/society/view/u15-46523-2026/",
+    "ru": "",
+    "zh": "白俄罗斯五项运动选手格涅奇克与科尔扎温在西班牙U15世锦赛接力中夺冠",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:35:00 +0300",
+    "beijing": "2026-08-22 23:35"
+  },
+  {
+    "slug": "u15-46522-2026",
+    "link": "https://chn.belta.by/society/view/u15-46522-2026/",
+    "ru": "",
+    "zh": "白俄罗斯选手费多罗维奇与克瓦什涅夫斯卡娅荣膺U15世界五项运动接力冠军",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 18:22:00 +0300",
+    "beijing": "2026-08-22 23:22"
+  },
+  {
+    "slug": "poluchila-besplatnyj-detoks-na-dva-dnya-shaurmichnoj-zapretili-realizacziyu-tovara-posle-z",
+    "link": "https://minsknews.by/poluchila-besplatnyj-detoks-na-dva-dnya-shaurmichnoj-zapretili-realizacziyu-tovara-posle-zhaloby-v-seti/",
+    "ru": "«Получила бесплатный «детокс» на два дня». Шаурмичной запретили реализацию товара после жалобы в Сети",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 15:21:43 +0000",
+    "beijing": "2026-08-22 23:21",
+    "zh": "«Получила бесплатный «детокс» на два дня». Шаурмичной запретили реализацию товара после жалобы в Сети",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "tanczuyut-dazhe-prohozhie-besplatnye-master-klassy-i-trenirovki-provodyat-v-czentralnom-ra",
+    "link": "https://minsknews.by/tanczuyut-dazhe-prohozhie-besplatnye-master-klassy-i-trenirovki-provodyat-v-czentralnom-rajone/",
+    "ru": "Танцуют даже прохожие: бесплатные мастер-классы и тренировки проводят в Центральном районе",
+    "cat": "event",
+    "isodate": "Sat, 22 Aug 2026 14:59:00 +0000",
+    "beijing": "2026-08-22 22:59",
+    "zh": "Танцуют даже прохожие: бесплатные мастер-классы и тренировки проводят в Центральном районе",
+    "sum": "",
+    "body": [],
+    "images": []
+  },
+  {
+    "slug": "46521-2026",
+    "link": "https://chn.belta.by/society/view/-46521-2026/",
+    "ru": "",
+    "zh": "\"迪纳摩-申尼克\"冰球队在图拉赛事中取得第三场胜利",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:56:00 +0300",
+    "beijing": "2026-08-22 22:56"
+  },
+  {
+    "slug": "cziklon-priska-prines-silnyj-veter-i-narushil-energosnabzhenie-ryada-naselennyh-punktov-be",
+    "link": "https://minsknews.by/cziklon-priska-prines-silnyj-veter-i-narushil-energosnabzhenie-ryada-naselennyh-punktov-belarusi/",
+    "ru": "Циклон «Приска» принес сильный ветер и нарушил энергоснабжение ряда населенных пунктов Беларуси",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 14:41:52 +0000",
+    "beijing": "2026-08-22 22:41",
+    "zh": "Циклон «Приска» принес сильный ветер и нарушил энергоснабжение ряда населенных пунктов Беларуси",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46516-2026",
+    "link": "https://chn.belta.by/society/view/-46516-2026/",
+    "ru": "",
+    "zh": "巴拉涅茨表达了自己的观点：机器人能否在战场上取代士兵？",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:35:00 +0300",
+    "beijing": "2026-08-22 22:35"
+  },
+  {
+    "slug": "lishennaya-roditelskih-prav-minchanka-za-15-mesyaczev-261-raz-ne-vyshla-na-rabotu",
+    "link": "https://minsknews.by/lishennaya-roditelskih-prav-minchanka-za-15-mesyaczev-261-raz-ne-vyshla-na-rabotu/",
+    "ru": "Лишенная родительских прав минчанка за 15 месяцев 261 раз не вышла на работу",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 14:09:41 +0000",
+    "beijing": "2026-08-22 22:09",
+    "zh": "Лишенная родительских прав минчанка за 15 месяцев 261 раз не вышла на работу",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46520-2026",
+    "link": "https://chn.belta.by/society/view/-46520-2026/",
+    "ru": "",
+    "zh": "巴拉涅茨谈白俄罗斯国产步枪：“主权化”是军工发展的核心趋势",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 17:01:00 +0300",
+    "beijing": "2026-08-22 22:01"
+  },
+  {
+    "slug": "beloruski-vyigrali-estafetu-na-chempionate-mira-u15-po-sovremennomu-pyatiboryu-v-madride",
+    "link": "https://minsknews.by/beloruski-vyigrali-estafetu-na-chempionate-mira-u15-po-sovremennomu-pyatiboryu-v-madride/",
+    "ru": "Белоруски выиграли эстафету на чемпионате мира U15 по современному пятиборью в Мадриде",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 13:51:22 +0000",
+    "beijing": "2026-08-22 21:51",
+    "zh": "Белоруски выиграли эстафету на чемпионате мира U15 по современному пятиборью в Мадриде",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46519-2026",
+    "link": "https://chn.belta.by/society/view/-46519-2026/",
+    "ru": "",
+    "zh": "“土豆为媒传乡味，饼香作引话农桑”沃罗诺沃“白俄罗斯土豆饼”文化教育中心开幕",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:46:00 +0300",
+    "beijing": "2026-08-22 21:46"
+  },
+  {
+    "slug": "46518-2026",
+    "link": "https://chn.belta.by/politics/view/-46518-2026/",
+    "ru": "",
+    "zh": "白俄罗斯和哈萨克斯坦中央选举委员会正式签署合作备忘录",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:31:00 +0300",
+    "beijing": "2026-08-22 21:31"
+  },
+  {
+    "slug": "46515-2026",
+    "link": "https://chn.belta.by/society/view/-46515-2026/",
+    "ru": "",
+    "zh": "明斯克医生完成高难度下肢动脉重建手术",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:28:00 +0300",
+    "beijing": "2026-08-22 21:28"
+  },
+  {
+    "slug": "unikalnuyu-rekonstrukcziyu-arterij-vypolnili-minskie-vrachi",
+    "link": "https://minsknews.by/unikalnuyu-rekonstrukcziyu-arterij-vypolnili-minskie-vrachi/",
+    "ru": "Уникальную реконструкцию артерий выполнили минские врачи",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 13:27:02 +0000",
+    "beijing": "2026-08-22 21:27",
+    "zh": "Уникальную реконструкцию артерий выполнили минские врачи",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "otkryvaem-neizvestnyj-hajnan-tropicheskie-lesa-i-ih-unikalnye-obitateli",
+    "link": "https://minsknews.by/otkryvaem-neizvestnyj-hajnan-tropicheskie-lesa-i-ih-unikalnye-obitateli/",
+    "ru": "Открываем неизвестный Хайнань: тропические леса и их уникальные обитатели",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 13:05:30 +0000",
+    "beijing": "2026-08-22 21:05",
+    "zh": "Открываем неизвестный Хайнань: тропические леса и их уникальные обитатели",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46514-2026",
+    "link": "https://chn.belta.by/society/view/-46514-2026/",
+    "ru": "",
+    "zh": "白俄罗斯体操选手卡尔塔绍夫在欧锦赛青少年组中获得第五名",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 16:01:00 +0300",
+    "beijing": "2026-08-22 21:01"
+  },
+  {
+    "slug": "46517-2026",
+    "link": "https://chn.belta.by/society/view/-46517-2026/",
+    "ru": "",
+    "zh": "明斯克州各行业代表参观独立宫：感谢总统让我们的劳动成果进入国家殿堂",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 15:38:00 +0300",
+    "beijing": "2026-08-22 20:38"
+  },
+  {
+    "slug": "46513-2026",
+    "link": "https://chn.belta.by/society/view/-46513-2026/",
+    "ru": "",
+    "zh": "白俄罗斯选手斯塔霍维奇在花样滑冰青年大奖赛首站进入前五",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 15:35:00 +0300",
+    "beijing": "2026-08-22 20:35"
+  },
+  {
+    "slug": "ot-studenta-do-uchitelya-hirurga-i-prodavcza-pobesedovali-s-molodymi-speczialistam-o-pervo",
+    "link": "https://minsknews.by/ot-studenta-do-uchitelya-hirurga-i-prodavcza-pobesedovali-s-molodymi-speczialistam-o-pervom-gode-raboty/",
+    "ru": "От студента до учителя, хирурга и продавца: побеседовали с молодыми специалистами о первом годе работы",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 12:21:08 +0000",
+    "beijing": "2026-08-22 20:21",
+    "zh": "От студента до учителя, хирурга и продавца: побеседовали с молодыми специалистами о первом годе работы",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-belarusi-mogut-zapretit-reklamu-azartnyh-igr-v-seti",
+    "link": "https://minsknews.by/v-belarusi-mogut-zapretit-reklamu-azartnyh-igr-v-seti/",
+    "ru": "В Беларуси могут запретить рекламу азартных игр в Сети",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 12:00:14 +0000",
+    "beijing": "2026-08-22 20:00",
+    "zh": "В Беларуси могут запретить рекламу азартных игр в Сети",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46512-2026",
+    "link": "https://chn.belta.by/society/view/-46512-2026/",
+    "ru": "",
+    "zh": "“白俄罗斯核电站，和平原子能清洁能源”电动交通汽车拉力赛从明斯克出发前往奥斯特罗韦茨",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 15:00:00 +0300",
+    "beijing": "2026-08-22 20:00"
+  },
+  {
+    "slug": "u-zhitelya-stoliczy-nashli-svertok-s-gashishem-emu-grozit-vplot-do-pyati-let-lisheniya-svo",
+    "link": "https://minsknews.by/u-zhitelya-stoliczy-nashli-svertok-s-gashishem-emu-grozit-vplot-do-pyati-let-lisheniya-svobody/",
+    "ru": "У жителя столицы нашли сверток с гашишем — ему грозит вплоть до пяти лет лишения свободы",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 11:36:38 +0000",
+    "beijing": "2026-08-22 19:36",
+    "zh": "У жителя столицы нашли сверток с гашишем — ему грозит вплоть до пяти лет лишения свободы",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "85-46510-2026",
+    "link": "https://chn.belta.by/society/view/85-46510-2026/",
+    "ru": "",
+    "zh": "白俄罗斯项目“三分之一”将在圣彼得堡列宁格勒围困开始85周年之际展出",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 14:26:00 +0300",
+    "beijing": "2026-08-22 19:26"
+  },
+  {
+    "slug": "nahodyashhijsya-na-obsluzhivanii-zhkh-zhilfond-pervomajskogo-rajona-gotov-k-otopitelnomu-s",
+    "link": "https://minsknews.by/nahodyashhijsya-na-obsluzhivanii-zhkh-zhilfond-pervomajskogo-rajona-gotov-k-otopitelnomu-sezonu/",
+    "ru": "Находящийся на обслуживании ЖКХ жилфонд Первомайского района готов к отопительному сезону",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 11:13:03 +0000",
+    "beijing": "2026-08-22 19:13",
+    "zh": "Находящийся на обслуживании ЖКХ жилфонд Первомайского района готов к отопительному сезону",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kakie-voprosy-v-hode-pryamoj-linii-zadali-zhiteli-pervomajskogo-rajona",
+    "link": "https://minsknews.by/kakie-voprosy-v-hode-pryamoj-linii-zadali-zhiteli-pervomajskogo-rajona/",
+    "ru": "Какие вопросы в ходе прямой линии задали жители Первомайского района",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 11:03:42 +0000",
+    "beijing": "2026-08-22 19:03",
+    "zh": "Какие вопросы в ходе прямой линии задали жители Первомайского района",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46511-2026",
+    "link": "https://chn.belta.by/politics/view/-46511-2026/",
+    "ru": "",
+    "zh": "分析家：印度新发展战略或将成为与白俄罗斯合作路线图的范本",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 14:00:00 +0300",
+    "beijing": "2026-08-22 19:00"
+  },
+  {
+    "slug": "minchanin-ukral-iz-magazina-fen-za-chto-poluchil-13-yu-sudimost",
+    "link": "https://minsknews.by/minchanin-ukral-iz-magazina-fen-za-chto-poluchil-13-yu-sudimost/",
+    "ru": "Минчанин украл из магазина фен, за что получил 13-ю судимость",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 10:49:05 +0000",
+    "beijing": "2026-08-22 18:49",
+    "zh": "Минчанин украл из магазина фен, за что получил 13-ю судимость",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "razrosshiesya-kusty-i-kapremont-vo-frunzenskom-proshla-pryamaya-liniya",
+    "link": "https://minsknews.by/razrosshiesya-kusty-i-kapremont-vo-frunzenskom-proshla-pryamaya-liniya/",
+    "ru": "Разросшиеся кусты и капремонт: во Фрунзенском прошла прямая линия",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 10:44:38 +0000",
+    "beijing": "2026-08-22 18:44",
+    "zh": "Разросшиеся кусты и капремонт: во Фрунзенском прошла прямая линия",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "15-46509-2026",
+    "link": "https://chn.belta.by/economics/view/15-46509-2026/",
+    "ru": "",
+    "zh": "今年白俄罗斯电动汽车数量增长1.5万辆",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 13:44:00 +0300",
+    "beijing": "2026-08-22 18:44"
+  },
+  {
+    "slug": "speczialist-po-zdorovyu-razveyala-mif-o-vitaminnoj-podushke-na-zimu",
+    "link": "https://minsknews.by/speczialist-po-zdorovyu-razveyala-mif-o-vitaminnoj-podushke-na-zimu/",
+    "ru": "Специалист по здоровью развеяла миф о «витаминной подушке» на зиму",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 10:31:38 +0000",
+    "beijing": "2026-08-22 18:31",
+    "zh": "Специалист по здоровью развеяла миф о «витаминной подушке» на зиму",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "nastavniki-i-podderzhka-kollektiva-kak-molodye-speczialisty-mzsh-osvaivayutsya-na-novyh-ra",
+    "link": "https://minsknews.by/nastavniki-i-podderzhka-kollektiva-kak-molodye-speczialisty-mzsh-osvaivayutsya-na-novyh-rabochih-mestah/",
+    "ru": "Наставники и поддержка коллектива. Как молодые специалисты МЗШ осваиваются на новых рабочих местах",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 10:13:34 +0000",
+    "beijing": "2026-08-22 18:13",
+    "zh": "Наставники и поддержка коллектива. Как молодые специалисты МЗШ осваиваются на новых рабочих местах",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "46508-2026",
+    "link": "https://chn.belta.by/economics/view/-46508-2026/",
+    "ru": "",
+    "zh": "白俄罗斯企业与俄国家原子能公司合作项目披露：电动矿车、牵引电池、增材制造中心",
+    "source": "belta",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 13:12:00 +0300",
+    "beijing": "2026-08-22 18:12"
+  },
+  {
+    "slug": "belorusskij-park-elektromobilej-vyros-na-15-tys-mashin-s-nachala-goda",
+    "link": "https://minsknews.by/belorusskij-park-elektromobilej-vyros-na-15-tys-mashin-s-nachala-goda/",
+    "ru": "Белорусский парк электромобилей вырос на 15 тыс. машин с начала года",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 09:51:29 +0000",
+    "beijing": "2026-08-22 17:51",
+    "zh": "Белорусский парк электромобилей вырос на 15 тыс. машин с начала года",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kartofel-po-79-kopeek-i-kabachki-za-1-byn-chto-i-pochem-prodayut-na-komarovke",
+    "link": "https://minsknews.by/kartofel-po-79-kopeek-i-kabachki-za-1-byn-chto-i-pochem-prodayut-na-komarovke/",
+    "ru": "Картофель по 79 копеек и кабачки за 1 BYN: что и почем продают на Комаровке",
+    "cat": "news",
+    "isodate": "Sat, 22 Aug 2026 09:33:12 +0000",
+    "beijing": "2026-08-22 17:33",
+    "zh": "Картофель по 79 копеек и кабачки за 1 BYN: что и почем продают на Комаровке",
+    "sum": "",
+    "body": []
+  },
+  {
     "slug": "po-zayavkam-gorozhan-minskaya-molodezh-blagoustraivayut-stolichnye-dvory",
     "link": "https://minsknews.by/po-zayavkam-gorozhan-minskaya-molodezh-blagoustraivayut-stolichnye-dvory/",
     "ru": "По заявкам горожан: минская молодежь благоустраивает столичные дворы",
