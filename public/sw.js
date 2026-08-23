@@ -1,12 +1,13 @@
-var CACHE = 'bkcn-v7';
+var CACHE = 'bkcn-v9';
 var ASSETS = [
   './',
   './index.html',
-  './style.v5.css',
+  './style.css',
   './life.html',
   './manifest.json',
   './icon.svg',
-  './icon-maskable.svg'
+  './icon-maskable.svg',
+  './clerk-auth.js'
 ];
 
 self.addEventListener('install', function (e) {

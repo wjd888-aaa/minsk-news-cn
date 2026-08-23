@@ -9,12 +9,33 @@ const FETCH_INTERVAL_MS = 23 * 60 * 60 * 1000;
 const MAX_ITEMS = 120;
 const MAX_FULLTEXT = 20;
 const HOMEPAGE_RECENT = 60;
+const FREE_PER_SECTION = 5;
+
+const LOCK_ATTR = ' data-lock="1"';
+const LOCK_FLAG_SCRIPT = `<script>window.BK_LOCK_PAGE=1</scr` + `ipt>`;
+
+function lockAttr(i) {
+  return i >= FREE_PER_SECTION ? LOCK_ATTR : '';
+}
+
+function freeSlugsOf(records) {
+  const seen = {};
+  const free = new Set();
+  for (const r of records) {
+    const c = r.cat || 'news';
+    seen[c] = (seen[c] || 0) + 1;
+    if (seen[c] <= FREE_PER_SECTION) free.add(r.slug);
+  }
+  return free;
+}
 
 const PARENT_LINK =
   `<div class="topbar"><a href="https://minsktc.me" target="_blank" rel="noopener noreferrer">明斯克同城闲置 minsktc.me ↗</a>` +
-  `<a id="bkUserLink" href="login.html" style="float:right;color:#b33a2e;font-weight:600;text-decoration:none">登录 / 注册</a>` +
+  `<a id="bkUserLink" href="/login.html" style="float:right;color:#b33a2e;font-weight:600;text-decoration:none">登录 / 注册</a>` +
   `<script>(function(){try{var u=JSON.parse(localStorage.getItem('bk_user')||'null');if(u&&u.n){var el=document.getElementById('bkUserLink');if(el)el.textContent='👤 '+(u.n.length>10?u.n.slice(0,10)+'…':u.n);}}catch(e){}})();` +
-  `</scr` + `ipt></div>`;
+  `</scr` + `ipt></div>` +
+  `<script src="/clerk-auth.js"></scr` + `ipt>` +
+  `<script>window.BKAuth&&window.BKAuth.locks&&window.BKAuth.locks()</scr` + `ipt>`;
 
 const EVENT_KEYS = [
   'выставк', 'концерт', 'фестивал', 'спектакл', 'форум', 'ярмарк', 'премьер',
@@ -1315,7 +1336,7 @@ async function fetchFastfoods() {
   return items;
 }
 
-function articlePageHtml(rec) {
+function articlePageHtml(rec, isFree) {
   const isBelta = rec.source === 'belta';
   const origLabel = isBelta ? '查看中文原文 ↗' : '查看俄语原文 ↗';
   let bodyHtml;
@@ -1338,6 +1359,7 @@ function articlePageHtml(rec) {
 </head>
 <body>
 ${PARENT_LINK}
+${isFree === false ? LOCK_FLAG_SCRIPT : ''}
 <nav class="crumb"><a href="../index.html">← 返回首页</a></nav>
 <header class="site-head article-head">
   <h1>${escapeHtml(rec.zh)}</h1>
@@ -1364,21 +1386,23 @@ function catBadge(cat) {
 }
 
 function lifePageHtml(life) {
+  let lifeIdx = 0;
   const secs = (life || [])
     .map(
       (s) => `<section class="life-sec">
   <h2>${s.icon ? s.icon + ' ' : ''}${escapeHtml(s.title)}</h2>
   <ul class="life-list">
     ${(s.items || [])
-      .map(
-        (it) => `<li>
+      .map((it) => {
+        const lock = lockAttr(lifeIdx++);
+        return `<li${lock}>
       <div class="life-name">${escapeHtml(it.name)}${it.phone ? ` <span class="life-phone">${escapeHtml(it.phone)}</span>` : ''}</div>
       ${it.img ? `<img class="life-img" src="${escapeHtml(it.img)}" alt="${escapeHtml(it.name)}" loading="lazy">` : ''}
       ${it.addr ? `<div class="life-addr">📍 ${escapeHtml(it.addr)}</div>` : ''}
       ${it.note ? `<div class="life-note">${escapeHtml(it.note).split('\n').join('<br>')}</div>` : ''}
       ${it.link ? `<div class="life-link"><a href="${escapeHtml(it.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(it.link.replace(/^https?:\/\//, ''))} ↗</a></div>` : ''}
-    </li>`
-      )
+    </li>`;
+      })
       .join('\n')}
   </ul>
 </section>`
@@ -1455,9 +1479,10 @@ function homepageHtml(records, deals, fastfoods, widgets) {
     <span class="deals-n">🍔 ${fastfoods.length} deals</span>
   </div>
 </div>`;
+  let ffIdx = 0;
   const ffCard = (d) => {
     const dPeriod = ruDateToNumeric(d.period);
-    return `<article class="card deal ff-deal" data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
+    return `<article class="card deal ff-deal"${lockAttr(ffIdx++)} data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-chip ff-store-chip">${ffIcon(d.store) ? `<img class="chip-ico" src="${ffIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
@@ -1512,9 +1537,9 @@ ${dealBar}
 <div class="deal-empty" hidden>该超市暂无折扣信息</div>
 ${deals
   .map(
-    (d) => {
+    (d, i) => {
     const dPeriod = ruDateToNumeric(d.period);
-    return `<article class="card deal" data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
+    return `<article class="card deal"${lockAttr(i)} data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-chip">${storeIcon(d.store) ? `<img class="chip-ico" src="${storeIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
@@ -1531,9 +1556,15 @@ ${deals
   )
   .join('\n')}
 </div>`;
+  const catCount = {};
+  const catIdx = (c) => {
+    const k = c.cat || 'news';
+    catCount[k] = (catCount[k] || 0) + 1;
+    return catCount[k] - 1;
+  };
   const cards = recent
     .map(
-      (c) => `<article class="card" data-cat="${c.cat || 'news'}" title="${escapeHtml((c.ru || c.zh).slice(0, 160))}">
+      (c) => `<article class="card"${lockAttr(catIdx(c))} data-cat="${c.cat || 'news'}" title="${escapeHtml((c.ru || c.zh).slice(0, 160))}">
   <h2 class="ttl"><a href="article/${encodeURIComponent(c.slug)}.html">${escapeHtml(c.zh)}</a></h2>
   <span class="ru-src" hidden>${escapeHtml(c.ru)}</span>
   ${(c.sum || '').length > 1 ? `<p class="sum">${escapeHtml(c.sum.slice(0, 160))} <a class="more" href="article/${encodeURIComponent(c.slug)}.html">阅读全文 ↗</a></p>` : ''}
@@ -1546,7 +1577,7 @@ ${deals
   let olderHtml = '';
   if (older.length) {
     const list = older
-      .map((o) => `<li class="arch-item" data-cat="${o.cat || 'news'}">${catBadge(o.cat)} <a href="article/${encodeURIComponent(o.slug)}.html">${escapeHtml(o.zh)}</a> <span class="old-date">${escapeHtml(o.beijing)}</span></li>`)
+      .map((o) => `<li class="arch-item"${lockAttr(catIdx(o))} data-cat="${o.cat || 'news'}">${catBadge(o.cat)} <a href="article/${encodeURIComponent(o.slug)}.html">${escapeHtml(o.zh)}</a> <span class="old-date">${escapeHtml(o.beijing)}</span></li>`)
       .join('\n');
     olderHtml = `<details class="archive"><summary>更早的新闻（${records.length - recent.length} 篇）</summary>
 <ul>${list}</ul></details>`;
@@ -1997,9 +2028,10 @@ async function buildSite(records, deals, fastfoods) {
   }
   writeFileSync(path.join(OUT_DIR, 'index.html'), homepageHtml(records, deals, fastfoods || [], widgets), 'utf8');
   writeFileSync(path.join(OUT_DIR, 'life.html'), lifePageHtml(readJson(LIFE_FILE, [])), 'utf8');
+  const freeSlugs = freeSlugsOf(records);
   for (const rec of records) {
     try {
-      writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
+      writeFileSync(path.join(OUT_DIR, 'article', `${rec.slug}.html`), articlePageHtml(rec, freeSlugs.has(rec.slug)), 'utf8');
     } catch {
       continue;
     }
