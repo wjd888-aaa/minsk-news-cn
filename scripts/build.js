@@ -34,7 +34,7 @@ const PARENT_LINK =
   `<a id="bkUserLink" href="/login.html" style="float:right;color:#b33a2e;font-weight:600;text-decoration:none">登录 / 注册</a>` +
   `<script>(function(){try{var u=JSON.parse(localStorage.getItem('bk_user')||'null');if(u&&u.n){var el=document.getElementById('bkUserLink');if(el)el.textContent='👤 '+(u.n.length>10?u.n.slice(0,10)+'…':u.n);}}catch(e){}})();` +
   `</scr` + `ipt></div>` +
-  `<script src="/clerk-auth.js?v=v15"></scr` + `ipt>` +
+  `<script src="/clerk-auth.js?v=v16"></scr` + `ipt>` +
   `<script>window.BKAuth&&window.BKAuth.locks&&window.BKAuth.locks()</scr` + `ipt>`;
 
 const EVENT_KEYS = [
