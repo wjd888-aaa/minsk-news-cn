@@ -384,36 +384,36 @@ function slugFromUrl(url) {
   return slug || 'article-' + Math.random().toString(36).slice(2, 8);
 }
 
+function divBlockAt(html, tagStart) {
+  let depth = 0;
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = tagStart;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    if (t[0][1] === '/') { depth--; if (depth === 0) return { start: tagStart, end: tagRe.lastIndex }; }
+    else depth++;
+  }
+  return { start: tagStart, end: html.length };
+}
+
 function findDivBlock(html, classPart) {
   const openRe = new RegExp(`<div\\b[^>]*class="[^"]*${classPart}[^"]*"[^>]*>`, 'i');
   const m = openRe.exec(html);
   if (!m) return null;
-  let depth = 0;
-  const tagRe = /<\/?div\b[^>]*>/gi;
-  tagRe.lastIndex = m.index;
-  let t;
-  while ((t = tagRe.exec(html))) {
-    if (t[0][1] === '/') { depth--; if (depth === 0) return { start: m.index, end: tagRe.lastIndex }; }
-    else depth++;
-  }
-  return { start: m.index, end: html.length };
+  return divBlockAt(html, m.index);
 }
 
 function articleContentRegion(html) {
+  const h1 = html.search(/<h1[\s>]/i);
+  const anchor = h1 > -1 ? h1 : 0;
+  const s1 = html.indexOf('class="page-content"', anchor);
+  if (s1 > -1) return divBlockAt(html, html.lastIndexOf('<div', s1));
   const blk = findDivBlock(html, 'news-whole-post');
   if (blk) return blk;
-  const s1 = html.indexOf('class="page-content"');
-  if (s1 < 0) return null;
-  let s2 = html.indexOf('class="page-content"', s1 + 30);
-  let end = html.length;
-  if (s2 > s1) end = s2;
-  else {
-    const a = html.indexOf('<aside', s1);
-    const f = html.indexOf('<footer', s1);
-    const candidates = [a, f].filter((x) => x > s1);
-    if (candidates.length) end = Math.min(...candidates);
-  }
-  return { start: s1, end };
+  const a = html.indexOf('class="page-content"');
+  if (a < 0) return null;
+  const s2 = html.indexOf('class="page-content"', a + 30);
+  return { start: a, end: s2 > a ? s2 : html.length };
 }
 
 function extractArticleBody(html) {
@@ -446,8 +446,13 @@ function beltaContentRegion(html) {
 
 function extractArticleImages(html) {
   const region = articleContentRegion(html);
-  const seg = region ? html.slice(region.start, region.end) : html;
-  return extractImageUrls(seg);
+  const h1 = html.search(/<h1[\s>]/i);
+  const from = h1 > -1 ? h1 : (region ? region.start : 0);
+  let to = region ? region.end : html.length;
+  const zone = html.slice(from, to);
+  const stop = zone.search(/Читайте также|Подписывайтесь|Наш канал|Смотрите также/i);
+  if (stop > -1) to = from + stop;
+  return extractImageUrls(html.slice(from, to));
 }
 
 function extractBeltaImages(html) {

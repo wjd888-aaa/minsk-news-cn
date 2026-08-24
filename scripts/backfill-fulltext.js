@@ -62,6 +62,52 @@ function findDivBlock(html, classPart) {
   }
   return { start: m.index, end: html.length };
 }
+function divBlockAt(html, tagStart) {
+  let depth = 0;
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = tagStart;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    if (t[0][1] === '/') { depth--; if (depth === 0) return { start: tagStart, end: tagRe.lastIndex }; }
+    else depth++;
+  }
+  return { start: tagStart, end: html.length };
+}
+function minskRegion(html) {
+  const h1 = html.search(/<h1[\s>]/i);
+  const anchor = h1 > -1 ? h1 : 0;
+  const s1 = html.indexOf('class="page-content"', anchor);
+  if (s1 > -1) return divBlockAt(html, html.lastIndexOf('<div', s1));
+  return findDivBlock(html, 'news-whole-post');
+}
+function extractMinskBody(html) {
+  const region = minskRegion(html);
+  if (!region) return [];
+  const seg = html.slice(region.start, region.end);
+  const STOP = /Читайте также|Подписывайтесь|Наш канал|Смотрите также/i;
+  const paras = [];
+  const re = /<p[^>]*>([\s\S]*?)<\/p>/g;
+  let m;
+  while ((m = re.exec(seg))) {
+    const t = stripHtml(m[1]);
+    if (t.length > 15) {
+      if (STOP.test(t)) break;
+      paras.push(t);
+    }
+    if (paras.length >= 40) break;
+  }
+  return paras;
+}
+function extractMinskImages(html) {
+  const h1 = html.search(/<h1[\s>]/i);
+  const region = minskRegion(html);
+  const from = h1 > -1 ? h1 : (region ? region.start : 0);
+  let to = region ? region.end : html.length;
+  const zone = html.slice(from, to);
+  const stop = zone.search(/Читайте также|Подписывайтесь|Наш канал|Смотрите также/i);
+  if (stop > -1) to = from + stop;
+  return extractImageUrls(html.slice(from, to));
+}
 function extractImageUrls(seg) {
   const out = [];
   const re = /<img[^>]+src=["']([^"']+)["']/gi;
@@ -108,28 +154,6 @@ async function downloadArticleImages(urls, slug, base) {
     } catch { continue; }
   }
   return local;
-}
-function extractMinskBody(html) {
-  const blk = findDivBlock(html, 'news-whole-post');
-  if (!blk) return [];
-  const seg = html.slice(blk.start, blk.end);
-  const STOP = /Читайте также|Подписывайтесь|Наш канал|Смотрите также/i;
-  const paras = [];
-  const re = /<p[^>]*>([\s\S]*?)<\/p>/g;
-  let m;
-  while ((m = re.exec(seg))) {
-    const t = stripHtml(m[1]);
-    if (t.length > 15) {
-      if (STOP.test(t)) break;
-      paras.push(t);
-    }
-    if (paras.length >= 40) break;
-  }
-  return paras;
-}
-function extractMinskImages(html) {
-  const blk = findDivBlock(html, 'news-whole-post');
-  return extractImageUrls(blk ? html.slice(blk.start, blk.end) : html);
 }
 function extractBeltaBody(html) {
   const blk = findDivBlock(html, 'js-mediator-article');
