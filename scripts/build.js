@@ -1,4 +1,5 @@
 ﻿const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync } = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 
 const RSS_URL = 'https://minsknews.by/feed/';
@@ -444,6 +445,7 @@ function beltaContentRegion(html) {
   return { start: s1, end: ends.length ? Math.min(...ends) : html.length };
 }
 
+// minsknews: 只收 WordPress 媒体库图（wp-image-类名 = 文章自己的图），h1到正文区，相关推荐处截断
 function extractArticleImages(html) {
   const region = articleContentRegion(html);
   const h1 = html.search(/<h1[\s>]/i);
@@ -452,15 +454,33 @@ function extractArticleImages(html) {
   const zone = html.slice(from, to);
   const stop = zone.search(/Читайте также|Подписывайтесь|Наш канал|Смотрите также/i);
   if (stop > -1) to = from + stop;
-  return extractImageUrls(html.slice(from, to));
+  const seg = html.slice(from, to);
+  const out = [];
+  for (const m of seg.matchAll(/<img[^>]*wp-image-\d+[^>]*>/gi)) {
+    const src = (m[0].match(/src=["']([^"']+)["']/i) || [])[1];
+    if (isJunkImageUrl(src)) continue;
+    if (out.includes(src)) continue;
+    out.push(src);
+    if (out.length >= 6) break;
+  }
+  return out;
 }
 
+// belta: 只收正文容器(js-mediator-article)内部的图
 function extractBeltaImages(html) {
-  const region = beltaContentRegion(html);
-  let seg = region ? html.slice(region.start, region.end) : '';
   const blk = findDivBlock(html, 'js-mediator-article');
-  if (blk) seg += '\n' + html.slice(blk.start, blk.end);
-  return extractImageUrls(seg || html);
+  if (!blk) return [];
+  return extractImageUrls(html.slice(blk.start, blk.end));
+}
+
+function isJunkImageUrl(u) {
+  if (!u) return true;
+  if (/^data:/i.test(u) || /\.svg(\?|$)/i.test(u)) return true;
+  if (/yandex|mc\.|pixel|tracker|informer|top-fwz1|mail\.ru/i.test(u)) return true;
+  if (/banner|adfox|wpadcenter|adv\b/i.test(u)) return true;
+  if (/logo|icon|favicon|avatar|desimages|dzen|google-logo|t-me|subscribe|social|share/i.test(u)) return true;
+  if (/-80x80|-50x50|-150x130|\.thumbs\//i.test(u)) return true;
+  return false;
 }
 
 function extractImageUrls(seg) {
@@ -469,11 +489,7 @@ function extractImageUrls(seg) {
   let m;
   while ((m = re.exec(seg)) && out.length < 6) {
     const u = (m[1] || '').trim();
-    if (!u || /^data:/i.test(u) || /\.svg(\?|$)/i.test(u)) continue;
-    if (/yandex|mc\.|pixel|tracker|informer|top-fwz1|mail\.ru/i.test(u)) continue;
-    if (/banner|adfox|wpadcenter|adv\b/i.test(u)) continue;
-    if (/logo|icon|favicon|avatar|desimages|dzen|google-logo|t-me|subscribe|social|share/i.test(u)) continue;
-    if (/-80x80|-50x50|-150x130|\.thumbs\//i.test(u)) continue;
+    if (isJunkImageUrl(u)) continue;
     if (out.includes(u)) continue;
     out.push(u);
   }
@@ -489,10 +505,13 @@ function resolveUrl(u, base) {
   }
 }
 
+// 图片下载 v2：8KB体积门槛 + 内容哈希账本(单次构建内跨文章去重) + 返回来源URL供追溯
+const imgLedger = new Set();
 async function downloadArticleImages(urls, slug, base) {
   const dir = path.join(ART_DIR, 'imgs', slug);
   mkdirSync(dir, { recursive: true });
   const local = [];
+  const srcs = [];
   let i = 0;
   let totalBytes = 0;
   for (const u of urls) {
@@ -503,7 +522,11 @@ async function downloadArticleImages(urls, slug, base) {
       const res = await fetch(abs, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' } });
       if (!res.ok) continue;
       const buf = Buffer.from(await res.arrayBuffer());
-      if (buf.length < 500 || totalBytes + buf.length > 4 * 1024 * 1024) continue;
+      if (buf.length < 8 * 1024) continue;
+      if (totalBytes + buf.length > 4 * 1024 * 1024) continue;
+      const h = crypto.createHash('md5').update(buf).digest('hex');
+      if (imgLedger.has(h)) continue;
+      imgLedger.add(h);
       const ct = res.headers.get('content-type') || '';
       let ext = '.jpg';
       if (ct.includes('png')) ext = '.png';
@@ -512,12 +535,11 @@ async function downloadArticleImages(urls, slug, base) {
       writeFileSync(path.join(dir, `img${i}${ext}`), buf);
       totalBytes += buf.length;
       local.push(`../imgs/${slug}/img${i}${ext}`);
+      srcs.push(abs);
       await sleep(150);
-    } catch {
-      continue;
-    }
+    } catch { continue; }
   }
-  return local;
+  return { local, srcs };
 }
 
 function extractBeltaBody(html) {
@@ -2042,7 +2064,9 @@ async function fetchNews() {
         const html = await pr.text();
         if (rec.source === 'belta') {
           rec.body = extractBeltaBody(html).slice(0, 30);
-          rec.images = await downloadArticleImages(extractBeltaImages(html), rec.slug, rec.link);
+          const dl = await downloadArticleImages(extractBeltaImages(html), rec.slug, rec.link);
+          rec.images = dl.local;
+          rec.image_srcs = dl.srcs;
           if (rec.body.length) fulltextDone++;
           beltaDone++;
           console.log(`done (${rec.body.length} 段, ${rec.images.length} 图)`);
@@ -2054,7 +2078,9 @@ async function fetchNews() {
             if (zh) rec.body.push(zh);
             await sleep(200 + Math.random() * 200);
           }
-          rec.images = await downloadArticleImages(extractArticleImages(html), rec.slug, rec.link);
+          const dl2 = await downloadArticleImages(extractArticleImages(html), rec.slug, rec.link);
+          rec.images = dl2.local;
+          rec.image_srcs = dl2.srcs;
           if (rec.body.length) fulltextDone++;
           console.log(`done (${rec.body.length} 段, ${rec.images.length} 图)`);
         }

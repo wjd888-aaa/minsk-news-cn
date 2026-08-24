@@ -204,10 +204,14 @@ async function main() {
       let body = [], imgs = [];
       if (r.source === 'belta') {
         body = extractBeltaBody(html);
-        imgs = await downloadArticleImages(beltaImages(html), r.slug, r.link);
+        const dl = await downloadArticleImages(beltaImages(html), r.slug, r.link);
+        imgs = dl.local;
+        r.image_srcs = dl.srcs;
       } else {
         const ruParas = extractMinskBody(html);
-        imgs = await downloadArticleImages(extractMinskImages(html), r.slug, r.link);
+        const dl2 = await downloadArticleImages(extractMinskImages(html), r.slug, r.link);
+        imgs = dl2.local;
+        r.image_srcs = dl2.srcs;
         for (const p of ruParas) {
           const zh = await translateChunk(p);
           if (zh) body.push(zh);
