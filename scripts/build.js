@@ -1309,6 +1309,7 @@ async function fetchDeals() {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   const deals = [...pageItems, ...tgItems]
     .filter((d) => !isDealExpired(d) && isRealDeal(d))
+    .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0))
     .slice(0, DEAL_MAX);
   writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
   return deals;
@@ -1421,6 +1422,7 @@ async function fetchFastfoods() {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   const items = [...pageItems, ...tgItems]
     .filter((d) => !isDealExpired(d) && isRealDeal(d))
+    .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0))
     .slice(0, FASTFOOD_MAX);
   writeFileSync(FASTFOODS_FILE, JSON.stringify(items, null, 2), 'utf8');
   return items;
@@ -1567,12 +1569,14 @@ function homepageHtml(records, deals, fastfoods, widgets) {
   </div>
   <div class="deal-sort">
     <span class="deals-n">🍔 ${fastfoods.length} deals</span>
+    <button class="sbtn active" data-sort="time" type="button">Newest</button>
+    <button class="sbtn" data-sort="price" type="button">Price (Low→High)</button>
   </div>
 </div>`;
   let ffIdx = 0;
   const ffCard = (d) => {
     const dPeriod = ruDateToNumeric(d.period);
-    return `<article class="card deal ff-deal"${lockAttr(ffIdx++)} data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
+    return `<article class="card deal ff-deal"${lockAttr(ffIdx++)} data-cat="ff" data-ffstore="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-time="${escapeHtml(d.date || '')}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-chip ff-store-chip">${ffIcon(d.store) ? `<img class="chip-ico" src="${ffIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
@@ -1587,19 +1591,6 @@ function homepageHtml(records, deals, fastfoods, widgets) {
   <div class="meta deal-actions"><a href="${escapeHtml(d.link)}" target="_blank" rel="noopener noreferrer">原文 ↗</a></div>
 </article>`;
   };
-  const ffGroupOf = (s) => {
-    const list = fastfoods.filter((d) => d.store === s);
-    if (!list.length) return '';
-    return `<section class="ff-group" data-ffgroup="${escapeHtml(s)}">
-<h3 class="ff-group-h">${ffIcon(s) ? `<img class="chip-ico" src="${ffIcon(s)}" alt="" loading="lazy">` : ''}${escapeHtml(ffEn(s))}<b>${list.length}</b></h3>
-${list.map(ffCard).join('\n')}
-</section>`;
-  };
-  const ffGroups = [...ALL_FASTFOOD]
-    .map((s) => ({ s, n: fastfoods.filter((d) => d.store === s).length }))
-    .sort((a, b) => b.n - a.n)
-    .map((o) => ffGroupOf(o.s))
-    .join('\n');
   const fastfoodCards = `<section class="ff-section">
 <div class="ff-title">
   <h2>🍔 明斯克快餐折扣</h2>
@@ -1607,7 +1598,11 @@ ${list.map(ffCard).join('\n')}
 <div class="deal-feed ff-feed">
 ${fastfoodBar}
 <div class="deal-empty" hidden>该快餐品牌暂无折扣信息</div>
-${ffGroups}
+${fastfoods
+    .slice()
+    .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0))
+    .map(ffCard)
+    .join('\n')}
 </div>
 </section>`;
   const dealBar = `<div class="deals-bar">
@@ -1629,7 +1624,7 @@ ${deals
   .map(
     (d, i) => {
     const dPeriod = ruDateToNumeric(d.period);
-    return `<article class="card deal"${lockAttr(i)} data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
+    return `<article class="card deal"${lockAttr(i)} data-cat="deal" data-store="${escapeHtml(d.store)}" data-price="${d.price != null ? d.price : ''}" data-time="${escapeHtml(d.date || '')}" data-key="${escapeHtml(d.user + '/' + d.id)}" title="${escapeHtml((dPeriod ? dPeriod + ' · ' : '') + d.text.slice(0, 160))}">
   ${d.photo ? `<img class="deal-img" src="${escapeHtml(d.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}
   <div class="deal-head"><span class="store-chip">${storeIcon(d.store) ? `<img class="chip-ico" src="${storeIcon(d.store)}" alt="" loading="lazy">` : ''}${escapeHtml(enStore(d.store))}</span> <span class="mtime">● ${escapeHtml(dPeriod || d.beijing + '（北京时间）')}</span></div>
   ${d.price != null
@@ -1790,32 +1785,31 @@ ${olderHtml}
       c.style.display = ok ? '' : 'none';
       if (ok) vis++;
     });
-    ffFeed.querySelectorAll('.ff-group').forEach(function (g) {
-      var any = Array.prototype.some.call(g.querySelectorAll('.ff-deal'), function (c) {
-        return c.style.display !== 'none';
-      });
-      g.style.display = any ? '' : 'none';
-    });
     var empty = ffFeed.querySelector('.deal-empty');
     if (empty) empty.hidden = vis !== 0;
     ffFeed.style.display = vis ? '' : 'none';
   }
   var origSuper = origOrder.filter(function (el) { return !el.classList.contains('ff-deal'); });
-  function sortDeals() {
-    if (!feed) return;
-    var list;
-    if (sortMode === 'price') {
-      list = origSuper.slice().sort(function (a, b) {
+  var ffEls = origOrder.filter(function (el) { return el.classList.contains('ff-deal'); });
+  function sortList(mode, els) {
+    if (mode === 'price') {
+      return els.slice().sort(function (a, b) {
         var pa = parseFloat(a.getAttribute('data-price') || '');
         var pb = parseFloat(b.getAttribute('data-price') || '');
         pa = isNaN(pa) ? 1e12 : pa;
         pb = isNaN(pb) ? 1e12 : pb;
         return pa - pb;
       });
-    } else {
-      list = origSuper.slice();
     }
-    list.forEach(function (el) { feed.appendChild(el); });
+    return els.slice().sort(function (a, b) {
+      var ta = Date.parse(a.getAttribute('data-time') || '') || 0;
+      var tb = Date.parse(b.getAttribute('data-time') || '') || 0;
+      return tb - ta;
+    });
+  }
+  function sortDeals() {
+    if (feed) sortList(sortMode, origSuper).forEach(function (el) { feed.appendChild(el); });
+    if (ffFeed) sortList(sortMode, ffEls).forEach(function (el) { ffFeed.appendChild(el); });
   }
   function apply() {
     var active = document.querySelector('.tab.active');
@@ -1956,6 +1950,7 @@ ${olderHtml}
     }
   });
   renderFavs();
+  apply();
   refreshDealButtons();
   if (window.addEventListener) window.addEventListener('load', refreshDealButtons);
   if (input) {
@@ -2192,7 +2187,11 @@ async function main() {
   console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newCount} 篇（全文 ${fulltextDone} 篇），折扣 ${deals.length} 条，快餐 ${fastfoods.length} 条。`);
 }
 
-main().catch((e) => {
-  console.error('BUILD ERROR:', e.message);
-  process.exit(1);
-});
+module.exports = { buildSite };
+
+if (require.main === module) {
+  main().catch((e) => {
+    console.error('BUILD ERROR:', e.message);
+    process.exit(1);
+  });
+}
