@@ -1702,6 +1702,24 @@ ${deals
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 ${PWA_HEAD}
 <link rel="stylesheet" href="style.${CSS_VERSION}.css">
+<script>
+(function () {
+  var m = (location.hash || '').match(/^#f=([a-zA-Z-]+)$/);
+  if (!m || m[1] === 'all') return;
+  var f = m[1];
+  document.documentElement.setAttribute('data-tabf', f);
+  var st = document.createElement('style');
+  st.textContent = '.deal-feed,.ff-section{display:none!important}'
+    + '[data-tabf="deal"] .deal-feed{display:block!important}'
+    + '[data-tabf="ff"] .ff-section{display:block!important}'
+    + '[data-tabf] .card.deal,[data-tabf] .card.ff-deal,[data-tabf] .arch-item{display:none!important}'
+    + '[data-tabf="deal"] .card.deal{display:block!important}'
+    + '[data-tabf="ff"] .card.ff-deal{display:block!important}'
+    + '[data-tabf] .card[data-cat="' + f + '"],[data-tabf] .arch-item[data-cat="' + f + '"]{display:block!important}'
+    + '[data-tabf] .arch-item[data-cat="' + f + '"]{display:list-item!important}';
+  document.head.appendChild(st);
+})();
+</script>
 </head>
 <body>
 ${PARENT_LINK}
@@ -1833,6 +1851,7 @@ ${olderHtml}
   function apply() {
     var active = document.querySelector('.tab.active');
     var f = active ? active.getAttribute('data-f') : 'all';
+    curF = f;
     var q = (input && input.value || '').toLowerCase().trim();
     var vis = 0;
     items.forEach(function (c) {
@@ -1917,6 +1936,7 @@ ${olderHtml}
         }
       } catch (err) {}
       apply();
+      saveScrollNow();
     });
   });
   chips.forEach(function (c) {
@@ -1976,17 +1996,38 @@ ${olderHtml}
       });
     }
   });
+  var initF = '';
   (function () {
     var m = (location.hash || '').match(/^#f=([a-zA-Z-]+)$/);
     if (!m) return;
-    var t0 = document.querySelector('.tab[data-f="' + m[1] + '"]');
+    initF = m[1];
+    var t0 = document.querySelector('.tab[data-f="' + initF + '"]');
     if (t0 && t0.tagName === 'BUTTON') {
       tabs.forEach(function (x) { x.classList.remove('active'); });
       t0.classList.add('active');
     }
+    document.documentElement.removeAttribute('data-tabf');
   })();
+  var curF = 'all';
+  var scrollT = null;
+  function saveScrollNow() {
+    try { sessionStorage.setItem('bkScroll', JSON.stringify({ f: curF, y: window.scrollY })); } catch (e) {}
+  }
+  window.addEventListener('scroll', function () {
+    if (scrollT) return;
+    scrollT = setTimeout(function () { scrollT = null; saveScrollNow(); }, 200);
+  }, { passive: true });
   renderFavs();
   apply();
+  if (initF) {
+    try {
+      var sv = JSON.parse(sessionStorage.getItem('bkScroll') || 'null');
+      if (sv && sv.f === initF && sv.y) {
+        window.scrollTo(0, sv.y);
+        window.addEventListener('load', function () { window.scrollTo(0, sv.y); });
+      }
+    } catch (e) {}
+  }
   refreshDealButtons();
   if (window.addEventListener) window.addEventListener('load', refreshDealButtons);
   if (input) {
