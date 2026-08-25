@@ -1466,6 +1466,25 @@ ${bodyHtml}
   <p>${isBelta ? '本文转载自白通社中文版（chn.belta.by），版权归原作者所有。' : '本文由机器自动翻译，可能存在不准确之处，仅供学习交流。'}</p>
   <p><a href="../index.html">← 返回首页</a></p>
 </footer>
+<script>
+(function () {
+  function fromHome() {
+    try {
+      if (!document.referrer) return false;
+      var r = new URL(document.referrer);
+      return r.origin === location.origin && (r.pathname === '/' || r.pathname.endsWith('/index.html'));
+    } catch (e) { return false; }
+  }
+  document.querySelectorAll('a[href="../index.html"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (fromHome() && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  });
+})();
+</script>
 ${PWA_REGISTER_DEEP}
 </body>
 </html>
@@ -1887,8 +1906,16 @@ ${olderHtml}
   tabs.forEach(function (t) {
     t.addEventListener('click', function (e) {
       if (t.tagName === 'A') return;
+      var wasActive = t.classList.contains('active');
       tabs.forEach(function (x) { x.classList.remove('active'); });
-      t.classList.add('active');
+      try {
+        if (wasActive) {
+          history.replaceState(null, '', location.pathname + location.search);
+        } else {
+          t.classList.add('active');
+          history.replaceState(null, '', '#f=' + t.getAttribute('data-f'));
+        }
+      } catch (err) {}
       apply();
     });
   });
@@ -1949,6 +1976,15 @@ ${olderHtml}
       });
     }
   });
+  (function () {
+    var m = (location.hash || '').match(/^#f=([a-zA-Z-]+)$/);
+    if (!m) return;
+    var t0 = document.querySelector('.tab[data-f="' + m[1] + '"]');
+    if (t0 && t0.tagName === 'BUTTON') {
+      tabs.forEach(function (x) { x.classList.remove('active'); });
+      t0.classList.add('active');
+    }
+  })();
   renderFavs();
   apply();
   refreshDealButtons();
