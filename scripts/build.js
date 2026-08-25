@@ -1899,7 +1899,6 @@ ${olderHtml}
         ffSection.style.display = 'none';
       }
     }
-    sortDeals();
     refreshDealButtons();
   }
   function refreshDealButtons() {
@@ -1969,6 +1968,8 @@ ${olderHtml}
       sbtns.forEach(function (x) { x.classList.remove('active'); });
       b.classList.add('active');
       apply();
+      sortDeals();
+      saveScrollNow();
     });
   });
   var favbtn = document.querySelector('.favbtn');
@@ -1996,6 +1997,7 @@ ${olderHtml}
       });
     }
   });
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   var initF = '';
   (function () {
     var m = (location.hash || '').match(/^#f=([a-zA-Z-]+)$/);
@@ -2010,6 +2012,7 @@ ${olderHtml}
   })();
   var curF = 'all';
   var scrollT = null;
+  var userMoved = false;
   function saveScrollNow() {
     try { sessionStorage.setItem('bkScroll', JSON.stringify({ f: curF, y: window.scrollY })); } catch (e) {}
   }
@@ -2017,17 +2020,22 @@ ${olderHtml}
     if (scrollT) return;
     scrollT = setTimeout(function () { scrollT = null; saveScrollNow(); }, 200);
   }, { passive: true });
-  renderFavs();
-  apply();
-  if (initF) {
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { userMoved = true; }, { passive: true });
+  });
+  function restoreScroll() {
+    if (userMoved) return;
     try {
       var sv = JSON.parse(sessionStorage.getItem('bkScroll') || 'null');
-      if (sv && sv.f === initF && sv.y) {
-        window.scrollTo(0, sv.y);
-        window.addEventListener('load', function () { window.scrollTo(0, sv.y); });
-      }
+      if (sv && sv.f === curF && sv.y) window.scrollTo(0, sv.y);
     } catch (e) {}
   }
+  renderFavs();
+  apply();
+  restoreScroll();
+  window.addEventListener('load', restoreScroll);
+  setTimeout(restoreScroll, 800);
+  setTimeout(restoreScroll, 2000);
   refreshDealButtons();
   if (window.addEventListener) window.addEventListener('load', refreshDealButtons);
   if (input) {
