@@ -4,8 +4,8 @@
     "id": "kazdyi-ponedelnik-dobryi-vprok",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/kazdyi-ponedelnik-dobryi-vprok",
-    "date": "2026-08-28T23:58:17.402Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:12.325Z",
+    "beijing": "2026-08-29 14:28",
     "text": "КАЖДЫЙ ПОНЕДЕЛЬНИК – Добрый ВПРОК 💙 Забота, которая становится приятным бонусом в супермаркете по адресу: Бобруйск, ул. Минская, 94В",
     "zh": "每个星期一都是一个美好的未来 💙 护理，这成为超市的令人愉快的奖励：Bobruisk，st。明斯卡亚，94V",
     "period": "",
@@ -22,8 +22,8 @@
     "id": "novinka-v-magazine-v-malinovke",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/novinka-v-magazine-v-malinovke",
-    "date": "2026-08-28T23:58:17.402Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:12.325Z",
+    "beijing": "2026-08-29 14:28",
     "text": "🥤 Новинка в магазине в Малиновке! Холодные фруктовые напитки собственного производства за 3,99 руб — только в Малиновке",
     "zh": "🥤 马利诺夫卡商店新品！我们自己生产的冷果汁饮料售价 3.99 卢布 - 仅在 Malinovka",
     "period": "",
@@ -34,10 +34,6 @@
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-08-21",
-        "p": 3.99
-      },
       {
         "t": "2026-08-22",
         "p": 3.99
@@ -65,6 +61,10 @@
       {
         "t": "2026-08-28",
         "p": 3.99
+      },
+      {
+        "t": "2026-08-29",
+        "p": 3.99
       }
     ]
   },
@@ -73,8 +73,8 @@
     "id": "my-zabotimsia-o-vas",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/my-zabotimsia-o-vas",
-    "date": "2026-08-28T23:58:17.402Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:12.325Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Мы заботимся о вас! Постоянное накопление 10% на социально-значимые товары для пенсионеров, инвалидов, многодетных семей и малообеспеченных граждан",
     "zh": "我们关心你！为养老金领取者、残疾人、大家庭和低收入公民持续积累 10% 的社会重要商品",
     "period": "",
@@ -91,8 +91,8 @@
     "id": "voskresene-den-semi-s-prostore",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/voskresene-den-semi-s-prostore",
-    "date": "2026-08-28T23:58:17.402Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:12.325Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Воскресенье — День семьи с ProStore! Предложение действует только в магазинах ProStore по адресам: Минск, ул. М. Богдановича, 132 и Бобруйск, ул. Минская, 94В Проводите воскресенье вместе с нами!",
     "zh": "周日是 ProStore 的家庭日！该优惠仅在以下地址的 ProStore 商店有效：明斯克、圣彼得堡。 M. Bogdanovich，132 和 Bobruisk，圣。 Minskaya，94V 和我们一起度过周日！",
     "period": "",
@@ -109,8 +109,8 @@
     "id": "shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-avgusta",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-avgusta/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "КОМБО за 6,59 р и за 4,59 р! С 1 по 31 августа",
     "zh": "COMBO 6.59 卢布和 4.59 卢布！ 8月1日至31日",
     "period": "",
@@ -121,10 +121,6 @@
     "discount": null,
     "endDate": "31 августа",
     "history": [
-      {
-        "t": "2026-08-21",
-        "p": 6.59
-      },
       {
         "t": "2026-08-22",
         "p": 6.59
@@ -152,6 +148,10 @@
       {
         "t": "2026-08-28",
         "p": 6.59
+      },
+      {
+        "t": "2026-08-29",
+        "p": 6.59
       }
     ]
   },
@@ -160,8 +160,8 @@
     "id": "shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Скидка 20% на кулинарию! В г. Минске: ул. Скрипникова, 15А, ул. Шаранговича, 51",
     "zh": "烹饪20%折扣！在明斯克：st。斯克里普尼科娃，15A，圣。沙兰戈维查，51 岁",
     "period": "",
@@ -178,8 +178,8 @@
     "id": "shares/pora-v-shkolu-pora-v-almi",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/pora-v-shkolu-pora-v-almi/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Пора в школу! Пора в АЛМИ!",
     "zh": "是时候去学校了！是时候去阿尔米了！",
     "period": "",
@@ -196,8 +196,8 @@
     "id": "shares/aktsiya-v-almi-1-1-besplatno-1002",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-v-almi-1-1-besplatno-1002/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "АКЦИЯ «1+1 БЕСПЛАТНО»",
     "zh": "“1+1免费”促销",
     "period": "",
@@ -214,8 +214,8 @@
     "id": "shares/aktsiya-shashlyk-1-1",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-shashlyk-1-1/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "АКЦИЯ «ШАШЛЫК 1+1»",
     "zh": "促销活动“SHABBAB 1+1”",
     "period": "",
@@ -232,8 +232,8 @@
     "id": "shares/aktsiya-mesyats-avgust-01-08-2026-31-08-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-mesyats-avgust-01-08-2026-31-08-2026/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "АКЦИЯ МЕСЯЦ АВГУСТ 01.08.2026-31.08.2026",
     "zh": "促销月 8 月 01/2026-08/31/2026",
     "period": "",
@@ -250,8 +250,8 @@
     "id": "shares/2-aya-pitstsa-v-podarok-v-ponedelnik-i-vtornik-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/2-aya-pitstsa-v-podarok-v-ponedelnik-i-vtornik-/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "2-ая пицца в ПОДАРОК! В понедельник и вторник",
     "zh": "第二份披萨免费！周一和周二",
     "period": "",
@@ -268,8 +268,8 @@
     "id": "shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Каждый 7-й КОФЕ, СЭНДВИЧ, КУСОК ПИЦЦЫ всего за 2 КОПЕЙКИ! Только с картой «ВЫГОДА!»",
     "zh": "每 7 份咖啡、三明治、披萨片仅需 2 KOPEYKS！只有“好处！”卡片",
     "period": "",
@@ -286,8 +286,8 @@
     "id": "shares/nlo-burger-flvb2024",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/nlo-burger-flvb2024/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "НОВИНКА! НЛО-бургер в АЛМИ!",
     "zh": "新的！ ALMI 的 UFO 汉堡！",
     "period": "",
@@ -304,8 +304,8 @@
     "id": "shares/obnovlenie-bonusnoy-programmy-vygoda",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/obnovlenie-bonusnoy-programmy-vygoda/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Бонусная программа ВЫГОДА!",
     "zh": "奖金计划 好处！",
     "period": "",
@@ -322,8 +322,8 @@
     "id": "shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Больше выгодных покупок — с картой «ВЫГОДА!»",
     "zh": "通过“BENEF!”进行更有利可图的购买卡片",
     "period": "",
@@ -340,8 +340,8 @@
     "id": "shares/aktsiya-nedelya-20-08-2026-02-09-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-nedelya-20-08-2026-02-09-2026/",
-    "date": "2026-08-28T23:58:15.494Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:10.370Z",
+    "beijing": "2026-08-29 14:28",
     "text": "АКЦИЯ НЕДЕЛЯ 20.08.2026-02.09.2026",
     "zh": "促销周 08/20/2026-09/02/2026",
     "period": "",
@@ -358,8 +358,8 @@
     "id": "discounts/tvoy-perekryestok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/tvoy-perekryestok/",
-    "date": "2026-08-28T23:58:13.653Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:08.555Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Твой ПерекрестОК",
     "zh": "你的十字路口",
     "period": "",
@@ -376,8 +376,8 @@
     "id": "discounts/karta-aktsiy-i-skidok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/karta-aktsiy-i-skidok/",
-    "date": "2026-08-28T23:58:13.653Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:08.555Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Карта акций и скидок",
     "zh": "促销和折扣卡",
     "period": "",
@@ -394,8 +394,8 @@
     "id": "ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
-    "date": "2026-08-28T23:58:12.569Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:07.515Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Cкидка 20% на готовую кулинарную продукцию \"Дионис\"",
     "zh": "现成烹饪产品“Dionysus”20% 折扣",
     "period": "1 января 2024 - 31 декабря 2026",
@@ -412,8 +412,8 @@
     "id": "socialnaya-skidka",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/socialnaya-skidka",
-    "date": "2026-08-28T23:58:12.569Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:07.515Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Социальная скидка",
     "zh": "社会折扣",
     "period": "1 июля 2025 - 31 декабря 2026",
@@ -430,8 +430,8 @@
     "id": "mobilnoe-prilozhenie-oplati",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/mobilnoe-prilozhenie-oplati",
-    "date": "2026-08-28T23:58:12.569Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:07.515Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Мобильное приложение ОПЛАТИ",
     "zh": "移动应用程序支付",
     "period": "13 сентября 2022 - 31 декабря 2026",
@@ -448,8 +448,8 @@
     "id": "kozhnaya-pyatnica-rodnae-svayo",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/kozhnaya-pyatnica-rodnae-svayo",
-    "date": "2026-08-28T23:58:12.569Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:07.515Z",
+    "beijing": "2026-08-29 14:28",
     "text": "Кожная пятніца – роднае, сваё",
     "zh": "皮肤星期五 - 亲爱的，我们的",
     "period": "1 января 2026 - 31 декабря 2026",
@@ -466,8 +466,8 @@
     "id": "sale/letnyaya-rasprodazha-skidki-do-70-",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/letnyaya-rasprodazha-skidki-do-70-/",
-    "date": "2026-08-28T23:58:11.413Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:06.425Z",
+    "beijing": "2026-08-29 14:28",
     "text": "-70% 17.08.2026 Летняя распродажа! Скидки до 70%!",
     "zh": "-70% 2026 年 8 月 17 日夏季促销！折扣高达70%！",
     "period": "",
@@ -484,8 +484,8 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-08-28T23:58:11.413Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:06.425Z",
+    "beijing": "2026-08-29 14:28",
     "text": "-50% с 26 августа по 8 сентября Горячие цены! Скидки до -50%!",
     "zh": "8月26日至9月8日-50% 热销价！折扣高达-50%！",
     "period": "",
@@ -502,8 +502,8 @@
     "id": "sale/aktsiya-s-kartoy-deshevle-v-tri-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aktsiya-s-kartoy-deshevle-v-tri-tseny/",
-    "date": "2026-08-28T23:58:11.413Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:06.425Z",
+    "beijing": "2026-08-29 14:28",
     "text": "С 26 августа по 8 сентября Акция \"С картой дешевле\" в ТРИ ЦЕНЫ!",
     "zh": "8月26日至9月8日，“持卡更便宜”促销三价！",
     "period": "",
@@ -520,8 +520,8 @@
     "id": "sale/shkolnaya-rasprodazha-skidki-do-60-",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/shkolnaya-rasprodazha-skidki-do-60-/",
-    "date": "2026-08-28T23:58:11.413Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:06.425Z",
+    "beijing": "2026-08-29 14:28",
     "text": "-60% с 26 августа по 16 сентября Школьная распродажа! Скидки до -60%!",
     "zh": "-60% 8 月 26 日至 9 月 16 日学校促销！折扣高达-60%！",
     "period": "",
@@ -538,8 +538,8 @@
     "id": "sale/aktsiya-vykhodnogo-dnya",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aktsiya-vykhodnogo-dnya/",
-    "date": "2026-08-28T23:58:11.413Z",
-    "beijing": "2026-08-29 07:58",
+    "date": "2026-08-29T06:28:06.425Z",
+    "beijing": "2026-08-29 14:28",
     "text": "30.08.2026 0 0 0 0 с 27 по 30 августа Акция выходного дня!",
     "zh": "08/30/2026 0 0 0 0 8月27日至8月30日 周末促销！",
     "period": "с 27 по 30 августа",
@@ -550,6 +550,28 @@
     "discount": null,
     "endDate": "30 августа",
     "history": []
+  },
+  {
+    "user": "fixprice_by",
+    "id": "32896",
+    "store": "Fix Price",
+    "link": "https://t.me/fixprice_by/32896",
+    "date": "2026-08-29T05:00:05+00:00",
+    "beijing": "2026-08-29 13:00",
+    "text": "БОЛЬШЕ ТОВАРОВ — БОЛЬШЕ ВЫГОДЫ 💰 Акция 2=1 в Fix Price 😎 📌 Чипсы рисовые отличаются воздушной текстурой и приятным хрустом&#33; Обладают ярким ароматом и интересным азиатским вкусом. Масса нетто: 45 г. Товар представлен в ассортименте. 💳 Стоимость: 1,68 рубля. 📲 Арт: 1600778 Берите ещё больше любимых товаров, а платите — меньше&#33; 🎊 Срок действия акции — до 31.12.2026. Подробная информация на сайте fix-price.by . 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
+    "zh": "更多产品 - 更多福利 💰 固定价格促销 2=1 😎 📌 米片质地轻盈，嘎吱嘎吱的口感令人愉悦！它们具有明亮的香气和有趣的亚洲味道。净重：45克。该产品以多种形式呈现。 💳费用：1.68卢布。 📲 艺术：1600778 以更少的价格购买更多您喜爱的产品！ 🎊 促销期至12/31/2026。详细信息请参见网站 fix-price.by。 🤩 在网站 fix-price.by 或移动应用程序下订单取货。 #fixpriceby",
+    "photo": "https://cdn4.telesco.pe/file/XBm1-YOshlqApfpPZvKqXG-3ulosZC00Q8t8nJrJQsr6RLcEUbDuZahNrOt35rqMFQ0tVj5bblbl7Q7pcbwxzHx9zSsNBZcb3IZ3KzBoNTQ3iwh7idX34pw0wKwWogr1vjEb-bxBgB_A2jkBEQ0jLe-_7ylLiAkjjAr4OzMApAQZ8xVpXAEKPHAR8JgQykrh-1RbzbPz8ySTu0hw6gldkNPsQHZJzA-1wDF9uD02zZA334WR7EBYCHv7k6PVl2ZtIgsrwDvCTrvsz8fRNexqXnfWqlMVzzZLH-fd7BHumsbs3GQ0RAWqNDEvs09gqaJbmha7WgSwdwjqLvp3BxuhKg.jpg",
+    "price": 1.68,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "",
+    "history": [
+      {
+        "t": "2026-08-29",
+        "p": 1.68
+      }
+    ]
   },
   {
     "user": "fixprice_by",
@@ -569,6 +591,10 @@
     "history": [
       {
         "t": "2026-08-28",
+        "p": 12.6
+      },
+      {
+        "t": "2026-08-29",
         "p": 12.6
       }
     ]
@@ -591,6 +617,10 @@
     "history": [
       {
         "t": "2026-08-28",
+        "p": 2.5
+      },
+      {
+        "t": "2026-08-29",
         "p": 2.5
       }
     ]
@@ -622,7 +652,7 @@
     "beijing": "2026-08-28 13:00",
     "text": "Всё для гигиены и свежести 😍 📌 Влажные салфетки (Стоимость: 4,50 рубля). Содержат витамин Е. Без спирта. 😃 В упаковке 8 мини-пачек по 8 салфеток в каждой. 📲 Арт: 3105227 📌 Туалетная бумага (Стоимость: 7,25 рубля) обеспечит дополнительный комфорт&#33; Пятислойная. Со смываемой втулкой. 😃 В упаковке 8 рулонов. 📲 Арт: 3130190 📌 Полотенца бумажные (Стоимость: 2,75 рубля). Отличаются высокой степенью впитываемости и ультрамягкостью. Трёхслойные. Изготовлены из 100% целлюлозы. 😃 В упаковке 110 листов. 📲 Арт: 3131106 🤩 Оформите заказ с самовывозом на сайте fix-price.by или в мобильном приложении. #fixpriceby",
     "zh": "一切都是为了卫生和新鲜😍 📌 湿巾（价格：4.50 卢布）。含有维生素E。不含酒精。 😃 包装内含 8 个迷你包，每包 8 张餐巾纸。 📲 艺术：3105227 📌 卫生纸（价格：7.25 卢布）将提供额外的舒适感！五层。带可冲洗套筒。 😃 一包有8卷。 📲 艺术品：3130190 📌 纸巾（价格：2.75 卢布）。它们的特点是高度吸收性和超柔软。三层。由 100% 纤维素制成。 😃 一包有110张。 📲 艺术：3131106 🤩 在网站 fix-price.by 或移动应用程序下订单取货。 #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/nSD7nEBb4Ry1RLqzaViA4MIDeut_gjGFyJs0edKKtiSMmOReJ0ODkB3smke_J4DSuy0iMth1cKFVeDxOeTSQ22w-b0wzo2kMnUe5NJX2dn8e6Ee9nxKSDom8WDrZ0QI0lv5m4_H6KdVkoWTT8hFRuvQ6NS0G2aO7zNGgLuzgpfMpuvYt8vgaeMQ2UMu73XHVRIXCNHKFjob1I2hLEDP2ECG3Q0S8kVjyDpqNhyJm5k9QPIMLR1S6hD8aoqYVppgne7qhE0SaKxSbJDrK3cMAt3KCnFu7ECtx825yTnKklB7l28fAm1OLKgJKXcIoqr7syJQCECzwGsZOEzDLZ3afeA.jpg",
+    "photo": "https://cdn4.telesco.pe/file/nUDQPXXqftZ1QQDLZm0gVNUpNI91n6wkhJsZrBFcS_f3geni1iw1eHIiIawkLRCJWbycIZNKX0rQgB6jnmqZPw0sbSs2TGTcQVj8bnHAGhRLs8_YBLTFWxj3E-6fa6V5AUqqSafUVCKuVFZsQrnLO0qVDRQyggrwwv_l8gUwJMjtAdaAYIZF6Cd9F3ucg4jImyzYVWT0vaVMC65EOIeWHDMXkO94Ghoz2h8-aJY6-zRE_GbQG1oI-S80Rsemgfl0PcN5KZ93TQjZgvTIBUXn06o2kNcewl52InNGaLyXyk91kHegDnTMt45_B39qnlT56t8-WJfaTU-GK-kPLlD6Hg.jpg",
     "price": 4.5,
     "priceUnit": "",
     "oldPrice": null,
@@ -631,6 +661,10 @@
     "history": [
       {
         "t": "2026-08-28",
+        "p": 4.5
+      },
+      {
+        "t": "2026-08-29",
         "p": 4.5
       }
     ]
@@ -653,6 +687,10 @@
     "history": [
       {
         "t": "2026-08-28",
+        "p": 3.25
+      },
+      {
+        "t": "2026-08-29",
         "p": 3.25
       }
     ]
@@ -680,6 +718,10 @@
       {
         "t": "2026-08-28",
         "p": 3.75
+      },
+      {
+        "t": "2026-08-29",
+        "p": 3.75
       }
     ]
   },
@@ -705,6 +747,10 @@
       },
       {
         "t": "2026-08-28",
+        "p": 7.99
+      },
+      {
+        "t": "2026-08-29",
         "p": 7.99
       }
     ]
@@ -732,6 +778,10 @@
       {
         "t": "2026-08-28",
         "p": 29.99
+      },
+      {
+        "t": "2026-08-29",
+        "p": 29.99
       }
     ]
   },
@@ -758,6 +808,10 @@
       {
         "t": "2026-08-28",
         "p": 3.6
+      },
+      {
+        "t": "2026-08-29",
+        "p": 3.6
       }
     ]
   },
@@ -783,6 +837,10 @@
       },
       {
         "t": "2026-08-28",
+        "p": 14.99
+      },
+      {
+        "t": "2026-08-29",
         "p": 14.99
       }
     ]
@@ -836,6 +894,10 @@
       {
         "t": "2026-08-28",
         "p": 0.99
+      },
+      {
+        "t": "2026-08-29",
+        "p": 0.99
       }
     ]
   },
@@ -848,7 +910,7 @@
     "beijing": "2026-08-27 14:11",
     "text": "Черные цены в «Евроопт»&#33; 🔥 С 27 по 29 августа во всех гипермаркетах «Евроопт» стартуют «Черные цены» - целых 3 дня скидок на популярные товары&#33; Успейте выгодно подготовиться к концу лета и началу учебы 👇🏻 ✔ Арбуз - 1,19 руб. за 1 кг ✔ Колбаса сыровяленая «Антоновская оригинальная» - 23,99 руб. за 1 кг ✔ Кофе растворимый Nescafe Gold - 19,99 руб. за 170 г ✔ Салфетки многофункциональные Fairy - 11,99 руб. за 100 шт ✔ Хризантема кустовая - 4,99 руб. за 1 шт ✔ Подгузники-трусики Pampers , 5 (12–17 кг) - 39.99 руб. за 42 шт Смотрите листовку и планируйте покупки 👌🏻 *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80",
     "zh": "Euroopt 的黑色价格！ 🔥 8月27日至29日，所有Euroopt大卖场将开启“黑价”——热门产品3天折扣！赶快为暑假结束和开学做好有利可图的准备吧👇🏻 ✔ 西瓜 - 1.19 擦。 1 公斤 ✔ 干腌香肠“Antonovskaya 原味” - 23.99 卢布。 1 公斤 ✔ 雀巢金装速溶咖啡 - 19.99 卢布。 170 克 ✔ 多功能餐巾仙女 - 11.99 擦。 100 件装 ✔ 喷雾菊花 - 4.99 擦。 1 件 ✔ Pampers 内裤尿布，5 片（12–17 公斤）- 39.99 擦。 42 件 请参阅传单并计划您的购买 👌🏻 *商品成本为发布帖子时的最新价格，在其他商店参观日期可能会有所不同。更多详情请访问 evroopt.by 或致电 +375 44 788 88 80",
-    "photo": "https://cdn4.telesco.pe/file/ep2TJ4797GoWntBPxv8hOWf_I9mEzSG18qM3ipeHdJhnQMWVvhONNti9bTna83l5VeyqMBkH-AEIzHLWVz0LzCX3SJSVQkCODOmF7R4M-EokVJLg9KN6B8JHE97LKXH-Sp4xgoxpfpf-6pE_gTgSwD9VhTfVMR3Fs-Wk-pf3mxiJuNgBhZS2P1DuEwyJVj6Q4Ec6KLo2o-IeWJSr8EpS5Ph2Yqx17KlbbYZVKG5opzRVfPyIco7ohrySduqxCVY18v637k0xHXY9zQaeNYk8P0Kee9g94t8-f29DvRvCkOZUn51v19_r_E4BTbwfly7VprUtTodXLkVH-gmSEnx5wg.jpg",
+    "photo": "https://cdn4.telesco.pe/file/r5imNdqMQdiSfbd2XVe7eqLv-EKJHClifGVadmQ4X0UInfaWngrQK_M4OZjluDpRxbGCZ1LK9gfwTJzIDviIjEA3GDenL6n3UbB6Z_qHHSXA9rklNz4IrKH59JHW9uMv9MlNLUTcPT-qAIl0km_g6FQa85aVSz_QVO5TdPtlyQTaOjZ5xGL7fCLNDz-AWY-9sLS7mA3G0Y4RWmOGsQXsnbkWcQJO5Ph-q6VmdEUYP8PgbQpaY7HjFeA1htYKGnxIYVYfvZe63-jwsoH6nFYkGV0IZquaoFgItjiZg5RDL93SpdOYYtJj6fcGMimHU_KuCiuc4l0_8Kljp4Eyn-lIiw.jpg",
     "price": 1.19,
     "priceUnit": "",
     "oldPrice": null,
@@ -861,6 +923,10 @@
       },
       {
         "t": "2026-08-28",
+        "p": 1.19
+      },
+      {
+        "t": "2026-08-29",
         "p": 1.19
       }
     ]
@@ -952,6 +1018,10 @@
       {
         "t": "2026-08-28",
         "p": 3.29
+      },
+      {
+        "t": "2026-08-29",
+        "p": 3.29
       }
     ]
   },
@@ -1007,6 +1077,10 @@
       },
       {
         "t": "2026-08-28",
+        "p": 4.49
+      },
+      {
+        "t": "2026-08-29",
         "p": 4.49
       }
     ]
@@ -2523,55 +2597,5 @@
     "discount": 20,
     "endDate": "6 сентября",
     "history": []
-  },
-  {
-    "user": "unistoreminsk",
-    "id": "1538",
-    "store": "UniStore",
-    "link": "https://t.me/unistoreminsk/1538",
-    "date": "2026-08-17T10:30:30+00:00",
-    "beijing": "2026-08-17 18:30",
-    "text": "🔥 С 17.08 по 30.08 — новая акционная листовка в Unistore опт&розница и Unistore дискаунтер&#33; Август — время ловить последние тёплые дни, пополнить запасы для дома, готовиться к новому учебному году и присмотреть приятные знаки внимания к 1 сентября. 🍵 Набор чайных напитков DALAI 7 вкусов, 60 шт – 12,98 руб. 🍬 Набор конфет СЛАДКИЙ ПОДАРОК Лиловый, 260 г – 7,99 руб. ☕ Кофе молотый LAVAZZA Crema e gusto, 250 г – 17,49 руб. ☕ Кофе растворимый NESCAFE Gold aroma с добавлением молотого, 170 г – 17,49 руб. 🤍 Конфеты RAFFAELLO, 70 г – 7,49 руб. 🍫 Набор конфет O'ZERA Вафельная с ореховой начинкой в молочном шоколаде, 150 г – 6,58 руб. 🏖️ Скидки до -30% на летние товары&#33; И, конечно, выгодные цены на молочную продукцию, мясную гастрономию, напитки, снеки, консервы и другие товары. Закупайтесь выгодно в Unistore&#33; 🛒 #unistore #юнистор #акцииминск #скидкиминск #продуктывыгодно",
-    "zh": "🔥 17.08 至 30.08 - Unistore 批发及零售及 Unistore 折扣店推出新促销单张！ 8 月是抓住最后温暖的日子、为家庭补充物资、为新学年做准备并为 9 月 1 日寻找令人愉快的关注迹象的时候。 🍵 DALAI 茶饮套装 7 种口味，60 件 – 12.98 卢布。 🍬 糖果套装 SWEET GIFT 紫丁香，260 克 – 7.99 擦。 ☕ LAVAZZA Crema e gusto 咖啡粉，250 克 – 17.49 擦。 ☕ 雀巢黄金速溶咖啡，添加研磨粉，170 克 – 17.49 擦。 🤍 拉斐尔糖果，70 克 – 7.49 擦。 🍫 O'ZERA 糖果华夫饼套装，坚果夹心牛奶巧克力，150 克 – 6.58 擦。 🏖️夏季产品折扣高达-30%！当然，乳制品、肉类熟食、饮料、零食、罐头食品和其他商品的优惠价格。在 Unistore 购物有利可图！ 🛒 #unistore #unistore #promotionsminsk #discountskiminsk #有利可图的产品",
-    "photo": "https://cdn4.telesco.pe/file/hEIe71pQLKc_lulrOYUSlD5KitD02Q1l89OGWxsaY4uMN1fhc5p6nyiv2xTH1jNQ85fSPmnhr-eZaLIvTSIZwdRF5JPKF_Fz74_TlZmKH3pFdWdPV8U-NMGDrgeDlABiov1iK84p-lqMM2WAiGHMAyjV3OZRQxYJVqaz9zwwyxsQ7LDHK05rZLIQplOsJC_Di_7Aq_SY_e7v7ipK-0x8POss2vVWjR-l4Xkf_Qu3u4M-2Cn7i8Zd7lhuQaprPfjnGksf1A7GLdQz-iPsDPTWNYa5T0nRBJRvFouiG3F_X7bnycTXU5zwH9Co6vC7dn_gx3lRwO3_gPktaRmqSugCHA.jpg",
-    "price": 30.08,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 30,
-    "endDate": "",
-    "history": [
-      {
-        "t": "2026-08-21",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-22",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-23",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-24",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-25",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-26",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-27",
-        "p": 30.08
-      },
-      {
-        "t": "2026-08-28",
-        "p": 30.08
-      }
-    ]
   }
 ]
