@@ -4,8 +4,8 @@
     "id": "kazdyi-ponedelnik-dobryi-vprok",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/kazdyi-ponedelnik-dobryi-vprok",
-    "date": "2026-08-30T22:33:58.687Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:18.383Z",
+    "beijing": "2026-08-31 09:13",
     "text": "КАЖДЫЙ ПОНЕДЕЛЬНИК – Добрый ВПРОК 💙 Забота, которая становится приятным бонусом в супермаркете по адресу: Бобруйск, ул. Минская, 94В",
     "zh": "每个星期一都是一个美好的未来 💙 护理，这成为超市的令人愉快的奖励：Bobruisk，st。明斯卡亚，94V",
     "period": "",
@@ -22,8 +22,8 @@
     "id": "novinka-v-magazine-v-malinovke",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/novinka-v-magazine-v-malinovke",
-    "date": "2026-08-30T22:33:58.687Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:18.383Z",
+    "beijing": "2026-08-31 09:13",
     "text": "🥤 Новинка в магазине в Малиновке! Холодные фруктовые напитки собственного производства за 3,99 руб — только в Малиновке",
     "zh": "🥤 马利诺夫卡商店新品！我们自己生产的冷果汁饮料售价 3.99 卢布 - 仅在 Malinovka",
     "period": "",
@@ -34,10 +34,6 @@
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-08-23",
-        "p": 3.99
-      },
       {
         "t": "2026-08-24",
         "p": 3.99
@@ -65,6 +61,10 @@
       {
         "t": "2026-08-30",
         "p": 3.99
+      },
+      {
+        "t": "2026-08-31",
+        "p": 3.99
       }
     ]
   },
@@ -73,8 +73,8 @@
     "id": "my-zabotimsia-o-vas",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/my-zabotimsia-o-vas",
-    "date": "2026-08-30T22:33:58.687Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:18.383Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Мы заботимся о вас! Постоянное накопление 10% на социально-значимые товары для пенсионеров, инвалидов, многодетных семей и малообеспеченных граждан",
     "zh": "我们关心你！为养老金领取者、残疾人、大家庭和低收入公民持续积累 10% 的社会重要商品",
     "period": "",
@@ -91,8 +91,8 @@
     "id": "voskresene-den-semi-s-prostore",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/voskresene-den-semi-s-prostore",
-    "date": "2026-08-30T22:33:58.687Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:18.383Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Воскресенье — День семьи с ProStore! Предложение действует только в магазинах ProStore по адресам: Минск, ул. М. Богдановича, 132 и Бобруйск, ул. Минская, 94В Проводите воскресенье вместе с нами!",
     "zh": "周日是 ProStore 的家庭日！该优惠仅在以下地址的 ProStore 商店有效：明斯克、圣彼得堡。 M. Bogdanovich，132 和 Bobruisk，圣。 Minskaya，94V 和我们一起度过周日！",
     "period": "",
@@ -109,8 +109,8 @@
     "id": "shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-avgusta",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-avgusta/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "КОМБО за 6,59 р и за 4,59 р! С 1 по 31 августа",
     "zh": "COMBO 6.59 卢布和 4.59 卢布！ 8月1日至31日",
     "period": "",
@@ -121,10 +121,6 @@
     "discount": null,
     "endDate": "31 августа",
     "history": [
-      {
-        "t": "2026-08-23",
-        "p": 6.59
-      },
       {
         "t": "2026-08-24",
         "p": 6.59
@@ -152,6 +148,10 @@
       {
         "t": "2026-08-30",
         "p": 6.59
+      },
+      {
+        "t": "2026-08-31",
+        "p": 6.59
       }
     ]
   },
@@ -160,8 +160,8 @@
     "id": "shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Скидка 20% на кулинарию! В г. Минске: ул. Скрипникова, 15А, ул. Шаранговича, 51",
     "zh": "烹饪20%折扣！在明斯克：st。斯克里普尼科娃，15A，圣。沙兰戈维查，51 岁",
     "period": "",
@@ -178,8 +178,8 @@
     "id": "shares/pora-v-shkolu-pora-v-almi",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/pora-v-shkolu-pora-v-almi/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Пора в школу! Пора в АЛМИ!",
     "zh": "是时候去学校了！是时候去阿尔米了！",
     "period": "",
@@ -196,8 +196,8 @@
     "id": "shares/aktsiya-mesyats-avgust-01-08-2026-31-08-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-mesyats-avgust-01-08-2026-31-08-2026/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "АКЦИЯ МЕСЯЦ АВГУСТ 01.08.2026-31.08.2026",
     "zh": "促销月 8 月 01/2026-08/31/2026",
     "period": "",
@@ -214,8 +214,8 @@
     "id": "shares/2-aya-pitstsa-v-podarok-v-ponedelnik-i-vtornik-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/2-aya-pitstsa-v-podarok-v-ponedelnik-i-vtornik-/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "2-ая пицца в ПОДАРОК! В понедельник и вторник",
     "zh": "第二份披萨免费！周一和周二",
     "period": "",
@@ -232,8 +232,8 @@
     "id": "shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Каждый 7-й КОФЕ, СЭНДВИЧ, КУСОК ПИЦЦЫ всего за 2 КОПЕЙКИ! Только с картой «ВЫГОДА!»",
     "zh": "每 7 份咖啡、三明治、披萨片仅需 2 KOPEYKS！只有“好处！”卡片",
     "period": "",
@@ -250,8 +250,8 @@
     "id": "shares/nlo-burger-flvb2024",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/nlo-burger-flvb2024/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "НОВИНКА! НЛО-бургер в АЛМИ!",
     "zh": "新的！ ALMI 的 UFO 汉堡！",
     "period": "",
@@ -268,8 +268,8 @@
     "id": "shares/obnovlenie-bonusnoy-programmy-vygoda",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/obnovlenie-bonusnoy-programmy-vygoda/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Бонусная программа ВЫГОДА!",
     "zh": "奖金计划 好处！",
     "period": "",
@@ -286,8 +286,8 @@
     "id": "shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Больше выгодных покупок — с картой «ВЫГОДА!»",
     "zh": "通过“BENEF!”进行更有利可图的购买卡片",
     "period": "",
@@ -304,8 +304,8 @@
     "id": "shares/aktsiya-nedelya-20-08-2026-02-09-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-nedelya-20-08-2026-02-09-2026/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "АКЦИЯ НЕДЕЛЯ 20.08.2026-02.09.2026",
     "zh": "促销周 08/20/2026-09/02/2026",
     "period": "",
@@ -322,8 +322,8 @@
     "id": "shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "СКИДКА 50% на ножи за фишки",
     "zh": "薯片刀具 50% 折扣",
     "period": "",
@@ -340,8 +340,8 @@
     "id": "shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu/",
-    "date": "2026-08-30T22:33:56.088Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:16.373Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Получи скидку -70% в DOMINO'S на 2-ю пиццу среднего или большого размера",
     "zh": "在 DOMINO'S 购买第二份中号或大号披萨即可享受 -70% 折扣",
     "period": "",
@@ -358,8 +358,8 @@
     "id": "discounts/tvoy-perekryestok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/tvoy-perekryestok/",
-    "date": "2026-08-30T22:33:54.247Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:13.615Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Твой ПерекрестОК",
     "zh": "你的十字路口",
     "period": "",
@@ -376,8 +376,8 @@
     "id": "discounts/karta-aktsiy-i-skidok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/karta-aktsiy-i-skidok/",
-    "date": "2026-08-30T22:33:54.247Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:13.615Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Карта акций и скидок",
     "zh": "促销和折扣卡",
     "period": "",
@@ -394,8 +394,8 @@
     "id": "ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
-    "date": "2026-08-30T22:33:53.204Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:11.825Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Cкидка 20% на готовую кулинарную продукцию \"Дионис\"",
     "zh": "现成烹饪产品“Dionysus”20% 折扣",
     "period": "1 января 2024 - 31 декабря 2026",
@@ -412,8 +412,8 @@
     "id": "socialnaya-skidka",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/socialnaya-skidka",
-    "date": "2026-08-30T22:33:53.204Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:11.825Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Социальная скидка",
     "zh": "社会折扣",
     "period": "1 июля 2025 - 31 декабря 2026",
@@ -430,8 +430,8 @@
     "id": "mobilnoe-prilozhenie-oplati",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/mobilnoe-prilozhenie-oplati",
-    "date": "2026-08-30T22:33:53.204Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:11.825Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Мобильное приложение ОПЛАТИ",
     "zh": "移动应用程序支付",
     "period": "13 сентября 2022 - 31 декабря 2026",
@@ -448,8 +448,8 @@
     "id": "kozhnaya-pyatnica-rodnae-svayo",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/kozhnaya-pyatnica-rodnae-svayo",
-    "date": "2026-08-30T22:33:53.204Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:11.825Z",
+    "beijing": "2026-08-31 09:13",
     "text": "Кожная пятніца – роднае, сваё",
     "zh": "皮肤星期五 - 亲爱的，我们的",
     "period": "1 января 2026 - 31 декабря 2026",
@@ -466,8 +466,8 @@
     "id": "sale/letnyaya-rasprodazha-skidki-do-70-",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/letnyaya-rasprodazha-skidki-do-70-/",
-    "date": "2026-08-30T22:33:52.058Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:10.387Z",
+    "beijing": "2026-08-31 09:13",
     "text": "-70% 17.08.2026 Летняя распродажа! Скидки до 70%!",
     "zh": "-70% 2026 年 8 月 17 日夏季促销！折扣高达70%！",
     "period": "",
@@ -484,8 +484,8 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-08-30T22:33:52.058Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:10.387Z",
+    "beijing": "2026-08-31 09:13",
     "text": "-50% с 26 августа по 8 сентября Горячие цены! Скидки до -50%!",
     "zh": "8月26日至9月8日-50% 热销价！折扣高达-50%！",
     "period": "",
@@ -502,8 +502,8 @@
     "id": "sale/aktsiya-s-kartoy-deshevle-v-tri-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aktsiya-s-kartoy-deshevle-v-tri-tseny/",
-    "date": "2026-08-30T22:33:52.058Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:10.387Z",
+    "beijing": "2026-08-31 09:13",
     "text": "С 26 августа по 8 сентября Акция \"С картой дешевле\" в ТРИ ЦЕНЫ!",
     "zh": "8月26日至9月8日，“持卡更便宜”促销三价！",
     "period": "",
@@ -520,8 +520,8 @@
     "id": "sale/shkolnaya-rasprodazha-skidki-do-60-",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/shkolnaya-rasprodazha-skidki-do-60-/",
-    "date": "2026-08-30T22:33:52.058Z",
-    "beijing": "2026-08-31 06:33",
+    "date": "2026-08-31T01:13:10.387Z",
+    "beijing": "2026-08-31 09:13",
     "text": "-60% с 26 августа по 16 сентября Школьная распродажа! Скидки до -60%!",
     "zh": "-60% 8 月 26 日至 9 月 16 日学校促销！折扣高达-60%！",
     "period": "",
@@ -588,6 +588,10 @@
       {
         "t": "2026-08-30",
         "p": 2.75
+      },
+      {
+        "t": "2026-08-31",
+        "p": 2.75
       }
     ]
   },
@@ -627,6 +631,10 @@
       {
         "t": "2026-08-30",
         "p": 9.96
+      },
+      {
+        "t": "2026-08-31",
+        "p": 9.96
       }
     ]
   },
@@ -649,26 +657,12 @@
       {
         "t": "2026-08-30",
         "p": 3.25
+      },
+      {
+        "t": "2026-08-31",
+        "p": 3.25
       }
     ]
-  },
-  {
-    "user": "page:triceny",
-    "id": "sale/aktsiya-vykhodnogo-dnya",
-    "store": "Три цены",
-    "link": "https://3ceni.by/sale/aktsiya-vykhodnogo-dnya/",
-    "date": "2026-08-29T20:40:43.538Z",
-    "beijing": "2026-08-30 04:40",
-    "text": "30.08.2026 0 0 0 0 с 27 по 30 августа Акция выходного дня!",
-    "zh": "08/30/2026 0 0 0 0 8月27日至8月30日 周末促销！",
-    "period": "с 27 по 30 августа",
-    "photo": "",
-    "price": null,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "30 августа",
-    "history": []
   },
   {
     "user": "fixprice_by",
@@ -692,6 +686,10 @@
       },
       {
         "t": "2026-08-30",
+        "p": 5.75
+      },
+      {
+        "t": "2026-08-31",
         "p": 5.75
       }
     ]
@@ -719,6 +717,10 @@
       {
         "t": "2026-08-30",
         "p": 11.3
+      },
+      {
+        "t": "2026-08-31",
+        "p": 11.3
       }
     ]
   },
@@ -744,6 +746,10 @@
       },
       {
         "t": "2026-08-30",
+        "p": 1.75
+      },
+      {
+        "t": "2026-08-31",
         "p": 1.75
       }
     ]
@@ -771,25 +777,12 @@
       {
         "t": "2026-08-30",
         "p": 5.99
+      },
+      {
+        "t": "2026-08-31",
+        "p": 5.99
       }
     ]
-  },
-  {
-    "user": "evroopt_shop",
-    "id": "4277",
-    "store": "Евроопт",
-    "link": "https://t.me/evroopt_shop/4277",
-    "date": "2026-08-29T09:00:16+00:00",
-    "beijing": "2026-08-29 17:00",
-    "text": "😱 Покупаете канцтовары ? Успейте закупиться выгодно к новому учебному году с клубом «Еплюс. Детки» в магазинах «Евроопт» и «Хит&#33;». ⏳ По 30 августа новым участникам клуба «Еплюс. Детки » доступны приветственные бонусы&#33; Активируйте один на выбор&#33; Например: 🛍 Возвращаем 30% бонусами за канцелярские товары. 🔥 А также для участников клуба собрали в карусели выгодные комбо-наборы со скидками до 87% – листайте и выбирайте&#33; 📲 Вступить просто: приложение «Еплюс » → раздел «Еплюс. Детки» → заполните профиль ребенка. ✨ Применяйте карту «Еплюс» на кассе – скидки клуба применятся автоматически. Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80 #Евроопт #ЕплюсДетки",
-    "zh": "😱 买文具？赶快通过 Eplus 俱乐部为新学年进行有利可图的采购吧。 “Euroopt”和“Hit!”商店中的“儿童”。⏳ 8 月 30 日之前，Eplus 俱乐部新会员。儿童 » 欢迎奖金可用！激活您选择的一项！例如：🛍 我们返还办公用品 30% 的奖金。🔥 我们还在转盘中为俱乐部会员收集了可盈利的组合套装，折扣高达 87% - 滚动浏览并选择！📲 加入很容易： “Eplus”申请→“Eplus”儿童部分→填写孩子的个人资料。 ✨ 在结帐时使用您的 Eplus 卡 - 俱乐部折扣将自动应用。商品价格为发布帖子时的最新价格，在其他商店参观日期可能会有所不同。有关 evroopt.by 的更多详细信息或致电 +375 44 788 88 80 #Euroopt #EplusChildren",
-    "photo": "https://cdn4.telesco.pe/file/EmVzuHszqqXhtvO_qZOMusctQuxBGvS1tvbokzhuPTYZPaP8xKhEy2dM7jjTg1IpenIB6pb9nrSNCXjElMlI-HaivBhSOdIawt9p57j_wSji7lfw1PohM-XmraGnnK87MTD430tMrYxKb1uvHc-Y-DyIq9vBcjxY1N2fZ-j146wDRmz06LIHt1S808KRh2zrkdZWWVOVexURc_RS0WwdbjF50UhoN1Utf1BtG3v-lbpV7n3BmOhlQQkh80ACtUp47aIkf2Y4bac25aFyLSEv38Bh9e6cEg2myFMni11QlI_yI4T7SM3_ONgsZmUlrG_SKwVkeveIoKRplDOdC-R0_g.jpg",
-    "price": null,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 30,
-    "endDate": "30 августа",
-    "history": []
   },
   {
     "user": "fixprice_by",
@@ -839,6 +832,10 @@
       },
       {
         "t": "2026-08-30",
+        "p": 25.99
+      },
+      {
+        "t": "2026-08-31",
         "p": 25.99
       }
     ]
@@ -1086,6 +1083,10 @@
       {
         "t": "2026-08-30",
         "p": 7.99
+      },
+      {
+        "t": "2026-08-31",
+        "p": 7.99
       }
     ]
   },
@@ -1119,6 +1120,10 @@
       },
       {
         "t": "2026-08-30",
+        "p": 29.99
+      },
+      {
+        "t": "2026-08-31",
         "p": 29.99
       }
     ]
@@ -1184,6 +1189,10 @@
       {
         "t": "2026-08-30",
         "p": 14.99
+      },
+      {
+        "t": "2026-08-31",
+        "p": 14.99
       }
     ]
   },
@@ -1210,40 +1219,6 @@
       {
         "t": "2026-08-28",
         "p": 5.5
-      }
-    ]
-  },
-  {
-    "user": "magazin_sosedi",
-    "id": "3042",
-    "store": "Соседи",
-    "link": "https://t.me/magazin_sosedi/3042",
-    "date": "2026-08-27T06:51:16+00:00",
-    "beijing": "2026-08-27 14:51",
-    "text": "А У НАС В СОСЕДЯХ ВКУСНЫЕ ЦЕНЫ&#33; 😋 💛 Август подходит к концу, и мы решили проводить его вкусно&#33; 🌞 с 27 по 30 августа: 🔸 Вафли «Спартак» «Черноморские» 87 г - всего 0,99 рублей&#33; 🔸 Сливки питьевые 20% 500 г - всего 4,99 рублей&#33; 🔸 Дыня «Торпеда» 1 кг - всего 2,99 рублей&#33; 🔸 Пекинская капуста 1 кг - всего 4,99 рублей&#33; 🔸 Кукуруза РБ в початках 1 кг - всего 3,99 рублей&#33; Отправляйте это сообщение близким и приходите к нам в Соседи&#33; 💛",
-    "zh": "我们的邻居物价也很优惠！ 😋 💛八月即将结束，我们决定好好地度过！ 🌞 8月27日至8月30日：🔸 华夫饼“斯巴达克”“黑海”87克 - 只需0.99卢布！ 🔸 饮用奶油 20% 500 克 - 仅 4.99 卢布！ 🔸 甜瓜“鱼雷”1 公斤 - 仅 2.99 卢布！ 🔸 北京白菜1公斤——仅需4.99卢布！ 🔸 RB 玉米棒 1 公斤 - 只需 3.99 卢布！将此消息发送给您所爱的人并来拜访我们的邻居！ 💛",
-    "photo": "https://cdn4.telesco.pe/file/lekrsl_twEKWEGDTiw_Q8HJJLeGNXBUwhyi7rYMJx-me8HS5TTByvMWSLN6u9HX62ugA8hKENquoReLHu6fTcf8fYqduI2Lj3lqC5MCcsst5weKiazmsXHwD40554mxsq6X5M8zjH3gdN-T9JBFFHUKgbn3H5DFABP81wfd_oK-5r_fhuL600WbUr6C41K-CyXEVXjFk4hjcLXQnuOTHCZeUzhYeyKej51P_6e9i4JQU5jcnlBi9YO830IXjzfCYVRN_tKm2FSGLtt36copWtdM8t8xL4AjJwqQmjtXFYZw_eldTBiKuNxB84t2KDBgoU9IYK0u38Oo7pdMRO1NZyw.jpg",
-    "price": 0.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 20,
-    "endDate": "30 августа",
-    "history": [
-      {
-        "t": "2026-08-27",
-        "p": 0.99
-      },
-      {
-        "t": "2026-08-28",
-        "p": 0.99
-      },
-      {
-        "t": "2026-08-29",
-        "p": 0.99
-      },
-      {
-        "t": "2026-08-30",
-        "p": 0.99
       }
     ]
   },
@@ -1405,6 +1380,10 @@
       },
       {
         "t": "2026-08-30",
+        "p": 4.49
+      },
+      {
+        "t": "2026-08-31",
         "p": 4.49
       }
     ]
@@ -2596,5 +2575,66 @@
     "discount": null,
     "endDate": "",
     "history": []
+  },
+  {
+    "user": "shopsgreen",
+    "id": "1049",
+    "store": "Green",
+    "link": "https://t.me/shopsgreen/1049",
+    "date": "2026-08-17T12:51:51+00:00",
+    "beijing": "2026-08-17 20:51",
+    "text": "С 10 августа по 6 сентября есть уникальная возможность у НОВЫХ пользователей 💚 мобильного приложения получить на свой ПЕРВЫЙ ЗАКАЗ при первой регистрации скидку в размере 20% 👉 подробности ТУТ",
+    "zh": "从 8 月 10 日到 9 月 6 日，移动应用程序的新用户💚有独特的机会在首次注册时获得首次订单 20% 的折扣 👉 详情请点击此处",
+    "photo": "https://cdn4.telesco.pe/file/UkRjdZHX33lpuRerHUpzu8cmc58enUbSdG1D-crh7jKTlhJQVLsMC0Fcfjy1mZk-nBSh7aAYMx4fQ3OGLunQn-0-DANASHsEb8s_TUjtGqbpaL_uu4G1lUDShwhPKKOQCucmW1iW_w4ofC-5rE7q_wsVgPZ-FEtanoScL5NzYdswt6P5v_9khaT61bnycZRg5tE-LiLYzThPxTa5PItpXuRxiMAj62tmmqmGsk3CE9GEp3VBODn5n4rWsj9jpKDMovOmiju6J7pN3_MrH6NT52Y9zBbgiRUvKFZ3dQUyQm5s70rcy3WtjQSbzqIGcWFmjOckWnjpYM6pcGWltdm9Cg.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 20,
+    "endDate": "6 сентября",
+    "history": []
+  },
+  {
+    "user": "unistoreminsk",
+    "id": "1538",
+    "store": "UniStore",
+    "link": "https://t.me/unistoreminsk/1538",
+    "date": "2026-08-17T10:30:30+00:00",
+    "beijing": "2026-08-17 18:30",
+    "text": "🔥 С 17.08 по 30.08 — новая акционная листовка в Unistore опт&розница и Unistore дискаунтер&#33; Август — время ловить последние тёплые дни, пополнить запасы для дома, готовиться к новому учебному году и присмотреть приятные знаки внимания к 1 сентября. 🍵 Набор чайных напитков DALAI 7 вкусов, 60 шт – 12,98 руб. 🍬 Набор конфет СЛАДКИЙ ПОДАРОК Лиловый, 260 г – 7,99 руб. ☕ Кофе молотый LAVAZZA Crema e gusto, 250 г – 17,49 руб. ☕ Кофе растворимый NESCAFE Gold aroma с добавлением молотого, 170 г – 17,49 руб. 🤍 Конфеты RAFFAELLO, 70 г – 7,49 руб. 🍫 Набор конфет O'ZERA Вафельная с ореховой начинкой в молочном шоколаде, 150 г – 6,58 руб. 🏖️ Скидки до -30% на летние товары&#33; И, конечно, выгодные цены на молочную продукцию, мясную гастрономию, напитки, снеки, консервы и другие товары. Закупайтесь выгодно в Unistore&#33; 🛒 #unistore #юнистор #акцииминск #скидкиминск #продуктывыгодно",
+    "zh": "🔥 17.08 至 30.08 - Unistore 批发及零售及 Unistore 折扣店推出新促销单张！ 8 月是抓住最后的温暖日子、为家庭补充物资、为新学年做准备并为 9 月 1 日寻找令人愉快的关注迹象的时候。 🍵 达莱茶饮料套装 7 种口味，60 粒 – 12.98 卢布。 🍬 糖果套装 SWEET GIFT 紫丁香，260 克 – 7.99 擦。 ☕ LAVAZZA Crema e gusto 咖啡粉，250 克 – 17.49 擦。 ☕ 雀巢黄金速溶咖啡，添加研磨粉，170 克 – 17.49 擦。 🤍 拉斐尔糖果，70 克 – 7.49 擦。 🍫 O'ZERA 糖果华夫饼套装，坚果夹心牛奶巧克力，150 克 – 6.58 擦。 🏖️夏季产品折扣高达-30%！当然，乳制品、肉类熟食、饮料、零食、罐头食品和其他商品的优惠价格。在 Unistore 购物有利可图！ 🛒 #unistore #unistore #promotionsminsk #discountskiminsk #有利可图的产品",
+    "photo": "https://cdn4.telesco.pe/file/vR-aPBcHoO1X8M7gxAZgeYgRYSUTTybtJ3zjMXQeL7JpLLkTbccujo5MkLsB0K5_6vEuTvW9ucpPMV8XDc3lFnsyEN2A2Qvp_7vT5nKbYCwfgdei0flvSmuLmEn5c26-khwV2eX55f1Yv-lGN2dclcmC0288VSchxNIaxFEzYL2vgUrq8RfVbkVEpXDonCji1kmDWp3Xyd2VChJkqDsXNUEJuskD6cb2ynjvmsQt787ka3MCWWwe4APTU0RxlBP-CoPQtXuTC7Ggs56x7Lq0sAB-ITvWOdCuhFa077Ab8lnkieEEs8T_HPiNKngk-kd59ejR74jD7C-DSY4gZt7JrQ.jpg",
+    "price": 30.08,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": 30,
+    "endDate": "",
+    "history": [
+      {
+        "t": "2026-08-31",
+        "p": 30.08
+      }
+    ]
+  },
+  {
+    "user": "groshyk",
+    "id": "4504",
+    "store": "Грошык",
+    "link": "https://t.me/groshyk/4504",
+    "date": "2026-08-15T11:51:53+00:00",
+    "beijing": "2026-08-15 19:51",
+    "text": "Девочки, зашла в Грошык за игровыми товарами, а в итоге залипла в отделе канцелярии и косметики&#33; 😂 Посмотрите, сколько классных штук я нашла для подготовки к учебному году и просто для настроения)) 🎒 ДЛЯ ШКОЛЫ И УНИВЕРА • Набор школьника (бутылочка + ланчбокс) — всего за 8,99 руб. Цвет — сочный апельсин&#33; 🍊 • Стаканы с котиками в стиле мема six, seven (425 мл) — 3,89 руб. Теперь пить кофе или какао будет в сто раз приятнее. 🐱 ☕️ • Силиконовые пеналы с джибитсами — 6,99 руб. Они такие тактильные, просто антистресс&#33; 🌸 ДЛЯ СЕБЯ ЛЮБИМОЙ • Гели для душа Palmolive Elixir (Орхидея и Георгин) — 8,99 руб. Ароматы просто люкс&#33; ✨ • Корейская пенка для умывания CONSLY с японской сливой — 19,99 руб. • Огромные флаконы шампуня WEPROVE — 16,99 руб. за 500 мл. Грошык как всегда радует: и к учебе подготовит, и полочку в ванной обновит 🤗 А что из этого вы бы купили первым делом? ❤️ — Стакан с котиком 6,7 🔥 — Набор для перекусов 😍 — Всё для ванной",
+    "zh": "姑娘们，我去Groshyk买游戏用品，结果却被困在了文具和化妆品部门！ 😂 看看我发现了多少很酷的东西来为学年做准备，只是为了心情）） 🎒 对于学校和大学 • 学生套装（瓶子+午餐盒）- 仅售 8.99 卢布。颜色是多汁的橙色！ 🍊 • 六、七模因风格的猫眼镜（425 毫升）- 3.89 擦。现在喝咖啡或可可会令人愉悦一百倍。 🐱 ☕️ • 带jibits 的硅胶铅笔盒- 6.99 擦。它们非常有触觉，简直可以抗压！为您自己• Palmolive Elixir 沐浴露（兰花和大丽花）- 8.99 擦。香气简直就是奢华！ ✨ • 韩国 CONSLY 日本梅子洗面奶 — 19.99 卢布。 • 大瓶WEPROVE洗发水- 16.99卢布。 500 毫升。 Groshyk 一如既往地让你开心：他会为你的学习做准备，并更新浴室的架子 🤗 你会先买哪一个？ ❤️ — 玻璃杯和一只猫 6.7 🔥 — 零食套装 😍 — 浴室的一切",
+    "photo": "https://cdn4.telesco.pe/file/PimGzcd2Yv82O2_Hib6SY6_jjNtwoD2J3z48CzK1ndgV0wDXd4HFKHl8TLjtAuOyg599lh7F7v_tBpQ1fq0g5Jko2oOsaM7Qmy7vG8KM36IUxOdZC6ABoqZkMczqp5W8_xTSo6ZSOjP6te1BOapKwG9AWE1aJZBXvfzCagX38fRlGz6qBB4UhhwGIyZZ-NS03cItOxh1YKxVlRkE3rtTamulX9-eKZNiqJFeWv_ZxPG1znTHXYy2vJQkiARO7c820cWCdsptvApQoOmKFErd3X1mIzAXmnhz7k588iDUUQe0ckpHUCVIc3ARGrS842wdD78FGg57yYkoDNWEwDXl4g.jpg",
+    "price": 8.99,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "",
+    "history": [
+      {
+        "t": "2026-08-31",
+        "p": 8.99
+      }
+    ]
   }
 ]
