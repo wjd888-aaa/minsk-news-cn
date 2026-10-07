@@ -622,7 +622,7 @@ async function fetchWeather() {
   }
 }
 
-async function fetchUnionpayBynCny() {
+async function fetchUnionpayBoth() {
   const beijing = new Date(Date.now() + 8 * 3600 * 1000);
   const dow = beijing.getUTCDay();
   let dt = beijing;
@@ -639,9 +639,16 @@ async function fetchUnionpayBynCny() {
   });
   if (!res.ok) throw new Error('unionpay http ' + res.status);
   const j = await res.json();
-  const row = (j.exchangeRateJson || []).find((x) => x.transCur === 'BYN' && x.baseCur === 'CNY');
-  if (!row) throw new Error('unionpay BYN missing');
-  return Number(row.rateData);
+  const rows = j.exchangeRateJson || [];
+  const byn = rows.find((x) => x.transCur === 'BYN' && x.baseCur === 'CNY');
+  const usd = rows.find((x) => x.transCur === 'USD' && x.baseCur === 'CNY');
+  if (!byn) throw new Error('unionpay BYN missing');
+  return { bynInCny: Number(byn.rateData), usdInCny: usd ? Number(usd.rateData) : null };
+}
+
+async function fetchUnionpayBynCny() {
+  const up = await fetchUnionpayBoth();
+  return up.bynInCny;
 }
 
 async function fetchNbrbRates() {
@@ -654,8 +661,11 @@ async function fetchNbrbRates() {
   if (!usd) throw new Error('NBRB USD missing');
   const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
   let bynInCny = null;
+  let unionpayUsdInCny = null;
   try {
-    bynInCny = await fetchUnionpayBynCny();
+    const up = await fetchUnionpayBoth();
+    bynInCny = up.bynInCny;
+    unionpayUsdInCny = up.usdInCny;
   } catch (e) {
     console.log('unionpay fail: ' + e.message);
   }
@@ -664,7 +674,11 @@ async function fetchNbrbRates() {
     if (cny) bynInCny = 1 / (Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale));
   }
   if (bynInCny == null) throw new Error('NBRB CNY missing');
-  return { bynInCny, usdInCny: usdRate * bynInCny };
+  const usdInCnyFinal = unionpayUsdInCny != null ? unionpayUsdInCny : (usdRate * bynInCny);
+  return {
+    bynInCny: Math.round(bynInCny * 1000) / 1000,
+    usdInCny: Math.round(usdInCnyFinal * 1000) / 1000,
+  };
 }
 
 async function fetchErApiRates() {
@@ -676,11 +690,14 @@ async function fetchErApiRates() {
   if (!j.rates || !j.rates.CNY || !j.rates.BYN) throw new Error('erapi rates missing');
   const usdInCny = Number(j.rates.CNY);
   const bynInCny = usdInCny / Number(j.rates.BYN);
-  return { bynInCny, usdInCny };
+  return {
+    bynInCny: Math.round(bynInCny * 1000) / 1000,
+    usdInCny: Math.round(usdInCny * 1000) / 1000,
+  };
 }
 
 function fmtRate(bynInCny, usdInCny, note) {
-  return `🇧🇾 今日银联汇率 1 Br ≈ ${bynInCny.toFixed(2)} ¥ · 1 $ ≈ ${usdInCny.toFixed(2)} ¥${note || ''}`;
+  return `🇧🇾 今日银联汇率 1 Br ≈ ${bynInCny.toFixed(3)} ¥ · 1 $ ≈ ${usdInCny.toFixed(3)} ¥${note || ''}`;
 }
 
 function saveRatesCache(rates) {
