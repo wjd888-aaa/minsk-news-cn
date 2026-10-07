@@ -1,4 +1,4 @@
-﻿const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync } = require('fs');
+﻿const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync, rmSync } = require('fs');
 const crypto = require('crypto');
 const path = require('path');
 
@@ -11,6 +11,10 @@ const MAX_ITEMS = 120;
 const MAX_FULLTEXT = 20;
 const HOMEPAGE_RECENT = 60;
 const FREE_PER_SECTION = 5;
+
+const NEWS_KEEP_DAYS = 14;
+const DEAL_KEEP_DAYS = 60;
+const FASTFOOD_KEEP_DAYS = 60;
 
 const LOCK_ATTR = ' data-lock="1"';
 const LOCK_FLAG_SCRIPT = `<script>window.BK_LOCK_PAGE=1</scr` + `ipt>`;
@@ -127,8 +131,8 @@ const DEAL_CHANNELS = [
   { user: 'unistoreminsk', store: 'UniStore' },
   { user: 'magazin_sosedi', store: 'Соседи' },
 ];
-const DEAL_DAYS = 30;
-const DEAL_MAX = 100;
+const DEAL_DAYS = DEAL_KEEP_DAYS;
+const DEAL_MAX = 400;
 
 const DEAL_PAGES = [
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
@@ -186,8 +190,8 @@ const FASTFOOD_TG = [
   { user: 'dominospizzabelarus', store: 'Domino' },
   { user: 'cofixbelarus', store: 'Cofix' },
 ];
-const FASTFOOD_DAYS = 30;
-const FASTFOOD_MAX = 60;
+const FASTFOOD_DAYS = FASTFOOD_KEEP_DAYS;
+const FASTFOOD_MAX = 200;
 
 const FASTFOOD_PAGES = [
   { id: 'mak', store: 'Mak', url: 'https://mak.by/news/?group=promotions', parse: parseMakPromos, limit: 6 },
@@ -574,6 +578,34 @@ function readJson(file, fallback) {
   } catch {
     return fallback;
   }
+}
+
+function pruneOldNews(records) {
+  const cutoff = Date.now() - NEWS_KEEP_DAYS * 86400000;
+  return records.filter((r) => {
+    const t = Date.parse(r.isodate);
+    return !isNaN(t) && t >= cutoff;
+  });
+}
+
+function pruneOldFiles(records) {
+  const kept = new Set(records.map((r) => r.slug));
+  let removed = 0;
+  for (const f of readdirSync(ART_DIR)) {
+    if (!f.endsWith('.html')) continue;
+    const slug = f.slice(0, -5);
+    if (kept.has(slug)) continue;
+    try { rmSync(path.join(ART_DIR, f), { force: true }); removed++; } catch {}
+  }
+  const imgsBase = path.join(ART_DIR, 'imgs');
+  if (existsSync(imgsBase)) {
+    for (const d of readdirSync(imgsBase)) {
+      if (kept.has(d)) continue;
+      try { rmSync(path.join(imgsBase, d), { recursive: true, force: true }); removed++; } catch {}
+    }
+  }
+  if (removed) console.log('  清理过期新闻文件: ' + removed + ' 个');
+  return removed;
 }
 
 function nowBeijing() {
@@ -1320,7 +1352,8 @@ async function fetchDeals() {
     }
     await sleep(300);
   }
-  const pageItems = [...pageMap.values()];
+  const pageItems = [...pageMap.values()]
+    .filter((d) => d.date && new Date(d.date).getTime() >= cutoff);
   const tgItems = [...tgMap.values()]
     .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -1433,7 +1466,8 @@ async function fetchFastfoods() {
     }
     await sleep(300);
   }
-  const pageItems = [...pageMap.values()];
+  const pageItems = [...pageMap.values()]
+    .filter((d) => d.date && new Date(d.date).getTime() >= cutoff);
   const tgItems = [...tgMap.values()]
     .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -2191,15 +2225,18 @@ async function fetchNews() {
     }
   }
 
-  // ---- 5. merge into index, sort desc ----
+  // ---- 5. merge into index, sort desc, prune older than NEWS_KEEP_DAYS ----
   for (const rec of newRecords) byLink.set(rec.link, rec);
-  const records = [...byLink.values()].sort((a, b) => new Date(b.isodate) - new Date(a.isodate));
+  const allRecords = [...byLink.values()].sort((a, b) => new Date(b.isodate) - new Date(a.isodate));
+  const records = pruneOldNews(allRecords);
+  if (records.length !== allRecords.length) console.log(`保留最近 ${NEWS_KEEP_DAYS} 天：清除 ${allRecords.length - records.length} 篇过期新闻`);
 
-  // ---- 6. write article pages + persist ----
+  // ---- 6. write article pages + persist, clean expired files ----
   mkdirSync(ART_DIR, { recursive: true });
   for (const rec of newRecords) {
     writeFileSync(path.join(ART_DIR, `${rec.slug}.html`), articlePageHtml(rec), 'utf8');
   }
+  pruneOldFiles(records);
   writeFileSync(INDEX_FILE, JSON.stringify(records, null, 2), 'utf8');
   writeFileSync(LAST_RUN_FILE, JSON.stringify({ ts: Date.now(), iso: new Date().toISOString() }), 'utf8');
 
@@ -2268,7 +2305,7 @@ async function main() {
     const left = Math.ceil((FETCH_INTERVAL_MS - (Date.now() - lastRun.ts)) / 3600000);
     console.log(`SKIP news: 距上次抓取不足 23 小时，${left} 小时后再次检查。仍会抓取超市折扣并重建页面。`);
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, 'news_skipped=true\n');
-    records = readJson(INDEX_FILE, []);
+    records = pruneOldNews(readJson(INDEX_FILE, []));
   } else {
     const r = await fetchNews();
     records = r.records;
