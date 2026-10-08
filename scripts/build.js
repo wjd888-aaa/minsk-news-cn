@@ -2307,7 +2307,13 @@ async function main() {
     const left = Math.ceil((FETCH_INTERVAL_MS - (Date.now() - lastRun.ts)) / 3600000);
     console.log(`SKIP news: 距上次抓取不足 23 小时，${left} 小时后再次检查。仍会抓取超市折扣并重建页面。`);
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, 'news_skipped=true\n');
-    records = pruneOldNews(readJson(INDEX_FILE, []));
+    const all = readJson(INDEX_FILE, []);
+    records = pruneOldNews(all);
+    if (records.length !== all.length) {
+      console.log(`保留最近 ${NEWS_KEEP_DAYS} 天：清除 ${all.length - records.length} 篇过期新闻`);
+      pruneOldFiles(records);
+      writeFileSync(INDEX_FILE, JSON.stringify(records, null, 2), 'utf8');
+    }
   } else {
     const r = await fetchNews();
     records = r.records;
