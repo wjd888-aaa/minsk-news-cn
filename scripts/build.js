@@ -15,6 +15,7 @@ const FREE_PER_SECTION = 5;
 const NEWS_KEEP_DAYS = 14;
 const DEAL_KEEP_DAYS = 60;
 const FASTFOOD_KEEP_DAYS = 60;
+const NEWS_KEEP_CATS = ['news', 'event', 'china'];
 
 const LOCK_ATTR = ' data-lock="1"';
 const LOCK_FLAG_SCRIPT = `<script>window.BK_LOCK_PAGE=1</scr` + `ipt>`;
@@ -583,6 +584,7 @@ function readJson(file, fallback) {
 function pruneOldNews(records) {
   const cutoff = Date.now() - NEWS_KEEP_DAYS * 86400000;
   return records.filter((r) => {
+    if (!NEWS_KEEP_CATS.includes(r.cat || 'news')) return true;
     const t = Date.parse(r.isodate);
     return !isNaN(t) && t >= cutoff;
   });
@@ -2326,7 +2328,7 @@ async function main() {
   console.log(`DONE: 共 ${records.length} 篇，本次新增 ${newCount} 篇（全文 ${fulltextDone} 篇），折扣 ${deals.length} 条，快餐 ${fastfoods.length} 条。`);
 }
 
-module.exports = { buildSite };
+module.exports = { buildSite, pruneOldNews };
 
 if (require.main === module) {
   main().catch((e) => {
