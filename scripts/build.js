@@ -2308,9 +2308,10 @@ async function main() {
     console.log(`SKIP news: 距上次抓取不足 23 小时，${left} 小时后再次检查。仍会抓取超市折扣并重建页面。`);
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, 'news_skipped=true\n');
     const all = readJson(INDEX_FILE, []);
-    records = pruneOldNews(all);
-    if (records.length !== all.length) {
-      console.log(`保留最近 ${NEWS_KEEP_DAYS} 天：清除 ${all.length - records.length} 篇过期新闻`);
+    const sorted = [...all].sort((a, b) => new Date(b.isodate) - new Date(a.isodate));
+    records = pruneOldNews(sorted);
+    if (records.length !== all.length || sorted.some((r, i) => r !== all[i])) {
+      if (records.length !== all.length) console.log(`保留最近 ${NEWS_KEEP_DAYS} 天：清除 ${all.length - records.length} 篇过期新闻`);
       pruneOldFiles(records);
       writeFileSync(INDEX_FILE, JSON.stringify(records, null, 2), 'utf8');
     }
