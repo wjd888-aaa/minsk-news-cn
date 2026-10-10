@@ -1136,12 +1136,17 @@ function isDealExpired(d) {
   return end.getTime() < today.getTime();
 }
 
+const DEAL_SIGNAL = /скидк|акци|распродаж|подар|выгод|копе|коп\b|руб|%|промокод|промо-код|бесплатн|второ[йае]|2-я|2-ая|специальн|спецпредложен|BYN/i;
+const NON_DEAL = /новинк|бонусн[аоы].{0,8}программ|программ[аы].{0,8}лояльност|карт[аы].{0,6}(акци|выгод|лояльност|скидок)|мобильн.{0,8}приложен|установи|скача|подписыв|розыгрыш|конкурс|поздравл|с праздник|ваканси|ищем сотрудник|набор в команду|прямой эфир|приглашаем/i;
+
 function isRealDeal(d) {
   if (d == null) return false;
   if (d.price != null || d.oldPrice != null || d.discount != null) return true;
   const t = String(d.text || '');
-  if (/промокод|промо-код|по промокод/i.test(t) || /BYN|бел\. руб|бел. руб/i.test(t)) return true;
-  return (d.user || '').startsWith('page:') && t.length > 1;
+  if (t.length < 2) return false;
+  if (/промокод|промо-код/i.test(t)) return true;
+  if (NON_DEAL.test(t)) return false;
+  return DEAL_SIGNAL.test(t);
 }
 
 function dealSig(d) {
