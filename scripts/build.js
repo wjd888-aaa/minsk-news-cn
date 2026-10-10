@@ -1762,7 +1762,7 @@ ${PWA_HEAD}
   var f = m[1];
   document.documentElement.setAttribute('data-tabf', f);
   var st = document.createElement('style');
-  st.textContent = '.deal-feed,.ff-section{display:none!important}'
+  st.textContent = '[data-tabf] .deal-feed,[data-tabf] .ff-section{display:none!important}'
     + '[data-tabf="deal"] .deal-feed{display:block!important}'
     + '[data-tabf="ff"] .ff-section{display:block!important}'
     + '[data-tabf] .card.deal,[data-tabf] .card.ff-deal,[data-tabf] .arch-item{display:none!important}'
