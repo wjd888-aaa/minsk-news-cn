@@ -27,5 +27,5 @@ jobs:
       - name: Send rate report
         env:
           KONTATO_API_KEY: ${{ secrets.KONTATO_API_KEY }}
-          KONTATO_DEST: '375292238345'
+          KONTATO_DESTS: '375259741332,375292238345'
         run: node scripts/rate-report.js
