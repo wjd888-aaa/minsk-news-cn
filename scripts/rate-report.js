@@ -180,27 +180,31 @@ async function buildMessage() {
   let rubYest = null;
   for (let i = 1; i <= 3 && rubYest == null; i++) rubYest = await fetchRubOn(iso(addDays(today, -i)));
 
-  const lines = [];
-  lines.push('📊 汇率日报（白俄时间15:00）');
-  lines.push('今日 1 Br = ¥' + (1 / t.cnyperbyn).toFixed(4) + ' ｜ 1 $ = ¥' + (t.usd / t.cnyperbyn).toFixed(4));
-  lines.push('🔮 明日 1 Br = ¥' + (next != null ? (1 / next).toFixed(4) : '—'));
+  const blocks = [];
 
-  lines.push('涨跌（1 CNY兑BYN）：');
+  blocks.push([
+    '📊 汇率日报（白俄时间15:00）',
+    '今日 1 Br = ¥' + (1 / t.cnyperbyn).toFixed(4) + ' ｜ 1 $ = ¥' + (t.usd / t.cnyperbyn).toFixed(4),
+    '🔮 明日 1 Br = ¥' + (next != null ? (1 / next).toFixed(4) : '—'),
+  ]);
+
   const segs = [];
   if (yest != null && prev2 != null) segs.push({ k: '昨较前', v: pct(yest, prev2) });
   segs.push({ k: '今较昨', v: pct(t.cnyperbyn, yest != null ? yest : t.cnyperbyn) });
   if (next != null) segs.push({ k: '明较今', v: pct(next, t.cnyperbyn) });
-  for (const s of segs) lines.push(s.k + '：' + signed(s.v));
 
+  const trend = ['涨跌（1 CNY兑BYN）：'];
+  for (const s of segs) trend.push(s.k + '：' + signed(s.v));
   const hot = segs.filter((s) => Math.abs(s.v) >= 0.1);
   if (hot.length) {
     const desc = hot
       .map((s) => s.k + (s.v >= 0 ? '走高' : '走低') + '（' + (s.v >= 0 ? '换白卢布更划算' : '先等等') + '）')
       .join('；');
-    lines.push('✅【提醒】' + desc + '。');
+    trend.push('✅【提醒】' + desc + '。');
   } else {
-    lines.push('ℹ️【提示】涨跌均未超 0.1%，汇率平稳，可正常安排。');
+    trend.push('ℹ️【提示】涨跌均未超 0.1%，汇率平稳，可正常安排。');
   }
+  blocks.push(trend);
 
   const cnyChg = yest != null ? pct(t.cnyperbyn, yest) : 0;
   const rubChg = t.rub != null && rubYest != null ? pct(t.rub, rubYest) : 0;
@@ -212,29 +216,28 @@ async function buildMessage() {
     dCny: cnyChg,
     dRub: rubChg,
   });
-  lines.push(outlook);
-  lines.push('建议：分批换、别赌单一时点。');
+  blocks.push([outlook, '建议：分批换、别赌单一时点。']);
 
   let upLine;
   try {
     const up = await fetchUnionpay();
     if (up && up.bynInCny != null) {
-      upLine = '🇨🇳 中国银联汇率 1 Br ≈ ' + up.bynInCny.toFixed(3) + ' ¥';
-      if (up.usdInCny != null) upLine += ' ｜ 1 $ ≈ ' + up.usdInCny.toFixed(3) + ' ¥';
+      upLine = '🇨🇳 中国银联汇率 1 Br ≈ ' + up.bynInCny.toFixed(4) + ' ¥';
+      if (up.usdInCny != null) upLine += ' ｜ 1 $ ≈ ' + up.usdInCny.toFixed(4) + ' ¥';
     } else {
       throw new Error('unionpay unavailable');
     }
   } catch (e) {
     upLine =
       '🇨🇳 中国银联汇率 1 Br ≈ ' +
-      (1 / t.cnyperbyn).toFixed(3) +
+      (1 / t.cnyperbyn).toFixed(4) +
       ' ¥ ｜ 1 $ ≈ ' +
-      (t.usd / t.cnyperbyn).toFixed(3) +
+      (t.usd / t.cnyperbyn).toFixed(4) +
       ' ¥（NBRB换算）';
   }
-  lines.push(upLine);
+  blocks.push([upLine]);
 
-  return lines.join('\n');
+  return blocks.map((b) => b.join('\n')).join('\n\n');
 }
 
 async function sendTo(dest, message) {
