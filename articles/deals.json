@@ -4,8 +4,8 @@
     "id": "novinka-v-magazine-v-malinovke",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/novinka-v-magazine-v-malinovke",
-    "date": "2026-10-11T20:02:28.775Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:09.779Z",
+    "beijing": "2026-10-12 08:19",
     "text": "🥤 Новинка в магазине в Малиновке! Холодные фруктовые напитки собственного производства за 3,99 руб — только в Малиновке",
     "zh": "🥤 马利诺夫卡商店新品！我们自己生产的冷果汁饮料售价 3.99 卢布 - 仅在 Malinovka",
     "period": "",
@@ -16,10 +16,6 @@
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-10-04",
-        "p": 3.99
-      },
       {
         "t": "2026-10-05",
         "p": 3.99
@@ -47,6 +43,10 @@
       {
         "t": "2026-10-11",
         "p": 3.99
+      },
+      {
+        "t": "2026-10-12",
+        "p": 3.99
       }
     ]
   },
@@ -55,8 +55,8 @@
     "id": "kazdyi-ponedelnik-dobryi-vprok",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/kazdyi-ponedelnik-dobryi-vprok",
-    "date": "2026-10-11T20:02:28.775Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:09.779Z",
+    "beijing": "2026-10-12 08:19",
     "text": "КАЖДЫЙ ПОНЕДЕЛЬНИК – Добрый ВПРОК 💙 Забота, которая становится приятным бонусом в супермаркете по адресу: Бобруйск, ул. Минская, 94В",
     "zh": "每个星期一都是一次美好的操蛋💙护理，这在位于Bobruisk，st.的超市里成为了令人愉快的奖励。明斯卡亚，94V",
     "period": "",
@@ -73,8 +73,8 @@
     "id": "shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Скидка 20% на кулинарию! В г. Минске: ул. Скрипникова, 15А, ул. Шаранговича, 51",
     "zh": "烹饪20%折扣！在明斯克：st。斯克里普尼科娃，15A，圣。沙兰戈维查，51 岁",
     "period": "",
@@ -91,8 +91,8 @@
     "id": "shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Каждый 7-й КОФЕ, СЭНДВИЧ, КУСОК ПИЦЦЫ всего за 2 КОПЕЙКИ! Только с картой «ВЫГОДА!»",
     "zh": "每 7 份咖啡、三明治、披萨片仅需 2 KOPEYKS！只有“好处！”卡片",
     "period": "",
@@ -109,8 +109,8 @@
     "id": "shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Больше выгодных покупок — с картой «ВЫГОДА!»",
     "zh": "通过“BENEF!”进行更有利可图的购买卡片",
     "period": "",
@@ -127,8 +127,8 @@
     "id": "shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "СКИДКА 50% на ножи за фишки",
     "zh": "薯片刀具 50% 折扣",
     "period": "",
@@ -145,8 +145,8 @@
     "id": "shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Получи скидку -70% в DOMINO'S на 2-ю пиццу среднего или большого размера",
     "zh": "在 DOMINO'S 购买第二份中号或大号披萨即可享受 -70% 折扣",
     "period": "",
@@ -163,8 +163,8 @@
     "id": "shares/15vinditro_v_magazinakh_pinsk",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/15vinditro_v_magazinakh_pinsk/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "- 15% В ИНВИТРО в магазинах АЛМИ г.Пинск",
     "zh": "- 平斯克 ALMI 商店 15% IN INVITRO",
     "period": "",
@@ -181,8 +181,8 @@
     "id": "shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-oktyabrya-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-oktyabrya-/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "КОМБО за 6,59 р и за 4,59 р! С 1 по 31 октября",
     "zh": "COMBO 6.59 卢布和 4.59 卢布！ 10月1日至31日",
     "period": "",
@@ -193,10 +193,6 @@
     "discount": null,
     "endDate": "31 октября",
     "history": [
-      {
-        "t": "2026-10-04",
-        "p": 6.59
-      },
       {
         "t": "2026-10-05",
         "p": 6.59
@@ -224,6 +220,10 @@
       {
         "t": "2026-10-11",
         "p": 6.59
+      },
+      {
+        "t": "2026-10-12",
+        "p": 6.59
       }
     ]
   },
@@ -232,8 +232,8 @@
     "id": "shares/aktsiya-nedelya-01-10-2026-14-10-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-nedelya-01-10-2026-14-10-2026/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "АКЦИЯ НЕДЕЛЯ 01.10.2026-14.10.2026",
     "zh": "促销周 2026年10月1日-2026年10月14日",
     "period": "",
@@ -250,8 +250,8 @@
     "id": "shares/obnovlenie-bonusnoy-programmy-vygoda",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/obnovlenie-bonusnoy-programmy-vygoda/",
-    "date": "2026-10-11T20:02:26.263Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:07.597Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Бонусная программа ВЫГОДА!",
     "zh": "奖金计划 好处！",
     "period": "",
@@ -268,8 +268,8 @@
     "id": "discounts/karta-aktsiy-i-skidok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/karta-aktsiy-i-skidok/",
-    "date": "2026-10-11T20:02:23.724Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:05.248Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Карта акций и скидок",
     "zh": "促销和折扣卡",
     "period": "",
@@ -286,8 +286,8 @@
     "id": "ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
-    "date": "2026-10-11T20:02:21.897Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:03.608Z",
+    "beijing": "2026-10-12 08:19",
     "text": "Cкидка 20% на готовую кулинарную продукцию \"Дионис\"",
     "zh": "现成烹饪产品“Dionysus”20% 折扣",
     "period": "1 января 2024 - 31 декабря 2026",
@@ -304,8 +304,8 @@
     "id": "sale/teplo-v-kazhdom-podarke",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/teplo-v-kazhdom-podarke/",
-    "date": "2026-10-11T20:02:20.348Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:02.216Z",
+    "beijing": "2026-10-12 08:19",
     "text": "с 1 по 14 октября Тепло в каждом подарке!",
     "zh": "10月1日至10月14日，每份礼物都充满温暖！",
     "period": "с 1 по 14 октября",
@@ -322,8 +322,8 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-10-11T20:02:20.348Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:02.216Z",
+    "beijing": "2026-10-12 08:19",
     "text": "-65% с 7 по 20 октября Горячие цены! Скидки до -65%!",
     "zh": "10月7日至10月20日-65% 热销价！折扣高达-65%！",
     "period": "с 7 по 20 октября",
@@ -340,8 +340,8 @@
     "id": "sale/30-na-tovary-iz-kollektsii-spadchyna",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/30-na-tovary-iz-kollektsii-spadchyna/",
-    "date": "2026-10-11T20:02:20.348Z",
-    "beijing": "2026-10-12 04:02",
+    "date": "2026-10-12T00:19:02.216Z",
+    "beijing": "2026-10-12 08:19",
     "text": "с 9 по 15 октября -30% на товары из коллекции \"Спадчына\"",
     "zh": "10 月 9 日至 10 月 15 日期间，“Spadchyna”系列商品可享受 -30% 折扣",
     "period": "с 9 по 15 октября",
@@ -372,6 +372,10 @@
       {
         "t": "2026-10-11",
         "p": 4.5
+      },
+      {
+        "t": "2026-10-12",
+        "p": 4.5
       }
     ]
   },
@@ -393,6 +397,10 @@
     "history": [
       {
         "t": "2026-10-11",
+        "p": 3.5
+      },
+      {
+        "t": "2026-10-12",
         "p": 3.5
       }
     ]
@@ -433,6 +441,10 @@
       {
         "t": "2026-10-11",
         "p": 10.17
+      },
+      {
+        "t": "2026-10-12",
+        "p": 10.17
       }
     ]
   },
@@ -472,6 +484,10 @@
       {
         "t": "2026-10-11",
         "p": 5.25
+      },
+      {
+        "t": "2026-10-12",
+        "p": 5.25
       }
     ]
   },
@@ -497,6 +513,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 11.3
+      },
+      {
+        "t": "2026-10-12",
         "p": 11.3
       }
     ]
@@ -524,6 +544,10 @@
       {
         "t": "2026-10-11",
         "p": 4.5
+      },
+      {
+        "t": "2026-10-12",
+        "p": 4.5
       }
     ]
   },
@@ -549,6 +573,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 3.5
+      },
+      {
+        "t": "2026-10-12",
         "p": 3.5
       }
     ]
@@ -576,6 +604,10 @@
       {
         "t": "2026-10-11",
         "p": 3.5
+      },
+      {
+        "t": "2026-10-12",
+        "p": 3.5
       }
     ]
   },
@@ -602,6 +634,10 @@
       {
         "t": "2026-10-11",
         "p": 5.3
+      },
+      {
+        "t": "2026-10-12",
+        "p": 5.3
       }
     ]
   },
@@ -627,6 +663,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 7.99
+      },
+      {
+        "t": "2026-10-12",
         "p": 7.99
       }
     ]
@@ -876,6 +916,10 @@
       {
         "t": "2026-10-11",
         "p": 5.49
+      },
+      {
+        "t": "2026-10-12",
+        "p": 5.49
       }
     ]
   },
@@ -1034,6 +1078,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 12.99
+      },
+      {
+        "t": "2026-10-12",
         "p": 12.99
       }
     ]
@@ -1307,6 +1355,10 @@
       {
         "t": "2026-10-11",
         "p": 8.99
+      },
+      {
+        "t": "2026-10-12",
+        "p": 8.99
       }
     ]
   },
@@ -1526,6 +1578,10 @@
       {
         "t": "2026-10-11",
         "p": 11.99
+      },
+      {
+        "t": "2026-10-12",
+        "p": 11.99
       }
     ]
   },
@@ -1643,44 +1699,6 @@
       {
         "t": "2026-10-05",
         "p": 2.25
-      }
-    ]
-  },
-  {
-    "user": "evroopt_shop",
-    "id": "4465",
-    "store": "Евроопт",
-    "link": "https://t.me/evroopt_shop/4465",
-    "date": "2026-10-04T11:39:57+00:00",
-    "beijing": "2026-10-04 19:39",
-    "text": "Порадуйте своего хвостика изысканными вкусами&#33; 🐾 По 11 октября в «Евроопт» действуют специальные акционные цены для участников клуба «Еплюс. Питомцы»: • Корм для кошек SHEBA, паштет, говядина - 1,29 руб. за 75 г (скидка -27%) • Корм для кошек SHEBA, крафт коллекция, говядина - 1,29 руб. за 75 г (скидка -27%) • Корм для кошек «Гурмэ», перл, в ассортименте - 1,39 руб. за 75 г (скидка -22%) • Корм для кошек Whiskas, в ассортименте - 0,99 руб. за 75 г (скидка -28%) • Лакомство для кошек Dreamies, курица - 1,49 руб. за 30 г (скидка -25%) • Лакомство для кошек Dreamies, курица - 2,89 руб. за 60 г (скидка -27%) • Лакомство для кошек Perfect fit, курица - 1,99 руб. за 50 г (скидка -31%) Как вступить в клуб? 📲 Скачайте приложение «Еплюс» → Раздел «Еплюс. Питомцы» → Заполните профиль питомца → Готово&#33; *Стоимость товаров актуальна на момент публикации и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80",
-    "zh": "用美味的味道让你的马尾辫高兴起来！ 🐾 截至 10 月 11 日，Euroopt 为 Eplus 俱乐部会员提供特别促销价格。宠物”： • SHEBA 猫粮，肉酱，牛肉 - 1.29 卢布，75 克（-27% 折扣） • SHEBA 猫粮，工艺品系列，牛肉 - 1.29 卢布，75 克（-27% 折扣） • 美味猫粮，珍珠，什锦 - 1.39 卢布，75 克（-22% 折扣） • Whiskas 猫粮，什锦 - 0.99 卢布。 75 克（-28% 折扣） • Dreamies 猫零食，鸡肉 - 30 克（-25% 折扣） • Dreamies 猫零食，鸡肉 - 60 克（-27% 折扣） • Perfect fit 猫零食，鸡肉 - 50 克（-31% 折扣） 如何加入俱乐部？宠物” → 填写您宠物的个人资料 → 完成！ *产品价格为发布时的最新价格，其他商店日期可能会有所不同。更多详情请访问 evroopt.by 或致电 +375 44 788 88 80",
-    "photo": "https://cdn4.telesco.pe/file/Fs5NaRGAgL4fauvp-dGaBfOhDqRgnXDSrznNGAQk4pJuJFWKuIIVitwHSudQ9Rwd2nC-k5xzFldKaETMkAJ0RP0XwB_xw41FzEu6CE_TQokDNJXac2LcpHYgLDkx2wDaD1Ms3KJjwUNzyEaaH6PrFXJ_wWWApYmzP6YNVB32b1f3FjUYdzoEMKG1RC_XqLye8vaHs0EMHUjt69Y2FrAGPEJ5FXCdfEST3MLbOTL_riLRo30n5WphTlSPN6R1Xd7Tjwjwuz5LnAN6FYeV5QzwSE0G7cAQcCAG1IdizCZ9vDPey9e7UkISFG_EIqaYyRTc-0BoYYKaBeunHWSXry_Bnw.jpg",
-    "price": 1.29,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 27,
-    "endDate": "11 октября",
-    "history": [
-      {
-        "t": "2026-10-04",
-        "p": 1.29
-      },
-      {
-        "t": "2026-10-05",
-        "p": 1.29
-      },
-      {
-        "t": "2026-10-06",
-        "p": 1.29
-      },
-      {
-        "t": "2026-10-07",
-        "p": 1.29
-      },
-      {
-        "t": "2026-10-08",
-        "p": 1.29
       }
     ]
   },
@@ -2313,10 +2331,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-04",
-        "p": 47.52
-      },
-      {
         "t": "2026-10-05",
         "p": 47.52
       },
@@ -2342,6 +2356,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 47.52
+      },
+      {
+        "t": "2026-10-12",
         "p": 47.52
       }
     ]
@@ -3325,6 +3343,10 @@
       {
         "t": "2026-10-11",
         "p": 13.09
+      },
+      {
+        "t": "2026-10-12",
+        "p": 13.09
       }
     ]
   },
@@ -3337,7 +3359,7 @@
     "beijing": "2026-08-15 19:51",
     "text": "Девочки, зашла в Грошык за игровыми товарами, а в итоге залипла в отделе канцелярии и косметики&#33; 😂 Посмотрите, сколько классных штук я нашла для подготовки к учебному году и просто для настроения)) 🎒 ДЛЯ ШКОЛЫ И УНИВЕРА • Набор школьника (бутылочка + ланчбокс) — всего за 8,99 руб. Цвет — сочный апельсин&#33; 🍊 • Стаканы с котиками в стиле мема six, seven (425 мл) — 3,89 руб. Теперь пить кофе или какао будет в сто раз приятнее. 🐱 ☕️ • Силиконовые пеналы с джибитсами — 6,99 руб. Они такие тактильные, просто антистресс&#33; 🌸 ДЛЯ СЕБЯ ЛЮБИМОЙ • Гели для душа Palmolive Elixir (Орхидея и Георгин) — 8,99 руб. Ароматы просто люкс&#33; ✨ • Корейская пенка для умывания CONSLY с японской сливой — 19,99 руб. • Огромные флаконы шампуня WEPROVE — 16,99 руб. за 500 мл. Грошык как всегда радует: и к учебе подготовит, и полочку в ванной обновит 🤗 А что из этого вы бы купили первым делом? ❤️ — Стакан с котиком 6,7 🔥 — Набор для перекусов 😍 — Всё для ванной",
     "zh": "姑娘们，我去Groshyk买游戏用品，结果却被困在了文具和化妆品部门！ 😂 看看我发现了多少很酷的东西来为学年做准备，只是为了心情）） 🎒 对于学校和大学 • 学生套装（瓶子+午餐盒）- 仅售 8.99 卢布。颜色是多汁的橙色！ 🍊 • 六、七模因风格的猫眼镜（425 毫升）- 3.89 擦。现在喝咖啡或可可会令人愉悦一百倍。 🐱 ☕️ • 带jibits 的硅胶铅笔盒- 6.99 擦。它们非常有触觉，简直可以抗压！为您自己• Palmolive Elixir 沐浴露（兰花和大丽花）- 8.99 擦。香气简直就是奢华！ ✨ • 韩国 CONSLY 日本梅子洗面奶 — 19.99 卢布。 • 大瓶WEPROVE洗发水- 16.99卢布。 500 毫升。 Groshyk 一如既往地让你开心：他会为你的学习做好准备，并更新浴室的架子 🤗 你会先买哪一个？ ❤️ — 玻璃杯和一只猫 6.7 🔥 — 零食套装 😍 — 浴室的一切",
-    "photo": "https://cdn4.telesco.pe/file/lE0KcBrdiFOPAH9Jv8JAkXERzE6gh_FcgGRGo5UKBesJ0LDt9LHoYv64rTXB0Rd5VTbAj1BP-JFO53xHRClguH9op1Ngc0ZUQHb1hlQ7Eha-75UT4uXAwq5DmAAjwBAnkSkJL7XYDwEgc_dvSNt6SIvlrpEKk3NLJ4CJgIgxnsxIeBE559PTBcTb66nbTjTb6LSMv2BFUTKcp1J8v3_IuTJrAZXzLK13MU8nYpLLh_JeNYctD_dOTrTaEXE0wUET72PxkJprlTepNHUdRuYzpQQqWhEEBZ-quzQ5_JWbMR_Zt8wIiyQ7jT_tZGS7Y96EKM4yXHGNsA1_mBONxvKAww.jpg",
+    "photo": "https://cdn4.telesco.pe/file/Z0jTs1zJmM1BeNNkhJRmUl0gz5ut_2Pijbc4fw2Bw0WFBjfGxKRsbm5EX0LbLypzX_4vJpIuQQT-MvqDo8Qzcq2P9KDEtbCOMeTBFtu8qQTjWvFr-TOFc9fxEiiHFKRQ6RW9VXpXc1bottazit5LgzQX4hcPuWoY-QJqXFL4NUA3_XYJtW9wd6qeoWvcMGsjsRjqUfJ6p-Qe83QXfdqyLp6olfo2is4WnaOOJgX72eRCqnZkpsjDDJjqU2U-v5a3kGVC-0a0ZmRwfyj0l9XG7P8D007RVQ4rtrwYqTEqssZhjVfoPAUC2p-sMt7J6n2Ljrjxg4CI-qNV-tzcFV4QRQ.jpg",
     "price": 8.99,
     "priceUnit": "",
     "oldPrice": null,
@@ -3362,6 +3384,10 @@
       },
       {
         "t": "2026-10-11",
+        "p": 8.99
+      },
+      {
+        "t": "2026-10-12",
         "p": 8.99
       }
     ]
