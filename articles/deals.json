@@ -4,8 +4,8 @@
     "id": "novinka-v-magazine-v-malinovke",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/novinka-v-magazine-v-malinovke",
-    "date": "2026-10-18T22:52:59.177Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:13.020Z",
+    "beijing": "2026-10-19 08:58",
     "text": "🥤 Новинка в магазине в Малиновке! Холодные фруктовые напитки собственного производства за 3,99 руб — только в Малиновке",
     "zh": "🥤 马利诺夫卡商店新品！我们自己生产的冷果汁饮料售价 3.99 卢布 - 仅在 Malinovka",
     "period": "",
@@ -16,10 +16,6 @@
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-10-11",
-        "p": 3.99
-      },
       {
         "t": "2026-10-12",
         "p": 3.99
@@ -47,6 +43,10 @@
       {
         "t": "2026-10-18",
         "p": 3.99
+      },
+      {
+        "t": "2026-10-19",
+        "p": 3.99
       }
     ]
   },
@@ -55,8 +55,8 @@
     "id": "kazdyi-ponedelnik-dobryi-vprok",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/kazdyi-ponedelnik-dobryi-vprok",
-    "date": "2026-10-18T22:52:59.177Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:13.020Z",
+    "beijing": "2026-10-19 08:58",
     "text": "КАЖДЫЙ ПОНЕДЕЛЬНИК – Добрый ВПРОК 💙 Забота, которая становится приятным бонусом в супермаркете по адресу: Бобруйск, ул. Минская, 94В",
     "zh": "每个星期一都是一次美好的操蛋💙护理，这在位于Bobruisk，st.的超市里成为了令人愉快的奖励。明斯卡亚，94V",
     "period": "",
@@ -73,8 +73,8 @@
     "id": "shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-20-na-kulinariyu-v-g-minske-ul-skripnikova-15a-ul-sharangovicha-51/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Скидка 20% на кулинарию! В г. Минске: ул. Скрипникова, 15А, ул. Шаранговича, 51",
     "zh": "烹饪20%折扣！在明斯克：st。斯克里普尼科娃，15A，圣。沙兰戈维查，51 岁",
     "period": "",
@@ -91,8 +91,8 @@
     "id": "shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Каждый 7-й КОФЕ, СЭНДВИЧ, КУСОК ПИЦЦЫ всего за 2 КОПЕЙКИ! Только с картой «ВЫГОДА!»",
     "zh": "每 7 份咖啡、三明治、披萨片仅需 2 KOPEYKS！只有“好处！”卡片",
     "period": "",
@@ -109,8 +109,8 @@
     "id": "shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Больше выгодных покупок — с картой «ВЫГОДА!»",
     "zh": "通过“BENEF!”进行更有利可图的购买卡片",
     "period": "",
@@ -127,8 +127,8 @@
     "id": "shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-kollektsiya-nozhey-bugatti-so-skidkoy-do-50/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "СКИДКА 50% на ножи за фишки",
     "zh": "薯片刀具 50% 折扣",
     "period": "",
@@ -145,8 +145,8 @@
     "id": "shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-oktyabrya-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-31-oktyabrya-/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "КОМБО за 6,59 р и за 4,59 р! С 1 по 31 октября",
     "zh": "COMBO 6.59 卢布和 4.59 卢布！ 10月1日至31日",
     "period": "",
@@ -157,10 +157,6 @@
     "discount": null,
     "endDate": "31 октября",
     "history": [
-      {
-        "t": "2026-10-11",
-        "p": 6.59
-      },
       {
         "t": "2026-10-12",
         "p": 6.59
@@ -188,6 +184,10 @@
       {
         "t": "2026-10-18",
         "p": 6.59
+      },
+      {
+        "t": "2026-10-19",
+        "p": 6.59
       }
     ]
   },
@@ -196,8 +196,8 @@
     "id": "shares/obnovlenie-bonusnoy-programmy-vygoda",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/obnovlenie-bonusnoy-programmy-vygoda/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Бонусная программа ВЫГОДА!",
     "zh": "奖金计划 好处！",
     "period": "",
@@ -214,8 +214,8 @@
     "id": "shares/skidka-30-na-khlebobulochnye-izdeliya-v-vechernee-vremya",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-30-na-khlebobulochnye-izdeliya-v-vechernee-vremya/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Скидка 30% на хлебобулочные изделия в вечернее время",
     "zh": "晚上烘焙产品 30% 折扣",
     "period": "",
@@ -232,8 +232,8 @@
     "id": "shares/aktsiya-mesyats-sentyabr-01-10-2026-31-10-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/aktsiya-mesyats-sentyabr-01-10-2026-31-10-2026/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "АКЦИЯ МЕСЯЦ СЕНТЯБРЬ 01.10.2026-31.10.2026",
     "zh": "促销月 2026年10月1日-2026年10月31日",
     "period": "",
@@ -250,8 +250,8 @@
     "id": "shares/ochen-bolshaya-aktsiya-15-10-2026-21-10-2026",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/ochen-bolshaya-aktsiya-15-10-2026-21-10-2026/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "ОЧЕНЬ БОЛЬШАЯ АКЦИЯ 15.10.2026-21.10.2026",
     "zh": "非常大的促销 10/15/2026-10/21/2026",
     "period": "",
@@ -268,8 +268,8 @@
     "id": "shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/-Poluchi%20skidku-70%25vDOMINO%27S-na%202-yu-pitstsu/",
-    "date": "2026-10-18T22:52:57.425Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:11.107Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Получи скидку -70% в DOMINO'S на 2-ю пиццу среднего или большого размера",
     "zh": "在 DOMINO'S 购买第二份中号或大号披萨即可享受 -70% 折扣",
     "period": "",
@@ -286,8 +286,8 @@
     "id": "discounts/karta-aktsiy-i-skidok",
     "store": "ПерекрестОК",
     "link": "https://perekrestok24.by/discounts/karta-aktsiy-i-skidok/",
-    "date": "2026-10-18T22:52:55.317Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:08.492Z",
+    "beijing": "2026-10-19 08:58",
     "text": "Карта акций и скидок",
     "zh": "促销和折扣卡",
     "period": "",
@@ -304,8 +304,8 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-10-18T22:52:52.735Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:06.466Z",
+    "beijing": "2026-10-19 08:58",
     "text": "-65% с 7 по 20 октября Горячие цены! Скидки до -65%!",
     "zh": "10月7日至10月20日-65% 热销价！折扣高达-65%！",
     "period": "с 7 по 20 октября",
@@ -322,8 +322,8 @@
     "id": "sale/podarki-dlya-lyubimogo-papy",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/podarki-dlya-lyubimogo-papy/",
-    "date": "2026-10-18T22:52:52.735Z",
-    "beijing": "2026-10-19 06:52",
+    "date": "2026-10-19T00:58:06.466Z",
+    "beijing": "2026-10-19 08:58",
     "text": "С 15 по 21 октября Подарки для любимого папы!",
     "zh": "10/22/2026 0 0 0 0 从10月15日到10月21日 给您亲爱的爸爸的礼物！",
     "period": "с 15 по 21 октября",
@@ -372,6 +372,10 @@
       {
         "t": "2026-10-18",
         "p": 2.25
+      },
+      {
+        "t": "2026-10-19",
+        "p": 2.25
       }
     ]
   },
@@ -393,6 +397,10 @@
     "history": [
       {
         "t": "2026-10-18",
+        "p": 4.25
+      },
+      {
+        "t": "2026-10-19",
         "p": 4.25
       }
     ]
@@ -442,7 +450,7 @@
         "p": 2.8
       },
       {
-        "t": "2026-10-18",
+        "t": "2026-10-19",
         "p": 5.3
       }
     ]
@@ -465,6 +473,10 @@
     "history": [
       {
         "t": "2026-10-18",
+        "p": 5.4
+      },
+      {
+        "t": "2026-10-19",
         "p": 5.4
       }
     ]
@@ -492,6 +504,10 @@
       {
         "t": "2026-10-18",
         "p": 3.59
+      },
+      {
+        "t": "2026-10-19",
+        "p": 3.59
       }
     ]
   },
@@ -517,6 +533,10 @@
       },
       {
         "t": "2026-10-18",
+        "p": 1.29
+      },
+      {
+        "t": "2026-10-19",
         "p": 1.29
       }
     ]
@@ -727,6 +747,10 @@
       {
         "t": "2026-10-18",
         "p": 6.99
+      },
+      {
+        "t": "2026-10-19",
+        "p": 6.99
       }
     ]
   },
@@ -787,40 +811,6 @@
       {
         "t": "2026-10-17",
         "p": 2.8
-      }
-    ]
-  },
-  {
-    "user": "magazin_sosedi",
-    "id": "3237",
-    "store": "Соседи",
-    "link": "https://t.me/magazin_sosedi/3237",
-    "date": "2026-10-15T13:02:13+00:00",
-    "beijing": "2026-10-15 21:02",
-    "text": "А У НАС В СОСЕДЯХ: Вкусно? Ещё бы&#33; Выгодно? Конечно&#33; 😍 С 15 по 18 октября в «Соседях» специальные цены на любимые продукты: 🍪 Печенье «Мариэрта» Слодыч, 430 г - 3,75 рублей &#33; 🧀 Сыр «Камамбер» 50%, 125 г - 5,99 рублей &#33; 🍐 Груша «Конференция», 1 кг - 3,99 рублей &#33; 🍇 Виноград «Тайфи», 1 кг - 4,99 рублей &#33; 🥬 Рукола ALVADO, 70 г - 3,99 рублей &#33; До встречи в наших магазинах&#33;",
-    "zh": "而我们的邻居：它好吃吗？当然！有利可图？当然！ 😍 从 10 月 15 日至 18 日，Neighbors 将为您喜爱的产品提供特价：🍪 Marierta Slodych 饼干，430 克 - 3.75 卢布！ 🧀 卡芒贝尔奶酪 50%，125 克 - 5.99 卢布！ 🍐会议梨，1公斤 - 3.99卢布！ 🍇 Taifi 葡萄，1 公斤 - 4.99 卢布！ 🥬 ALVADO 芝麻菜，70 克 - 3.99 卢布！我们商店见！",
-    "photo": "https://cdn4.telesco.pe/file/HHkQAubnHwU1H_V3q6cECNpVn9ER13wbncmluh32dUt8oPmZFKuXx53psrOtEPE8slbyCushHkrXKor5jKi-IQQLK759oNv3VzB_w8mYh-z0rmfqJm3uKH9KJ_qDYUy0rXjhdMWReZcaN4P_0SmQGaNQzU8bXomsLfVVSuG6DB8phLDTGPU6XRccAlbJNaURoBUSG6enUiQbDhmLn_7jAMF7JsnKsEFnqqgLLN52UBpK9Wn0ysXNB5Zj28cy5Q1LIbqWW5iV3RuwKPmJnKpdHfUjqDyRonz30NOcDosKjFn7WtWaYOhO1de16FjwQ3knZaLnvv9s9CYfEX6LTABSBQ.jpg",
-    "price": 3.75,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 50,
-    "endDate": "18 октября",
-    "history": [
-      {
-        "t": "2026-10-15",
-        "p": 3.75
-      },
-      {
-        "t": "2026-10-16",
-        "p": 3.75
-      },
-      {
-        "t": "2026-10-17",
-        "p": 3.75
-      },
-      {
-        "t": "2026-10-18",
-        "p": 3.75
       }
     ]
   },
@@ -979,6 +969,10 @@
       {
         "t": "2026-10-18",
         "p": 8.49
+      },
+      {
+        "t": "2026-10-19",
+        "p": 8.49
       }
     ]
   },
@@ -1133,6 +1127,10 @@
       },
       {
         "t": "2026-10-18",
+        "p": 3.29
+      },
+      {
+        "t": "2026-10-19",
         "p": 3.29
       }
     ]
@@ -1355,6 +1353,10 @@
       {
         "t": "2026-10-18",
         "p": 28.87
+      },
+      {
+        "t": "2026-10-19",
+        "p": 28.87
       }
     ]
   },
@@ -1381,48 +1383,6 @@
       {
         "t": "2026-10-14",
         "p": 3.75
-      }
-    ]
-  },
-  {
-    "user": "kopeechka_by",
-    "id": "3106",
-    "store": "Копеечка",
-    "link": "https://t.me/kopeechka_by/3106",
-    "date": "2026-10-13T08:25:58+00:00",
-    "beijing": "2026-10-13 16:25",
-    "text": "ОВОЩНАЯ ЯРМАРКА В КОПЕЕЧКЕ&#33; 🍏 🍎 🥕 🥬 До 18 октября: Картофель (урожай 2026) РБ 1 кг - 0.69 р. Картофель красный (урожай 2026) РБ 1 кг - 0.69 р. Картофель Долина вкуса (мытый, фас.) 1 кг - 1.99 р Лук репчатый (урожай 2026) РБ 1 кг - 1.25 р. Лук репчатый (красный) РБ 1 кг - 1.85 р. Морковь (урожай 2026) РБ 1 кг - 0.75 р. Морковь мытая \"ФХ НОВИЦКИХ\"(фас) РБ 1кг - 2.49 р. Свекла (урожай 2026) РБ 1 кг - 0.69 р. Капуста белокочанная (урожай 2026) РБ 1 кг - 0.79 р. Капуста краснокочанная РБ 1 кг - 2.39 р. Капуста (пекинская) 1 кг - 3.69 р. Яблоко \"ГОЛДЕН\" РБ 1 кг - 1.69 р. Яблоко \"РЕД ПРИНЦ\" РБ 1 кг - 1.69 р. Яблоко \"ГАЛА\" РБ 1 кг - 1.69 р. Яблоко \"АУКСИС\" РБ 1 кг - 1.49 р. Яблоко \"ХАНИ КРИСП\" РБ 1 кг - 1.59 р.",
-    "zh": "蔬菜公平价格！ 🍏 🍎 🥕 🥬 直到 10 月 18 日：土豆（2026 年收获）RB 1 公斤 - 0.69 擦。红土豆（2026 年收获）RB 1 千克 - 0.69 擦。土豆 Valley of Taste（洗净，包装）1 公斤 - 1.99 擦。洋葱（2026 年收获）RB 1 千克 - 1.25 擦。洋葱（红）RB 1 千克 - 1.85 擦。胡萝卜（2026 年收获）RB 1 千克 - 0.75 卢布。洗过的胡萝卜“FH NOVITSKIKH”（包装）RB 1kg - 2.49 擦。甜菜根（2026 年收获）RB 1 千克 - 0.69 擦。白甘蓝（2026 年收获）RB 1 千克 - 0.79 擦。红甘蓝 RB 1 千克 - 2.39 擦。卷心菜（北京）1 公斤 - 3.69 卢布。苹果“GOLDEN”RB 1 公斤 - 1.69 擦。苹果“红王子”RB 1 千克 - 1.69 擦。苹果“GALA”RB 1 千克 - 1.69 擦。苹果“AUKSIS”RB 1 千克 - 1.49 擦。苹果“蜂蜜脆”RB 1 千克 - 1.59 擦。",
-    "photo": "https://cdn4.telesco.pe/file/FTdCoVj30P2zFK-25vCaKljap8S-dYeRDtFuQ4oncujK4oWs9NS8aLvEtaEqpSa29Y8rXEfqNlR6jEgI3J89m-t_qe2YsIKKAa9hHmmktZsg-NhAEGQQ0iVQerPrsM2pf3jvHxWHwgzDi3Jyk2X9tKXHRKjSXluLNB8MEr18wvIlCpXmi75jXVJgqcghyCVlQlLEoa9hN_4uccDUnt_vNOfzOx0BGBOLSHjUXd50GPsjYlAu5u6Eq4RBttDgt7hAME-2BlSu1kLADTOgWiswQGP3QwX8sAb_Oiae8WdWdbn71AcomSx5Us1P2N2XUmTpKJC8Y7XQY0ysMvIqfa7N1g.jpg",
-    "price": 0.69,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "18 октября",
-    "history": [
-      {
-        "t": "2026-10-13",
-        "p": 0.69
-      },
-      {
-        "t": "2026-10-14",
-        "p": 0.69
-      },
-      {
-        "t": "2026-10-15",
-        "p": 0.69
-      },
-      {
-        "t": "2026-10-16",
-        "p": 0.69
-      },
-      {
-        "t": "2026-10-17",
-        "p": 0.69
-      },
-      {
-        "t": "2026-10-18",
-        "p": 0.69
       }
     ]
   },
@@ -1697,6 +1657,10 @@
       {
         "t": "2026-10-18",
         "p": 16.99
+      },
+      {
+        "t": "2026-10-19",
+        "p": 16.99
       }
     ]
   },
@@ -1888,23 +1852,6 @@
         "p": 10.17
       }
     ]
-  },
-  {
-    "user": "evroopt_shop",
-    "id": "4544",
-    "store": "Евроопт",
-    "link": "https://t.me/evroopt_shop/4544",
-    "date": "2026-10-11T09:19:16+00:00",
-    "beijing": "2026-10-11 17:19",
-    "text": "✨ Подарите заботу самым близким с WORLD EXPERT&#33; Приближается День матери, и это прекрасный повод сказать спасибо главным женщинам в нашей жизни. Пространство красоты WORLD EXPERT к этому теплому празднику подготовило особенное предложение. • 💥 Скидка 10% на весь ассортимент ко Дню матери действует с 12 по 18 октября включительно&#33; 🌸 Успейте выбрать подарок для любимых мамочек&#33; Заглядывайте в магазины «Евроопт» на островки WORLD EXPERT за порцией красоты и уюта&#33; *Стоимость товаров актуальна на момент публикации поста и может отличаться в другие даты посещения магазинов. Подробнее на evroopt.by или по номеру +375 44 788 88 80 #Евроопт #WorldExpert",
-    "zh": "✨ 与 WORLD EXPERT 一起照顾最亲近的人！母亲节即将来临，这是一个向我们生活中重要的女性表示感谢的好机会。 WORLD EXPERT美容空间为这个温馨的假期准备了特别优惠。 • 💥 母亲节全系列10%折扣有效期为10月12日至10月18日（含）！ 🎈赶快为亲爱的妈妈挑选一份礼物吧！前往 WORLD EXPERT 岛屿上的 Euroopt 商店，感受美丽和舒适！ *商品成本是帖子发布时的最新价格，在其他商店参观日期可能会有所不同。更多详情请访问 evroopt.by 或致电 +375 44 788 88 80 #Euroopt #WorldExpert",
-    "photo": "https://cdn4.telesco.pe/file/btA72FwGEFBZJgmXi3P4uQ3IV2hlwvF8-BxhF0QLQFo-mnx039kkqr1VehRcjjg036F9xqK8dwbg1sDJC2vaqjLsyFr75-VRa2IxSbs96cHsoghVHxdPzMFn1bnRpp_iYjAPKW7FJv9ZSpxJYwx2_69nUlDe6R24gJtGfuCdNY-nec-vcRe-4NRRIlJpBRyM9W6tzpptu4drxE7puPxnoXVgodnsdYPXChBSQ82BCPdT5m3vhYFwJ8y-ao2bzhoLGt2lAGnJZks9SOY6CCZFiqGyBlE_UMAFRVIwfO5BShtGv5bfHyoU3d9ej01OR6nJLoEAgHBedbaez5ng8NYf2Q.jpg",
-    "price": null,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 10,
-    "endDate": "18 октября",
-    "history": []
   },
   {
     "user": "fixprice_by",
@@ -2492,10 +2439,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-11",
-        "p": 12.99
-      },
-      {
         "t": "2026-10-12",
         "p": 12.99
       },
@@ -2521,6 +2464,10 @@
       },
       {
         "t": "2026-10-18",
+        "p": 12.99
+      },
+      {
+        "t": "2026-10-19",
         "p": 12.99
       }
     ]
@@ -4722,10 +4669,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-11",
-        "p": 13.09
-      },
-      {
         "t": "2026-10-12",
         "p": 13.09
       },
@@ -4751,6 +4694,10 @@
       },
       {
         "t": "2026-10-18",
+        "p": 13.09
+      },
+      {
+        "t": "2026-10-19",
         "p": 13.09
       }
     ]
