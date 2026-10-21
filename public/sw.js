@@ -1,4 +1,4 @@
-var CACHE = 'bkcn-v18';
+var CACHE = 'bkcn-v20';
 var ASSETS = [
   './',
   './index.html',
@@ -6,8 +6,7 @@ var ASSETS = [
   './life.html',
   './manifest.json',
   './icon.svg',
-  './icon-maskable.svg',
-  './clerk-auth.js'
+  './icon-maskable.svg'
 ];
 
 self.addEventListener('install', function (e) {
