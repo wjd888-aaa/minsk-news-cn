@@ -96,7 +96,6 @@ const STORE_ICON = {
 const storeIcon = (s) => STORE_ICON[s] || '';
 
 const DEAL_CHANNELS = [
-  { user: 'shopsgreen', store: 'Green' },
   { user: 'evroopt_shop', store: 'Евроопт' },
   { user: 'hitdiscount_by', store: 'Хит' },
   { user: 'gippoby_offical', store: 'Гиппо' },
@@ -112,6 +111,7 @@ const DEAL_DAYS = DEAL_KEEP_DAYS;
 const DEAL_MAX = 400;
 
 const DEAL_PAGES = [
+  { id: 'green', store: 'Green', url: 'https://green-market.by/shares', parse: parseGreenShares, limit: 12 },
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
@@ -742,6 +742,33 @@ async function fetchRates() {
   return '';
 }
 
+function parseGreenShares(html) {
+  const out = [];
+  const seen = new Set();
+  for (const block of html.split('news-preview-item').slice(1)) {
+    const hrefM = block.match(/href="(\/shares\/[a-z0-9-]+)"/i);
+    const titleM = block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i);
+    if (!hrefM || !titleM) continue;
+    const slug = hrefM[1].split('/').pop();
+    if (seen.has(slug)) continue;
+    const text = stripHtml(titleM[1]).replace(/\s+/g, ' ').trim();
+    if (!text) continue;
+    const dateM = block.match(/npi-date[^>]*>([\s\S]*?)<\/div>/i);
+    const period = dateM ? stripHtml(dateM[1]).replace(/\s+/g, ' ').trim() : '';
+    const imgM = block.match(/<img[^>]+src="([^"]+)"/i);
+    const photo = imgM ? (imgM[1].startsWith('/') ? 'https://green-market.by' + imgM[1] : imgM[1]) : '';
+    seen.add(slug);
+    out.push({
+      id: slug,
+      link: 'https://green-market.by' + hrefM[1],
+      text,
+      period,
+      photo,
+    });
+  }
+  return out;
+}
+
 function parse3CeniSales(html) {
   const out = [];
   const seen = new Set();
@@ -1113,7 +1140,7 @@ function isDealExpired(d) {
 }
 
 const DEAL_SIGNAL = /скидк|акци|распродаж|подар|выгод|копе|коп\b|руб|%|промокод|промо-код|бесплатн|второ[йае]|2-я|2-ая|специальн|спецпредложен|BYN|карт|бонус|лояльност|накоп|купон/i;
-const NON_DEAL = /новинк|мобильн.{0,8}приложен|установи|скача|подписыв|розыгрыш|конкурс|поздравл|с праздник|ваканси|ищем сотрудник|набор в команду|прямой эфир|приглашаем/i;
+const NON_DEAL = /новинк|мобильн.{0,8}приложен|установи|скача|подписыв|розыгрыш|конкурс|поздравл|с праздник|ваканси|ищем сотрудник|набор в команду|прямой эфир|приглашаем|открыл|открыти|автомагазин|на полках|привозим|ассортимент|дегустац/i;
 const WELFARE = /социальн|пенсионер|инвалид|многодетн|малообеспечн|льготн|пожилых|ветеран|день добра/i;
 
 function isRealDeal(d) {
@@ -1270,7 +1297,7 @@ async function fetchDeals() {
       for (const msg of msgs) {
         if (!msg.date || new Date(msg.date).getTime() < cutoff) continue;
         const fields = extractDealFields(msg.text, '');
-        if (!isRealDeal(fields)) continue;
+        if (!isRealDeal({ ...fields, text: msg.text })) continue;
         const key = ch.user + '/' + msg.id;
         const prev = tgMap.get(key);
         let zh = (prev && prev.zh) || '';
@@ -1326,7 +1353,7 @@ async function fetchDeals() {
           text: it.text,
           zh,
           period: it.period || '',
-          photo: '',
+          photo: it.photo || '',
           ...extractDealFields(it.text, it.period || ''),
         }));
         kept++;
