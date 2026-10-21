@@ -100,10 +100,7 @@ const DEAL_CHANNELS = [
   { user: 'hitdiscount_by', store: 'Хит' },
   { user: 'gippoby_offical', store: 'Гиппо' },
   { user: 'kopeechka_by', store: 'Копеечка' },
-  { user: 'groshyk', store: 'Грошык' },
-  { user: 'santaretail_by', store: 'Санта' },
   { user: 'fixprice_by', store: 'Fix Price' },
-  { user: 'koronaby', store: 'Корона' },
   { user: 'unistoreminsk', store: 'UniStore' },
   { user: 'magazin_sosedi', store: 'Соседи' },
 ];
@@ -112,6 +109,9 @@ const DEAL_MAX = 400;
 
 const DEAL_PAGES = [
   { id: 'green', store: 'Green', url: 'https://green-market.by/shares', parse: parseGreenShares, limit: 12 },
+  { id: 'korona', store: 'Корона', url: 'https://korona.by/hypermarkets/promotions', parse: parseKoronaPromos, limit: 10 },
+  { id: 'santa', store: 'Санта', url: 'https://santaretail.by/pokupatelyam/vygodnye-predlozheniya/', parse: parseSantaPromos, limit: 8 },
+  { id: 'groshyk', store: 'Грошык', url: 'https://groshyk.by/bolshaya-rasprodazha/', parse: parseGroshykSale, limit: 8 },
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
@@ -769,6 +769,133 @@ function parseGreenShares(html) {
   return out;
 }
 
+function numDateEnd(period) {
+  const all = String(period || '').match(/(\d{1,2})\.(\d{2})(?:\.(\d{4}))?/g);
+  if (!all || !all.length) return '';
+  const last = all[all.length - 1].match(/(\d{1,2})\.(\d{2})(?:\.(\d{4}))?/);
+  if (!last) return '';
+  const day = +last[1];
+  const mon = +last[2];
+  if (day < 1 || day > 31 || mon < 1 || mon > 12) return '';
+  const yr = last[3] || String(new Date().getFullYear());
+  return `${String(day).padStart(2, '0')}.${last[2]}.${yr}`;
+}
+
+function parseKoronaPromos(html) {
+  const marker = '"productListMap":{"data":';
+  const at = html.indexOf(marker);
+  if (at < 0) return [];
+  const start = at + marker.length;
+  let depth = 0;
+  let inStr = false;
+  let esc = false;
+  let end = -1;
+  for (let p = start; p < html.length; p++) {
+    const c = html[p];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === '[') depth++;
+    else if (c === ']') {
+      depth--;
+      if (depth === 0) { end = p + 1; break; }
+    }
+  }
+  if (end < 0) return [];
+  let arr;
+  try { arr = JSON.parse(html.slice(start, end)); } catch (e) { return []; }
+  return arr
+    .filter((x) => x && x.name && x.discountPrice != null && Number(x.discountPrice) > 0)
+    .map((x) => {
+      const endDate = numDateEnd(x.date);
+      const dm = String(x.date || '').match(/(\d{1,2})\.(\d{2})(?:\.(\d{4}))?/);
+      let period = x.date || '';
+      if (dm && endDate) {
+        const yr = dm[3] || String(new Date().getFullYear());
+        period = `${String(+dm[1]).padStart(2, '0')}.${dm[2]}.${yr} - ${endDate}`;
+      }
+      return {
+        id: String(x.article || x.id),
+        link: 'https://korona.by/hypermarkets/promotions',
+        text: String(x.name).replace(/\s+/g, ' ').trim(),
+        period,
+        photo: (x.image && (x.image.thumbnails && x.image.thumbnails.url)) || (x.image && x.image.url) || '',
+        price: Number(x.discountPrice),
+        oldPrice: x.price != null && Number(x.price) > Number(x.discountPrice) ? Number(x.price) : null,
+        endDate,
+      };
+    });
+}
+
+function parseSantaPromos(html) {
+  const out = [];
+  const seen = new Set();
+  for (const m of html.matchAll(/<a class="article-discount[^"]*" href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+    const link = m[1].startsWith('http') ? m[1] : 'https://santaretail.by' + m[1];
+    const idM = link.match(/[?&]Id=(\d+)/);
+    const id = idM ? idM[1] : link;
+    if (seen.has(id)) continue;
+    const title = stripHtml((m[2].match(/<h5[^>]*>([\s\S]*?)<\/h5>/) || [])[1] || '').replace(/\s+/g, ' ').trim();
+    if (!title) continue;
+    const desc = stripHtml((m[2].match(/<h6[^>]*>([\s\S]*?)<\/h6>/) || [])[1] || '').replace(/\s+/g, ' ').trim();
+    const img = (m[2].match(/<img[^>]+src="([^"]+)"/) || [])[1] || '';
+    seen.add(id);
+    out.push({
+      id,
+      link,
+      text: desc && desc !== title ? `${title} — ${desc}` : title,
+      period: '',
+      photo: img.startsWith('/') ? 'https://santaretail.by' + img : img,
+    });
+  }
+  return out;
+}
+
+function parseGroshykSale(html) {
+  const BE_MONTHS = {
+    'студзеня': 1, 'лютага': 2, 'сакавіка': 3, 'красавіка': 4, 'мая': 5, 'чэрвеня': 6,
+    'ліпеня': 7, 'жніўня': 8, 'верасня': 9, 'кастрычніка': 10, 'лістапада': 11, 'снежня': 12,
+  };
+  let period = '';
+  let endDate = '';
+  const pm = html.match(/Акцыя дзейнічае\s+з\s+(\d{1,2})\s+па\s+(\d{1,2})\s+([а-яёіi]+)/i);
+  if (pm) {
+    const mon = BE_MONTHS[pm[3].toLowerCase().replace(/i/g, 'і')];
+    if (mon) {
+      const yr = String(new Date().getFullYear());
+      const mm = String(mon).padStart(2, '0');
+      period = `${String(+pm[1]).padStart(2, '0')}.${mm}.${yr} - ${String(+pm[2]).padStart(2, '0')}.${mm}.${yr}`;
+      endDate = `${String(+pm[2]).padStart(2, '0')}.${mm}.${yr}`;
+    }
+  }
+  const out = [];
+  for (const block of html.split('<div class="table__product">').slice(1)) {
+    const nameM = block.match(/class="product__title"[^>]*>([\s\S]*?)<\/span>/);
+    const priceM = block.match(/class="product__price"[^>]*>([\d.,]+)<\/span>/);
+    if (!nameM || !priceM) continue;
+    const codeM = block.match(/Артикул:\s*(\d+)/);
+    const oldM = block.match(/class="product__price-block-old"[^>]*>([\d.,]+)</);
+    const imgM = block.match(/class="product__image"[^>]*src="([^"]+)"/);
+    const name = stripHtml(nameM[1]).replace(/\s+/g, ' ').trim();
+    if (!name) continue;
+    out.push({
+      id: codeM ? codeM[1] : name.slice(0, 40),
+      link: 'https://groshyk.by/bolshaya-rasprodazha/',
+      text: name,
+      period,
+      photo: imgM ? imgM[1] : '',
+      price: Number(priceM[1].replace(',', '.')),
+      oldPrice: oldM ? Number(oldM[1].replace(',', '.')) : null,
+      endDate,
+    });
+  }
+  return out;
+}
+
 function parse3CeniSales(html) {
   const out = [];
   const seen = new Set();
@@ -1343,6 +1470,7 @@ async function fetchDeals() {
           zh = (await translate(it.text.slice(0, 1500))) || it.text;
           await sleep(150);
         }
+        const fields = extractDealFields(it.text, it.period || '');
         pageMap.set(key, withHistory({
           user: 'page:' + src.id,
           id: it.id,
@@ -1354,9 +1482,19 @@ async function fetchDeals() {
           zh,
           period: it.period || '',
           photo: it.photo || '',
-          ...extractDealFields(it.text, it.period || ''),
+          ...fields,
+          ...(it.price != null ? { price: it.price } : {}),
+          ...(it.oldPrice != null ? { oldPrice: it.oldPrice } : {}),
+          ...(it.discount != null ? { discount: it.discount } : {}),
+          ...(it.endDate ? { endDate: it.endDate } : {}),
         }));
         kept++;
+      }
+      if (items.length) {
+        const seen = new Set(items.slice(0, src.limit || 8).map((it) => 'page:' + src.id + '/' + it.id));
+        for (const k of [...pageMap.keys()]) {
+          if (k.startsWith('page:' + src.id + '/') && !seen.has(k)) pageMap.delete(k);
+        }
       }
       console.log(`  deals ${src.id}: ${items.length} 条，保留 ${kept}`);
     } catch (e) {
@@ -1370,7 +1508,7 @@ async function fetchDeals() {
     .filter((d) => d.date && new Date(d.date).getTime() >= cutoff)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   const deals = [...pageItems, ...tgItems]
-    .filter((d) => !isDealExpired(d) && isRealDeal(d))
+    .filter((d) => !isDealExpired(d) && ((d.user || '').startsWith('page:') || isRealDeal(d)))
     .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0))
     .slice(0, DEAL_MAX);
   writeFileSync(DEALS_FILE, JSON.stringify(deals, null, 2), 'utf8');
