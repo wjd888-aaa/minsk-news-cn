@@ -110,9 +110,9 @@ const DEAL_MAX = 400;
 const DEAL_PAGES = [
   { id: 'green', store: 'Green', url: 'https://green-market.by/shares', parse: parseGreenShares, limit: 12 },
   { id: 'korona', store: 'Корона', url: 'https://korona.by/hypermarkets/promotions', parse: parseKoronaPromos, limit: 10 },
-  { id: 'santa', store: 'Санта', url: 'https://salepost.by/santa-salebook', parse: parseSalepostFlyer, limit: 2 },
-  { id: 'santa2', store: 'Санта', url: 'https://salepost.by/santabum-salebook', parse: parseSalepostFlyer, limit: 2 },
-  { id: 'groshyk', store: 'Грошык', url: 'https://salepost.by/groshyk-salebook', parse: parseSalepostFlyer, limit: 2 },
+  { id: 'santa', store: 'Санта', url: 'https://salepost.by/santa-salebook', parse: (h) => parseSalepostFlyer(h, '桑塔'), limit: 2 },
+  { id: 'santa2', store: 'Санта', url: 'https://salepost.by/santabum-salebook', parse: (h) => parseSalepostFlyer(h, '桑塔'), limit: 2 },
+  { id: 'groshyk', store: 'Грошык', url: 'https://salepost.by/groshyk-salebook', parse: (h) => parseSalepostFlyer(h, '格罗希克'), limit: 2 },
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
@@ -897,7 +897,7 @@ function parseGroshykSale(html) {
   return out;
 }
 
-function parseSalepostFlyer(html) {
+function parseSalepostFlyer(html, storeZh) {
   const one = (re) => {
     const m = html.match(re);
     return m ? m[1] : '';
@@ -925,7 +925,8 @@ function parseSalepostFlyer(html) {
   let hsh = 5381;
   for (let i = 0; i < text.length; i++) hsh = ((hsh << 5) + hsh + text.charCodeAt(i)) | 0;
   const id = `${period.replace(/\./g, '').replace(/\s*-\s*/, '-')}-${(hsh >>> 0).toString(36)}`;
-  return [{ id, link: '', text, period, photo, endDate }];
+  const zh = storeZh ? `${storeZh} 新一期优惠单（${ruDateToNumeric(period) || period}）` : '';
+  return [{ id, link: '', text, period, photo, endDate, zh }];
 }
 
 function parse3CeniSales(html) {
@@ -1497,7 +1498,7 @@ async function fetchDeals() {
         }
         const key = 'page:' + src.id + '/' + it.id;
         const prev = pageMap.get(key);
-        let zh = (prev && prev.zh) || '';
+        let zh = it.zh || (prev && prev.zh) || '';
         if (!zh) {
           zh = (await translate(it.text.slice(0, 1500))) || it.text;
           await sleep(150);
