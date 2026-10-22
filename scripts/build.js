@@ -110,8 +110,9 @@ const DEAL_MAX = 400;
 const DEAL_PAGES = [
   { id: 'green', store: 'Green', url: 'https://green-market.by/shares', parse: parseGreenShares, limit: 12 },
   { id: 'korona', store: 'Корона', url: 'https://korona.by/hypermarkets/promotions', parse: parseKoronaPromos, limit: 10 },
-  { id: 'santa', store: 'Санта', url: 'https://santaretail.by/pokupatelyam/vygodnye-predlozheniya/', parse: parseSantaPromos, limit: 8 },
-  { id: 'groshyk', store: 'Грошык', url: 'https://groshyk.by/bolshaya-rasprodazha/', parse: parseGroshykSale, limit: 8 },
+  { id: 'santa', store: 'Санта', url: 'https://salepost.by/santa-salebook', parse: parseSalepostFlyer, limit: 2 },
+  { id: 'santa2', store: 'Санта', url: 'https://salepost.by/santabum-salebook', parse: parseSalepostFlyer, limit: 2 },
+  { id: 'groshyk', store: 'Грошык', url: 'https://salepost.by/groshyk-salebook', parse: parseSalepostFlyer, limit: 2 },
   { id: 'triceny', store: 'Три цены', url: 'https://3ceni.by/sales/', parse: parse3CeniSales, limit: 8 },
   { id: 'dionis', store: 'Дионис', url: 'https://dionis-shop.by/promotions', parse: parseDionisPromos, limit: 8 },
   { id: 'perekrestok', store: 'ПерекрестОК', url: 'https://perekrestok24.by/discounts/', parse: parsePerekrestokDiscounts, limit: 8, enrich: fetchPerekrestokPeriod },
@@ -896,6 +897,37 @@ function parseGroshykSale(html) {
   return out;
 }
 
+function parseSalepostFlyer(html) {
+  const one = (re) => {
+    const m = html.match(re);
+    return m ? m[1] : '';
+  };
+  const title = stripHtml(one(/<title[^>]*>([\s\S]*?)<\/title>/)).replace(/\s+/g, ' ').trim();
+  const desc = stripHtml(
+    one(/<meta[^>]+name="description"[^>]+content=["']([^"']*)["']/i) ||
+    one(/<meta[^>]+content=["']([^"']*)["'][^>]+name="description"/i)
+  ).replace(/\s+/g, ' ').trim();
+  const photo =
+    one(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) ||
+    one(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i);
+  const dm = `${title} ${desc}`.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})(?:\s*[-–—]\s*|\s+по\s+)(\d{1,2})\.(\d{1,2})\.(\d{4})/i);
+  if (!dm) return [];
+  const period = `${dm[1]}.${dm[2]}.${dm[3]} - ${dm[4]}.${dm[5]}.${dm[6]}`;
+  const endDate = `${dm[4]}.${dm[5]}.${dm[6]}`;
+  const cut = (s) =>
+    s
+      .replace(/\s*Предложение действует[\s\S]*$/i, '')
+      .replace(/\s*[Сс]\s*\d{1,2}\.\d{1,2}\.\d{4}[\s\S]*$/, '')
+      .replace(/\s+NEW\s*$/i, '')
+      .trim();
+  const text = cut(desc) || cut(title);
+  if (!text) return [];
+  let hsh = 5381;
+  for (let i = 0; i < text.length; i++) hsh = ((hsh << 5) + hsh + text.charCodeAt(i)) | 0;
+  const id = `${period.replace(/\./g, '').replace(/\s*-\s*/, '-')}-${(hsh >>> 0).toString(36)}`;
+  return [{ id, link: '', text, period, photo, endDate }];
+}
+
 function parse3CeniSales(html) {
   const out = [];
   const seen = new Set();
@@ -1475,7 +1507,7 @@ async function fetchDeals() {
           user: 'page:' + src.id,
           id: it.id,
           store: src.store,
-          link: it.link,
+          link: it.link || src.url,
           date: now,
           beijing: fmtBeijing(now),
           text: it.text,
