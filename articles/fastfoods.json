@@ -4,8 +4,8 @@
     "id": "tempo-0",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-10-24T23:00:17.110Z",
-    "beijing": "2026-10-25 07:00",
+    "date": "2026-10-25T01:01:44.463Z",
+    "beijing": "2026-10-25 09:01",
     "text": "ВТОРАЯ ПИЦЦА ВСЕГО ЗА 3 РУБЛЯ! — Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля!",
     "zh": "第二份披萨只需 3 卢布！ — 一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份仅需 3 卢布！",
     "period": "",
@@ -22,8 +22,8 @@
     "id": "tempo-1",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-10-24T23:00:17.110Z",
-    "beijing": "2026-10-25 07:00",
+    "date": "2026-10-25T01:01:44.463Z",
+    "beijing": "2026-10-25 09:01",
     "text": "Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля! * Акция действует только при заказе пиццы (размер 26 или 31 см) с собой при заказе по короткому номеру 7773, по акционной цене 3 рубля предоставляется пицца меньшей стоимостью, не суммируется с другими акциями и специальными предложениями .",
     "zh": "一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份只需 3 卢布！ *此优惠仅适用于订购披萨（尺寸26或31厘米）并以短号7773订购外带；促销价为 3 卢布，提供价值较低的披萨，且不能与其他促销和特别优惠同时使用。",
     "period": "",
@@ -40,8 +40,8 @@
     "id": "tempo-2",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-10-24T23:00:17.110Z",
-    "beijing": "2026-10-25 07:00",
+    "date": "2026-10-25T01:01:44.463Z",
+    "beijing": "2026-10-25 09:01",
     "text": "СЕТ-ТОП КОМБО! — ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой!",
     "zh": "机顶盒组合！ - 披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！",
     "period": "",
@@ -58,8 +58,8 @@
     "id": "tempo-3",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-10-24T23:00:17.110Z",
-    "beijing": "2026-10-25 07:00",
+    "date": "2026-10-25T01:01:44.463Z",
+    "beijing": "2026-10-25 09:01",
     "text": "ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой! * В состав сета входят 2 пиццы (31 см): \"Флорентийская\", \"Чикен Барбекю\" , и напиток 2 Coca-Cola (0,5 л.) . * Акция распространяется при заказе навынос или с услугой доставки в г. Минске, не суммируется с другими акциями и специальными предложениями. * Не действует в предпраздничные и праздничные дни",
     "zh": "披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！ * 套装包括 2 个披萨（31 厘米）：“佛罗伦萨”、“烧烤鸡肉”和 2 杯可口可乐饮料（0.5 升）。 * 此促销活动适用于在明斯克订购外卖或送货服务，且不能与其他促销活动和特别优惠同时使用。 *节假日前及公众假期无效",
     "period": "",
@@ -89,6 +89,10 @@
     "history": [
       {
         "t": "2026-10-24",
+        "p": 7.5
+      },
+      {
+        "t": "2026-10-25",
         "p": 7.5
       }
     ]
@@ -149,6 +153,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 26.1
+      },
+      {
+        "t": "2026-10-25",
         "p": 26.1
       }
     ]
@@ -259,6 +267,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 27.9
+      },
+      {
+        "t": "2026-10-25",
         "p": 27.9
       }
     ]
@@ -476,10 +488,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-17",
-        "p": 0.33
-      },
-      {
         "t": "2026-10-18",
         "p": 0.33
       },
@@ -505,6 +513,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 0.33
+      },
+      {
+        "t": "2026-10-25",
         "p": 0.33
       }
     ]
@@ -571,7 +583,7 @@
         "p": 8.99
       },
       {
-        "t": "2026-10-24",
+        "t": "2026-10-25",
         "p": 8.99
       }
     ]
@@ -610,10 +622,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-17",
-        "p": 7.9
-      },
-      {
         "t": "2026-10-18",
         "p": 7.9
       },
@@ -639,6 +647,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 7.9
+      },
+      {
+        "t": "2026-10-25",
         "p": 7.9
       }
     ]
@@ -724,10 +736,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-17",
-        "p": 4.7
-      },
-      {
         "t": "2026-10-18",
         "p": 4.7
       },
@@ -753,6 +761,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 4.7
+      },
+      {
+        "t": "2026-10-25",
         "p": 4.7
       }
     ]
@@ -834,10 +846,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-10-17",
-        "p": 0.33
-      },
-      {
         "t": "2026-10-18",
         "p": 0.33
       },
@@ -863,6 +871,10 @@
       },
       {
         "t": "2026-10-24",
+        "p": 0.33
+      },
+      {
+        "t": "2026-10-25",
         "p": 0.33
       }
     ]
@@ -1477,7 +1489,7 @@
         "p": 24.9
       },
       {
-        "t": "2026-10-24",
+        "t": "2026-10-25",
         "p": 19.9
       }
     ]
@@ -1559,7 +1571,7 @@
     "beijing": "2026-09-10 17:07",
     "text": "Надо определяться: клубника или малина? 😱 А пока, дарим рулетики с малиной или клубникой при любом заказе от 21 BYN 🍓 промокод на малиновые: MALINA ❤️ промокод на клубничные: KLUBNIKA Акция действует на доставку , самовывоз и в ресторане во всех ресторанах «Додо Пицца» Беларуси, кроме Борисова, Новополоцка, Орши и Полоцка по 16.09.2026. Внимание: продукт может быть распродан в отдельных ресторанах. Всем бабье лето 🫧",
     "zh": "我们需要决定：草莓还是覆盆子？ 😱 同时，我们为 21 BYN 起的任何订单提供覆盆子或草莓卷 🍓 覆盆子促销代码：MALINA ❤️ 草莓促销代码：KLUBNIKA 该促销活动适用于白俄罗斯所有 Dodo Pizza 餐厅的送货、自取和餐厅，鲍里索夫、新波洛茨克、奥尔沙和波洛茨克除外，2026 年 9 月 16 日。请注意：产品可能在部分餐厅售完。大家小阳春🫧",
-    "photo": "https://cdn4.telesco.pe/file/pL-vRQsGTE2t9Ec9AITVL2Fs4so6IplFA10TkktFEcwczJd2qw2sWF38ujLJElxFkZLzeeTlEwyJmoiyzL0r6cHVdkPy1OqlR06DR3Pm5aeJTm2bZvMslsugwy1OOThUVfkfzAjvjMVr_0WtVCr1Xx-LMI7tyRErl6tidUGZ1OaciL29QLVP4LPKAwvk1NmgUT5i70EoqSKnKHLM0YqoRxqM-Fz7zdQ_l9nf48Osen4rfwMDr89lllJho51noC3ucdZVZSgg6Bu7guQNPaLY3UW7CVWTqj0IQIPF-MP7W6KUX8PaxAxmjqaK1NBeS-WXrKpjf_ghhOlfyElK5Ac8dA.jpg",
+    "photo": "https://cdn4.telesco.pe/file/RT_CcWN573FRQHSqsHdWmywyDDjiFAqrupkPSnPLH2CU2r5Hu_61cjubdPcRJ6l-MlMQQcw8Yx9tid-vbxqzbyzCBb5KKZxpR6KxQaULPG5nzqUY_Jo4KCp-M4eNmu3cDQ-rgLpEwTdMBO8-TyzF9lV2BHU85OV38Io1dMZHaWOd2s2upIdXDsX8pWn54nfuqAFsy2MffNCKaPKK-2_BWehO4ckQlIJYqtTbBXtRNuF-fbZbK3_dsjYfbSs_fMrh7tYKspUUZ0-JiwDmO9cDDYTMtq_JkFL-uwnIytYCKpL1G6ognePOBoiQGyDsk2h3Ka7pknMu7Jvw7PBO3NrK8w.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -1669,7 +1681,7 @@
     "beijing": "2026-09-06 16:03",
     "text": "МИНИ-НАПИТОК В ПОДАРОК 🔥 Лови промокод: «1111» ; Срок действия: 06.09-11.09; Условия: мини-напиток в подарок к любому напитку объема «L» из гламурного меню Называй промокод на кассе бариста и наслаждайся любимыми напитками ❤️",
     "zh": "迷你饮料作为礼物 🔥 获取促销代码：“1111”；有效期：06.09-11.09；条件：赠送迷你饮料一杯，搭配迷人菜单中的任何“L”号饮料。在咖啡师结帐处拨打促销代码并享用您最喜欢的饮料❤️",
-    "photo": "https://cdn4.telesco.pe/file/HdRyzN-A9m5kIsHebEemx14W3PobXSPWyV5OEMQVL9mBuQPoXntPsHcs6jh9lrEJjDyCJ5JjRkEK4UKpLcsCWgSKwZ1K6OWa_4UCYyCYOmo9nTyjATpjn4Bi3ZDff8mgOyO9TAVYQuxrO-HeSkZValraUDHPsWd1z_VBxtf7FP9P_XxlaowGm2E5oI2Iwnyy--iHAj3sZUBsce_XgbTTA4MTbPo1yMCguKzx2QqSpw2R0VY3BtjGM6WU3IuoQjNe77PHbYqdUwDddUQpylfXuv7-HDSWEQg5_0O1kTYZyqVTOdqoJEgnygrv5hI9bCVbJ8d1YNat925VYgLT3f1pRQ.jpg",
+    "photo": "https://cdn4.telesco.pe/file/SK3C5OKdHSrHRmfStsZmYiZofAKt17Rex6dc1VD3Sljhj0Yx91zpqnUUKQjOczRbBZHAkjzWBYOUgkfiO0uHuB3-Acdwb204VGUJhCJT7OTisOICXbcqy9HsFNySYWBsIkzT6YAgSG-RFjywyov3jo-6n0iwkNqQVJifOTlqK-N2rVEVvLXfWuwtnNMzFFXTgmpv6XEbyjpEbzxHpzK4K1-g9xU7FMwGjId4cwl8iPnOXKFr5SdqW-7x6JF1ZP7zLQ-usowTC3m5I_RtwvrYtQ1UHNBcefFx3XabjPT4reo27_D-uVJWAzJYm4T45v-mrLrDafP3tzHp_JgnHVlK8Q.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
