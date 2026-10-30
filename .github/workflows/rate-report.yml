@@ -1,8 +1,8 @@
 name: Rate Report -> WhatsApp
 
+# 只由外部定时器（cron-job.org）在 13:00 UTC = 明斯克 16:00 调用 workflow_dispatch 触发。
+# GitHub 自带的 schedule 会排队延迟 3-6 小时，已弃用。
 on:
-  schedule:
-    - cron: '0 12 * * *' # 12:00 UTC = 白俄 15:00
   workflow_dispatch:
 
 permissions:
