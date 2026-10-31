@@ -1,12 +1,17 @@
 name: Rate Report -> WhatsApp
 
-# 只由外部定时器（cron-job.org）在 13:00 UTC = 明斯克 16:00 调用 workflow_dispatch 触发。
-# GitHub 自带的 schedule 会排队延迟 3-6 小时，已弃用。
+# 主触发：cron-job.org 每天 13:00 UTC（明斯克 16:00）调用 workflow_dispatch，准点。
+# 兜底触发：GitHub 自带 schedule（12:00 UTC）。它经常排队延迟 3-6 小时，所以只在
+#           “过去 24 小时内没有任何成功的 workflow_dispatch 运行”时才真正发送，
+#           避免和 cron-job.org 重复发两份。
 on:
+  schedule:
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: rate-report
@@ -24,7 +29,21 @@ jobs:
         with:
           node-version: 20
 
+      - name: 兜底判断（仅 schedule 触发时执行）
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sent=$(gh api "/repos/${GITHUB_REPOSITORY}/actions/workflows/rate-report.yml/runs?per_page=50" \
+            --jq '[.workflow_runs[] | select(.event=="workflow_dispatch" and .conclusion=="success" and .created_at > (now - 86400 | todate))] | length')
+          echo "最近 24h 内成功的 dispatch 运行数：$sent"
+          if [ "$sent" -gt 0 ]; then
+            echo "今天已由外部定时器发送，跳过兜底，不重复发送。"
+            echo "SKIP_SEND=1" >> "$GITHUB_ENV"
+          fi
+
       - name: Send rate report
+        if: env.SKIP_SEND != '1'
         env:
           KONTATO_API_KEY: ${{ secrets.KONTATO_API_KEY }}
           KONTATO_DESTS: '375259741332,375292238345'
