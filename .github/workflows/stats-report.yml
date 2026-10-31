@@ -1,0 +1,35 @@
+name: News Stats -> WhatsApp
+
+# 每天把 news.minsktc.me 的访问数据推到 WhatsApp。
+# 数据来源：Cloudflare Web Analytics（GraphQL Analytics API）。
+# 需要仓库 Secret：CF_API_TOKEN（Account Analytics: Read 即可）
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stats-report
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Send stats report
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          KONTATO_API_KEY: ${{ secrets.KONTATO_API_KEY }}
+          KONTATO_DESTS: '375259741332,375292238345'
+        run: node scripts/cf-daily.js
