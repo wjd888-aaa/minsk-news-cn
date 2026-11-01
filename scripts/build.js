@@ -213,6 +213,19 @@ const PWA_HEAD = `<link rel="manifest" href="manifest.json">
 const PWA_REGISTER = `<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(function () {}); }</script>`;
 const PWA_REGISTER_DEEP = `<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js').catch(function () {}); }</script>`;
 
+// Microsoft Clarity 访客统计（提供独立访客 UV / 回访 / 录屏 / 热图）。
+// 在仓库 Variables 里设置 CLARITY_ID 即生效；留空则不注入任何脚本。
+const CLARITY_ID = process.env.CLARITY_ID || '';
+const CLARITY_SNIPPET = CLARITY_ID
+  ? `<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "${CLARITY_ID}");
+</script>`
+  : '';
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function stripHtml(s) {
@@ -1682,6 +1695,7 @@ function articlePageHtml(rec) {
 <meta name="description" content="${escapeHtml((rec.sum || rec.zh).slice(0, 160))}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 <link rel="stylesheet" href="../style.${CSS_VERSION}.css">
+${CLARITY_SNIPPET}
 </head>
 <body>
 ${PARENT_LINK}
@@ -1759,6 +1773,7 @@ function lifePageHtml(life) {
 <meta name="description" content="在白俄罗斯生活的实用信息：紧急电话、中国驻白大使馆与签证、医疗就医、交通出行、白俄高校地址。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
 <link rel="stylesheet" href="style.${CSS_VERSION}.css">
+${CLARITY_SNIPPET}
 </head>
 <body>
 ${PARENT_LINK}
@@ -1944,6 +1959,7 @@ ${PWA_HEAD}
   document.head.appendChild(st);
 })();
 </script>
+${CLARITY_SNIPPET}
 </head>
 <body>
 ${PARENT_LINK}
