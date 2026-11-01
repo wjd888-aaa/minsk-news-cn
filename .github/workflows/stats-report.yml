@@ -3,6 +3,11 @@ name: News Stats -> WhatsApp
 # 每天把 news.minsktc.me 的访问数据推到 WhatsApp。
 # 数据来源：Cloudflare Web Analytics（GraphQL Analytics API）。
 # 需要仓库 Secret：CF_API_TOKEN（Account Analytics: Read 即可）
+#
+# 触发方式：
+#   1) 本机 Windows 任务 RateReport-1600（16:00 准点，电脑开机时）
+#   2) GitHub 自带 schedule（12:00 UTC 起跑，常延迟 3-6 小时，作为兜底）
+# 去重：12 小时内已有成功运行则跳过，避免两条都发。
 on:
   schedule:
     - cron: '0 12 * * *'
@@ -10,6 +15,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: stats-report
@@ -27,7 +33,20 @@ jobs:
         with:
           node-version: 20
 
+      - name: 去重（12 小时内已发过就跳过）
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sent=$(gh api "/repos/${GITHUB_REPOSITORY}/actions/workflows/stats-report.yml/runs?per_page=50" \
+            --jq '[.workflow_runs[] | select(.conclusion=="success" and .created_at > (now - 43200 | todate))] | length')
+          echo "最近 12h 成功运行数：$sent"
+          if [ "$sent" -gt 0 ]; then
+            echo "今天已发过，跳过。"
+            echo "SKIP_SEND=1" >> "$GITHUB_ENV"
+          fi
+
       - name: Send stats report
+        if: env.SKIP_SEND != '1'
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           KONTATO_API_KEY: ${{ secrets.KONTATO_API_KEY }}
