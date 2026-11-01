@@ -30,6 +30,8 @@ jobs:
 
       - name: Fetch & translate
         id: build
+        env:
+          CLARITY_ID: ${{ vars.CLARITY_ID }}
         run: node scripts/build.js
         timeout-minutes: 45
 
