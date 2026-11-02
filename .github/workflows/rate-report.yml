@@ -1,9 +1,10 @@
 name: Rate Report -> WhatsApp
 
-# 主触发：cron-job.org 每天 13:00 UTC（明斯克 16:00）调用 workflow_dispatch，准点。
-# 兜底触发：GitHub 自带 schedule（12:00 UTC）。它经常排队延迟 3-6 小时，所以只在
-#           “过去 24 小时内没有任何成功的 workflow_dispatch 运行”时才真正发送，
-#           避免和 cron-job.org 重复发两份。
+# 主触发：cron-job.org 每天 13:00 UTC（明斯克 16:00）调用 workflow_dispatch。
+# 提前触发：本机计划任务「RateReport-1500」在明斯克 15:00 调用 workflow_dispatch。
+# 兜底触发：GitHub 自带 schedule（12:00 UTC），经常排队延迟 3-6 小时。
+# 去重：明斯克当天只允许第一次成功运行真正发送，其余触发一律跳过。
+#       谁先跑到谁发，不会重复发两份，所以提前那条能先发、16:00 那条自动让位。
 on:
   schedule:
     - cron: '0 12 * * *'
@@ -29,18 +30,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: 兜底判断（仅 schedule 触发时执行）
-        if: github.event_name == 'schedule'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 去重（明斯克当天只发一次）
         run: |
+          today=$(TZ=Europe/Minsk date +%F)
           sent=$(gh api "/repos/${GITHUB_REPOSITORY}/actions/workflows/rate-report.yml/runs?per_page=50" \
-            --jq '[.workflow_runs[] | select(.event=="workflow_dispatch" and .conclusion=="success" and .created_at > (now - 86400 | todate))] | length')
-          echo "最近 24h 内成功的 dispatch 运行数：$sent"
+            | jq --arg today "$today" '[.workflow_runs[] | select(.conclusion=="success") | select((((.created_at | fromdateiso8601) + 10800) | strftime("%Y-%m-%d")) == $today)] | length')
+          echo "明斯克 $today 已有成功运行：$sent 次"
           if [ "$sent" -gt 0 ]; then
-            echo "今天已由外部定时器发送，跳过兜底，不重复发送。"
+            echo "今天已经发过，跳过本次，不重复发送。"
             echo "SKIP_SEND=1" >> "$GITHUB_ENV"
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Send rate report
         if: env.SKIP_SEND != '1'
