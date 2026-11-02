@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Test rate module
+        run: node --test scripts/rates.test.js
+
       - name: Fetch & translate
         id: build
         env:

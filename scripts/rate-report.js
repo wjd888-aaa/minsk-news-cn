@@ -10,6 +10,8 @@
 //   LLM_URL          展望生成端点（默认 Pollinations，免密钥）
 //   LLM_MODEL        模型名（默认 openai）
 
+const { fetchUnionpay } = require('./rates');
+
 const API = 'https://api.kontato.ai/v1/send';
 const DESTS = (process.env.KONTATO_DESTS || '375259741332,375292238345')
   .split(',')
@@ -21,13 +23,6 @@ const LLM_URL = process.env.LLM_URL || 'https://text.pollinations.ai/openai';
 const LLM_MODEL = process.env.LLM_MODEL || 'openai';
 const UA = { 'User-Agent': 'Mozilla/5.0' };
 
-function ymd(d) {
-  return (
-    d.getUTCFullYear() +
-    String(d.getUTCMonth() + 1).padStart(2, '0') +
-    String(d.getUTCDate()).padStart(2, '0')
-  );
-}
 function addDays(base, n) {
   return new Date(base.getTime() + n * 86400000);
 }
@@ -57,6 +52,7 @@ async function fetchToday() {
   const rub = list.find((x) => x.Cur_Abbreviation === 'RUB' && x.Cur_Scale);
   if (!cny || !usd) throw new Error('nbrb today missing CNY/USD');
   return {
+    date: String(cny.Date || '').slice(0, 10),
     cnyperbyn: Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale),
     usd: Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale),
     rub: rub ? Number(rub.Cur_OfficialRate) / Number(rub.Cur_Scale) : null,
@@ -97,32 +93,7 @@ async function fetchBack(today, startBack) {
   return null;
 }
 
-// 银联：今天/前一天/前两天（周末落到周五）依次取第一个 200
-async function fetchUnionpay() {
-  const beijing = new Date(Date.now() + 8 * 3600 * 1000);
-  for (let back = 0; back <= 2; back++) {
-    let dt = addDays(beijing, -back);
-    const dow = dt.getUTCDay();
-    if (dow === 6) dt = addDays(dt, -1);
-    else if (dow === 0) dt = addDays(dt, -2);
-    const url = 'https://www.unionpayintl.com/upload/jfimg/' + ymd(dt) + '.json';
-    try {
-      const res = await fetch(url, {
-        headers: { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.unionpayintl.com/cn/rate/' },
-      });
-      if (!res.ok) continue;
-      const j = await res.json();
-      const rows = j.exchangeRateJson || [];
-      const byn = rows.find((x) => x.transCur === 'BYN' && x.baseCur === 'CNY');
-      const usd = rows.find((x) => x.transCur === 'USD' && x.baseCur === 'CNY');
-      if (!byn) continue;
-      return { bynInCny: Number(byn.rateData), usdInCny: usd ? Number(usd.rateData) : null };
-    } catch (e) {
-      /* try next */
-    }
-  }
-  return null;
-}
+// 银联取数统一走 scripts/rates.js（含日期校验、合理区间校验、周末回退）。
 
 const OUTLOOK_FALLBACK =
   '📈 国际形势·15-30日展望：白卢布大体跟俄卢布走，俄卢布中期偏弱（制裁、炼油厂扰动、预算买汇）；人民币稳中偏强，结汇季有支撑。基准情景：CNY/BYN 缓升，换人民币成白卢布更划算。窗口提示：每月25-28日俄税期 CNY/BYN 易回落（别急着换），税期后、新制裁落地、美联储议息前后为关注窗口。以上为概率化判断，非精确日期承诺。';
@@ -182,10 +153,12 @@ async function buildMessage() {
 
   const blocks = [];
 
+  const nbrbDate = (t.date || iso(today)).slice(5);
   blocks.push([
     '📊 汇率日报（白俄时间15:00）',
+    '💵 白央行牌价 ' + nbrbDate,
     '今日 1 Br = ¥' + (1 / t.cnyperbyn).toFixed(4) + ' ｜ 1 $ = ¥' + (t.usd / t.cnyperbyn).toFixed(4),
-    '🔮 明日 1 Br = ¥' + (next != null ? (1 / next).toFixed(4) : '—'),
+    '🔮 明日（白央行）1 Br = ¥' + (next != null ? (1 / next).toFixed(4) : '—'),
   ]);
 
   const segs = [];
@@ -218,22 +191,20 @@ async function buildMessage() {
   });
   blocks.push([outlook, '建议：分批换、别赌单一时点。']);
 
+  // 银联单独一行：有数据才标「银联」，取不到就明确说未发布，绝不用央行数据冒充。
   let upLine;
   try {
     const up = await fetchUnionpay();
-    if (up && up.bynInCny != null) {
-      upLine = '🇨🇳 中国银联汇率 1 Br ≈ ' + up.bynInCny.toFixed(4) + ' ¥';
-      if (up.usdInCny != null) upLine += ' ｜ 1 $ ≈ ' + up.usdInCny.toFixed(4) + ' ¥';
-    } else {
-      throw new Error('unionpay unavailable');
-    }
-  } catch (e) {
     upLine =
-      '🇨🇳 中国银联汇率 1 Br ≈ ' +
-      (1 / t.cnyperbyn).toFixed(4) +
+      '🇨🇳 银联卡汇率 ' +
+      up.date.slice(5) +
+      ' ｜ 1 Br ≈ ' +
+      up.bynInCny.toFixed(4) +
       ' ¥ ｜ 1 $ ≈ ' +
-      (t.usd / t.cnyperbyn).toFixed(4) +
-      ' ¥（NBRB换算）';
+      up.usdInCny.toFixed(4) +
+      ' ¥';
+  } catch (e) {
+    upLine = '🇨🇳 银联卡汇率：今日数据尚未发布，暂缺（上图为白央行官方牌价）';
   }
   blocks.push([upLine]);
 

@@ -1,0 +1,30 @@
+name: Rates Check
+
+# 每天两次核对线上页面：显示的汇率必须与它标注的来源一致。
+# 起因：银联文件 404 时旧代码静默改用央行/市场价，页面却仍写「银联」。
+on:
+  schedule:
+    - cron: '20 5 * * *'
+    - cron: '20 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Unit tests (offline fixtures)
+        run: node --test scripts/rates.test.js
+
+      - name: Verify live page matches its labelled source
+        run: node scripts/check-rates.js

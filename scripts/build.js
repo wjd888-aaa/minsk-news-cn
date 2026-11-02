@@ -1,6 +1,7 @@
 ﻿const { writeFileSync, readFileSync, mkdirSync, copyFileSync, existsSync, appendFileSync, readdirSync, statSync, rmSync } = require('fs');
 const crypto = require('crypto');
 const path = require('path');
+const { resolveRates, formatRates } = require('./rates');
 
 const RSS_URL = 'https://minsknews.by/feed/';
 const BELTA_RSS = 'https://chn.belta.by/rss/';
@@ -646,114 +647,17 @@ async function fetchWeather() {
   }
 }
 
-async function fetchUnionpayBoth() {
-  const beijing = new Date(Date.now() + 8 * 3600 * 1000);
-  const dow = beijing.getUTCDay();
-  let dt = beijing;
-  if (dow === 6) dt = new Date(beijing.getTime() - 86400000);
-  if (dow === 0) dt = new Date(beijing.getTime() - 2 * 86400000);
-  const url =
-    'https://www.unionpayintl.com/upload/jfimg/' +
-    dt.getUTCFullYear() +
-    String(dt.getUTCMonth() + 1).padStart(2, '0') +
-    String(dt.getUTCDate()).padStart(2, '0') +
-    '.json';
-  const res = await fetch(url, {
-    headers: { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.unionpayintl.com/cn/rate/' },
-  });
-  if (!res.ok) throw new Error('unionpay http ' + res.status);
-  const j = await res.json();
-  const rows = j.exchangeRateJson || [];
-  const byn = rows.find((x) => x.transCur === 'BYN' && x.baseCur === 'CNY');
-  const usd = rows.find((x) => x.transCur === 'USD' && x.baseCur === 'CNY');
-  if (!byn) throw new Error('unionpay BYN missing');
-  return { bynInCny: Number(byn.rateData), usdInCny: usd ? Number(usd.rateData) : null };
-}
-
-async function fetchUnionpayBynCny() {
-  const up = await fetchUnionpayBoth();
-  return up.bynInCny;
-}
-
-async function fetchNbrbRates() {
-  const res = await fetch('https://api.nbrb.by/exrates/rates?periodicity=0', {
-    headers: { 'User-Agent': 'Mozilla/5.0' },
-  });
-  if (!res.ok) throw new Error('rates http ' + res.status);
-  const list = await res.json();
-  const usd = list.find((x) => x.Cur_Abbreviation === 'USD' && x.Cur_Scale);
-  if (!usd) throw new Error('NBRB USD missing');
-  const usdRate = Number(usd.Cur_OfficialRate) / Number(usd.Cur_Scale);
-  let bynInCny = null;
-  let unionpayUsdInCny = null;
-  try {
-    const up = await fetchUnionpayBoth();
-    bynInCny = up.bynInCny;
-    unionpayUsdInCny = up.usdInCny;
-  } catch (e) {
-    console.log('unionpay fail: ' + e.message);
-  }
-  if (bynInCny == null) {
-    const cny = list.find((x) => x.Cur_Abbreviation === 'CNY' && x.Cur_Scale);
-    if (cny) bynInCny = 1 / (Number(cny.Cur_OfficialRate) / Number(cny.Cur_Scale));
-  }
-  if (bynInCny == null) throw new Error('NBRB CNY missing');
-  const usdInCnyFinal = unionpayUsdInCny != null ? unionpayUsdInCny : (usdRate * bynInCny);
-  return {
-    bynInCny: Math.round(bynInCny * 1000) / 1000,
-    usdInCny: Math.round(usdInCnyFinal * 1000) / 1000,
-  };
-}
-
-async function fetchErApiRates() {
-  const res = await fetch('https://open.er-api.com/v6/latest/USD', {
-    headers: { 'User-Agent': 'Mozilla/5.0' },
-  });
-  if (!res.ok) throw new Error('erapi http ' + res.status);
-  const j = await res.json();
-  if (!j.rates || !j.rates.CNY || !j.rates.BYN) throw new Error('erapi rates missing');
-  const usdInCny = Number(j.rates.CNY);
-  const bynInCny = usdInCny / Number(j.rates.BYN);
-  return {
-    bynInCny: Math.round(bynInCny * 1000) / 1000,
-    usdInCny: Math.round(usdInCny * 1000) / 1000,
-  };
-}
-
-function fmtRate(bynInCny, usdInCny, note) {
-  return `🇧🇾 今日银联汇率 1 Br ≈ ${bynInCny.toFixed(3)} ¥ · 1 $ ≈ ${usdInCny.toFixed(3)} ¥${note || ''}`;
-}
-
-function saveRatesCache(rates) {
-  try {
-    mkdirSync(ART_DIR, { recursive: true });
-    writeFileSync(RATES_CACHE_FILE, JSON.stringify({ ...rates, ts: Date.now() }), 'utf8');
-  } catch (e) {
-    console.log('rates cache write fail: ' + e.message);
-  }
-}
-
+// 汇率统一由 scripts/rates.js 取数：来源、日期、数值一一对应，不再跨源拼接。
+// 银联未发布时自动改用白央行 / 市场参考价，并把真实来源与日期写进文案。
 async function fetchRates() {
   try {
-    const rates = await fetchNbrbRates();
-    saveRatesCache(rates);
-    return fmtRate(rates.bynInCny, rates.usdInCny);
+    const { rate, errors } = await resolveRates({ cacheFile: RATES_CACHE_FILE });
+    for (const e of errors) console.log('rates: ' + e);
+    return rate ? formatRates(rate) : '';
   } catch (e) {
     console.log('rates fetch fail: ' + e.message);
+    return '';
   }
-  try {
-    const rates = await fetchErApiRates();
-    saveRatesCache(rates);
-    return fmtRate(rates.bynInCny, rates.usdInCny);
-  } catch (e) {
-    console.log('erapi fail: ' + e.message);
-  }
-  const cached = readJson(RATES_CACHE_FILE, null);
-  if (cached && cached.bynInCny != null && cached.usdInCny != null) {
-    const d = new Date(cached.ts || Date.now());
-    return fmtRate(cached.bynInCny, cached.usdInCny, `（缓存 ${d.getUTCMonth() + 1}-${d.getUTCDate()}）`);
-  }
-  return '';
 }
 
 function parseGreenShares(html) {
