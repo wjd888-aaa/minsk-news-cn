@@ -1,10 +1,10 @@
 {
  "source": "unionpay",
  "sourceLabel": "银联",
- "date": "2026-11-02",
- "bynInCny": 2.26479973,
- "usdInCny": 6.6721,
- "fetchedAt": "2026-11-03T02:51:04.801Z",
- "deviationPct": 0.58,
- "ts": 1793674264801
+ "date": "2026-11-03",
+ "bynInCny": 2.26197164,
+ "usdInCny": 6.6839,
+ "fetchedAt": "2026-11-03T10:35:35.170Z",
+ "deviationPct": 0.46,
+ "ts": 1793702135205
 }
