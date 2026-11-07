@@ -1,5 +1,533 @@
 [
   {
+    "slug": "oktyabr-kak-tochka-otscheta-minsk-otmetil-godovshhinu-revolyuczii-na-pl-nezavisimosti",
+    "link": "https://minsknews.by/oktyabr-kak-tochka-otscheta-minsk-otmetil-godovshhinu-revolyuczii-na-pl-nezavisimosti/",
+    "ru": "Октябрь как точка отсчета: Минск отметил годовщину революции на пл. Независимости",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 13:47:35 +0000",
+    "beijing": "2026-11-07 21:47",
+    "zh": "以十月为起点：明斯克在广场上庆祝革命周年纪念日。独立",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "belorusskie-sambisty-zavoevali-eshhe-dve-medali-na-chempionate-mira-v-tashkente",
+    "link": "https://minsknews.by/belorusskie-sambisty-zavoevali-eshhe-dve-medali-na-chempionate-mira-v-tashkente/",
+    "ru": "Белорусские самбисты завоевали еще две медали на чемпионате мира в Ташкенте",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 13:23:40 +0000",
+    "beijing": "2026-11-07 21:23",
+    "zh": "白俄罗斯桑博摔跤手在塔什干世锦赛上再夺两枚奖牌",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "prezident-belarusi-porassuzhdal-est-li-u-nego-druzya-i-nazval-svoj-glavnyj-lozung",
+    "link": "https://minsknews.by/prezident-belarusi-porassuzhdal-est-li-u-nego-druzya-i-nazval-svoj-glavnyj-lozung/",
+    "ru": "Президент Беларуси порассуждал, есть ли у него друзья, и назвал свой главный лозунг",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 12:53:01 +0000",
+    "beijing": "2026-11-07 20:53",
+    "zh": "白俄罗斯总统猜测他是否有朋友并命名了他的主要口号",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "dvizhenie-ogranichat-na-ul-ya-luchiny-9-10-noyabrya-izmenitsya-rabota-transporta",
+    "link": "https://minsknews.by/dvizhenie-ogranichat-na-ul-ya-luchiny-9-10-noyabrya-izmenitsya-rabota-transporta/",
+    "ru": "Движение ограничат на ул. Я. Лучины 9-10 ноября — изменится работа транспорта",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 12:07:08 +0000",
+    "beijing": "2026-11-07 20:07",
+    "zh": "街道上的交通将受到限制。是啊。 Luchiny 11 月 9 日至 10 日 - 交通工作将发生变化",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "nochyu-v-lesu-zaderzhali-vypivshego-minchanina-emu-grozit-do-pyati-let-lisheniya-svobody",
+    "link": "https://minsknews.by/nochyu-v-lesu-zaderzhali-vypivshego-minchanina-emu-grozit-do-pyati-let-lisheniya-svobody/",
+    "ru": "Ночью в лесу задержали выпившего минчанина — ему грозит до пяти лет лишения свободы",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 11:41:25 +0000",
+    "beijing": "2026-11-07 19:41",
+    "zh": "一名醉酒的明斯克居民夜间在森林中被拘留 - 他将面临最高五年的监禁",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "yabloki-klyukva-lisichki-chem-komarovka-raduet-minchan-7-noyabrya",
+    "link": "https://minsknews.by/yabloki-klyukva-lisichki-chem-komarovka-raduet-minchan-7-noyabrya/",
+    "ru": "Яблоки, клюква, лисички: чем Комаровка радует минчан 7 ноября",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 11:16:42 +0000",
+    "beijing": "2026-11-07 19:16",
+    "zh": "苹果、蔓越莓、鸡油菌：11 月 7 日科马罗夫卡如何让明斯克居民满意",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kgk-provodit-opros-o-foto-i-videosemke-v-uchrezhdeniyah-obrazovaniya-stoliczy",
+    "link": "https://minsknews.by/kgk-provodit-opros-o-foto-i-videosemke-v-uchrezhdeniyah-obrazovaniya-stoliczy/",
+    "ru": "КГК проводит опрос о фото- и видеосъемке в учреждениях образования столицы",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 11:04:04 +0000",
+    "beijing": "2026-11-07 19:04",
+    "zh": "KGC 对首都教育机构的照片和视频录制情况进行了调查",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "poisk-sebya-i-rodstvennoj-dushi-balet-dve-anny-bolshogo-teatra-rossii-predstavili-v-minske",
+    "link": "https://minsknews.by/poisk-sebya-i-rodstvennoj-dushi-balet-dve-anny-bolshogo-teatra-rossii-predstavili-v-minske/",
+    "ru": "Поиск себя и родственной души. Балет «Две Анны» Большого театра России представили в Минске",
+    "cat": "event",
+    "isodate": "Sat, 07 Nov 2026 10:44:26 +0000",
+    "beijing": "2026-11-07 18:44",
+    "zh": "寻找你自己和你的灵魂伴侣。俄罗斯莫斯科大剧院芭蕾舞剧《两个安娜》在明斯克上演",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "bolshe-vsego-boimsya-ne-uspet-spasatel-rasskazal-o-speczifike-sluzhby-v-czentralnom-rochs-",
+    "link": "https://minsknews.by/bolshe-vsego-boimsya-ne-uspet-spasatel-rasskazal-o-speczifike-sluzhby-v-czentralnom-rochs-stoliczy/",
+    "ru": "«Больше всего боимся не успеть». Спасатель рассказал о специфике службы в Центральном РОЧС столицы",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 10:21:24 +0000",
+    "beijing": "2026-11-07 18:21",
+    "zh": "“我们最害怕的就是不准时。”救援人员讲述了首都中部地区紧急情况服务中心的服务细节",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "zadacha-odna-vyigrat-zhenskaya-komanda-minsk-gotovitsya-k-turniru-po-indorhokkeyu-na-prizy",
+    "link": "https://minsknews.by/zadacha-odna-vyigrat-zhenskaya-komanda-minsk-gotovitsya-k-turniru-po-indorhokkeyu-na-prizy-vechyorki/",
+    "ru": "Задача одна — выиграть. Женская команда «Минск» готовится к турниру по индорхоккею на призы «Вечёрки»",
+    "cat": "event",
+    "isodate": "Sat, 07 Nov 2026 09:45:04 +0000",
+    "beijing": "2026-11-07 17:45",
+    "zh": "唯一的任务就是获胜。明斯克女队正在备战室内曲棍球锦标赛“晚间”奖项",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "minchanin-otdal-mashinu-za-100-dollarov-pod-raspisku-ostalnyh-deneg-ot-pokupatelya-tak-i-n",
+    "link": "https://minsknews.by/minchanin-otdal-mashinu-za-100-dollarov-pod-raspisku-ostalnyh-deneg-ot-pokupatelya-tak-i-ne-dozhdalsya/",
+    "ru": "Минчанин отдал машину за 100 долларов под расписку — остальных денег от покупателя не дождался",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 09:25:33 +0000",
+    "beijing": "2026-11-07 17:25",
+    "zh": "明斯克居民凭收据以 100 美元的价格购买了这辆车，但没有收到买家的剩余款项",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kakuyu-rol-vns-sygralo-v-sudbe-suverennoj-belarusi-mneniya-delegatov-raznyh-sozyvov",
+    "link": "https://minsknews.by/kakuyu-rol-vns-sygralo-v-sudbe-suverennoj-belarusi-%e2%80%93-mneniya-delegatov-raznyh-sozyvov/",
+    "ru": "Какую роль ВНС сыграло в судьбе суверенной Беларуси – мнения делегатов разных созывов",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 09:06:41 +0000",
+    "beijing": "2026-11-07 17:06",
+    "zh": "最高国民议会在主权白俄罗斯的命运中发挥了什么作用 - 不同会议代表的意见",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "belorusskie-batutisty-zavoevali-zoloto-chempionata-mira-v-nankine",
+    "link": "https://minsknews.by/belorusskie-batutisty-zavoevali-zoloto-chempionata-mira-v-nankine/",
+    "ru": "Белорусские батутисты завоевали золото чемпионата мира в Нанкине",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 08:48:22 +0000",
+    "beijing": "2026-11-07 16:48",
+    "zh": "白俄罗斯蹦床运动员在南京世锦赛上夺得金牌",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-minske-muzhchina-proehal-neskolko-metrov-na-avtomobile-i-stal-figurantom-ugolovnogo-dela",
+    "link": "https://minsknews.by/v-minske-muzhchina-proehal-neskolko-metrov-na-avtomobile-i-stal-figurantom-ugolovnogo-dela/",
+    "ru": "В Минске мужчина проехал несколько метров на автомобиле и стал фигурантом уголовного дела",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 08:29:11 +0000",
+    "beijing": "2026-11-07 16:29",
+    "zh": "在明斯克，一名男子开车行驶了几米，成为一起刑事案件的被告。",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-stolicze-ee-imenem-nazvana-ulicza-kakoj-vklad-vnesla-v-pobedu-oktyabrskoj-revolyuczii-ve",
+    "link": "https://minsknews.by/v-stolicze-ee-imenem-nazvana-ulicza-kakoj-vklad-vnesla-v-pobedu-oktyabrskoj-revolyuczii-vera-sluczkaya/",
+    "ru": "В столице ее именем названа улица. Какой вклад внесла в победу Октябрьской революции Вера Слуцкая",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 08:10:13 +0000",
+    "beijing": "2026-11-07 16:10",
+    "zh": "在首都，有一条街道以她的名字命名。维拉·斯卢茨卡娅为十月革命的胜利做出了哪些贡献？",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "gde-v-minske-planiruyut-nanesti-dorozhnuyu-razmetku-dnem-7-noyabrya",
+    "link": "https://minsknews.by/gde-v-minske-planiruyut-nanesti-dorozhnuyu-razmetku-dnem-7-noyabrya/",
+    "ru": "Где в Минске планируют нанести дорожную разметку днем 7 ноября",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 07:53:09 +0000",
+    "beijing": "2026-11-07 15:53",
+    "zh": "他们计划于 11 月 7 日下午在明斯克的哪些地方应用道路标记",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "gorodskoj-transport-minska-rabotaet-po-grafiku-voskresenya-7-noyabrya",
+    "link": "https://minsknews.by/gorodskoj-transport-minska-rabotaet-po-grafiku-voskresenya-7-noyabrya/",
+    "ru": "Городской транспорт Минска работает по графику воскресенья 7 ноября",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 07:32:57 +0000",
+    "beijing": "2026-11-07 15:32",
+    "zh": "明斯克市交通按照 11 月 7 日星期日的时刻表运行",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "gibel-teplohoda-armeniya-i-luchshij-belorusskij-futbolist-xx-veka-etot-den-v-istorii-7-noy",
+    "link": "https://minsknews.by/gibel-teplohoda-armeniya-i-luchshij-belorusskij-futbolist-xx-veka-etot-den-v-istorii-7-noyabrya/",
+    "ru": "Гибель теплохода «Армения» и лучший белорусский футболист XX века. Этот день в истории: 7 ноября",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 07:15:50 +0000",
+    "beijing": "2026-11-07 15:15",
+    "zh": "“亚美尼亚”号船和20世纪最好的白俄罗斯足球运动员的死亡。历史上的今天：11 月 7 日",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "za-sutki-milicziya-zaderzhala-dvuh-kurerov-moshennikov-u-nih-izyali-okolo-160-tys-byn",
+    "link": "https://minsknews.by/za-sutki-milicziya-zaderzhala-dvuh-kurerov-moshennikov-u-nih-izyali-okolo-160-tys-byn/",
+    "ru": "За сутки милиция задержала двух курьеров мошенников — у них изъяли около 160 тыс. BYN",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 07:01:18 +0000",
+    "beijing": "2026-11-07 15:01",
+    "zh": "白天，警方拘留了两名诈骗快递员，从他们身上查获了约 16 万拜恩",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "girlyanda-iz-sushek-i-bagamskie-krasaviczy-vystavka-elochnyh-igrushek-rabotaet-v-minske",
+    "link": "https://minsknews.by/girlyanda-iz-sushek-i-bagamskie-krasaviczy-vystavka-elochnyh-igrushek-rabotaet-v-minske/",
+    "ru": "Гирлянда из сушек и багамские красавицы. Выставка елочных игрушек работает в Минске",
+    "cat": "event",
+    "isodate": "Sat, 07 Nov 2026 06:41:43 +0000",
+    "beijing": "2026-11-07 14:41",
+    "zh": "干果和巴哈马美女的花环。圣诞装饰品展览在明斯克开幕",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "pod-rechiczej-brakonery-presledovali-na-avtomobile-godovalogo-losenka-chem-zakonchilas-ist",
+    "link": "https://minsknews.by/pod-rechiczej-brakonery-presledovali-na-avtomobile-godovalogo-losenka-chem-zakonchilas-istoriya/",
+    "ru": "Под Речицей браконьеры преследовали на автомобиле годовалого лосенка. Чем закончилась история",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 06:11:02 +0000",
+    "beijing": "2026-11-07 14:11",
+    "zh": "在雷奇察附近，偷猎者正在车里追赶一岁大的麋鹿幼崽。故事是如何结束的",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "nakazanie-v-vide-ogranicheniya-svobody-poluchil-zhitel-stoliczy-kotoryj-ne-platil-alimenty",
+    "link": "https://minsknews.by/nakazanie-v-vide-ogranicheniya-svobody-poluchil-zhitel-stoliczy-kotoryj-ne-platil-alimenty/",
+    "ru": "Наказание в виде ограничения свободы получил житель столицы, который не платил алименты",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 05:51:48 +0000",
+    "beijing": "2026-11-07 13:51",
+    "zh": "首都居民因不支付赡养费而受到限制自由的惩罚",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "lukashenko-pozdravil-belorusov-s-dnem-oktyabrskoj-revolyuczii-4",
+    "link": "https://minsknews.by/lukashenko-pozdravil-belorusov-s-dnem-oktyabrskoj-revolyuczii-4/",
+    "ru": "Лукашенко поздравил белорусов с Днем Октябрьской революции",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 05:30:15 +0000",
+    "beijing": "2026-11-07 13:30",
+    "zh": "卢卡申科在十月革命日向白俄罗斯人民表示祝贺",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "selskohozyajstvennye-yarmarki-rabotayut-v-stolicze-7-i-8-noyabrya",
+    "link": "https://minsknews.by/selskohozyajstvennye-yarmarki-rabotayut-v-stolicze-7-i-8-noyabrya/",
+    "ru": "Сельскохозяйственные ярмарки работают в столице 7 и 8 ноября",
+    "cat": "event",
+    "isodate": "Sat, 07 Nov 2026 05:22:36 +0000",
+    "beijing": "2026-11-07 13:22",
+    "zh": "11月7日至8日首都举行农博会",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "krasnyj-den-kalendarya-kak-revolyucziya-izmenila-zhizn-minchan",
+    "link": "https://minsknews.by/krasnyj-den-kalendarya-kak-revolyucziya-izmenila-zhizn-minchan/",
+    "ru": "Красный день календаря. Как революция изменила жизнь минчан",
+    "cat": "news",
+    "isodate": "Sat, 07 Nov 2026 05:00:15 +0000",
+    "beijing": "2026-11-07 13:00",
+    "zh": "红色日历日。革命如何改变明斯克居民的生活",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "zoloto-i-bronzu-vzyali-komandy-belarusi-v-pozharnoj-estafete-na-chempionate-mira-v-baku",
+    "link": "https://minsknews.by/zoloto-i-bronzu-vzyali-komandy-belarusi-v-pozharnoj-estafete-na-chempionate-mira-v-baku/",
+    "ru": "Золото и бронзу взяли команды Беларуси в пожарной эстафете на чемпионате мира в Баку",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 20:03:41 +0000",
+    "beijing": "2026-11-07 04:03",
+    "zh": "白俄罗斯队在巴库世锦赛火力接力比赛中获得金牌和铜牌",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "dlya-formirovaniya-grazhdanskogo-obshhestva-voprosy-patrioticheskogo-vospitaniya-obsudili-",
+    "link": "https://minsknews.by/dlya-formirovaniya-grazhdanskogo-obshhestva-voprosy-patrioticheskogo-vospitaniya-obsudili-v-minske/",
+    "ru": "Для формирования гражданского общества. Вопросы патриотического воспитания обсудили в Минске",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 19:34:34 +0000",
+    "beijing": "2026-11-07 03:34",
+    "zh": "形成公民社会。明斯克讨论爱国主义教育问题",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "nebolshoj-moroz-nochyu-i-do-5-s-dnem-ozhidaetsya-v-minske-7-noyabrya",
+    "link": "https://minsknews.by/nebolshoj-moroz-nochyu-i-do-5-%c2%b0s-dnem-ozhidaetsya-v-minske-7-noyabrya/",
+    "ru": "Небольшой мороз ночью и до +5 °С днем ожидается в Минске 7 ноября",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 18:59:07 +0000",
+    "beijing": "2026-11-07 02:59",
+    "zh": "预计 11 月 7 日明斯克夜间将出现轻微霜冻，白天最高可达 +5 °C",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "monetka-na-udachu-i-triumf-batki-minaya-kak-proshlo-zakrytie-xxxii-festivalya-listapad",
+    "link": "https://minsknews.by/monetka-na-udachu-i-triumf-batki-minaya-kak-proshlo-zakrytie-xxxii-festivalya-listapad/",
+    "ru": "Монетка на удачу и триумф «Батьки Миная»: как прошло закрытие XXXII фестиваля «Лістапад»",
+    "cat": "event",
+    "isodate": "Fri, 06 Nov 2026 18:49:07 +0000",
+    "beijing": "2026-11-07 02:49",
+    "zh": "一枚象征好运和“Batka Minaya”胜利的硬币：第 32 届“Listapad”节的闭幕情况如何？",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "gomel-pobedil-arsenal-na-starte-28-go-tura-chempionata-strany-po-futbolu",
+    "link": "https://minsknews.by/gomel-pobedil-arsenal-na-starte-28-go-tura-chempionata-strany-po-futbolu/",
+    "ru": "«Гомель» победил «Арсенал» на старте 28-го тура чемпионата страны по футболу",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 18:26:15 +0000",
+    "beijing": "2026-11-07 02:26",
+    "zh": "国足第28轮揭幕战“戈梅利”击败“阿森纳”",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "zhenskoe-dvizhenie-stanet-odnim-iz-novyh-napravlenij-raboty-partii-belaya-rus",
+    "link": "https://minsknews.by/zhenskoe-dvizhenie-stanet-odnim-iz-novyh-napravlenij-raboty-partii-belaya-rus/",
+    "ru": "Женское движение станет одним из новых направлений работы партии «Белая Русь»",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 18:00:01 +0000",
+    "beijing": "2026-11-07 02:00",
+    "zh": "妇女运动将成为白俄罗斯党的新工作领域之一",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "zhitel-stoliczy-ehal-na-poputke-i-vyhodya-iz-avtomobilya-pohitil-borsetku-voditelya",
+    "link": "https://minsknews.by/zhitel-stoliczy-ehal-na-poputke-i-vyhodya-iz-avtomobilya-pohitil-borsetku-voditelya/",
+    "ru": "Житель столицы ехал на попутке и, выходя из автомобиля, похитил борсетку водителя",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 17:45:18 +0000",
+    "beijing": "2026-11-07 01:45",
+    "zh": "首都的一名居民搭便车，下车后偷走了司机的防护罩。",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "oformit-elektronnuyu-podpis-mozhno-v-minskom-tcz-pershy-naczyyanalny-gandlyovy-dom",
+    "link": "https://minsknews.by/oformit-elektronnuyu-podpis-mozhno-v-minskom-tcz-pershy-naczyyanalny-gandlyovy-dom/",
+    "ru": "Оформить электронную подпись можно в минском ТЦ «Першы нацыянальны гандлёвы дом»",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 17:29:24 +0000",
+    "beijing": "2026-11-07 01:29",
+    "zh": "您可以在明斯克购物中心“Pershy National Handlev House”签发电子签名",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "vozvrashhenie-k-duhovnosti-i-preemstvennost-idealov-chem-vpechatlyalo-naczionalnoe-kino-na",
+    "link": "https://minsknews.by/vozvrashhenie-k-duhovnosti-i-preemstvennost-idealov-chem-vpechatlyalo-naczionalnoe-kino-na-listapadze/",
+    "ru": "Возвращение к духовности и преемственность идеалов: чем впечатляло национальное кино на «Лістападзе»",
+    "cat": "event",
+    "isodate": "Fri, 06 Nov 2026 17:17:41 +0000",
+    "beijing": "2026-11-07 01:17",
+    "zh": "回归灵性和理想的连续性：Listapad 的民族电影给观众留下了深刻的印象",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "v-758-tak-mozhno-bylo-vozmushheniya-minchan-na-rabotu-vozduhoduvok-prokommentirovali-v-mgz",
+    "link": "https://minsknews.by/v-758-tak-mozhno-bylo-vozmushheniya-minchan-na-rabotu-vozduhoduvok-prokommentirovali-v-mgzhh/",
+    "ru": "«В 7:58, так можно было?»: возмущения минчан на работу воздуходувок прокомментировали в МГЖХ",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 17:07:39 +0000",
+    "beijing": "2026-11-07 01:07",
+    "zh": "“7点58分，这可能吗？”：MGZHKh评论了明斯克居民对鼓风机运行的愤慨",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "posmotret-luchshie-filmy-proshedshego-listapada-mozhno-budet-v-fevrale-2027-go",
+    "link": "https://minsknews.by/posmotret-luchshie-filmy-proshedshego-listapada-mozhno-budet-v-fevrale-2027-go/",
+    "ru": "Посмотреть лучшие фильмы прошедшего «Лістапада» можно будет в феврале 2027-го",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 16:48:11 +0000",
+    "beijing": "2026-11-07 00:48",
+    "zh": "您可以在 2027 年 2 月观看 Listapad 过去的最佳影片",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "novaya-detskaya-ploshhadka-poyavilas-v-moskovskom-rajone-v-ramkah-grazhdanskoj-inicziativy",
+    "link": "https://minsknews.by/novaya-detskaya-ploshhadka-poyavilas-v-moskovskom-rajone-v-ramkah-grazhdanskoj-inicziativy/",
+    "ru": "Новая детская площадка появилась в Московском районе в рамках гражданской инициативы",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 16:29:16 +0000",
+    "beijing": "2026-11-07 00:29",
+    "zh": "作为公民倡议的一部分，莫斯科夫斯基区出现了一个新的儿童游乐场",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kak-v-stolicze-reshayut-problemu-podtoplenij-rasskazali-v-mingorispolkome",
+    "link": "https://minsknews.by/kak-v-stolicze-reshayut-problemu-podtoplenij-rasskazali-v-mingorispolkome/",
+    "ru": "Как в столице решают проблему подтоплений, рассказали в Мингорисполкоме",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 16:05:54 +0000",
+    "beijing": "2026-11-07 00:05",
+    "zh": "明斯克市执行委员会告诉首都如何解决洪水问题",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "kurer-telefonnyh-aferistov-zabral-sebe-dengi-a-te-v-otmestku-sdali-ego-miliczii",
+    "link": "https://minsknews.by/kurer-telefonnyh-aferistov-zabral-sebe-dengi-a-te-v-otmestku-sdali-ego-miliczii/",
+    "ru": "Курьер телефонных аферистов забрал себе деньги, а те в отместку сдали его милиции",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 15:33:27 +0000",
+    "beijing": "2026-11-06 23:33",
+    "zh": "电话诈骗者的快递员将钱据为己有，为了报复，他们将他交给了警方",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "minsk-zavershit-seriyu-czeremonij-zakrytiya-tretego-trudovogo-semestra-studotryadov-brsm",
+    "link": "https://minsknews.by/minsk-zavershit-seriyu-czeremonij-zakrytiya-tretego-trudovogo-semestra-studotryadov-brsm/",
+    "ru": "Минск завершит серию церемоний закрытия третьего трудового семестра студотрядов БРСМ",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 15:17:50 +0000",
+    "beijing": "2026-11-06 23:17",
+    "zh": "明斯克将完成白俄罗斯共和青年联盟学生队第三个工作学期的一系列闭幕式",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "pryamoj-efir-demokraty-snova-reshayut-v-ssha",
+    "link": "https://minsknews.by/pryamoj-efir-demokraty-snova-reshayut-v-ssha/",
+    "ru": "ПРЯМОЙ ЭФИР. Демократы снова решают в США",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 15:05:58 +0000",
+    "beijing": "2026-11-06 23:05",
+    "zh": "居住。美国民主党再次做出决定",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "my-gonimsya-ne-za-kolichestvom-a-za-kachestvom-n-burlyaev-o-listapadze-i-mirovom-kinematog",
+    "link": "https://minsknews.by/my-gonimsya-ne-za-kolichestvom-a-za-kachestvom-n-burlyaev-o-listapadze-i-mirovom-kinematografe/",
+    "ru": "«Мы гонимся не за количеством, а за качеством»: Н. Бурляев — о «Лістападзе» и мировом кинематографе",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 15:00:32 +0000",
+    "beijing": "2026-11-06 23:00",
+    "zh": "“我们追求的不是数量，而是质量”：N. Burlyaev - 关于“Listapad”和世界电影",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "dopsredstva-vydelyat-v-2026-godu-na-stroitelstvo-arendnogo-zhilya-i-infrastruktury",
+    "link": "https://minsknews.by/dopsredstva-vydelyat-v-2026-godu-na-stroitelstvo-arendnogo-zhilya-i-infrastruktury/",
+    "ru": "Допсредства выделят в 2026 году на строительство арендного жилья и инфраструктуры",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 14:51:36 +0000",
+    "beijing": "2026-11-06 22:51",
+    "zh": "2026年追加资金用于租赁住房和基础设施建设",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "minchan-predupredili-ob-izmenenii-v-rabote-otdelnyh-tramvajnyh-marshrutov-s-6-noyabrya",
+    "link": "https://minsknews.by/minchan-predupredili-ob-izmenenii-v-rabote-otdelnyh-tramvajnyh-marshrutov-s-6-noyabrya/",
+    "ru": "Минчан предупредили об изменении в работе отдельных трамвайных маршрутов с 6 ноября",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 14:48:53 +0000",
+    "beijing": "2026-11-06 22:48",
+    "zh": "明斯克居民收到关于 11 月 6 日起部分有轨电车路线运营变化的警告",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "rabotnikam-minskkommunteploseti-vruchili-klyuchi-ot-arendnyh-kvartir",
+    "link": "https://minsknews.by/rabotnikam-minskkommunteploseti-vruchili-klyuchi-ot-arendnyh-kvartir/",
+    "ru": "Работникам «Минсккоммунтеплосети» вручили ключи от арендных квартир",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 14:44:48 +0000",
+    "beijing": "2026-11-06 22:44",
+    "zh": "Minskkommunteploseti 的员工获得了出租公寓的钥匙",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "vyacheslav-danilovich-o-vns-na-etu-temu-eshhe-poyavyatsya-interesnye-nauchnye-raboty",
+    "link": "https://minsknews.by/vyacheslav-danilovich-o-vns-na-etu-temu-eshhe-poyavyatsya-interesnye-nauchnye-raboty/",
+    "ru": "Вячеслав Данилович о ВНС: на эту тему еще появятся интересные научные работы",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 14:36:50 +0000",
+    "beijing": "2026-11-06 22:36",
+    "zh": "维亚切斯拉夫·丹尼洛维奇（Vyacheslav Danilovich）关于 VNS：有趣的科学著作将出现在这个主题上",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "novyj-vzglyad-ot-molodyh-rezhisserov-i-ne-tolko-zhyuri-kinofestivalya-listapad-podvelo-ito",
+    "link": "https://minsknews.by/novyj-vzglyad-ot-molodyh-rezhisserov-i-ne-tolko-zhyuri-kinofestivalya-listapad-podvelo-itogi/",
+    "ru": "Новый взгляд от молодых режиссеров и не только. Жюри кинофестиваля «Лістапад» подвело итоги",
+    "cat": "event",
+    "isodate": "Fri, 06 Nov 2026 14:20:30 +0000",
+    "beijing": "2026-11-06 22:20",
+    "zh": "年轻导演等的新面貌。 Listapad电影节评审团总结结果",
+    "sum": "",
+    "body": []
+  },
+  {
+    "slug": "fejk-kontrol-ekspert-rasskazal-kak-ne-stat-zhertvoj-lozhnyh-novostej-v-internete",
+    "link": "https://minsknews.by/fejk-kontrol-ekspert-rasskazal-kak-ne-stat-zhertvoj-lozhnyh-novostej-v-internete/",
+    "ru": "Фейк-контроль: эксперт рассказал, как не стать жертвой ложных новостей в интернете",
+    "cat": "news",
+    "isodate": "Fri, 06 Nov 2026 14:00:56 +0000",
+    "beijing": "2026-11-06 22:00",
+    "zh": "虚假控制：专家讲述如何避免成为互联网假新闻的受害者",
+    "sum": "",
+    "body": []
+  },
+  {
     "slug": "za-kulisami-krupnyh-media-stoliczy-shkolniki-pobyvali-na-ekskursii-v-agentstve-minsk-novos",
     "link": "https://minsknews.by/za-kulisami-krupnyh-media-stoliczy-shkolniki-pobyvali-na-ekskursii-v-agentstve-minsk-novosti/",
     "ru": "За кулисами крупных медиа столицы: школьники побывали на экскурсии в агентстве «Минск-Новости»",
@@ -9555,26 +10083,6 @@
     ]
   },
   {
-    "slug": "klyukva-tykva-i-batat-chto-populyarno-u-minchan-na-komarovke-v-oktyabre",
-    "link": "https://minsknews.by/klyukva-tykva-i-batat-chto-populyarno-u-minchan-na-komarovke-v-oktyabre/",
-    "ru": "Клюква, тыква и батат: что популярно у минчан на Комаровке в октябре",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 13:49:34 +0000",
-    "beijing": "2026-10-24 21:49",
-    "zh": "蔓越莓、南瓜和红薯：十月科马罗夫卡明斯克居民最喜欢吃什么",
-    "sum": ""
-  },
-  {
-    "slug": "proverit-predupredit-pomoch-v-minske-startuet-akcziya-za-bezopasnost-vmeste",
-    "link": "https://minsknews.by/proverit-predupredit-pomoch-v-minske-startuet-akcziya-za-bezopasnost-vmeste/",
-    "ru": "Проверить, предупредить, помочь. В Минске стартовала акция «За безопасность вместе»",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 13:32:28 +0000",
-    "beijing": "2026-10-24 21:32",
-    "zh": "检查、警告、帮助。 “共同安全”运动在明斯克启动",
-    "sum": ""
-  },
-  {
     "slug": "prinesti-20-kg-kartofelya-bez-problem-volontery-brsm-pomogayut-pozhilym-minchanam-na-selho",
     "link": "https://minsknews.by/prinesti-20-kg-kartofelya-bez-problem-volontery-brsm-pomogayut-pozhilym-minchanam-na-selhozyarmarkah/",
     "ru": "Принести 20 кг картофеля? Без проблем! Волонтеры БРСМ помогают пожилым минчанам на сельхозярмарках",
@@ -9614,36 +10122,6 @@
     ]
   },
   {
-    "slug": "v-minske-sobrali-karavai-millionniki-iz-regionov-belarusi-za-luchshij-mozhno-progolosovat",
-    "link": "https://minsknews.by/v-minske-sobrali-karavai-millionniki-iz-regionov-belarusi%c2%a0-za-luchshij-mozhno-progolosovat/",
-    "ru": "В Минске собрали караваи-«миллионники» из регионов Беларуси — за лучший можно проголосовать",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 12:57:21 +0000",
-    "beijing": "2026-10-24 20:57",
-    "zh": "来自白俄罗斯地区的价值百万美元的面包已在明斯克收集 - 您可以投票选出最好的一个",
-    "sum": ""
-  },
-  {
-    "slug": "mesto-dlya-uedineniya-molodezh-navela-poryadok-v-studencheskom-parke",
-    "link": "https://minsknews.by/mesto-dlya-uedineniya-molodezh-navela-poryadok-v-studencheskom-parke/",
-    "ru": "Место для уединения. Молодежь навела порядок в Студенческом парке",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 12:51:01 +0000",
-    "beijing": "2026-10-24 20:51",
-    "zh": "一个保护隐私的地方。青少年清理学生公园",
-    "sum": ""
-  },
-  {
-    "slug": "skamejki-sosedskie-koty-narodnaya-tropa-chto-volnuet-zhitelej-pervomajskogo",
-    "link": "https://minsknews.by/skamejki-sosedskie-koty-narodnaya-tropa-chto-volnuet-zhitelej-pervomajskogo/",
-    "ru": "Скамейки, соседские коты, народная тропа: что волнует жителей Первомайского",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 12:29:40 +0000",
-    "beijing": "2026-10-24 20:29",
-    "zh": "长凳、邻居的猫、民俗小道：佩尔沃迈斯基居民的担忧是什么",
-    "sum": ""
-  },
-  {
     "slug": "minskaya-organizacziya-beloj-rusi-provela-subbotnik-v-memorialnom-komplekse-trostenecz",
     "link": "https://minsknews.by/minskaya-organizacziya-beloj-rusi-provela-subbotnik-v-memorialnom-komplekse-trostenecz/",
     "ru": "Минская организация «Белой Руси» провела субботник в мемориальном комплексе «Тростенец»",
@@ -9677,78 +10155,6 @@
     ]
   },
   {
-    "slug": "gruppu-podrostkov-podozrevayut-v-pohishhenii-shkolnika-v-sankt-peterburge",
-    "link": "https://minsknews.by/gruppu-podrostkov-podozrevayut-v-pohishhenii-shkolnika-v-sankt-peterburge/",
-    "ru": "Группу подростков подозревают в похищении школьника в Санкт-Петербурге",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 12:00:00 +0000",
-    "beijing": "2026-10-24 20:00",
-    "zh": "一群青少年涉嫌在圣彼得堡绑架一名男学生",
-    "sum": ""
-  },
-  {
-    "slug": "kommunalnye-sluzhby-i-mestnye-zhiteli-preobrazili-dvorovye-territorii-v-partizanskom",
-    "link": "https://minsknews.by/kommunalnye-sluzhby-i-mestnye-zhiteli-preobrazili-dvorovye-territorii-v-partizanskom/",
-    "ru": "Коммунальные службы и местные жители преобразили дворовые территории в Партизанском",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 11:46:29 +0000",
-    "beijing": "2026-10-24 19:46",
-    "zh": "公用事业公司和当地居民改造了 Partizanskoe 的庭院区域",
-    "sum": ""
-  },
-  {
-    "slug": "v-parke-semejnyh-derevev-v-zavodskom-rajone-vysadili-eshhe-50-klenov",
-    "link": "https://minsknews.by/v-parke-semejnyh-derevev-v-zavodskom-rajone-vysadili-eshhe-50-klenov/",
-    "ru": "В парке семейных деревьев в Заводском районе высадили 50 кленов",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 11:23:25 +0000",
-    "beijing": "2026-10-24 19:23",
-    "zh": "Zavodskoy 区的家谱公园种植了 50 棵枫树",
-    "sum": ""
-  },
-  {
-    "slug": "osveshhenie-vyvoz-musora-pdd-o-chem-eshhe-zhiteli-frunzenskogo-sprashivali-vo-vremya-pryam",
-    "link": "https://minsknews.by/osveshhenie-vyvoz-musora-pdd-o-chem-eshhe-zhiteli-frunzenskogo-sprashivali-vo-vremya-pryamoj-linii/",
-    "ru": "Освещение, вывоз мусора, ПДД: о чем еще жители Фрунзенского спрашивали во время прямой линии",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 11:01:28 +0000",
-    "beijing": "2026-10-24 19:01",
-    "zh": "照明、垃圾清除、交通规则：Frunzenskoe 的居民在直线电话中还询问了什么？",
-    "sum": ""
-  },
-  {
-    "slug": "beloruska-aleksandra-sasnovich-vyshla-v-final-kvalifikaczii-turnira-wta-500-v-tokio",
-    "link": "https://minsknews.by/beloruska-aleksandra-sasnovich-vyshla-v-final-kvalifikaczii-turnira-wta-500-v-tokio/",
-    "ru": "Белоруска Александра Саснович вышла в финал квалификации турнира WTA-500 в Токио",
-    "cat": "event",
-    "isodate": "Sat, 24 Oct 2026 10:44:27 +0000",
-    "beijing": "2026-10-24 18:44",
-    "zh": "白俄罗斯选手亚历山德拉·萨斯诺维奇进入东京 WTA-500 锦标赛预选赛最后一轮",
-    "sum": "",
-    "body": [
-      "据明斯克通讯社记者援引体育部新闻部门的消息报道，白俄罗斯网球运动员亚历山德拉·萨斯诺维奇 (Alexandra Sasnovich) 于 10 月 24 日在东京举行的 WTA-500 锦标赛开幕式上获胜。",
-      "在预选赛第一轮的比赛中，世界排名第122位的运动员用时两个小时击败了乌克兰选手尤利娅·斯塔罗杜布采娃（世界排名第50位）。比赛以6:4、7:5的比分结束。",
-      "在进入正赛的决定性比赛中，萨斯诺维奇将对阵乌兹别克斯坦选手卡米拉·拉希莫娃（第67位）。",
-      "在日本首都举行的比赛将于11月1日结束。"
-    ],
-    "images": [
-      "../imgs/beloruska-aleksandra-sasnovich-vyshla-v-final-kvalifikaczii-turnira-wta-500-v-tokio/img1.jpg"
-    ],
-    "image_srcs": [
-      "https://minsknews.by/wp-content/uploads/2024/07/photo_2024-07-19_17-23-37-805x600.jpg"
-    ]
-  },
-  {
-    "slug": "minchanin-poluchil-bolshoj-shtraf-za-to-chto-ukral-iz-podezda-skamyu",
-    "link": "https://minsknews.by/minchanin-poluchil-bolshoj-shtraf-za-to-chto-ukral-iz-podezda-skamyu/",
-    "ru": "Минчанин получил большой штраф за то, что украл из подъезда скамью",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 10:23:33 +0000",
-    "beijing": "2026-10-24 18:23",
-    "zh": "明斯克一名居民因偷窃入口处的长凳而收到巨额罚款",
-    "sum": ""
-  },
-  {
     "slug": "vmeste-my-sozdaem-budushhee-subbotnik-na-ul-yakubova-obedinil-zhitelej-raznyh-vozrastov",
     "link": "https://minsknews.by/vmeste-my-sozdaem-budushhee-subbotnik-na-ul-yakubova-obedinil-zhitelej-raznyh-vozrastov/",
     "ru": "«Вместе мы создаем будущее»: субботник на ул. Якубова объединил жителей разных возрастов",
@@ -9779,38 +10185,6 @@
       "https://minsknews.by/wp-content/uploads/2026/10/izobrazhenie_viber_2026-10-24_12-00-06-322-450x600.jpg",
       "https://minsknews.by/wp-content/uploads/2026/10/izobrazhenie_viber_2026-10-24_12-00-05-356.jpg",
       "https://minsknews.by/wp-content/uploads/2026/10/izobrazhenie_viber_2026-10-24_12-00-04-989.jpg"
-    ]
-  },
-  {
-    "slug": "moshenniki-ispolzuyut-doverie-k-servisu-e-pasluga-dlya-obmana-kak-raspoznat-shemu",
-    "link": "https://minsknews.by/moshenniki-ispolzuyut-doverie-k-servisu-e-pasluga-dlya-obmana-kak-raspoznat-shemu/",
-    "ru": "Мошенники используют доверие к сервису «Е-Паслуга» для обмана. Как распознать схему",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 10:00:29 +0000",
-    "beijing": "2026-10-24 18:00",
-    "zh": "欺诈者利用对 E-Pasluga 服务的信任进行欺骗。如何识别模式",
-    "sum": ""
-  },
-  {
-    "slug": "beloruska-darya-chupris-stala-vtoroj-v-strelbe-iz-vintovki-na-turnire-gran-pri-v-shymkente",
-    "link": "https://minsknews.by/beloruska-darya-chupris-stala-vtoroj-v-strelbe-iz-vintovki-na-turnire-gran-pri-v-shymkente/",
-    "ru": "Белоруска Дарья Чуприс стала второй в стрельбе из винтовки на турнире Гран-при в Шымкенте",
-    "cat": "event",
-    "isodate": "Sat, 24 Oct 2026 09:40:01 +0000",
-    "beijing": "2026-10-24 17:40",
-    "zh": "白俄罗斯选手达莉亚·丘普里斯 (Daria Chupris) 在奇姆肯特大奖赛上获得步枪射击第二名",
-    "sum": "",
-    "body": [
-      "据明斯克通讯社报道，10 月 24 日，白俄罗斯运动员达里亚·丘普里斯 (Daria Chupris) 在哈萨克斯坦举行的国际射联子弹射击大奖赛系列国际锦标赛中获得银牌。",
-      "照片来自 BELTA 档案",
-      "周六，欧洲锦标赛奖牌获得者和奥运会参赛者参加了 10 m 气步枪比赛。在资格赛中，D. Chupris 在 15 名女孩中取得了第三名，并在决赛中以 247.9 分获得银牌。哈萨克斯坦的亚历山德拉·勒 (Alexandra Le) 获得了黄金。 BELTA 写道，白俄罗斯的另一位代表 Elizaveta Gavrilenko 进入了前八名。",
-      "目前，白俄罗斯队各获得两个奖项。比赛将在奇姆肯特举行，共有来自14个国家的200多名运动员参加，比赛将持续到10月27日。"
-    ],
-    "images": [
-      "../imgs/beloruska-darya-chupris-stala-vtoroj-v-strelbe-iz-vintovki-na-turnire-gran-pri-v-shymkente/img1.jpg"
-    ],
-    "image_srcs": [
-      "https://minsknews.by/wp-content/uploads/2026/10/000028_1792829689_807532_big.jpg"
     ]
   },
   {
@@ -9848,16 +10222,6 @@
       "https://minsknews.by/wp-content/uploads/2026/10/img_8769.jpg",
       "https://minsknews.by/wp-content/uploads/2026/10/img_8770.jpg"
     ]
-  },
-  {
-    "slug": "stolichnaya-gai-usilit-kontrol-na-dorogah-s-25-po-31-oktyabrya",
-    "link": "https://minsknews.by/stolichnaya-gai-usilit-kontrol-na-dorogah-s-25-po-31-oktyabrya/",
-    "ru": "Столичная ГАИ усилит контроль на дорогах с 25 по 31 октября",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 09:10:57 +0000",
-    "beijing": "2026-10-24 17:10",
-    "zh": "首都交警将于10月25日至10月31日加强道路管控",
-    "sum": ""
   },
   {
     "slug": "vmeste-sdelaem-gorod-chishhe-mgzhh-vyshlo-na-subbotnik-na-ul-olshevskogo",
@@ -9917,37 +10281,6 @@
     ]
   },
   {
-    "slug": "v-kvartire-minchanina-nashli-svertok-s-marihuanoj",
-    "link": "https://minsknews.by/v-kvartire-minchanina-nashli-svertok-s-marihuanoj/",
-    "ru": "В квартире минчанина нашли сверток с марихуаной",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 08:27:14 +0000",
-    "beijing": "2026-10-24 16:27",
-    "zh": "在明斯克居民的公寓中发现一包大麻",
-    "sum": ""
-  },
-  {
-    "slug": "v-novom-dramaticheskom-teatre-podgotovili-premeru-interaktivnoj-skazki-czvetik-semiczvetik",
-    "link": "https://minsknews.by/v-novom-dramaticheskom-teatre-podgotovili-premeru-interaktivnoj-skazki-czvetik-semiczvetik/",
-    "ru": "В Новом драматическом театре подготовили премьеру интерактивной сказки «Цветик-семицветик»",
-    "cat": "event",
-    "isodate": "Sat, 24 Oct 2026 08:09:31 +0000",
-    "beijing": "2026-10-24 16:09",
-    "zh": "新话剧院准备互动童话《七花之花》首演",
-    "sum": "",
-    "body": [
-      "该文化机构告诉明斯克通讯社记者，根据瓦伦丁·卡塔耶夫作品改编的互动童话《七朵花》将于 10 月 24 日在新戏剧院首演。",
-      "故事里，女孩珍雅得到了一朵七花，可以实现七个愿望。主角利用了已经出现的机会，而热尼亚不止一次犯错误并纠正错误。",
-      "该剧主创将其定位为适合全家人一起互动的表演。"
-    ],
-    "images": [
-      "../imgs/v-novom-dramaticheskom-teatre-podgotovili-premeru-interaktivnoj-skazki-czvetik-semiczvetik/img1.jpg"
-    ],
-    "image_srcs": [
-      "https://minsknews.by/wp-content/uploads/2026/05/novyi-teatr.jpg"
-    ]
-  },
-  {
     "slug": "massovye-subbotniki-proshli-vo-vseh-ugolkah-pervomajskogo-rajona",
     "link": "https://minsknews.by/massovye-subbotniki-proshli-vo-vseh-ugolkah-pervomajskogo-rajona/",
     "ru": "Массовые субботники прошли во всех уголках Первомайского района",
@@ -9979,60 +10312,6 @@
       "https://minsknews.by/wp-content/uploads/2026/10/izobrazhenie_viber_2026-10-24_10-30-35-996.jpg",
       "https://minsknews.by/wp-content/uploads/2026/10/izobrazhenie_viber_2026-10-24_10-31-42-180.jpg"
     ]
-  },
-  {
-    "slug": "za-sutki-v-belorusskuyu-milicziyu-postupilo-bolee-300-soobshhenij-o-zvonkah-aferistov",
-    "link": "https://minsknews.by/za-sutki-v-belorusskuyu-milicziyu-postupilo-bolee-300-soobshhenij-o-zvonkah-aferistov/",
-    "ru": "За сутки в белорусскую милицию поступило более 300 сообщений о звонках аферистов",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 07:50:51 +0000",
-    "beijing": "2026-10-24 15:50",
-    "zh": "白天，白俄罗斯警方接到300多起诈骗电话举报",
-    "sum": ""
-  },
-  {
-    "slug": "lekcziyu-ob-energeticheskih-czentrah-cheloveka-provedut-v-naczionalnoj-biblioteke-28-oktya",
-    "link": "https://minsknews.by/lekcziyu-ob-energeticheskih-czentrah-cheloveka-provedut-v-naczionalnoj-biblioteke-28-oktyabrya/",
-    "ru": "Лекцию об энергетических центрах человека проведут в Национальной библиотеке 28 октября",
-    "cat": "event",
-    "isodate": "Sat, 24 Oct 2026 07:34:38 +0000",
-    "beijing": "2026-10-24 15:34",
-    "zh": "人体能量中心讲座将于10月28日在国家图书馆举办",
-    "sum": "",
-    "body": [
-      "明斯克通讯社记者从国家图书馆新闻处获悉，“人体和体外的能量中心”讲座将于10月28日在国家图书馆中文图书中心举行。",
-      "武术教练兼老师弗拉基米尔·佐里奇（Vladimir Zorich）将向学生介绍中国古代关于能量系统的教义，并谈论它对身心健康的影响。",
-      "中医是最古老的治疗体系之一，其哲学原理和方法已经发展了数千年。目前，由于其全面的健康方法，它被认为是最好的之一。与西方解剖学不同，东方传统将人视为一个单一的信息和能量系统。",
-      "在讲座中，学生将了解这个看不见的系统如何运作，生命能量（气）如何循环，以及为什么东方大师声称人体生物场远远超出了物质外壳。讲师将向观众介绍七个主要能量点（脉轮），清楚地展示它们的位置以及它们如何投射到身体及其周围的空间。",
-      "此外，专家还将向您展示基本的呼吸和冥想技巧，帮助您快速缓解压力、在工作日后恢复体力并增强您的免疫系统。",
-      "17:00开始，凭借书卡入场。"
-    ],
-    "images": [
-      "../imgs/lekcziyu-ob-energeticheskih-czentrah-cheloveka-provedut-v-naczionalnoj-biblioteke-28-oktya/img1.jpg"
-    ],
-    "image_srcs": [
-      "https://minsknews.by/wp-content/uploads/2026/10/af_zorich.jpg"
-    ]
-  },
-  {
-    "slug": "zachem-uchitelnicza-brosilas-v-niagaru-i-rokovaya-oshibka-roberta-skotta-etot-den-v-istori",
-    "link": "https://minsknews.by/zachem-uchitelnicza-brosilas-v-niagaru-i-rokovaya-oshibka-roberta-skotta-etot-den-v-istorii-24-oktyabrya/",
-    "ru": "Зачем учительница бросилась в Ниагару, и роковая ошибка Роберта Скотта. Этот день в истории: 24 октября",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 07:15:59 +0000",
-    "beijing": "2026-10-24 15:15",
-    "zh": "老师为何赶往尼亚加拉，以及罗伯特·斯科特的致命错误。历史上的这一天：10月24日",
-    "sum": ""
-  },
-  {
-    "slug": "tovarooborot-sverdlovskoj-oblasti-i-belarusi-priblizhaetsya-k-1-mlrd-dollarov",
-    "link": "https://minsknews.by/tovarooborot-sverdlovskoj-oblasti-i-belarusi-priblizhaetsya-k-1-mlrd-dollarov/",
-    "ru": "Товарооборот Свердловской области и Беларуси приближается к 1 млрд долларов",
-    "cat": "news",
-    "isodate": "Sat, 24 Oct 2026 07:03:18 +0000",
-    "beijing": "2026-10-24 15:03",
-    "zh": "斯维尔德洛夫斯克地区与白俄罗斯之间的贸易额接近10亿美元",
-    "sum": ""
   },
   {
     "slug": "subbotniki-projdut-vo-vseh-rajonah-stoliczy-24-oktyabrya-spisok-adresov",
