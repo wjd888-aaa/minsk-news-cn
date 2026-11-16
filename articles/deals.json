@@ -4,8 +4,8 @@
     "id": "novinka-v-magazine-v-malinovke",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/novinka-v-magazine-v-malinovke",
-    "date": "2026-11-15T21:33:23.173Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:47.983Z",
+    "beijing": "2026-11-16 09:39",
     "text": "🥤 Новинка в магазине в Малиновке! Холодные фруктовые напитки собственного производства за 3,99 руб — только в Малиновке",
     "zh": "🥤 马利诺夫卡商店新品！我们自己生产的冷果汁饮料售价 3.99 卢布 - 仅在 Malinovka",
     "period": "",
@@ -16,10 +16,6 @@
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-11-07",
-        "p": 3.99
-      },
       {
         "t": "2026-11-08",
         "p": 3.99
@@ -47,6 +43,10 @@
       {
         "t": "2026-11-15",
         "p": 3.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 3.99
       }
     ]
   },
@@ -55,8 +55,8 @@
     "id": "kazdyi-ponedelnik-dobryi-vprok",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/kazdyi-ponedelnik-dobryi-vprok",
-    "date": "2026-11-15T21:33:23.173Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:47.983Z",
+    "beijing": "2026-11-16 09:39",
     "text": "КАЖДЫЙ ПОНЕДЕЛЬНИК – Добрый ВПРОК 💙 Забота, которая становится приятным бонусом в супермаркете по адресу: Бобруйск, ул. Минская, 94В",
     "zh": "每个星期一都是一次美好的操蛋💙护理，这在位于Bobruisk，st.的超市里成为了令人愉快的奖励。明斯卡亚，94V",
     "period": "",
@@ -73,8 +73,8 @@
     "id": "my-zabotimsia-o-vas",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/my-zabotimsia-o-vas",
-    "date": "2026-11-15T21:33:23.173Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:47.983Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Мы заботимся о вас! Постоянная скидка -10% на социально-значимые товары для пенсионеров, инвалидов, многодетных семей и малообеспеченных граждан",
     "zh": "我们关心你！为养老金领取者、残疾人、大家庭和低收入公民提供具有社会意义的商品的永久 -10% 折扣",
     "period": "",
@@ -91,8 +91,8 @@
     "id": "voskresene-den-semi-s-prostore",
     "store": "ProStore",
     "link": "https://www.prostore.by/specialnye-predlozheniya/voskresene-den-semi-s-prostore",
-    "date": "2026-11-15T21:33:23.173Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:47.983Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Воскресенье — День семьи с ProStore! Предложение действует только в магазинах ProStore по адресам: Минск, ул. М. Богдановича, 132 и Бобруйск, ул. Минская, 94В Проводите воскресенье вместе с нами!",
     "zh": "周日是 ProStore 的家庭日！该优惠仅在以下地址的 ProStore 商店有效：明斯克、圣彼得堡。 M. Bogdanovich，132 和 Bobruisk，圣。 Minskaya，94V 和我们一起度过周日！",
     "period": "",
@@ -109,8 +109,8 @@
     "id": "shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kazhdyy-7-y-kofe-sendvich-kusok-pitstsy-vsego-za-2-kopeyki-tolko-s-kartoy-vygoda-/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Каждый 7-й КОФЕ, СЭНДВИЧ, КУСОК ПИЦЦЫ всего за 2 КОПЕЙКИ! Только с картой «ВЫГОДА!»",
     "zh": "每 7 份咖啡、三明治、披萨片仅需 2 KOPEYKS！只有“好处！”卡片",
     "period": "",
@@ -127,8 +127,8 @@
     "id": "shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/bolshe-vygodnykh-pokupok-s-kartoy-vygoda-/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Больше выгодных покупок — с картой «ВЫГОДА!»",
     "zh": "通过“BENEF!”进行更有利可图的购买卡片",
     "period": "",
@@ -145,8 +145,8 @@
     "id": "shares/obnovlenie-bonusnoy-programmy-vygoda",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/obnovlenie-bonusnoy-programmy-vygoda/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Бонусная программа ВЫГОДА!",
     "zh": "奖金计划 好处！",
     "period": "",
@@ -163,8 +163,8 @@
     "id": "shares/skidka-30-na-khlebobulochnye-izdeliya-v-vechernee-vremya",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-30-na-khlebobulochnye-izdeliya-v-vechernee-vremya/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Скидка 30% на хлебобулочные изделия в вечернее время",
     "zh": "晚上烘焙产品 30% 折扣",
     "period": "",
@@ -181,8 +181,8 @@
     "id": "shares/skidka-30-na-gotovuyu-produktsiyu-v-vechernee-vremya",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/skidka-30-na-gotovuyu-produktsiyu-v-vechernee-vremya/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Скидка 30% на готовую продукцию в вечернее время",
     "zh": "晚上成品30%折扣",
     "period": "",
@@ -199,8 +199,8 @@
     "id": "shares/prazdnuyte-den-rozhdeniya-s-nami",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/prazdnuyte-den-rozhdeniya-s-nami/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Празднуйте День Рождения с нами!",
     "zh": "和我们一起庆祝你的生日！",
     "period": "",
@@ -217,8 +217,8 @@
     "id": "shares/vygoda-sotsialnaya-skidka-7-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/vygoda-sotsialnaya-skidka-7-/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "ВЫГОДА! Социальная. Скидка 7%.",
     "zh": "益处！社会的。 7% 折扣。",
     "period": "",
@@ -235,8 +235,8 @@
     "id": "shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-30-noyabrya-",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/kombo-za-6-59-r-i-za-4-59-r-s-1-po-30-noyabrya-/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "КОМБО за 6,59 р и за 4,59 р! С 1 по 30 ноября",
     "zh": "COMBO 6.59 卢布和 4.59 卢布！ 11月1日至30日",
     "period": "",
@@ -247,10 +247,6 @@
     "discount": null,
     "endDate": "30 ноября",
     "history": [
-      {
-        "t": "2026-11-07",
-        "p": 6.59
-      },
       {
         "t": "2026-11-08",
         "p": 6.59
@@ -278,6 +274,10 @@
       {
         "t": "2026-11-15",
         "p": 6.59
+      },
+      {
+        "t": "2026-11-16",
+        "p": 6.59
       }
     ]
   },
@@ -286,8 +286,8 @@
     "id": "shares/nakley-ka-skidku-i-pokupay-vygodnee-v-almi",
     "store": "АЛМИ",
     "link": "https://www.almi.by/shares/nakley-ka-skidku-i-pokupay-vygodnee-v-almi/",
-    "date": "2026-11-15T21:33:22.038Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:46.394Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Наклей-ка скидку и покупай выгоднее в АЛМИ!",
     "zh": "在 ALMI 应用折扣并购买更有利可图！",
     "period": "",
@@ -304,8 +304,8 @@
     "id": "ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/ckidka-20-na-gotovuyu-kulinarnuyu-produkciyu-dionis",
-    "date": "2026-11-15T21:33:20.204Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:44.188Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Cкидка 20% на готовую кулинарную продукцию \"Дионис\"",
     "zh": "现成烹饪产品“Dionysus”20% 折扣",
     "period": "1 января 2024 - 31 декабря 2026",
@@ -322,8 +322,8 @@
     "id": "socialnaya-skidka",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/socialnaya-skidka",
-    "date": "2026-11-15T21:33:20.204Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:44.188Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Социальная скидка",
     "zh": "社会折扣",
     "period": "1 июля 2025 - 31 декабря 2026",
@@ -340,8 +340,8 @@
     "id": "mobilnoe-prilozhenie-oplati",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/mobilnoe-prilozhenie-oplati",
-    "date": "2026-11-15T21:33:20.204Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:44.188Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Мобильное приложение ОПЛАТИ",
     "zh": "移动应用程序支付",
     "period": "13 сентября 2022 - 31 декабря 2026",
@@ -358,8 +358,8 @@
     "id": "kozhnaya-pyatnica-rodnae-svayo",
     "store": "Дионис",
     "link": "https://dionis-shop.by/promotions/kozhnaya-pyatnica-rodnae-svayo",
-    "date": "2026-11-15T21:33:20.204Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:44.188Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Кожная пятніца – роднае, сваё",
     "zh": "皮肤星期五 - 亲爱的，我们的",
     "period": "1 января 2026 - 31 декабря 2026",
@@ -376,8 +376,8 @@
     "id": "sale/aziatskie-nakhodki",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aziatskie-nakhodki/",
-    "date": "2026-11-15T21:33:19.151Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:42.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "с 4 по 17 ноября Азиатские находки!",
     "zh": "11 月 4 日至 17 日亚洲发现！",
     "period": "с 4 по 17 ноября",
@@ -394,8 +394,8 @@
     "id": "sale/dvoynoy-keshbek-na-nashi-brendy",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/dvoynoy-keshbek-na-nashi-brendy/",
-    "date": "2026-11-15T21:33:19.151Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:42.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "с 4 по 17 ноября Двойной кешбэк на наши бренды!",
     "zh": "11月4日至17日，品牌双倍返现！",
     "period": "с 4 по 17 ноября",
@@ -412,8 +412,8 @@
     "id": "sale/goryachie-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/goryachie-tseny/",
-    "date": "2026-11-15T21:33:19.151Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:42.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "-50% с 4 по 17 ноября Горячие цены! Скидки до -50%!",
     "zh": "11月4日至11月17日-50% 热销价！折扣高达-50%！",
     "period": "с 4 по 17 ноября",
@@ -430,8 +430,8 @@
     "id": "sale/aktsiya-s-kartoy-deshevle-v-tri-tseny",
     "store": "Три цены",
     "link": "https://3ceni.by/sale/aktsiya-s-kartoy-deshevle-v-tri-tseny/",
-    "date": "2026-11-15T21:33:19.151Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:42.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "С 4 по 17 ноября Акция \"С картой дешевле\" в ТРИ ЦЕНЫ!",
     "zh": "11月4日至17日，“持卡更便宜”促销三价！",
     "period": "с 4 по 17 ноября",
@@ -448,8 +448,8 @@
     "id": "09112026-22112026-l2c5lg",
     "store": "Грошык",
     "link": "https://salepost.by/groshyk-salebook",
-    "date": "2026-11-15T21:33:17.402Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:40.738Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Дискаунтер Цуд цана!",
     "zh": "格罗希克 新一期优惠单（2026-11-09 至 2026-11-22）",
     "period": "09.11.2026 - 22.11.2026",
@@ -466,8 +466,8 @@
     "id": "11112026-17112026-8prb82",
     "store": "Санта",
     "link": "https://salepost.by/santabum-salebook",
-    "date": "2026-11-15T21:33:16.835Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:40.079Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Честные цены! Сочное предложение!",
     "zh": "桑塔 新一期优惠单（2026-11-11 至 2026-11-17）",
     "period": "11.11.2026 - 17.11.2026",
@@ -484,8 +484,8 @@
     "id": "04112026-17112026-1kft23d",
     "store": "Санта",
     "link": "https://salepost.by/santa-salebook",
-    "date": "2026-11-15T21:33:16.259Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:39.411Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Вкусный выбор! Ай да цена!",
     "zh": "桑塔 新一期优惠单（2026-11-04 至 2026-11-17）",
     "period": "04.11.2026 - 17.11.2026",
@@ -499,228 +499,11 @@
   },
   {
     "user": "page:korona",
-    "id": "738373",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Авокадо Израиль, 1 кг",
-    "zh": "以色列鳄梨，1 公斤",
-    "period": "12.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/xs/sd/XSSDZ6Oamc_260_260.png",
-    "price": 9.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 9.99
-      },
-      {
-        "t": "2026-11-14",
-        "p": 9.99
-      },
-      {
-        "t": "2026-11-15",
-        "p": 9.99
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "1266358",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Киви Греция, 1 кг",
-    "zh": "希腊猕猴桃，1公斤",
-    "period": "12.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/no/bi/nobIr40D2r_260_260.png",
-    "price": 7.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 7.99
-      },
-      {
-        "t": "2026-11-14",
-        "p": 7.99
-      },
-      {
-        "t": "2026-11-15",
-        "p": 7.99
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "722877",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Манго Бразилия, 1 кг",
-    "zh": "巴西芒果，1 公斤",
-    "period": "12.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/p2/kp/p2KPPrLW14_260_260.png",
-    "price": 7.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 7.99
-      },
-      {
-        "t": "2026-11-14",
-        "p": 7.99
-      },
-      {
-        "t": "2026-11-15",
-        "p": 7.99
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "1123109",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Рукола Италия, 100 г",
-    "zh": "意大利芝麻菜，100 克",
-    "period": "12.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/yh/5o/yH5Ow9cj90_260_260.png",
-    "price": 4.59,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 4.59
-      },
-      {
-        "t": "2026-11-14",
-        "p": 4.59
-      },
-      {
-        "t": "2026-11-15",
-        "p": 4.59
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "1106069",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Хлебец С отрубями, 90 г",
-    "zh": "带麸皮面包，90 克",
-    "period": "09.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/76/v9/76V9OBLP52_260_260.png",
-    "price": 0.62,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 0.62
-      },
-      {
-        "t": "2026-11-14",
-        "p": 0.62
-      },
-      {
-        "t": "2026-11-15",
-        "p": 0.62
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "1286203",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Сдоба с заварным кремом и начинкой с ароматом абрикоса 85 г",
-    "zh": "杏味蛋奶酥 85 克",
-    "period": "09.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/xy/js/Xyjs0TKIey_260_260.png",
-    "price": 1.35,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 1.35
-      },
-      {
-        "t": "2026-11-14",
-        "p": 1.35
-      },
-      {
-        "t": "2026-11-15",
-        "p": 1.35
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
-    "id": "1204151",
-    "store": "Корона",
-    "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
-    "text": "Торт Венский с ягодами, Fattoria, 650 г",
-    "zh": "维也纳浆果蛋糕，Fattoria，650 克",
-    "period": "09.11.2026 - 15.11.2026",
-    "photo": "https://korona.by/uploads/promotional-product-image/wn/c2/Wnc2oELZC4_260_260.png",
-    "price": 13.89,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15.11.2026",
-    "history": [
-      {
-        "t": "2026-11-13",
-        "p": 13.89
-      },
-      {
-        "t": "2026-11-14",
-        "p": 13.89
-      },
-      {
-        "t": "2026-11-15",
-        "p": 13.89
-      }
-    ]
-  },
-  {
-    "user": "page:korona",
     "id": "1174861",
     "store": "Корона",
     "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:37.880Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Чай Curtis Mango Mood зел аромат лист 100г пачка",
     "zh": "Tea Curtis 芒果心情绿香叶 100g 包",
     "period": "03.11.2026 - 16.11.2026",
@@ -742,6 +525,10 @@
       {
         "t": "2026-11-15",
         "p": 5.49
+      },
+      {
+        "t": "2026-11-16",
+        "p": 5.49
       }
     ]
   },
@@ -750,8 +537,8 @@
     "id": "1215018",
     "store": "Корона",
     "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:37.880Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Чай Curtis Hawaii Sunkiss черн ароматиз 20пх1,7г 34г пачка",
     "zh": "茶 Curtis Hawaii Sunkiss 黑色口味 20px 1.7g 34g 包",
     "period": "03.11.2026 - 16.11.2026",
@@ -773,6 +560,10 @@
       {
         "t": "2026-11-15",
         "p": 4.19
+      },
+      {
+        "t": "2026-11-16",
+        "p": 4.19
       }
     ]
   },
@@ -781,8 +572,8 @@
     "id": "741608",
     "store": "Корона",
     "link": "https://korona.by/hypermarkets/promotions",
-    "date": "2026-11-15T21:33:14.955Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:37.880Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Чай Curtis Hugo Cocktail зелен 20пх1,8г пирамидки 36г",
     "zh": "Curtis Hugo 鸡尾酒绿茶 20px 1.8g 金字塔 36g",
     "period": "03.11.2026 - 16.11.2026",
@@ -804,6 +595,10 @@
       {
         "t": "2026-11-15",
         "p": 4.19
+      },
+      {
+        "t": "2026-11-16",
+        "p": 4.19
       }
     ]
   },
@@ -812,8 +607,8 @@
     "id": "vkusnye-predlozheniya-v-green-picca-za-999-i-sushi-bar-za-299100-g",
     "store": "Green",
     "link": "https://green-market.by/shares/vkusnye-predlozheniya-v-green-picca-za-999-i-sushi-bar-za-299100-g",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "Вкусные предложения в Green: пицца за 9,99 и суши-бар за 2,99/100 г! 🍕 🍣 🔥",
     "zh": "Green美味优惠：披萨9.99，寿司2.99/100克！ 🍕🍣🔥",
     "period": "12 октября 2026 - 30 ноября 2026",
@@ -824,10 +619,6 @@
     "discount": null,
     "endDate": "30 ноября 2026",
     "history": [
-      {
-        "t": "2026-11-06",
-        "p": 9.99
-      },
       {
         "t": "2026-11-07",
         "p": 9.99
@@ -855,6 +646,10 @@
       {
         "t": "2026-11-15",
         "p": 9.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 9.99
       }
     ]
   },
@@ -863,8 +658,8 @@
     "id": "tolko-s-bonusnoy-kartoy-greenkarta-skidka-25",
     "store": "Green",
     "link": "https://green-market.by/shares/tolko-s-bonusnoy-kartoy-greenkarta-skidka-25",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "🎉 СКИДКА 25% на замороженную рыбу и рыбные полуфабрикаты!",
     "zh": "🎉 冷冻鱼和半成品鱼制品 25% 折扣！",
     "period": "15 октября 2026 - 30 ноября 2026",
@@ -881,8 +676,8 @@
     "id": "fishka-v-green",
     "store": "Green",
     "link": "https://green-market.by/shares/fishka-v-green",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "\"Скидки за фишки\"",
     "zh": "“筹码折扣”",
     "period": "7 октября 2026 - 15 декабря 2026",
@@ -899,8 +694,8 @@
     "id": "svezhaya-vypechka-vecherom-esche-deshevle",
     "store": "Green",
     "link": "https://green-market.by/shares/svezhaya-vypechka-vecherom-esche-deshevle",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "СВЕЖАЯ ВЫПЕЧКА ВЕЧЕРОМ ЕЩЕ ДЕШЕВЛЕ! 🥐✨",
     "zh": "晚上新鲜烘焙的东西更便宜！ 🥐✨",
     "period": "22 сентября 2026 - 31 декабря 2026",
@@ -917,8 +712,8 @@
     "id": "novye-akcii",
     "store": "Green",
     "link": "https://green-market.by/shares/novye-akcii",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "НОВЫЕ АКЦИИ",
     "zh": "新促销活动",
     "period": "11 ноября 2026 - 24 ноября 2026",
@@ -935,8 +730,8 @@
     "id": "vse-samoe-vazhnoe-dlya-malyshey-so-skidkami-v-green",
     "store": "Green",
     "link": "https://green-market.by/shares/vse-samoe-vazhnoe-dlya-malyshey-so-skidkami-v-green",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "👶💚 Всё самое важное для малышей — со скидками в GREEN!",
     "zh": "👶💚 所有对孩子来说最重要的事情 - 都有绿色折扣！",
     "period": "4 ноября 2026 - 17 ноября 2026",
@@ -953,8 +748,8 @@
     "id": "kupon",
     "store": "Green",
     "link": "https://green-market.by/shares/kupon",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "11.11 — День выгодных покупок в GREEN! 💚",
     "zh": "11.11 — GREEN 特价购物日！ 💚",
     "period": "8 ноября 2026 - 18 ноября 2026",
@@ -965,10 +760,6 @@
     "discount": null,
     "endDate": "18 ноября 2026",
     "history": [
-      {
-        "t": "2026-11-06",
-        "p": 11.11
-      },
       {
         "t": "2026-11-07",
         "p": 11.11
@@ -996,6 +787,10 @@
       {
         "t": "2026-11-15",
         "p": 11.11
+      },
+      {
+        "t": "2026-11-16",
+        "p": 11.11
       }
     ]
   },
@@ -1004,8 +799,8 @@
     "id": "yarmarka-orehov-i-suhofruktov-v-green",
     "store": "Green",
     "link": "https://green-market.by/shares/yarmarka-orehov-i-suhofruktov-v-green",
-    "date": "2026-11-15T21:33:12.850Z",
-    "beijing": "2026-11-16 05:33",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
     "text": "🌰 Ярмарка орехов и сухофруктов в GREEN! 🍇",
     "zh": "🌰 绿色坚果和干果博览会！ 🍇",
     "period": "11 ноября 2026 - 17 ноября 2026",
@@ -1015,6 +810,24 @@
     "oldPrice": null,
     "discount": null,
     "endDate": "17 ноября 2026",
+    "history": []
+  },
+  {
+    "user": "page:green",
+    "id": "beldan-s-16-po-22-noyabrya",
+    "store": "Green",
+    "link": "https://green-market.by/shares/beldan-s-16-po-22-noyabrya",
+    "date": "2026-11-16T01:39:32.874Z",
+    "beijing": "2026-11-16 09:39",
+    "text": "🥩 Неделя свинины «Белдан» в GREEN! С 16 по 22 ноября — вкусные предложения для ваших любимых блюд! 💚",
+    "zh": "🥩 绿色贝尔丹猪肉周！ 11 月 16 日至 22 日 - 为您喜爱的菜肴提供美味优惠！ 💚",
+    "period": "16 ноября 2026 - 22 ноября 2026",
+    "photo": "",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "22 ноября 2026",
     "history": []
   },
   {
@@ -1035,6 +848,10 @@
     "history": [
       {
         "t": "2026-11-15",
+        "p": 7.5
+      },
+      {
+        "t": "2026-11-16",
         "p": 7.5
       }
     ]
@@ -1075,6 +892,10 @@
       {
         "t": "2026-11-15",
         "p": 2.8
+      },
+      {
+        "t": "2026-11-16",
+        "p": 2.8
       }
     ]
   },
@@ -1096,6 +917,10 @@
     "history": [
       {
         "t": "2026-11-15",
+        "p": 3.99
+      },
+      {
+        "t": "2026-11-16",
         "p": 3.99
       }
     ]
@@ -1140,6 +965,10 @@
       {
         "t": "2026-11-15",
         "p": 4.6
+      },
+      {
+        "t": "2026-11-16",
+        "p": 4.6
       }
     ]
   },
@@ -1165,6 +994,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 11.3
+      },
+      {
+        "t": "2026-11-16",
         "p": 11.3
       }
     ]
@@ -1192,6 +1025,10 @@
       {
         "t": "2026-11-15",
         "p": 2.5
+      },
+      {
+        "t": "2026-11-16",
+        "p": 2.5
       }
     ]
   },
@@ -1217,6 +1054,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 4.5
+      },
+      {
+        "t": "2026-11-16",
         "p": 4.5
       }
     ]
@@ -1244,25 +1085,12 @@
       {
         "t": "2026-11-15",
         "p": 1.55
+      },
+      {
+        "t": "2026-11-16",
+        "p": 1.55
       }
     ]
-  },
-  {
-    "user": "fixprice_by",
-    "id": "34217",
-    "store": "Fix Price",
-    "link": "https://t.me/fixprice_by/34217",
-    "date": "2026-11-14T09:00:05+00:00",
-    "beijing": "2026-11-14 17:00",
-    "text": "Окутайте себя согревающей выгодой с промокодом Fix Price&#33; ☀️ 😍 💚 С 12 по 15 ноября оформите заказ от 35 рублей с самовывозом на сайте fix-price.by или в мобильном приложении Fix Price. Активируйте промокод Е-ШАРФ и сэкономьте 7 рублей&#33; Промокодом можно воспользоваться в течение всего периода проведения акции. 🌸 Как работает промокод: Шаг 1: Выберите товары и добавьте их в корзину; Шаг 2: Нажмите кнопку «оформить заказ»; Шаг 3: В поле «промокод» введите название промокода Е-ШАРФ и нажмите кнопку «применить». 🌸 Промокод не распространяется: - на заказы, в которые входит хоть один товар из алкогольной продукции; - на товары, добавленные в заказ на кассе розничного магазина; - на заказы, которые частично расформированы по инициативе клиента, и не соответствуют условиям акции. *Чтобы участвовать в акции, необходимо обновить мобильное приложение. Fix Price – мы заботимся о Вас&#33; Подробнее об акции читайте на сайте fix-price.by. #fixpriceby",
-    "zh": "使用固定价格促销代码让自己享受温暖的福利！ ☀️ 😍 💚 11 月 12 日至 15 日期间，可在 fix-price.by 网站或 Fix Price 移动应用程序下订单，价格为 35 卢布起，并可提货。激活促销代码 E-SCARF 并节省 7 卢布！促销代码可在整个促销期内使用。 👉 促销代码如何使用： 第1步：选择产品并将其添加到购物车；第二步：点击“下单”按钮；步骤3：在“促销代码”字段中，输入E-SCARF促销代码的名称，然后单击“应用”按钮。 👉 促销代码不适用于： - 包含至少一种酒类产品的订单； - 对于在零售店结账时添加到订单中的商品； - 对于客户主动部分取消且不符合促销条款的订单。 *要参加促销活动，您必须更新您的移动应用程序。固定价格——我们关心您！请访问 fix-price.by 网站了解有关促销的更多信息。 #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/M2hxG-mftXr8d2V3Gtq_RSDpf45PXC7CCsMuI48Sqn2M6ISfTLitjSGVe_nPsBobSbOTp6oG5XpHxoGbwAiDK_hS6ekZFu_TIznNyK8Wz5PyeHza-0d0T_6rnytsbxIoTZUaWV9s5_looRSMzhId0T42ItHCGssLeEkkDgVPZCgYEtBDxiQ9nWJcEeIv1h3AUUn3AtoTjjWUjbeIzpGOta4fNlfryY4uGvuCTDVPvOj8OTPpPyfzqMWo2u9FqF2kSL2LlmZcP-0SmlQrarkzwUxIzUTltJ1dmJylJwByIaWExW0-cEl2Jt8d1UCLuE4Aqy9buzmfACTOs91K8NOzZw.jpg",
-    "price": null,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15 ноября",
-    "history": []
   },
   {
     "user": "fixprice_by",
@@ -1341,6 +1169,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 2.39
+      },
+      {
+        "t": "2026-11-16",
         "p": 2.39
       }
     ]
@@ -1544,6 +1376,10 @@
       {
         "t": "2026-11-15",
         "p": 3.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 3.99
       }
     ]
   },
@@ -1582,40 +1418,6 @@
     "history": []
   },
   {
-    "user": "gippoby_offical",
-    "id": "457",
-    "store": "Гиппо",
-    "link": "https://t.me/gippoby_offical/457",
-    "date": "2026-11-12T14:41:49+00:00",
-    "beijing": "2026-11-12 22:41",
-    "text": "У НАС ДЛЯ ВАС КЛУБНИЧНЫЕ НОВОСТИ&#33; 🍓 Всего 160–171 ккал на 100 г&#33; Да-да, это не творог и не протеиновый батончик. Это настоящий торт «Венский пирог Клубничный» , 620 г клубничного удовольствия. А теперь цифра, которая понравится даже больше&#33; В честь Всемирного дня шопинга с 11 по 15 ноября целый торт — за 13,99 руб. вместо 16,96 руб.&#33; ❤️ КБЖУ на 100 г: 160–171 ккал | Б 1,5–1,9 г | Ж 7,5 г | У 21 г ❤️ КБЖУ на весь торт (620 г): 992–1060 ккал | Б 9,3–11,8 г | Ж 46,5 г | У 130,2 г Лёгкий по калориям, сладкий по вкусу, приятный по цене&#33;",
-    "zh": "我们为您带来草莓新闻！ 🍓 每100克仅160–171大卡！是的，是的，这不是干酪或蛋白质棒。这是真正的维也纳草莓派蛋糕，620克草莓味。现在您会更喜欢这个号码！为了庆祝 11 月 11 日至 15 日世界购物日，整个蛋糕售价 13.99 卢布。而不是 16.96 卢布！ ❤️ 每 100 克 KBJU：160–171 kcal | B 1.5–1.9 克 | 7.5 克 | 21 克❤️ KBJU 整个蛋糕（620 克）：992–1060 kcal | B 9.3–11.8 克 | 46.5 克 | 130.2克 热量低、味道甜、价格实惠！",
-    "photo": "https://cdn4.telesco.pe/file/a4tdB5VIyYU50CsPr3k3XlK8-7HUPSfjBunQBlBhPMkqoNFGiXS8neWtdR5bMCzxxeXaMh6Ew6k7_ykETE4BJPRzPXayQEbR3iwD-ard1OlcfhVPS1K2ANEUTuPJFaH9n7uYrVJLjv6gUm6bkJJTJXKqfmPy69mPfmHOB9WccNkO6YmAXTpY3BSshXoWyUGNxaXP24KTFtO2cBpcuIAjS9CEVnH58WncmKI6AkD6QpQeb7k31EvyK1KfneQ7RWPzYHMoRFiJWQp9DzWOkke7QXiXPkUzZWmpQbdiVH0OP1QySl8lENMtfpr1EI1DzxU-6wlUI2HoB_boXEDZVgSnFA.jpg",
-    "price": 13.99,
-    "priceUnit": "",
-    "oldPrice": 16.96,
-    "discount": null,
-    "endDate": "15 ноября",
-    "history": [
-      {
-        "t": "2026-11-12",
-        "p": 13.99
-      },
-      {
-        "t": "2026-11-13",
-        "p": 13.99
-      },
-      {
-        "t": "2026-11-14",
-        "p": 13.99
-      },
-      {
-        "t": "2026-11-15",
-        "p": 13.99
-      }
-    ]
-  },
-  {
     "user": "magazin_sosedi",
     "id": "3379",
     "store": "Соседи",
@@ -1646,6 +1448,10 @@
       {
         "t": "2026-11-15",
         "p": 31.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 31.99
       }
     ]
   },
@@ -1665,57 +1471,6 @@
     "discount": 10,
     "endDate": "",
     "history": []
-  },
-  {
-    "user": "fixprice_by",
-    "id": "34180",
-    "store": "Fix Price",
-    "link": "https://t.me/fixprice_by/34180",
-    "date": "2026-11-12T14:00:09+00:00",
-    "beijing": "2026-11-12 22:00",
-    "text": "Выгода, которая греет ☀️ 😍 💚 С 12 по 15 ноября оформите заказ от 35 рублей с самовывозом на сайте fix-price.by или в мобильном приложении Fix Price. Активируйте промокод Е-ШАРФ и сэкономьте 7 рублей&#33; Промокодом можно воспользоваться в течение всего периода проведения акции. 🌸 Как работает промокод: Шаг 1: Выберите товары и добавьте их в корзину; Шаг 2: Нажмите кнопку «оформить заказ»; Шаг 3: В поле «промокод» введите название промокода Е-ШАРФ и нажмите кнопку «применить». 🌸 Промокод не распространяется: - на заказы, в которые входит хоть один товар из алкогольной продукции; - на товары, добавленные в заказ на кассе розничного магазина; - на заказы, которые частично расформированы по инициативе клиента, и не соответствуют условиям акции. *Чтобы участвовать в акции, необходимо обновить мобильное приложение. Fix Price – мы заботимся о Вас&#33; Подробнее об акции читайте на сайте fix-price.by. #fixpriceby",
-    "zh": "一项让您暖和起来的福利☀️ 😍 💚 11 月 12 日至 15 日期间，在 fix-price.by 网站或 Fix Price 移动应用中下单，35 卢布起，可自提。激活促销代码 E-SCARF 并节省 7 卢布！促销代码可在整个促销期内使用。 👉 促销代码如何使用： 第1步：选择产品并将其添加到购物车；第二步：点击“下单”按钮；步骤3：在“促销代码”字段中，输入E-SCARF促销代码的名称，然后单击“应用”按钮。 👉 促销代码不适用于： - 包含至少一种酒类产品的订单； - 对于在零售店结账时添加到订单中的商品； - 对于客户主动部分取消且不符合促销条款的订单。 *要参加促销活动，您必须更新您的移动应用程序。固定价格——我们关心您！请访问 fix-price.by 网站了解有关促销的更多信息。 #fixpriceby",
-    "photo": "https://cdn4.telesco.pe/file/ilHMo9hdvGQ6wgenPXnF4Dr1cDKXY18tjxy9EY43WhJrkpx7LtCMn_3RzRU7TFGk-3Z1v8lNXrHp-vakJuLmS96l9EDJGg5uY5b1ZJdtNin1ljCzcjoi1didhhXFAAk5zQH55Qki1vU7li-qin7tt9167FEkFyaLJxHSgaRA9yw3nA5A9zpyXZCKakfJI-6U32MdDgRtRwi2twcQSQmxR8CkwSXXMjqRATjc7k0nath2gMf66Y1H9cPt_tNVgrLEKuj5utGa39VMJOMfe-MsbnebdwUCjn3AzBbypmw46M1yWSjAi31BJpcJhyVkhjICL1qMxLBffko24t8qd5wp9g.jpg",
-    "price": null,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15 ноября",
-    "history": []
-  },
-  {
-    "user": "magazin_sosedi",
-    "id": "3374",
-    "store": "Соседи",
-    "link": "https://t.me/magazin_sosedi/3374",
-    "date": "2026-11-12T12:00:27+00:00",
-    "beijing": "2026-11-12 20:00",
-    "text": "🎉 А у нас в Соседях: ещё больше выгодных покупок&#33; С 12 по 15 ноября встречайте специальные цены на конфеты, сыр, сочные фрукты и грибы. 🍬 Конфеты «Любимая Алёнка», 1 кг - 27,99&#33; 🧀 Сыр плавленый HOCHLAND «Сэндвич», 45%, 150 г - 4,69&#33; 🍊 Хурма, 1 кг - 6,79&#33; 🥭 Манго, 1 кг - 7,99&#33; 🍄 Шампиньоны, 1 кг - 7,49&#33; 25 лет приятных покупок&#33; До встречи в Соседях&#33; 🧡",
-    "zh": "🎉 在我们的邻居中：购买更有利可图！ 11 月 12 日至 15 日期间，您可以享受糖果、奶酪、多汁水果和蘑菇的特价优惠。 🍬 糖果“最喜欢的 Alyonka”，1 公斤 - 27.99！ 🧀 再制奶酪 HOCHLAND “三明治”，45%，150 克 - 4.69！ 🍊 柿子，1 公斤 - 6.79！ 🥭 芒果，1 公斤 - 7.99！ 🍄 蘑菇，1 公斤 - 7.49！ 25年愉快购物！我们在《邻居》中见！ 🧡",
-    "photo": "https://cdn4.telesco.pe/file/fhLRfxhXz7W7zSWSH6zyZYujrSoiQZjXonToZxjZCXX9qMYFpoXJ_v9R9J8yIpn_fJOWBj3LDuoSYuawZIqoR9s77KI3jxO3Jkpa4eWlVoqJIKGO4QxXucHz-tgVwaXlQ00D3y1U2kMgOn1DZ7FU-HqfetzVBc9wgc5SVcwJ7uZUwU-8efToS8h_-6HzRUh0FNvcbi1vskjzJav5VUI9xmy4TNEeWeNMsbuNynHIyN8gL_d28UtX4JaYRgfbAuYr49uTbSPDZ6X9wWJtHqlkeGIU-A8LA4QqGixYUq4H4iWyxRCO3vGc26ZlkZWb2xfNFjquHpBL_tce_283nyTimA.jpg",
-    "price": 27.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 45,
-    "endDate": "15 ноября",
-    "history": [
-      {
-        "t": "2026-11-12",
-        "p": 27.99
-      },
-      {
-        "t": "2026-11-13",
-        "p": 27.99
-      },
-      {
-        "t": "2026-11-14",
-        "p": 27.99
-      },
-      {
-        "t": "2026-11-15",
-        "p": 27.99
-      }
-    ]
   },
   {
     "user": "fixprice_by",
@@ -1877,6 +1632,10 @@
       {
         "t": "2026-11-15",
         "p": 8.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 8.99
       }
     ]
   },
@@ -2035,6 +1794,10 @@
       {
         "t": "2026-11-15",
         "p": 2.99
+      },
+      {
+        "t": "2026-11-16",
+        "p": 2.99
       }
     ]
   },
@@ -2124,6 +1887,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 3.99
+      },
+      {
+        "t": "2026-11-16",
         "p": 3.99
       }
     ]
@@ -2265,28 +2032,6 @@
     "discount": null,
     "endDate": "",
     "history": []
-  },
-  {
-    "user": "magazin_sosedi",
-    "id": "3344",
-    "store": "Соседи",
-    "link": "https://t.me/magazin_sosedi/3344",
-    "date": "2026-11-09T10:33:33+00:00",
-    "beijing": "2026-11-09 18:33",
-    "text": "Вы когда-нибудь пробовали черимойю ? 👀 Нет? Пора исправить это&#33; 🔥 По 15 ноября в Соседях действует акция на этот экзотический фрукт - 17,99 рублей за 1 кг&#33; Обязательно попробуйте&#33;",
-    "zh": "您尝试过番荔枝吗？ 👀 没有？是时候修复它了！ 🔥 截至 11 月 15 日，Neighbors 对这种异国水果进行促销 - 每 1 公斤 17.99 卢布！一定要尝试一下！",
-    "photo": "https://cdn4.telesco.pe/file/F1XcIbMqcijDh1AR2xly9j8h6Q3jmM5vvqQLcOlrHmAMRH4ztqbUkWDDU7xx-tB83b3T7GqXqwZvOz3bOB8EGkEGtfRKztv0F2qx8TvLsYIo57pDsPwh5B8eTpR_D-HJ0ixR2ntBLGKho_V_n8SvLBewjuw32LUVh2chjrh_zpuE3TNAKN_oxZ7LMxCWYQ9ah5BBzJXkWYbx-guCyzhslRPJNntRExg2bvO2PjDQVxe6a0j_5YahqEUGWYhCprXcpWwAF4M-NnhYbxZ4RsSw_oOUfMUqtNJZ8Q5VMAKYj2zA37WZc4W6aABFXHeOTPyg6dbF-HV03UkUZCIEpU0Y5w.jpg",
-    "price": 17.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "15 ноября",
-    "history": [
-      {
-        "t": "2026-11-11",
-        "p": 17.99
-      }
-    ]
   },
   {
     "user": "evroopt_shop",
@@ -2712,10 +2457,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-07",
-        "p": 41.99
-      },
-      {
         "t": "2026-11-08",
         "p": 41.99
       },
@@ -2741,6 +2482,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 41.99
+      },
+      {
+        "t": "2026-11-16",
         "p": 41.99
       }
     ]
@@ -3016,10 +2761,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-07",
-        "p": 2.99
-      },
-      {
         "t": "2026-11-08",
         "p": 2.99
       },
@@ -3045,6 +2786,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 2.99
+      },
+      {
+        "t": "2026-11-16",
         "p": 2.99
       }
     ]
@@ -3518,10 +3263,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-07",
-        "p": 6.99
-      },
-      {
         "t": "2026-11-08",
         "p": 6.99
       },
@@ -3547,6 +3288,10 @@
       },
       {
         "t": "2026-11-15",
+        "p": 6.99
+      },
+      {
+        "t": "2026-11-16",
         "p": 6.99
       }
     ]
@@ -4084,36 +3829,6 @@
     "discount": null,
     "endDate": "",
     "history": []
-  },
-  {
-    "user": "kopeechka_by",
-    "id": "3157",
-    "store": "Копеечка",
-    "link": "https://t.me/kopeechka_by/3157",
-    "date": "2026-11-02T05:57:16+00:00",
-    "beijing": "2026-11-02 13:57",
-    "text": "ПОКУПАЙТЕ ВЫГОДНО В КОПЕЕЧКЕ&#33; Осень продолжает нас радовать красками&#33; А Копеечка - новыми выгодными предложениями&#33; 🍂 🍁 Мы собрали для вас подборку любимых товаров по специальным ценам* – чтобы ваши покупки были не только выгодными, но и приятными&#33; ▫️ Масло подсолнечное «ПРАВИЛО ВКУСА», 1 л - 4,89 руб. ▫️ Пельмени «БАБУШКА АНЯ», классические, 430 г - 4,29 руб. ▫️ Чипсы «LAY’S», рифленые, лосось в сливочном соусе, 140 г - 3,79 руб. ▫️ Масло сливочное «ЯСЬ БЕЛОУС», сладкосливочное, 82,5%, 250 г - 4,99 руб. ▫️ Порошок для стирки «МАРА», автомат, для цветного белья, 400 г - 2,59 руб. *Акция действует при наличии товара в торговом объекте. Предложение действует со 2 по 15 ноября, если иное не указано в листовке. Подробности на kopeechka.by или по номеру +375(29)1447000 #Листовка #СуперЦена #Копеечка",
-    "zh": "以优惠价格购买！秋天继续以色彩给我们带来欢乐！还有 Kopeechka - 提供新的有利可图的优惠！ 🍂 🍁 我们以特价*汇集了一系列您最喜欢的产品 - 让您的购买不仅有利可图，而且令人愉快！ ▫️ 葵花籽油“味道法则”，1 升 - 4.89 擦。 ▫️ 饺子“GRANDMOTHER ANYA”，经典，430 克 - 4.29 擦。 ▫️“LAY’S”薯片，带凹槽，奶油酱三文鱼，140 克 - 3.79 擦。 ▫️ 黄油“YAS BELOUS”，甜奶油，82.5%，250 克 - 4.99 擦。 ▫️ 洗衣粉“MARA”，自动，用于彩色衣物，400 克 - 2.59 擦。 *促销活动在产品有货期间有效。除非传单上另有说明，否则优惠有效期为 11 月 2 日至 11 月 15 日。详情请访问 kopeechka.by 或致电 +375(29)1447000 #Leaflet #SuperPrice #Kopeechka",
-    "photo": "https://cdn4.telesco.pe/file/lAuKWwkT7VyauDnFJbAi-kCvm69bvEsG3fi2tr34kjU20i75aQd5ERbF8ZJFFfFvujQSnY0jB4Ru8Qv7ghdueWtvgua8ckp05Fa5lh6-S7nwzgKPG5Cqtu2erM_sQymPOwi81Ckx2gllKarmwyhmYiVwtUl_HIGJxsccJ0OOfaDj2Fw0WEybl6ffFVcC3HOvChQksVWoqTwJNnMdVctJPmRe7cZwZZEg23FfAzgU9_Da7lN_10aYcCumNW6j5yb67UyR1Xo_uD3Q9ptsbYRCr0KO5PA7vpEkW01u1yhkYpqM8QNshD0qcL_qnyl2ALmtY-M0BJMUBOy0L3UJ14Qfnw.jpg",
-    "price": 4.89,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 5,
-    "endDate": "15 ноября",
-    "history": [
-      {
-        "t": "2026-11-02",
-        "p": 4.89
-      },
-      {
-        "t": "2026-11-03",
-        "p": 4.89
-      },
-      {
-        "t": "2026-11-04",
-        "p": 4.89
-      }
-    ]
   },
   {
     "user": "fixprice_by",
@@ -6370,56 +6085,6 @@
       {
         "t": "2026-10-28",
         "p": 4.99
-      }
-    ]
-  },
-  {
-    "user": "kopeechka_by",
-    "id": "3132",
-    "store": "Копеечка",
-    "link": "https://t.me/kopeechka_by/3132",
-    "date": "2026-10-22T09:25:14+00:00",
-    "beijing": "2026-10-22 17:25",
-    "text": "В Копеечке - время вкусных встреч и горячей пиццы&#33; 🍕 С 11:00 до 15:00 наслаждайтесь пиццей DOBRO&PIZZA на тонком тесте весом 450 грамм со скидкой 20% - всего за 7,99 рублей&#33; Угощайтесь сами и делитесь с близкими: акция действует с 15 октября по 15 ноября 2026 года&#33; Адреса магазинов: Минск, ул. Некрашевича, 4 Минск, ул. Щербакова, 29 Гродно, ул. Наполеона Орды, 12 Гродно, ул. Фолюш, 15 Витебск, ул. Баграмяна, 10 Витебск, просп. Строителей, 1 Орша, ул. Ленина, 93 Слуцк, ул. Ленина, 237 Слуцк, ул. Ленина, 146 Кобрин, ул. Ленина, 11 Молодечно, ул. В. Гостинец, 143Б-23 Гомель, ул. Советская, 30-66 Хойники, ул. Советская, 93",
-    "zh": "是时候在 Kopeechka 参加美味的会议和热披萨了！ 🍕 11:00 至 15:00 期间，享受重 450 克 DOBRO&PIZZA 薄皮披萨 20% 折扣 - 只需 7.99 卢布！自助并与您所爱的人分享：促销有效期为2026年10月15日至11月15日！商店地址：明斯克，圣。 Nekrashevich, 4 明斯克, 圣。谢尔巴科娃，29 格罗德诺，圣。拿破仑·奥迪，格罗德诺 12 号，圣。 Folyush, 15 维捷布斯克, 圣。巴格拉米扬，维捷布斯克大街 10 号斯特罗特利，1 奥尔沙，圣。列宁娜，93 斯卢茨克，圣。列宁娜，237 斯卢茨克，圣。列宁娜，146 科布林，圣。列宁娜，11 Molodechno，圣。 V. Gostinets，143B-23 戈梅利，圣。苏维埃卡亚，30-66 Khoiniki，圣。苏联，93",
-    "photo": "https://cdn4.telesco.pe/file/tiE2tG6Ccfc1NpO8gDNF0gaurZ-6lxKjNSioXQhiGm45hcg79Vi2NzjA85i91uuOttK5q6eLeI0O_2kdkBDU8o2vwu51CsamOI1NzY3bpVxK88bqgBMyVKeDMDPD66YeZRis3MLQSiqJ0J-FTiTxIMoBVp_-2QSP8zEKjCn5JiZ82FHD_hAaXkUoBOQYM5gkkQbN1OEnpGVQu8-uI9XJYRZm1rMQNmORq5eVxWBcuE1VRJwJsuRqgbvTw9ptn6qSDQQ2_6wNxtvXR1G66TzCokEIq-Oh3E17UsDyin2L-GD3KlFxWvuQG2deRazGSKUXXGfVLDmUDgshapse61yGQA.jpg",
-    "price": 7.99,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": 20,
-    "endDate": "15 ноября 2026",
-    "history": [
-      {
-        "t": "2026-10-23",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-24",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-25",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-26",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-27",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-28",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-29",
-        "p": 7.99
-      },
-      {
-        "t": "2026-10-30",
-        "p": 7.99
       }
     ]
   },
