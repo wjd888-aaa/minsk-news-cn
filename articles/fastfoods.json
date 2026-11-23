@@ -4,8 +4,8 @@
     "id": "tempo-0",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-22T18:20:47.533Z",
-    "beijing": "2026-11-23 02:20",
+    "date": "2026-11-23T00:04:58.488Z",
+    "beijing": "2026-11-23 08:04",
     "text": "ВТОРАЯ ПИЦЦА ВСЕГО ЗА 3 РУБЛЯ! — Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля!",
     "zh": "第二份披萨只需 3 卢布！ — 一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份仅需 3 卢布！",
     "period": "",
@@ -22,8 +22,8 @@
     "id": "tempo-1",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-22T18:20:47.533Z",
-    "beijing": "2026-11-23 02:20",
+    "date": "2026-11-23T00:04:58.488Z",
+    "beijing": "2026-11-23 08:04",
     "text": "Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля! * Акция действует только при заказе пиццы (размер 26 или 31 см) с собой при заказе по короткому номеру 7773, по акционной цене 3 рубля предоставляется пицца меньшей стоимостью, не суммируется с другими акциями и специальными предложениями .",
     "zh": "一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份只需 3 卢布！ *此优惠仅适用于订购披萨（尺寸26或31厘米）并以短号7773订购外带；促销价为 3 卢布，提供价值较低的披萨，且不能与其他促销和特别优惠同时使用。",
     "period": "",
@@ -40,8 +40,8 @@
     "id": "tempo-2",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-22T18:20:47.533Z",
-    "beijing": "2026-11-23 02:20",
+    "date": "2026-11-23T00:04:58.488Z",
+    "beijing": "2026-11-23 08:04",
     "text": "СЕТ-ТОП КОМБО! — ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой!",
     "zh": "机顶盒组合！ - 披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！",
     "period": "",
@@ -58,8 +58,8 @@
     "id": "tempo-3",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-22T18:20:47.533Z",
-    "beijing": "2026-11-23 02:20",
+    "date": "2026-11-23T00:04:58.488Z",
+    "beijing": "2026-11-23 08:04",
     "text": "ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой! * В состав сета входят 2 пиццы (31 см): \"Флорентийская\", \"Чикен Барбекю\" , и напиток 2 Coca-Cola (0,5 л.) . * Акция распространяется при заказе навынос или с услугой доставки в г. Минске, не суммируется с другими акциями и специальными предложениями. * Не действует в предпраздничные и праздничные дни",
     "zh": "披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！ * 套装包括 2 个披萨（31 厘米）：“佛罗伦萨”、“烧烤鸡肉”和 2 杯可口可乐饮料（0.5 升）。 * 此促销活动适用于在明斯克订购外卖或送货服务，且不能与其他促销活动和特别优惠同时使用。 *节假日前及公众假期无效",
     "period": "",
@@ -93,6 +93,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 14.99
+      },
+      {
+        "t": "2026-11-23",
         "p": 14.99
       }
     ]
@@ -162,6 +166,10 @@
       {
         "t": "2026-11-22",
         "p": 5.5
+      },
+      {
+        "t": "2026-11-23",
+        "p": 5.5
       }
     ]
   },
@@ -217,6 +225,10 @@
       {
         "t": "2026-11-22",
         "p": 16.9
+      },
+      {
+        "t": "2026-11-23",
+        "p": 16.9
       }
     ]
   },
@@ -259,6 +271,10 @@
       {
         "t": "2026-11-22",
         "p": 31.8
+      },
+      {
+        "t": "2026-11-23",
+        "p": 31.8
       }
     ]
   },
@@ -296,10 +312,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 15.11
-      },
-      {
         "t": "2026-11-16",
         "p": 15.11
       },
@@ -325,6 +337,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 15.11
+      },
+      {
+        "t": "2026-11-23",
         "p": 15.11
       }
     ]
@@ -398,10 +414,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 15.11
-      },
-      {
         "t": "2026-11-16",
         "p": 15.11
       },
@@ -427,6 +439,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 15.11
+      },
+      {
+        "t": "2026-11-23",
         "p": 15.11
       }
     ]
@@ -589,10 +605,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 0.33
-      },
-      {
         "t": "2026-11-16",
         "p": 0.33
       },
@@ -618,6 +630,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 0.33
+      },
+      {
+        "t": "2026-11-23",
         "p": 0.33
       }
     ]
@@ -695,10 +711,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 0.33
-      },
-      {
         "t": "2026-11-16",
         "p": 0.33
       },
@@ -724,6 +736,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 0.33
+      },
+      {
+        "t": "2026-11-23",
         "p": 0.33
       }
     ]
@@ -969,10 +985,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 5.5
-      },
-      {
         "t": "2026-11-16",
         "p": 5.5
       },
@@ -998,6 +1010,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 5.5
+      },
+      {
+        "t": "2026-11-23",
         "p": 5.5
       }
     ]
@@ -1264,17 +1280,13 @@
     "beijing": "2026-10-20 14:03",
     "text": "Больше не в силах скрывать эту новость&#33; KFC запускает долгожданные боксы 🔥 Внутри них мы спрятали кое-что особенное — милые фигурки Джуниор Сандерса ❤️ Найти их можно в специальных боксах: 🍗 Джуниор Сандерс Бокс S Чизбургер или 6 наггетсов на выбор, ароматная картошечка (мал.), напиток 0,3 (холодный или горячий) и коллекционная фигурка — всего за 27,90 BYN. 🍗 Джуниор Сандерс Бокс M Двойной Чизбургер или Филе Бургер или Зингер Бургер или 10 наггетсов на выбор, картошечка фри (мал.), напиток 0,3 (холодный или горячий) и коллекционная фигурка за 30,90 BYN. ❣️ Акция действует с 20 октября и распространяется на все рестораны KFC. Количество боксов ограничено, успей собрать всю коллекцию&#33;",
     "zh": "我不能再隐瞒这个消息了！肯德基即将推出期待已久的盒子 🔥 我们在里面藏了一些特别的东西 - 可爱的 Junior Sanders 小雕像 ❤️ 您可以在特殊盒子中找到它们：🍗 Junior Sanders Box S 芝士汉堡或 6 块可供选择、调味土豆（小）、饮料 0.3（冷或热）和一个可收藏的小雕像 - 仅售 27.90 BYN。 🍗 Junior Sanders Box M 双层芝士汉堡或菲力汉堡或 Zinger 汉堡或 10 个鸡块可供选择，薯条（小），饮料 0.3（冷或热）和一个收藏雕像，售价 30.90 BYN。 ❣️促销活动从10月20日开始有效，适用于所有肯德基餐厅。盒子数量有限，所以一定要集齐全部！",
-    "photo": "https://cdn4.telesco.pe/file/FmeJiuL65MFkbVxWxGrqNQi2hzRjdwhY1Ie_stp3VZpBMZgLoC76RISKetGdPuqYqeQqrlcrpgTMUXKMxq7iBwiu_v0G9L10ARBFqO-gvqET3h3MOif2uXwEhrHqQQxwozWtkz-74qNfqoUhRRqP704fxFpkMx8UVsO7Gy0nRtXTYBwyWP0pXXPfbSPLHvG44IRypVvEKf11-UKxVyhIG6gnttNehDNtGG7zcOU7bPudkg_rmCmz_3Uq6RDMS31wohugQcZoG6XL4YVNxF4mBDClysMUd00L-_mMuaZfW59ttEqUlmZByZ4MrSJYhBlaKtC_xAQiuuUpfm6BsTUfQg.jpg",
+    "photo": "https://cdn4.telesco.pe/file/S0xxy6TXL682qgrfVtirwhtggb27odlUX2tXany3xssJSb7EKh8VgB3ET2KoqBjttO9ZLdFpe2HvXQgMzUEIJWbDYw6i3LXK8BgBXuVCWRQ6K4euCUkGhJDeEzhAnJBFE4J0g8NyhMc-o5CXcgNcCfs_kJVSX1LqDPouakjBmuVeiUitHogNZf1lW9E0TJH7_NT8Fwxg9e3SdmlG3LVh1v1IHqJqUXuE4jBSw2Y7PzfNizk5FrLMltmrnlU-TAg1nMGrhbF4h0MRJbqrMzHrD5MBxEk1YJcFvzF4wQAZWFzly66DkJeUGQ4LoPBi2T6GQv7Pt2VnpsZqA4y7HaRKDQ.jpg",
     "price": 27.9,
     "priceUnit": "",
     "oldPrice": null,
     "discount": null,
     "endDate": "",
     "history": [
-      {
-        "t": "2026-11-15",
-        "p": 27.9
-      },
       {
         "t": "2026-11-16",
         "p": 27.9
@@ -1301,6 +1313,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 27.9
+      },
+      {
+        "t": "2026-11-23",
         "p": 27.9
       }
     ]
@@ -1635,10 +1651,6 @@
     "endDate": "",
     "history": [
       {
-        "t": "2026-11-15",
-        "p": 7.9
-      },
-      {
         "t": "2026-11-16",
         "p": 7.9
       },
@@ -1664,6 +1676,10 @@
       },
       {
         "t": "2026-11-22",
+        "p": 7.9
+      },
+      {
+        "t": "2026-11-23",
         "p": 7.9
       }
     ]
@@ -1918,7 +1934,7 @@
     "beijing": "2026-10-04 16:08",
     "text": "Время отдыхать 🥳 Напоминаем вам, что сегодня действует промокод «2121», так что зови друзей и ждём вас в Cofix 😎",
     "zh": "是时候放松一下了🥳我们提醒您，今天促销代码“2121”有效，所以打电话给您的朋友，我们在Cofix等您😎",
-    "photo": "https://cdn4.telesco.pe/file/RDu9HRSD6G0HiwnbBY7lzme76sOdVldZvTHNUp_6c7GvABECelk1BiQuvrh3NWHQyRFVQbpmaGV2EN7IjqkP4yqCG9JT87uSgmUgPkvGgEZp-e06OaK6EAs1CJBTWqoGwqcs1Zn7mqBG46XxlDcn_FML-fOEpgOt3OEQaBtFxvaMMGYTqAUJYB4Hi7xsD0Bofskhw_Ek5mHUkEz_sDn9AtmB0KVUtBNrMJVAgUfHNbSlHE4q3VKwQRo7q2lEAA1OA9btAWb-m2BKsb4GnkXbs4PdW7S9iJzNkaJhfZivR54aM-03CPc22anCNi_9mFSRwDiN95jS7Wq1ZGpEX95q6A.jpg",
+    "photo": "https://cdn4.telesco.pe/file/DbE5LTVnBA4DSN549vhwEIvQlukjTH9foCtPDZEclXza0XvjLFs7-3mQxFcoiay_8-632QtiBT0pObQaAxWzvMy7j2vg6RgvAlTfilip9yBcJewK0B1c85nDnwiTXnVWMorn6wBvuW39pgU8vSTYHMIqXDBokqzhchFaIskUUeTusvqFuYLhM_DAEx8xApSwcXNY5_cNPISZw5hCgbza-jBGOS-nLHQxp6XE5Pc2vfsggCsA4WXZBRT1JhmTX516vMB08mfRaSuKYN9oRRbJ-Y16-4eHtpSZAEnY-DN0RDqYq-XqC5s8d9sD32HWAbgjZuE0H85TLt9Nslf-Di7PaQ.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -1935,7 +1951,7 @@
     "beijing": "2026-10-02 16:56",
     "text": "Эти фотографии восстанавливают уровень витамина D в организме 💯 Рубрика #додо_мир на связи&#33; Продолжаем путешествовать по Додо-миру и сегодня любуемся «Додо Пиццей» в Казахстане 🧡",
     "zh": "这些照片恢复了体内维生素 D 的水平💯类别#dodo_world 联系！我们继续环游渡渡鸟世界，今天我们欣赏哈萨克斯坦的“渡渡鸟披萨”🧡",
-    "photo": "https://cdn4.telesco.pe/file/ed7bGc9u533lLV9vX0T0EZaA3Dpswrs4txhuc1NFAIDMWVMHWj_ubxcaO7qQ3erd3ienj1E6Az2eO4pZzD1ewUfFS90tr2ns4zp-Cl3sOAIqff3inftv3TuSTBkmYe0d5cFGir-o2V7-GX1zKm2OURol9gi0-Q3JMm33QwEzqVkGrbTMK99EzPtQCBkNXAwJMVatcFV0kp34Fa7yQhmRbwCUKCRN6vvcbGdUMbw4juFK6uFQ_OHvPKrNpCftDMakNYJIznt6V4jkSzWFL_B5Ke1tTgo_h6HkUQakgQIKw7E-qIBnry_SO0vlDG_QxpXYW7ldHJu8BnXiKH-nncbEAA.jpg",
+    "photo": "https://cdn4.telesco.pe/file/oQMSrp_DPaNoe00vao8pfzdgptWdwKpxurXnnUlwZwWicUn4BGtwB37ELvrRlwyGqpZo7kSznJSwi64j3iDL60QwEf0o6bcDAcc97TB1bbQqJXvPMYHt5cmji-Nis1hrmQGJJTWwuInnSSwZRLbmkYJAICtcveK0o4n3Xfc9jYjaYNf7zmENCgmMosyTtXRL0ICAf6qFdNd8fVJA4SW-Ydhi_qaWXleoHj-rIbqlPs1vBobujFZ8zF8RZ5BnDU1M8RMTq2ftXX8ohehF8iCH7JpXv-RDcMFOY4x1b9i_ZAHNJC9jpKcghc3kh0gva_69PJTsoYrCu06oTpdsc9jzaw.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
