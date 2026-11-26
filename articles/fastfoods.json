@@ -4,8 +4,8 @@
     "id": "tempo-0",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-26T04:48:46.403Z",
-    "beijing": "2026-11-26 12:48",
+    "date": "2026-11-26T14:50:02.072Z",
+    "beijing": "2026-11-26 22:50",
     "text": "ВТОРАЯ ПИЦЦА ВСЕГО ЗА 3 РУБЛЯ! — Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля!",
     "zh": "第二份披萨只需 3 卢布！ — 一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份仅需 3 卢布！",
     "period": "",
@@ -22,8 +22,8 @@
     "id": "tempo-1",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-26T04:48:46.403Z",
-    "beijing": "2026-11-26 12:48",
+    "date": "2026-11-26T14:50:02.072Z",
+    "beijing": "2026-11-26 22:50",
     "text": "Одна пицца хорошо, а две &mdash; лучше: с понедельника по четверг заказывайте любимую пиццу с собой , а вторую получайте всего за 3 рубля! * Акция действует только при заказе пиццы (размер 26 или 31 см) с собой при заказе по короткому номеру 7773, по акционной цене 3 рубля предоставляется пицца меньшей стоимостью, не суммируется с другими акциями и специальными предложениями .",
     "zh": "一份披萨固然不错，但两份更好：从周一到周四，订购您最喜欢的披萨随身携带，第二份只需 3 卢布！ *此优惠仅适用于订购披萨（尺寸26或31厘米）并以短号7773订购外带；促销价为 3 卢布，提供价值较低的披萨，且不能与其他促销和特别优惠同时使用。",
     "period": "",
@@ -40,8 +40,8 @@
     "id": "tempo-2",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-26T04:48:46.403Z",
-    "beijing": "2026-11-26 12:48",
+    "date": "2026-11-26T14:50:02.072Z",
+    "beijing": "2026-11-26 22:50",
     "text": "СЕТ-ТОП КОМБО! — ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой!",
     "zh": "机顶盒组合！ - 披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！",
     "period": "",
@@ -58,8 +58,8 @@
     "id": "tempo-3",
     "store": "PizzaTempo",
     "link": "https://pizzatempo.by/discounts",
-    "date": "2026-11-26T04:48:46.403Z",
-    "beijing": "2026-11-26 12:48",
+    "date": "2026-11-26T14:50:02.072Z",
+    "beijing": "2026-11-26 22:50",
     "text": "ПИЦЦЫ и НАПИТКИ &mdash; выгодно и сытно! ТОП-сет всего за 42.9 рублей с доставкой! * В состав сета входят 2 пиццы (31 см): \"Флорентийская\", \"Чикен Барбекю\" , и напиток 2 Coca-Cola (0,5 л.) . * Акция распространяется при заказе навынос или с услугой доставки в г. Минске, не суммируется с другими акциями и специальными предложениями. * Не действует в предпраздничные и праздничные дни",
     "zh": "披萨和饮料 - 有利可图且令人满意！ TOP 套装仅需 42.9 卢布，含运费！ * 套装包括 2 个披萨（31 厘米）：“佛罗伦萨”、“烧烤鸡肉”和 2 杯可口可乐饮料（0.5 升）。 * 此促销活动适用于在明斯克订购外卖或送货服务，且不能与其他促销活动和特别优惠同时使用。 *节假日前及公众假期无效",
     "period": "",
@@ -69,6 +69,23 @@
     "oldPrice": null,
     "discount": null,
     "endDate": "",
+    "history": []
+  },
+  {
+    "user": "dominospizzabelarus",
+    "id": "745",
+    "store": "Domino",
+    "link": "https://t.me/dominospizzabelarus/745",
+    "date": "2026-11-26T14:27:21+00:00",
+    "beijing": "2026-11-26 22:27",
+    "text": "Самый вкусный шоппинг начинается в Domino’s&#33; 🔣 🔥 CRAZY WEEKEND 🔥 Только с 26 по 29 ноября. Каждая вторая пицца — всего за 1 копейку&#33; ❗️ И ещё одна причина поторопиться: Пицца Хатняя покидает меню уже в воскресенье. Самое время успеть съесть её напоследок&#33;",
+    "zh": "最佳购物体验从 Domino's 开始！ 🔣 🔥 疯狂周末 🔥 仅限11月26日至29日。每第二个披萨仅需1戈比！ ❗️ 还有一个要抓紧时间的理由：Khatnyaya Pizza 将于周日退出菜单。是时候吃最后一次了！",
+    "photo": "https://cdn4.telesco.pe/file/Hi64OqBxPYM3CpfKKoTwtM8sg6Aoma318p5eP8un-_RRAEVMnKKQI013PPdB-ju1zv0HOVVckgCxaR_EpHdsMFXAyuEPA1gRGtzvYQCMOqebfL2f4MuviXtb46Lv1zeNhw-6FHB5uG7ZUK-3Sa6HN4j-jZrSu2oSmLslZ22SgZWRmWrK8St9HUNuWOIiPYnX8jAT_vLJmG7SCaCCvdo50cR1d7wlV9SibhWKQkEOt0IEZYPzzXKFoY362nQ2sJnZias79q9WCVLTE93KyDSgz3VEeWftKCkYfoh57Swdle6QAgGz0oadOPJ6KSkoFBBXRpdvxRqahs3KnHZ_AerLfw.jpg",
+    "price": null,
+    "priceUnit": "",
+    "oldPrice": null,
+    "discount": null,
+    "endDate": "29 ноября",
     "history": []
   },
   {
@@ -106,7 +123,7 @@
     "beijing": "2026-11-24 19:41",
     "text": "Пицца и крылышки всего за 9,99 руб. с бонусами Domino’s&#33; 🔥 Вот что значит выгодно пользоваться нашей программой лояльности&#33; ⏺ Пицца Маргарита S — 9,99 руб. ⏺ Крылышки Чикен Дип M + 1 соус на выбор — 9,99 руб. Итого: 19,98 руб. → 9,99 руб. за всё&#33; Оформляйте заказ на самовывоз и оплачивайте до 50% стоимости накопленными бонусами.",
     "zh": "披萨和鸡翅仅需 9.99 卢布。多米诺骨牌奖金！ 🔥 这就是从我们的忠诚度计划中受益的意义！ ⏺ 玛格丽特披萨 S — 9.99 卢布。 ⏺ 鸡翅浸 M + 1 种您选择的酱汁 - 9.99 擦。总计：19.98 卢布。 → 9.99 卢布。为了一切！下单取货并用累积奖金支付高达 50% 的费用。",
-    "photo": "https://cdn4.telesco.pe/file/vJLq31dLrESNUWqWV6r8_X8XPMM3gHMKt7fPiRlMNhgIh7nIUt8v0dNjIekjHfGY9q0lg_wLzx098a-SMPxK46srxlzA2Iu-MKaImFueRwO-G2Pnew7xbgyTrYOMT99asHiGydiXlb24l3fRkM_L7clNIyhiJXVmy-6nXEPRFa8V0AzLsxPjRMScVMvSFSTWssPX0eyW55JTSNa6fryO92uoW6wYXKpml8Zx6hNnprude8IqyNQg9lZpVNQrDwUEf0RoEEIGq8P1GL3Uyx0PNZHOoPWkOB9fELWsLnwOO6qdsLgdo-zgYdHmcqjDmmBlIM6N-IjHeOX-KovEVaymAQ.jpg",
+    "photo": "https://cdn4.telesco.pe/file/WcibEVfVnZKUng2Mlg5ByJj3jOQG3UI9q6nh720Rig8HRAhUv7kJdLAEH5odrBOeg1i7TW_xzzUo6hP2TwhMLduLsxVN-ajGXstYhTmCZFfr8z68OXcfGUwJSRR7oZ4pUW-ZYpNctzh-1CNnYA8u0X7VThqwmFuSP23oZnCRCKXSeg-JnHBmOK8MFZTQ42UKAMYxTt2ri0oqgqyMHJf27r1G9I3LZ7fmiosYyvuGXDSF7riwAUqcIaDNB3GrVK0LO2ffb1Wv2MucBHvO9C3Xz7m7MiZO3rXGLCjNCskHA8J0HjzfCfGD-I3kpNrrHyHKdH8S75hDtOHvOhqb5CBiHg.jpg",
     "price": 9.99,
     "priceUnit": "",
     "oldPrice": null,
@@ -136,7 +153,7 @@
     "beijing": "2026-11-24 16:39",
     "text": "Крылышки Чикен Дип по суперценам&#33; Только два дня&#33; 📢 🔥 M + 1 соус 14,99 → 9,99 руб. 🔥 L + 2 соуса 22,99 → 14,99 руб. 🔥 XL + 3 соуса 30,99 → 24,99 руб. 9 соусов на выбор — найдите своё любимое сочетание&#33; 🤫 Маленький секрет от Domino’s: с нашей программой лояльности можно сэкономить ещё больше, оплатив до 50% заказа бонусами . Главное — не забудьте добавить пиццу в заказ.",
     "zh": "鸡翅超值优惠！只有两天！ 📢 🔥 M + 1 酱 14.99 → 9.99 擦。 🔥 L + 2 酱料 22.99 → 14.99 擦。 🔥 XL + 3 种酱汁 30.99 → 24.99 擦。 9 种酱汁可供选择 - 找到您最喜欢的组合！ 🤫 Domino's 的一个小秘密：通过我们的忠诚度计划，您可以通过奖金支付高达 50% 的订单，从而节省更多。最重要的是记住将披萨添加到您的订单中。",
-    "photo": "https://cdn4.telesco.pe/file/DBFc0X6_gX3312JZ6fyme7NZoYyVGL6z2X13-HzSk_SJuMNCeujPxRIZne0Dwi8dgWE3TGle0CricVRGjYwA87FJI9HGB3kYTSNt5tbWTcQSNMvV5yuFZnd3hEqfqtaPC-vJGmbL8WEkuvKxlYXcjQNjA1v1McmgtHqAEfD9JhtNbJYU1dZW_6iuGbDzzn2tzMvtnkCdtPUWIS3fKG8R5IQGxaYSx8wrD1_ZKqPjVOqcs0-cMpUr-l-grOqjL4c5E8Umd_oSFvQQtSSTb0Apup66CttUNlA8BUcVmTlDdH4xeJgfp4ISvtxO5OJ8hZnyAbmgve8GxKbn-EXUkGUDHw.jpg",
+    "photo": "https://cdn4.telesco.pe/file/kdByZqrfpTpA8mtSDnOYxad-mZd0ufemZzuapDM1xuAc0BJaFTXRj4zied_7W-8kQlfOp5cI0ZkZrwselAM5T29mjnCY0hVNoGXsBrjPF18e6nbS64ZMZix04y4wyKcnK9YYZ3K17Mb2VCL7R1tUaLaAxXpzrrfqKvLaHIq1R-i-fdHkkVOIZ6kyux2PxsOFx-zndTzVMNtRVnC0sHjnYQuwnmeTM70c4VGbEg02pwawBmTO8DVMJbBEENrLuCy6BTNtYTIdUrlVYZaC07rDbQSCtxOy7sao3g5S_hUUYZ_GtAPixZNWnvhEoylZ8n3KperxoJGRQpQP94KZUw-RsQ.jpg",
     "price": 14.99,
     "priceUnit": "",
     "oldPrice": null,
@@ -166,7 +183,7 @@
     "beijing": "2026-11-23 14:27",
     "text": "🔥 ВТОРОЙ НАПИТОК С NUTELLA БЕСПЛАТНО 🔥 Лови новый промокод: « 2222 »; Срок действия: 23.11 - 27.11 Условия: 2 напитка с Nutella объема «L» по цене 1*; Называй промокод на кассе бариста и наслаждайся любимым напитком 😎 *Акции не суммируются. ❤️ - я за друзьями и в Cofix",
     "zh": "🔥 免费第二杯 Nutella 饮品 🔥 获取新促销代码：“2222”；有效期：23.11 - 27.11 条件：2 杯 Nutella 饮料，容量“L”，价格为 1*；在结账时致电咖啡师，享用您最喜欢的饮料😎 *促销活动不能同时进行。 ❤️ - 我正在关注我的朋友和 Cofix",
-    "photo": "https://cdn4.telesco.pe/file/V9lsLrblvydoDW0BgBOUvZY4jcDIJBjN_epAJGLt-v_vNpseqrgqmGj514tI-rKowY-tEb2ZBUaw1_IrlJq1eg3oERsUMzAnsnkd8tHp2gPX_Sh1nEnNAtCcIaVeig2JAJx9pdhKuKRIK9Wt3F61apKYoTp1w1De4W-NXLwxj-UTZZO3WMNxO0m9DnEtvUuwC8zfoQWN7WgJIyfGhjielUxkdjZ4G7Xsc1b1IvNAalIiauDAoFfYeoED9WaCXr1CitxCgG5AeB7cnmfknrL6H7Txlzvz9Q4nRxIq47RdlK_nRCvK_OHc9N4xbwa6228TtxJz6VuxIiDtnGSaxg5TPw.jpg",
+    "photo": "https://cdn4.telesco.pe/file/sSVA3W9P5bvrBCkwTGaDVE8rAQlOzOGBy7AQRh8o6-t5QQa40pF_zt2IwmRrrZEQQ6e_IarjOHvIjb0MVyILzbHBjOQwQKCC7lhxfUDz3hELuGtWl7Lw1RmzcTl3oeGKYcQ_WbzhlKuzz0j8kFBMfJ96go0LwFhBMVaWAXx1POWoL5feTxucKVbeMgk4BVkjZV8rUj94lZo0Br8RXbuEPBfepLgXNAzv1MNDipwCN2qhpoNSoOSWISVfZ8XLZP6PqGq6UndtNdCndUYt8Qs9nLBRPFH83mWPF2F-oGzKPtW0_aRM4DrZHV5FHOm628RfyaudNaPKQzvPH1Kmua9s7A.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -183,7 +200,7 @@
     "beijing": "2026-11-20 19:10",
     "text": "ПИЦЦА С ПРИЯТНЫМ БОНУСОМ&#33; Заказывайте любимую пиццу в Domino’s и получайте не только удовольствие, но и скидку 7% на весь чек в аптеках «Добрыя лекi»&#33; Как получить скидку? 👇 🍕 До 30 ноября оформите заказ в Domino’s на доставку, самовывоз или вынос. 🎁 Получите купон на скидку 7% в аптеках «Добрыя лекi» . 💊 Воспользуйтесь скидкой до 31 декабря включительно&#33; Приятно, когда один заказ приносит сразу две выгоды&#33; Важно: — 1 купон = 1 чек со скидкой. — Количество купонов ограничено. — Скидки и акционные предложения не суммируются.",
     "zh": "披萨还有令人愉快的奖金！从 Domino's 订购您最喜欢的披萨，不仅可以享受乐趣，而且还可以在 Dobrya Leki 药房享受全收据 7% 的折扣！如何获得折扣？ 👇 🍕 在 11 月 30 日之前在 Domino's 下订单，即可享受送货、提货或外卖服务。 🎁 在 Dobrya Leki 药店获得 7% 折扣券。 💊 享受折扣直至 12 月 31 日（含）！一份订单同时带来两种好处真是太好了！重要提示： - 1 张优惠券 = 1 张折扣收据。 — 优惠券数量有限。 — 折扣和促销优惠不能合并使用。",
-    "photo": "https://cdn4.telesco.pe/file/WO2Ninl4IEtJGA-UFuZdX3iQgkNGUsO2sy3V1EaAqzECitDCGgGuiKduo_lcwjU0zHRpuEBRCPTp9JJhT9GmESNPSVOsb9CETL3dLouWkvaODqI8r1k1no5kq0IJ8TjbT7WC9LCkrziCCJmMdSpCaz2O2K2iH6kRO6G4XBz-e7Wk8vKphTDUfHalERd3XFDykcyo3vAeODg7iHVyvXRDd7sYaG7a0rNDFijjcxOYsciXUL6Lm79yRn0HiukmHsd8hulvedODI3pAjm6VjwqTBmawHIb9SFyPvn9DbsW9k6j4C7Ppogn4tlJa7YHFtovV4GOmPmP-GsK9Pd1bliYAgg.jpg",
+    "photo": "https://cdn4.telesco.pe/file/d_lY55O4MFsN9Yc6sG2476Kvu9Ubpnkeoy5iWEUftdqcr7JLrcl2dHEwO8j3C3dAnurx8JPff3KZ2_WR4iNIUyDPegBqeRNnvNdy740Ghr3g5oAeyMA_udioJOVV_GEUa0xvHdgEGvsdHhClb9SDwFEVbs3FlRTE9mn1qPVUwIyPd0qymua_5Zz6GXl5noB-ZPloHypySql2WT8u93_39FQq9jcQPMp8C9FW5DUm3gT99ot55cuBJKOSTSzITlsjimEX4ai9cbAFGJJ7OeVmMJ4E-tw4WB-K2EHa6sQm4Bhv4wvsP00-NrJzx3ZbtIincUst82e7feUkIKKtejjqnQ.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -200,7 +217,7 @@
     "beijing": "2026-11-19 16:04",
     "text": "🔥 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔥 Вы можете угнать машину. Можете скрыться от пяти звёзд розыска. Можете пройти самую сложную миссию. Но попробуйте пройти GTA VI на голодный желудок. 💀 Поэтому мы подготовили свой чит-код на идеальные выходные — CRAZY WEEKEND&#33; Каждая вторая пицца — всего за 1 копейку&#33; Собирайте свою банду, запасайтесь пиццей и отменяйте все планы. Впереди миссии поважнее&#33; 🫤",
     "zh": "🔥 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔡 🔥 你可以偷一辆车。你可以躲避五颗通缉的星星。你可以完成最困难的任务。但请尝试空腹通关《GTA VI》。 💀 这就是为什么我们为完美周末准备了作弊代码 - 疯狂周末！每第二个披萨只需 1 戈比！召集你的伙伴，储备披萨并取消所有计划。更重要的任务还在后面！ 🫤",
-    "photo": "https://cdn4.telesco.pe/file/YAuhS696cRcprxsn3ZVsae9QyZu9ZNnQhiMUHNm383wJ1w42XptOQCqOk8u22Veo1rrM5XoyzB5g6b83_5U2h672IqYf12brIn9oKDVZEh3fvv4_WNWOyWf1HfWwBfkhSMOf_WAH2V_TT1CFTOvRC0wP323ZaOmKTW0QtwW934YBkzwlBDZ5AL-PM9c895JDTQSj4Z7Fvkcjf7n0mxiRx4kr64lVIIlgmRPez37MGT2sJjjgwarRUOBIj-Ua3iCTaZxhlwGXwgbZ0wpOZfBhR3wdpqwJyDSsZAs_7-cKDVED1frr99SpvCYPtp7lkXrrcW2N1usJSeRX4ioP7rFEbQ.jpg",
+    "photo": "https://cdn4.telesco.pe/file/JfE9OypP1v0CtNTv73QfKUh2eHwVHHCeHZHZaLH_cugo81sKkJVgiUJFp-WalOfXwdwPloA0Xly21oVRFPb7PlZzTMoYOFpig0yD_bTXB_SGbA_tfbMnYM_r7a9cq-44OezUa9q9CbTXaiV4ymDZDuHfL4jY7EAhf3I8Zg8EuSkNRHesBGcN3Kp67veUvUtDsbpIeJgHxTAw9gnGpYJKyN8oO_35r3AeVdJt9TyzED6xuSjCMa7ZJJuw2j6kMLTX-dAOIYNPuD-0HOw6at_GujxjHpqwIjsUJ3mhPJ8phPN3gAHTZfepyn01mLNB7EcMbkjXQZjJ87SNJ-1QMHoNOQ.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -217,7 +234,7 @@
     "beijing": "2026-11-19 14:29",
     "text": "Ради этих новинок хочется выйти из дома и романтизировать всё вокруг 😍 Встречай смузи-чай в двух вариантах: 🍒 Пряная вишн я — насыщенная вишня, банан и ароматная корица. Для тех, кто любит яркие вкусы с пряными нотками. 🍂 Осенний микс — сочный ананас, клубника и зелёный чай. Такое сочетание добавит красок даже в самый пасмурный день. Цена: 5,50 BYN. Скорее бери на тест и делись, какой напиток стал твоим фаворитом 🍁",
     "zh": "这些新产品让你想离开家，让周围的一切变得浪漫😍 来认识一下两个版本的冰沙茶： 🍒 辣樱桃 - 浓郁的樱桃、香蕉和芳香的肉桂。适合那些喜欢带有辛辣味道的明亮口味的人。 🍂 秋季组合 - 多汁的菠萝、草莓和绿茶。即使在阴天，这种组合也会增添色彩。价格：5.50 BYN。赶快来测试一下，分享一下你最喜欢哪一款饮料吧🍁",
-    "photo": "https://cdn4.telesco.pe/file/j1MdU7gzagOs5s56eUKizeLPpUsywDvpo0UgSu_8Uxs_SxR9NRVPt3Pupsk6c4fMb4M4f90MX1blsszpL_DhASNKeRb-1kUIxbpf_102YORYuw1ZAobafPtkS7_zRNapm6F7Iynv-J9QojapEsXcXWJFOO6FdnZgtGUHJxgJl6VdE8o5PNWYdF8nR4pOZZs9lTe5nnFSyQzb4Y42fskVKJhAGnNEjuqm7cwjj7_zT2bpVbHGK5JBSIXp-AksYuZ_4R7FUaZ1jC4AvrYC-S9e7ADI1T9w73bcSNL5wG0agLywc2X_mBiKoAO_28WLfcX-5ENkDrwHsvjI_KdYJQmpHA.jpg",
+    "photo": "https://cdn4.telesco.pe/file/WMGrdhBgsxlyXEfuMRsHreNIJMRdSpV3S0bbhijtDiCh3nLmMzXm-73bY-AIzEg_xZDcBDEJNZKiJHGDupAPxVADVp-o1MU3hJ9utD1hQrp4c2eE9miJ0OH6oa3jAdC-UipoWqCHH_EUfg5cayauKBaESv1Cvw4Hbsp0w9QoOStrUiloUwC2-QoUpNUlhrZHrhql7vCKeLiAjzzjDnoKdSupSlpkEH5y-mJhrgZil2ms7YWUm45RM6EysfJ7l4Hj2V51TqqVfFjq-8Ji59CoVWnPoFUny6TUYCm8uC3Vp62007fimGxszU2H8w1ikMIRmH7X7jYJlHU68pO3qZYPtw.jpg",
     "price": 5.5,
     "priceUnit": "",
     "oldPrice": null,
@@ -267,7 +284,7 @@
     "beijing": "2026-11-18 20:11",
     "text": "HERE WE GO AGAIN&#33; 🍕 Завтра выходит GTA VI, а сегодня мы решили немного поностальгировать и вернуться на Grove Street. 🫤 CJ уже успел поработать курьером Domino’s, собрать банду на пиццу, устроить свидание и отдохнуть дома перед телеком. А у вас тем временем новая миссия&#33; 💸 +1000 БОНУСОВ УЖЕ В ВАШИХ ЛИЧНЫХ КАБИНЕТАХ&#33; MISSION PASSED&#33; RESPECT +100 💸 Прокачивайте настроение, заказывайте любимое и готовьтесь к новым приключениям&#33; Ну что, кто тоже вырос на San Andreas?",
     "zh": "又来了！ 🍕 GTA VI 明天就要上映了，今天我们决定怀旧一下，回到格罗夫街。 🫤 CJ 已经当过达美乐快递员，召集了一群人吃披萨，约会过，在家里的电视机前放松过。与此同时，你还有一个新的使命！ 💸 +1000 奖金已存入您的个人账户！任务通过！尊重 +100 💸 振奋心情，订购您最喜欢的商品，准备好迎接新的冒险！那么，谁也在圣安地列斯长大呢？",
-    "photo": "https://cdn4.telesco.pe/file/EHvxhORTU9AmJ7TubAKToJGvAkh7O-vH8WejuBtMt_XFGtpG8Etl2odxUgAU8jkhhKdSqKsSc1VVUxZCBOV41kjQ2xeBBOvRQUpZY0rZvTmmqw5UGfBqW2HqRtYpN8MFp6tc1Q54erHsevk8cNDWim1OI5u55pQ0on0h-K1_-p5jb3wJf2BtVkj1S_Sc0GyplvxaTz2ymOEbFsriJMF7Av9nNwSx_LmE80MVF-cK4H7DND8wnmPavJbciy9lGzo1jkaPpDdLZslhXVGGR9bjR4sQy4ISGz1ba9CEWEArer4uTAn38-TvbfnubYynpSx7knH8o-i_1ibDY72as2zu5Q.jpg",
+    "photo": "https://cdn4.telesco.pe/file/INyKq-N91DLvvA5roOJHDIbOO1Nlxjfa8X505wVAHit-5oS9ehqKd5riXFlNaYEs2nrk5uc6ykBRy8ksl-RIDGYGIlJZ6jyjKlYyYIH-LzSkMyteBVcsTtIJtv9XWFyu8TK6W6hLJy-31zeXIuny0Buw3ZvAMwtKzhKP6kJSx1XxxncySXvSIA7-eigL4IlXUbQAxdDWcU83fCmsuXCkZQR37s4BAlTySPcf2oBu5jIgQqcegLHtX6WtIp48S-TzKBrAnAbVmdTbDLbvBmH8DuaEjosNMgLxYVcuBBMJPtuifEJG7sWsLrXMA7tR382C5TpKCvJbhLw8SLMq5Zdzrw.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -284,7 +301,7 @@
     "beijing": "2026-11-18 15:47",
     "text": "Признавайся, ждал? 😎 Заказывай сочную курочку KFC и готовься включать любимую игру. Пора показать, кто в городе главный 🎮 С этим тебе поможет курпон « 7070 »: Баскет S с 12 крыльями всего за 16,90 BYN 🔥",
     "zh": "承认吧，你一直在等待吗？ 😎 订购多汁的肯德基鸡肉，准备好开启您最喜欢的游戏。是时候证明谁是这座城市的老大了🎮 优惠券“7070”将帮助您：带 12 个翅膀的篮子 S 仅售 16.90 BYN 🔥",
-    "photo": "https://cdn4.telesco.pe/file/uBeIFAw7vTi0pL-M2uI2mQBLyYkBZ9re8y911JvYQKL3MH-Mp8u-c1LSNdcnKf__ro9vmKv5rMRw383AKDkNDIMtqsN_rTeFkytEUyCTPrDu79gLVeZYhtJieYuu4lj-Xe8z62Nby-Q82jUoN2Ac6_TQL5jeBlp2rCGLJOJ24RwxNiqXLBRb0n-8PZ_VoRM56EUfasLxHdEFfI89YNLcDU0L0wzGZmzfYPmb_Ad0_70xMoZzjXnsnM0WQ-gsl9Q5yglnpT-BumPlRDzduz5j_SUz8CR7oXhAtKiy3auKKie7rmuSgdqAbd75vHGa2OItQAxwf-6UlZ84v0Om0uHd0w.jpg",
+    "photo": "https://cdn4.telesco.pe/file/FjsQAzgqBC1TU4f2-M8U1-B9tzm-M637C07NcaxJngYGoNp8R02VjtO7WiMQ_Lwp59t4CsymN9tc1z3Kj8BGy6ISvvVCxyIDdzla_7Fu7zGSppCq6Q6UdaPPc8WLA1hvXnzdLSpOmzijczzlRyfbOrKES7MKkAl3UTKMqM81jAd1NAxWgxAAv_NSTgp2-bYiuv8OmyB7RTNJFy9Stnj3wMusJoz1tdQAAO81Q5P6wBpHQxnLinQUZFy5SwDn0fmzeQKcY6J4aeif_de1TR0HnEU2yFifEyiMsmSB16nfVD0D5g04X05GXKfg1NQt4p5wTowRPhuvNvMe9Ofv5BV4Fg.jpg",
     "price": 16.9,
     "priceUnit": "",
     "oldPrice": null,
@@ -384,7 +401,7 @@
     "beijing": "2026-11-16 16:25",
     "text": "Возвращение ТЫКВЕННО-КАРАМЕЛЬНОГО КАПУЧИНО в новом промокоде 🔥 🎃 Промокод: « 5555 »; Условие: Тыквенно-карамельный капучино объем «М» всего за 5 руб Срок действия: 16.11 - 20.11 ❤️ - я за друзями и в Cofix",
     "zh": "南瓜焦糖卡布奇诺带着新的促销代码回归🔥 🎃 促销代码：“5555”；条件：南瓜焦糖卡布奇诺“M”卷仅需 5 卢布 有效期：11.16 - 11.20 ❤️ - 我正在关注我的朋友和 Cofix",
-    "photo": "https://cdn4.telesco.pe/file/tnDhqwrOR6Ye6FBbYOTHDJCc9Hrwr_ADkBCjn3F26q7Jo3wRXENJOVhCMpQLENF-E6KzdJCyWWdHvc7lwHz_Gieb0hLJBVrZziPA2uXbsKOZbrCab2WsJ7opFUhNSHgpD3os2TDDuP5dUPfKaKYFV3nbW1JCZXRJtUISDmQV3OvWyjERQLxrDcZcHeSx124jtTBCXq9PPEmK32I9xt3oyIL00qoKjnrfbO9rIWvwfqTWLkHKs5qzCBOaAOl81GZojV3GuOu_VkA1K7GIHRXK01p58M5OHuZIsKuclUKah3TbP3hqj7wme7OBwmOlekaQ3-3L2a4HfIt-M866mL4c9A.jpg",
+    "photo": "https://cdn4.telesco.pe/file/UP3clB49pPDiYe3nOKXwY55BllYtTF2x-5QtWxZylCRkAlIOchtt5-_ArqNuETYBLTIMSjy0nkHXfmStu5IXXXpRwUTsmwNCysWpngaiR0DZz3f23xT8DNuzsxhmXqu_yZnnfNG5YQcOMPQT7fVxzeuejaPWlmQ9lZqKS0O83_nOJ5t0pGBN8lIFxjTCizoP295uDNcwc_9rE1qMx95uaUSHLXOcpvV4eJ20fBIV7HeEfXrf_9h2Aext-bqyiqUj3r4c0BC-DU-Jcp6zd4VSmMO2olHgRGZrzq38Vx5THP9wIS9OY9sNrMyhPKgpK88bkP6-xFGpAd1FvcYj3QiDrQ.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -401,7 +418,7 @@
     "beijing": "2026-11-14 16:01",
     "text": "Сегодня День расслабленности и беззаботности. Меньше стресса и тревожности. 🎁 5000 бонусов уже в ваших личных кабинетах&#33; 🔥 CRAZY WEEKEND — по 15.11 включительно каждая вторая пицца всего за 1 копейку&#33; Выдыхайте, улыбайтесь и наслаждайтесь выходными&#33; 🍕",
     "zh": "今天是放松和无忧无虑的一天。减少压力和焦虑。 🎁 5000奖金已存入您的个人账户！ 🔥 疯狂周末 - 直到 11 月 15 日（含），每第二个披萨仅需 1 戈比！深呼吸，微笑，享受周末！ 🍕",
-    "photo": "https://cdn4.telesco.pe/file/BLRdx45SHZcfPEdQ0iKEBpl6k6BdocAo-L-KunV40XRi7NfliOkTBMd0GpqGzFNwCJFi-QYOMp5ymnZi40_WqGnEfBoC5lp1G6SyOk_6FgCZ7lhRuPWJIOp91fuzImezakTaMVcWocMzrB_leZeT-rD9hsmH3uWATqcZSIB9wDAG_SwcXtn2OabYfQ9-cthEmpkSB-Oqxnv_INN7_93-6gyW98--3T6BzjEPSH7PZC0N8UMGpW2HybEvz8KotK76KqkBMApKT2w-iEGGAmb1Gq1qggk05dD1AZ7BJYRFinn5Qnak8pg87FocIr9wBqZ8K4ItIO4z1wTL-58mK_GgqA.jpg",
+    "photo": "https://cdn4.telesco.pe/file/FACEFJ4XEhYF8-ovJ3r4-ikQlE3-yhNeBO-wGlDKhdbWQObx11ipD1LwowKZqpT8Nzntx20AUPBem10XooRYVh4DlJXghifRC-e8UjICmR_XZnp-aQHSuXmKUvUZtSD8D2QqY_zklmXATt4t5jShMlWOTGdwN8Szpwa1IZ_v4RNbVvlfdnePZ2IbZ8RaPRcbxoqL6-AD87-PGJVyRWnyZKAVtYKbY8aKxa7VrG9JroinFNZ5cEFE592htDAnQFKinIKsq6aQiCmNoLWik2TmCs3Vho3P5LQz6GZdeCV54RMOJdz_oLMav0NXsfGGRSPoaPnRcoIjxkDVtSfEil6WHQ.jpg",
     "price": 15.11,
     "priceUnit": "",
     "oldPrice": null,
@@ -503,7 +520,7 @@
     "beijing": "2026-11-12 18:53",
     "text": "НАМ СЕГОДНЯ 11 ЛЕТ&#33; 🎉 Знаете, говорят, что перед днём рождения обязательно должно случиться что-то неожиданное. Позавчера нам решили устроить неприятный сюрприз, сайт и мобильное приложение полностью перестали работать. Только вот такой подарок мы точно не заказывали. 😕 Сейчас наша команда делает всё возможное, чтобы вернуть их к жизни. Работаем, чиним, переживаем и очень скучаем по вашим онлайн-заказам. Но есть и хорошие новости: сайт и приложение восстанавливаются, а наши пиццерии работают в штатном режиме&#33; 🍕 Печи горячие, пицца готовится, а команда по-прежнему встречает вас с улыбкой. Операторы кол-центра на связи и с радостью примут ваш заказ. И знаете, что ещё? У нас CRAZY WEEKEND&#33; 🔥 По 15.11 включительно каждая вторая пицца — всего за 1 копейку&#33; Потому что день рождения без подарков - не день рождения. И пусть этот день рождения проходит совсем не так, как мы планировали, мы очень хотим провести его вместе с вами. Если сегодня вы заглянете к нам за пиццей, это будет лучшим подарком и огромной поддержкой для нас. 🥹 Спасибо, что остаётесь с нами&#33; ❤️ 💙",
     "zh": "今天我们 11 岁了！ 🎉 你知道，他们说在你生日之前一定会发生一些意想不到的事情。前天他们决定给我们一个不愉快的惊喜：网站和移动应用程序完全停止工作。只是我们绝对没有订这样的礼物。 😕 现在我们的团队正在尽一切努力让它们复活。我们工作、修理、担心，并且非常想念您的在线订单。但有个好消息：网站和应用程序正在恢复，我们的比萨店也正常营业！ 🍕 烤箱很热，披萨正在烹饪，团队仍然微笑着迎接你。呼叫中心接线员会与您联系，并很乐意接受您的订单。你知道还有什么吗？我们将度过一个疯狂的周末！ 🔥 15.11（含），每第二个披萨只需 1 戈比！因为没有礼物的生日就不是生日。即使这个生日根本没有按我们的计划进行，我们也真的很想和你一起度过。如果您今天过来吃披萨，这将是对我们最好的礼物和极大的支持。 🥹感谢您与我们在一起！ ❤️💙",
-    "photo": "https://cdn4.telesco.pe/file/L9nMK8JgvI4drIXZ4_6uTjnhwLJpZPB-O9gYf6yYIxC9ml4qzxnOl1dQ8jJE12qom_QQay0sE459kLHFoM202lCwhSrXGN-rYIis9MW2JSlsQda4mrT9cWJ8i6xqUnlQy6jloqQXmW6JaHwWEky7UzCTWocvbXHKNZADBnxQRxJHCQvyUQAeHpCf9min8aXxh4Jr7QO-ttpt1CXb_hpOFxBhsryV91NbpcZHvLY59TVjzk5RKKs6YP57JWGtcbQ6wBOr56mAkBafovUOMf2XQdK6KeyTvULJK7-DvOu_77LqbDHSpd7lA-7vPp7SS-kCYke5aYedy5pO5on6WDJMdQ",
+    "photo": "https://cdn4.telesco.pe/file/Tufh2MMIL-J9W_54sQdj3Fq3wVh8Mkpo-b6SrJdS44RQa4-bRY2VN2crQKYAUWEAzD15LSnosIIaVHiD-12hWesT2daEWPYSZgQfdpZQV6VdOPxnLgR9AZykAvmU6WLYrGzzUVAWquoujaJ8xwpSMsDz-QUoQjTXgYnUHmz6OH09On8ZZph7o_Diix2pp9u3pA_w85Tm-k2TzipWRKvoF4ci8TeW_Y5cFOYiqfi4lz3-G7y1WuCBtILdaoYpbfYvIRiCOxLmr64kzw2X1_tT4XZOpr8wkpLQUXPhegjV8wEA0yB1rwP44CKUEtfg8gVHwE1_F3boMqcHsxr4U6exKA",
     "price": 15.11,
     "priceUnit": "",
     "oldPrice": null,
@@ -744,7 +761,7 @@
     "beijing": "2026-11-04 20:03",
     "text": "Положи телефон - возьми кофе ☕️ 📵 Мошенники торопят: звонят «из банка», пишут «от друга», присылают ссылки «на посылку». Фикс - ленивец. Он не торопится, поэтому его не развести. Вместе с КиберПулом мы хотим, чтобы вы узнавали уловки мошенников раньше, чем они узнают ваши данные, поэтому подготовили тест-обучение. За его прохождение подарим фирменный стикерпак с Фиксом за 1 копейку. 👉 Пройти тест-обучение После тест-обучения вы получите: 🎟 Купон на набор наклеек с Фиксом за 1 копейку в любой COFIX 🔥 Бесплатный стикер-пак для Telegram Активность действует до 6 декабря. P.S. Если кто-то просит код из СМС, отправьте ему фото своего капучино. Пользы больше. 🔥 - у мошенников со мной нет шансов",
     "zh": "放下电话 - 喝杯咖啡☕️📵欺诈者很匆忙：他们打电话“从银行”，写“从朋友”，发送链接“到包裹”。菲克斯是个树懒。他不着急，所以不能分心。我们与 Cyber​​Pool 一起希望您在诈骗者发现您的数据之前识别出他们的伎俩，因此我们准备了测试培训。完成后，我们将赠送您一个带有 Fix 的品牌贴纸包，价格为 1 戈比。 👉 通过测试培训 测试培训后您将获得： 🎟 任意 COFIX 1 戈比 Fix 贴纸一套优惠券 🔥 免费 Telegram 贴纸包 活动有效期至 12 月 6 日。如果有人通过短信要求提供代码，请向他们发送您的卡布奇诺照片。还有更多好处。 🔥 - 骗子对我没有机会",
-    "photo": "https://cdn4.telesco.pe/file/ctJXS1u51FJSGd80aCRcCyfa57SKS_mgej-PZ7kSCsKDGt7SKBvE0df1BLIgegB2eQVSkIZdm_MGaDpGcax_0bv_d2arInLwU-E21jRVY9CQYzthUOjwSPPuckdEVuFJ-oxC2nnuLcXaoj6cyo-eXbjeTC1NsIkMI7QjDrq537K3opVD1ePvw4cswPaylphJTnxwMhbM4eLnUfwRTd_K79Nh2yYZvz8Ti87H1nGu_UMow98eZ6cRDZSUX_TBA9L8f7IIa-sB6sa14DHxbVuJ2R5O3-MVP2EBZdzqeuS6gPPFEidXLyFFreEgdUxEx5gqq_Ny9MJTB1tCMZVtt3k6Dg.jpg",
+    "photo": "https://cdn4.telesco.pe/file/IE31rLSDJuXPb8M4NoMyogIJ8D_QPZT5rDru93CuoOqjygRhj0nruqP-IFdOnjmC4CWrOS9Y1W6STybvquTAlxyQ7IBX_9ujzbw5vlUt-Vz4pttNd8K2eQrdvWOZu_g3Hox8Gm60dHALpKREpBwVhtN2Gy2PEuFepIYrlR86cgM9qPlN1jV-dU8QiEgmVhUL5ZmGVOdIBy729Thn7fARdre3VvdfZx37T9FD0LtKKAhHNHh9q2_tSQaKlvYnRSYXkzTTKj8qOw7R76yV2l-5f-pliUoB4f4FNoBgomEz3h-78XD3pzw7dAa_rAX5a_MJVbHYbc_6Ngz2303dc7urmw.jpg",
     "price": null,
     "priceUnit": "",
     "oldPrice": null,
@@ -2189,56 +2206,6 @@
       {
         "t": "2026-10-07",
         "p": 8.99
-      }
-    ]
-  },
-  {
-    "user": "cofixbelarus",
-    "id": "181",
-    "store": "Cofix",
-    "link": "https://t.me/cofixbelarus/181",
-    "date": "2026-09-27T05:41:59+00:00",
-    "beijing": "2026-09-27 13:41",
-    "text": "🔥 ВТОРОЙ НАПИТОК БЕСПЛАТНО 🔥 Лови новый промокод: «2121»; Срок действия: каждое воскресенье по 01.11; Условия: 2 латте/капучино (холодный или горячий) объема \"L\" по цене 1*; Называй промокод на кассе бариста и наслаждайся любимым кофе ❤️ *Акции не суммируются. 🔥 - я за друзьями и в Cofix",
-    "zh": "🔥 免费第二杯饮料 🔥 获取新促销代码：“2121”；有效期：每周日至01.11；条件：2 杯拿铁/卡布奇诺（冷或热）“L”尺寸，价格为 1*；结帐时致电咖啡师，享用您最喜欢的咖啡❤️ *促销活动不能合并。 🔥 - 我正在关注我的朋友和 Cofix",
-    "photo": "https://cdn4.telesco.pe/file/FAEgYx8lfLNRcRhTF3alu6pu_6tRYmVjnBepa9UYONngZ60xv_D_hsOdSNvHwDqSxwbMIzWHSBmOMg838L-ZUYKfXigk256OeV2NvG_M25W3Gl0n210IEHkm5SjyqVSy39JGIctgVfJSOmCoXF5OY242wmF29GS82KBZ09wwr9-eF5MzCMGQ4-ZqdxtUSGXjHlE3xEHy7jL86AXwmWkSBqkHenIiuJsmfRB7Q4edoTTtr2CzpvE34zn8fY_y2y6qUvjZed5dj9tsNs2B_1sKwhoGKh9rpM6wbDYAQviTD22PlFp7lMjGXiGgrDroVlAjmDRSSL1xi_92VZaDuncwdQ.jpg",
-    "price": 1.11,
-    "priceUnit": "",
-    "oldPrice": null,
-    "discount": null,
-    "endDate": "",
-    "history": [
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-09-27",
-        "p": 1.11
-      },
-      {
-        "t": "2026-10-01",
-        "p": 1.11
       }
     ]
   }
